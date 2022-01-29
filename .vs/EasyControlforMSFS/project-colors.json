@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ff9898c8-8b84-422b-b47f-ed165cc64f3d": {
+      "ProjectGuid": "ff9898c8-8b84-422b-b47f-ed165cc64f3d",
+      "DisplayName": "EasyControlforMSFS",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

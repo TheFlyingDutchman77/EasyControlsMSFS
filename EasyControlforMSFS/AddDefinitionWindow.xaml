@@ -1,0 +1,124 @@
+﻿<Window x:Class="EasyControlforMSFS.AddDefinitionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        xmlns:local="clr-namespace:EasyControlforMSFS"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="EasyControls for MSFS - add control definition" Height="450" Width="800" Icon="/flight_30822 (1).png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <StackPanel Name ="Header" Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Margin="0,0,0,0" Text="Aircraft event definitions" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FBFFFFFF" FontSize="20"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="1.5*" />
+            </Grid.RowDefinitions>
+            <StackPanel Name ="Controller_text" Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <Label Content="Select controller:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            </StackPanel>
+            <StackPanel Name ="Controller_input" Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <ComboBox Name="ControllersComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" IsEditable="True" SelectionChanged="ControllersComboBox_SelectionChanged"/>
+                <Separator Width="10" Background="Transparent"/>
+                <Label Name="ControllerConnectedLabel" Content="Check if connected" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" Visibility="Hidden"/>
+            </StackPanel>
+            <StackPanel Name ="Controller_connected" Grid.Column="2" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
+            </StackPanel>
+            <StackPanel Name ="ACname_text" Grid.Column="0" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <Label Content="Select aircraft:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Separator Height="3" Background="Transparent"/>
+                <Label Content="Axis 1 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Separator Height="3" Background="Transparent"/>
+                <Label Content="Axis 2 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Separator Height="3" Background="Transparent"/>
+                <Label Content="Axis 3 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            </StackPanel>
+            <StackPanel Name ="ACname_input" Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox Name="ACnamesComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" SelectionChanged="ACnamesComboBox_SelectionChanged"/>
+                    <Label Content="Inverted?" Width ="70" Name="Inverted"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Label Content="Min/max values:" Width ="110" Name="Minmax"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                </StackPanel>
+                <Separator Height="3" Background="Transparent"/>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox Name ="Axis1EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                    <Separator Width="30" Background="Transparent"/>
+                    <CheckBox Name="InvertedAxis1CheckBox" HorizontalAlignment="Center"></CheckBox>
+                    <Separator Width="30" Background="Transparent"/>
+                    <TextBox Name="MinAxis1TextBox" ToolTip="Most axis have 0 as min. Some -16383. For throttles, setting a negative nr (e.g. -5000) will allow reverse thrust. See the SDK" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                    <Separator Width="20" Background="Transparent"/>
+                    <TextBox Name="MaxAxis1TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>
+                </StackPanel>
+                <Separator Height="3" Background="Transparent"/>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox Name ="Axis2EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                    <Separator Width="30" Background="Transparent"/>
+                    <CheckBox Name="InvertedAxis2CheckBox" HorizontalAlignment="Center"></CheckBox>
+                    <Separator Width="30" Background="Transparent"/>
+                    <TextBox Name="MinAxis2TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                    <Separator Width="20" Background="Transparent"/>
+                    <TextBox Name="MaxAxis2TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>            
+                </StackPanel>
+                <Separator Height="3" Background="Transparent"/>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox Name ="Axis3EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                    <Separator Width="30" Background="Transparent"/>
+                    <CheckBox Name="InvertedAxis3CheckBox" HorizontalAlignment="Center"></CheckBox>
+                    <Separator Width="30" Background="Transparent"/>
+                    <TextBox Name="MinAxis3TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                    <Separator Width="20" Background="Transparent"/>
+                    <TextBox Name="MaxAxis3TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>            
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="Add_button_event" Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Name="Add_button_event_button" Click="Add_button_event_button_Click" Margin="10,0,0,0">Add button events</Button>
+            </StackPanel>
+            <StackPanel Name="Add_2ndaxisevent_event" Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Name="Add_2nd_axis_event_button" Click="Add_2nd_axis_event_button_Click" Margin="0,0,0,0">Add 2nd event for axis</Button>
+            </StackPanel>
+            <StackPanel Name ="New_items" Grid.Column="0" Grid.Row="7" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <Label Content="Enter new aircraft:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Separator Height="3" Background="Transparent"/>
+                <Label Content="Enter new event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="7" >
+                <StackPanel Name ="New_items_input" Grid.Column="1" Grid.Row="7" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                    <TextBox Name ="NewAircraftName" ToolTip="Type here a new aircraft name and hit enter. Aircraft will then be selectable above." Text="" TextWrapping="Wrap" Width="300" Foreground="White" Background="Black" KeyUp="NewAircraftName_KeyUp"  />
+                    <Separator Height="3" Background="Transparent"/>
+                    <TextBox Name ="NewEventName" Text="" ToolTip="Type here a new simconnect event and hit enter. The event will then be selectable above." TextWrapping="Wrap" Width="300" Foreground="White" Background="Black" KeyUp="NewEventName_KeyUp"  />
+                </StackPanel>
+                <Separator Width="30" Background="Transparent"/>
+                <StackPanel Grid.Column="3" Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Grid.Column="3" Grid.Row="8" Width="80" Click="SaveButton_Click">Save</Button>
+                    <Separator Width="20" Background="Transparent"/>
+                    <Button Grid.Column="3" Grid.Row="8" Width="80" Click="ExitButton_Click" >Exit</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Window>

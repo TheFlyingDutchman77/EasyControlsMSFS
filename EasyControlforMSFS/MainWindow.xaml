@@ -1,0 +1,65 @@
+﻿<Window x:Class="EasyControlforMSFS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        xmlns:local="clr-namespace:EasyControlforMSFS"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        Title="EasyControls for MSFS" Height="450" Width="600" Icon="/flight_30822 (1).png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <StackPanel Name ="Header" Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Margin="0,0,0,0" Text="EasyControls for MSFS" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FBFFFFFF" FontSize="20"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="500" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <StackPanel Name ="Aircraft_text" Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <Label Content="Select aircraft:" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <ComboBox Name="SelectAircraftComboBox" Margin="10,0,0,0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="200" SelectionChanged="SelectAircraftComboBox_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Name ="Aircrafty_input" Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
+            </StackPanel>
+            <StackPanel Name ="Messages" Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <Label Content="System messages:" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <TextBox x:Name ="MessageTextBox" VerticalScrollBarVisibility="Visible" Margin ="0,0,0,0" Width="500" Height="100" TextWrapping="Wrap"  Background="DimGray" Foreground="White" FontWeight="Light"/>
+                <Separator Height="20" Background="Transparent"/>
+                <StackPanel Name ="Simconnect" Orientation="Horizontal">
+                    <Label Content="Simconnect status:" HorizontalAlignment="Left" Margin="0,0, 10,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Ellipse Name ="SimconnectStatusEllipse" Fill="Red" Height="15" Width="15" StrokeThickness="0" ></Ellipse>
+                    <TextBox Name="Test1TextBox" Width="100" Margin="10,0,0,0" Visibility="Hidden"/>
+                    <TextBox Name="Test2TextBox" Width="100" Margin="10,0,0,0" Visibility="Hidden"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name ="Buttonsexit" Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button Content="Define events" Margin="0,0,0,20" Click="Button_Click"/>
+                <Separator Width="20" Background="Transparent"/>
+                <Button HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="ExitButton_Click">Exit</Button>
+            </StackPanel>
+
+        </Grid>
+
+
+    </Grid>
+</Window>

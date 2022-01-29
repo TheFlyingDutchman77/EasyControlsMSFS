@@ -1,0 +1,73 @@
+﻿<Window x:Class="EasyControlforMSFS.Add2ndAxisEventsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        xmlns:local="clr-namespace:EasyControlforMSFS"
+        mc:Ignorable="d"
+        Title="EasyControls for MSFS - add button event" Height="300" Width="600"
+        ResizeMode="NoResize" Icon="/flight_30822 (1).png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <StackPanel Name ="Header_button" Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Margin="0,0,0,0" Text="Add 2nd event for axis" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FBFFFFFF" FontSize="18" FontWeight="Normal"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="1.5*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <StackPanel Name ="Selectevents_text" Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <Label Content="Select axis:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Separator Height="3" Background="Transparent"/>
+                <Label Content="Select event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Separator Height="3" Background="Transparent"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1" >
+                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+                    <ComboBox Name ="SelectAxisComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="150" SelectionChanged="SelectAxisComboBox_SelectionChanged" />
+                    <Label Content="Inverted?" Width ="70" Name="Inverted"  HorizontalAlignment="Center" Margin="110,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Label Content="Min/max values:" Width ="110" Name="Minmax"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                </StackPanel>   
+                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                    <ComboBox Name ="AxisEventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="250" />
+                    <Separator Width="30" Background="Transparent"/>
+                    <CheckBox Name="InvertedAxisCheckBox" HorizontalAlignment="Center"></CheckBox>
+                    <Separator Width="30" Background="Transparent"/>
+                    <TextBox Name="MinAxisTextBox" ToolTip="Most axis have 0 as min. Some -16383. For throttles, setting a negative nr (e.g. -5000) will allow reverse thrust. See the SDK" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                    <Separator Width="20" Background="Transparent"/>
+                    <TextBox Name="MaxAxisTextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>
+                </StackPanel>
+             </StackPanel>
+            <StackPanel Name ="Newevent_text" Grid.Column="0" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <Label Content="Enter new event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Separator Height="3" Background="Transparent"/>
+            </StackPanel>
+            <StackPanel Name ="New_items_input" Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <TextBox Name ="NewEventName" Text="" TextWrapping="Wrap" Width="250" Foreground="White" Background="Black" KeyUp="NewEventName_KeyUp"  />
+                <Separator Height="3" Background="Transparent"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button Width="80" Click="SaveButton_Click">Save</Button>
+                <Separator Width="20" Background="Transparent"/>
+                <Button Width="80" Click="ExitButton_Click" Margin="0,0,20,000">Exit</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

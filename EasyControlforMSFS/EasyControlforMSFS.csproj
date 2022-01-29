@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="flight_30822 %281%29.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.22000.196" />
+    <PackageReference Include="YamlDotNet" Version="11.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.FlightSimulator.SimConnect">
+      <HintPath>Microsoft.FlightSimulator.SimConnect.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="flight_30822 (1).png" />
+  </ItemGroup>
+
+</Project>

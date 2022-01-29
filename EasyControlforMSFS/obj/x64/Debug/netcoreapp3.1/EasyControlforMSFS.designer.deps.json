@@ -1,0 +1,175 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MaterialDesignColors/2.0.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {
+            "assemblyVersion": "2.0.4.3",
+            "fileVersion": "2.0.4.3"
+          }
+        }
+      },
+      "MaterialDesignThemes/4.3.0": {
+        "dependencies": {
+          "MaterialDesignColors": "2.0.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "4.3.0.3",
+            "fileVersion": "4.3.0.3"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.0.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.Windows.SDK.Contracts/10.0.22000.196": {
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
+          "System.Runtime.WindowsRuntime": "4.6.0",
+          "System.Runtime.WindowsRuntime.UI.Xaml": "4.6.0"
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.Runtime.WindowsRuntime/4.6.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.WindowsRuntime.dll": {
+            "assemblyVersion": "4.0.14.0",
+            "fileVersion": "4.700.19.46214"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/System.Runtime.WindowsRuntime.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.14.0",
+            "fileVersion": "4.700.19.46214"
+          }
+        }
+      },
+      "System.Runtime.WindowsRuntime.UI.Xaml/4.6.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "System.Runtime.WindowsRuntime": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.WindowsRuntime.UI.Xaml.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.19.46214"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/System.Runtime.WindowsRuntime.UI.Xaml.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.19.46214"
+          }
+        }
+      },
+      "YamlDotNet/11.2.1": {
+        "runtime": {
+          "lib/netstandard2.1/YamlDotNet.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.2.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MaterialDesignColors/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l8LfghYjT2mBVp28CAU8UN4GQ6T/euzgGiTwFKy1DPUG8c5rng/CVXXqM5Xof0XAm0MhXgV8yjGRjQ7KOjT/Iw==",
+      "path": "materialdesigncolors/2.0.4",
+      "hashPath": "materialdesigncolors.2.0.4.nupkg.sha512"
+    },
+    "MaterialDesignThemes/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-edXh0Hl2LukyEZN+REVFuN+gaaUFo6AfHSaBjuZ95k4Qz1TljcxnfCznMKkGaQoEsy5ryk85ZbeRY/tOzFmKxg==",
+      "path": "materialdesignthemes/4.3.0",
+      "hashPath": "materialdesignthemes.4.3.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TsETIgVJb/AKoYfSP+iCxkuly5d3inZjTdx/ItZLk2CxY85v8083OBS3uai84kK3/baLnS5/b5XGs6zR7SuuHQ==",
+      "path": "microsoft.netcore.platforms/3.0.0",
+      "hashPath": "microsoft.netcore.platforms.3.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.Windows.SDK.Contracts/10.0.22000.196": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PsZ40Oj4Y4XUjmHo++aJxZZHRo6CUx6t+xoDwQS/pMPzU9DPvQQ0yCMfar1BsGVF4gJUqzh+U29qF0bEdCruAQ==",
+      "path": "microsoft.windows.sdk.contracts/10.0.22000.196",
+      "hashPath": "microsoft.windows.sdk.contracts.10.0.22000.196.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.WindowsRuntime/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IWrs1TmbxP65ZZjIglNyvDkFNoV5q2Pofg5WO7I8RKQOpLdFprQSh3xesOoClBqR4JHr4nEB1Xk1MqLPW1jPuQ==",
+      "path": "system.runtime.windowsruntime/4.6.0",
+      "hashPath": "system.runtime.windowsruntime.4.6.0.nupkg.sha512"
+    },
+    "System.Runtime.WindowsRuntime.UI.Xaml/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r4tNw5v5kqRJ9HikWpcyNf3suGw7DjX93svj9iBjtdeLqL8jt9Z+7f+s4wrKZJr84u8IMsrIjt8K6jYvkRqMSg==",
+      "path": "system.runtime.windowsruntime.ui.xaml/4.6.0",
+      "hashPath": "system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512"
+    },
+    "YamlDotNet/11.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tBt8K+korVfrjH9wyDEhiLKxbs8qoLCLIFwvYgkSUuMC9//w3z0cFQ8LQAI/5MCKq+BMil0cfRTRvPeE7eXhQw==",
+      "path": "yamldotnet/11.2.1",
+      "hashPath": "yamldotnet.11.2.1.nupkg.sha512"
+    }
+  }
+}
