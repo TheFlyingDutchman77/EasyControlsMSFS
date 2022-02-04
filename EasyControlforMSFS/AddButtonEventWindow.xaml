@@ -12,7 +12,7 @@
         FontFamily="{materialDesign:MaterialDesignFont}"
         xmlns:local="clr-namespace:EasyControlforMSFS"
         mc:Ignorable="d"
-        Title="EasyControls for MSFS - add button event" Height="300" Width="600"
+        Title="EasyControls for MSFS - add button event" Height="350" Width="600"
         ResizeMode="NoResize" Icon="/flight_30822 (1).png">
     <Grid>
         <Grid.RowDefinitions>
@@ -29,9 +29,9 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*" />
-                <RowDefinition Height="6*" />
+                <RowDefinition Height="5.5*" />
                 <RowDefinition Height="1.5*" />
-                <RowDefinition Height="2*" />
+                <RowDefinition Height="2.5*" />
             </Grid.RowDefinitions>
 
             <StackPanel Name ="Selectevents_text" Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" >
@@ -60,7 +60,9 @@
                 <Separator Height="3" Background="Transparent"/>
             </StackPanel>
             <StackPanel Name ="New_items_input" Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" >
-                <TextBox Name ="NewEventName" Text="" TextWrapping="Wrap" Width="300" Foreground="White" Background="Black" KeyUp="NewEventName_KeyUp"  />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Name ="NewEventName" Text="" TextWrapping="Wrap" Width="300" Foreground="White" Background="Black" KeyUp="NewEventName_KeyUp"  />
+                </StackPanel>
                 <Separator Height="3" Background="Transparent"/>
             </StackPanel>
             <StackPanel Name ="Auto_select_button" Grid.Column="0" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
@@ -68,7 +70,8 @@
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <CheckBox Name="AutoSelectButtonCheckbox" ToolTip="If this is true, a pressed button will automatically be selected."></CheckBox>
-                <Separator Width="200" Background="Transparent"/>
+                <Button Name="SendEventButton" Margin ="12,0,0,0" Width="150" FontSize="14" Click="SendEventButton_Click">Send event to sim</Button>
+                <Separator Width="40" Background="Transparent"/>
                 <Button Width="80" Click="SaveButton_Click">Save</Button>
                 <Separator Width="20" Background="Transparent"/>
                 <Button Width="80" Click="ExitButton_Click" Margin="0,0,20,000">Exit</Button>

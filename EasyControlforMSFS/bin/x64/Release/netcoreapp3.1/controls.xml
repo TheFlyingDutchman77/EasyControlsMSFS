@@ -45,6 +45,18 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+			<axis3>
+				<event>AS4TEST</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis3>
+			<axis4>
+				<event>AS5TEST</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis4>
 			<button8>
 				<event>PROP_PITCH_DECR</event>
 				<axis_link>2</axis_link>
@@ -256,12 +268,12 @@
 		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
 			<button0>
-				<event>MASTER_BATTERY_SET</event>
+				<event>Mobiflight.ASDHC6_DC_MASTER_TOGGLE</event>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
 			<button1>
-				<event>ALTERNATOR_SET</event>
+				<event>Mobiflight.ASDHC6_GENERATORS_TOGGLE</event>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
@@ -271,15 +283,27 @@
 				<is_switch>True</is_switch>
 			</button2>
 			<button3>
-				<event>PITOT_HEAT_SET</event>
+				<event>Mobiflight.ASDHC6_PITOT_TOGGLE</event>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
 			<button4>
-				<event>WINDSHIELD_DEICE_SET</event>
+				<event>Mobiflight.ASDHC6_WINDOW_HEAT_TOGGLE</event>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
+		</aircraft>
+		<aircraft name="Airbus A320neo">
+			<button0>
+				<event>Mobiflight.A32NX_BAT_TOGGLE</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<event>Mobiflight.A32NX_OH_ELEC_EXTPWR_TOG</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
 		</aircraft>
 	</joystick>
 </root>

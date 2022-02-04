@@ -45,6 +45,26 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+			<button0>
+				<event>Mobiflight.ASDHC6_COND1_ON</event>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+			<button1>
+				<event>Mobiflight.ASDHC6_COND1_OFF</event>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button1>
+			<button2>
+				<event>Mobiflight.ASDHC6_COND2_ON</event>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<event>Mobiflight.ASDHC6_COND2_OFF</event>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button3>
 			<button8>
 				<event>PROP_PITCH_DECR</event>
 				<axis_link>2</axis_link>
@@ -226,6 +246,72 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
+		</aircraft>
+		<aircraft name="Cessna Citation CJ4">
+			<button0>
+				<event>MASTER_BATTERY_SET</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<event>ALTERNATOR_SET</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<event>AVIONICS_MASTER_SET</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<event>PITOT_HEAT_SET</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<event>WINDSHIELD_DEICE_SET</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="Aerosoft Twin Otter">
+			<button0>
+				<event>Mobiflight.ASDHC6_DC_MASTER_TOGGLE</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<event>Mobiflight.ASDHC6_GENERATORS_TOGGLE</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<event>AVIONICS_MASTER_SET</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<event>Mobiflight.ASDHC6_PITOT_TOGGLE</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<event>Mobiflight.ASDHC6_WINDOW_HEAT_TOGGLE</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="Airbus A320neo">
+			<button0>
+				<event>Mobiflight.A32NX_BAT_TOGGLE</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<event>Mobiflight.A32NX_OH_ELEC_EXTPWR_TOG</event>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
 		</aircraft>
 	</joystick>
 </root>

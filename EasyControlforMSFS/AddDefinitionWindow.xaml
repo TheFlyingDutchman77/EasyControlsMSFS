@@ -13,7 +13,7 @@
         xmlns:local="clr-namespace:EasyControlforMSFS"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="EasyControls for MSFS - add control definition" Height="450" Width="800" Icon="/flight_30822 (1).png">
+        Title="EasyControls for MSFS - add control definition" Height="500" Width="800" Icon="/flight_30822 (1).png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -28,11 +28,11 @@
                 <ColumnDefinition Width="8*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*" />
-                <RowDefinition Height="1*" />
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="0.5*" />
-                <RowDefinition Height="1.5*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="90" />
             </Grid.RowDefinitions>
             <StackPanel Name ="Controller_text" Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
                 <Label Content="Select controller:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
@@ -44,64 +44,110 @@
             </StackPanel>
             <StackPanel Name ="Controller_connected" Grid.Column="2" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
             </StackPanel>
-            <StackPanel Name ="ACname_text" Grid.Column="0" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                <Label Content="Select aircraft:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-                <Separator Height="3" Background="Transparent"/>
-                <Label Content="Axis 1 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-                <Separator Height="3" Background="Transparent"/>
-                <Label Content="Axis 2 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-                <Separator Height="3" Background="Transparent"/>
-                <Label Content="Axis 3 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="2">
+                <StackPanel Name ="ACname_text" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                    <Label Content="Select aircraft:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Separator Height="3" Background="Transparent"/>
+                    <Label Content="Axis 1 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Separator Height="3" Background="Transparent"/>
+                    <Label Content="Axis 2 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Separator Height="3" Background="Transparent"/>
+                    <Label Content="Axis 3 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                </StackPanel>
+                <StackPanel Name="Axis45labels" Visibility="Hidden" Orientation="Vertical">
+                        <Separator Height="3" Background="Transparent"/>
+                        <Label Name ="Axis4label" Content="Axis 4 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                        <Separator Height="3" Background="Transparent"/>
+                        <Label Name ="Axis5label" Content="Axis 5 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                        <Separator Height="3" Background="Transparent"/>
+                        <Label Name ="Axis6label" Content="Axis 6 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                </StackPanel>
             </StackPanel>
-            <StackPanel Name ="ACname_input" Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <StackPanel Orientation="Horizontal">
-                    <ComboBox Name="ACnamesComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" SelectionChanged="ACnamesComboBox_SelectionChanged"/>
-                    <Label Content="Inverted?" Width ="70" Name="Inverted"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-                    <Label Content="Min/max values:" Width ="110" Name="Minmax"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            <StackPanel Name ="ACname_input" Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox Name="ACnamesComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" SelectionChanged="ACnamesComboBox_SelectionChanged"/>
+                        <Label Content="Inverted?" Width ="70" Name="Inverted"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                        <Label Content="Min/max values:" Width ="110" Name="Minmax"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    </StackPanel>
+                    <Separator Height="3" Background="Transparent"/>
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox Name ="Axis1EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                        <Separator Width="30" Background="Transparent"/>
+                        <CheckBox Name="InvertedAxis1CheckBox" HorizontalAlignment="Center"></CheckBox>
+                        <Separator Width="30" Background="Transparent"/>
+                        <TextBox Name="MinAxis1TextBox" ToolTip="Most axis have 0 as min. Some -16383. For throttles, setting a negative nr (e.g. -5000) will allow reverse thrust. See the SDK" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                        <Separator Width="20" Background="Transparent"/>
+                        <TextBox Name="MaxAxis1TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>
+                    </StackPanel>
+                    <Separator Height="3" Background="Transparent"/>
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox Name ="Axis2EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                        <Separator Width="30" Background="Transparent"/>
+                        <CheckBox Name="InvertedAxis2CheckBox" HorizontalAlignment="Center"></CheckBox>
+                        <Separator Width="30" Background="Transparent"/>
+                        <TextBox Name="MinAxis2TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                        <Separator Width="20" Background="Transparent"/>
+                        <TextBox Name="MaxAxis2TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>            
+                    </StackPanel>
+                    <Separator Height="3" Background="Transparent"/>
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox Name ="Axis3EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                        <Separator Width="30" Background="Transparent"/>
+                        <CheckBox Name="InvertedAxis3CheckBox" HorizontalAlignment="Center"></CheckBox>
+                        <Separator Width="30" Background="Transparent"/>
+                        <TextBox Name="MinAxis3TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                        <Separator Width="20" Background="Transparent"/>
+                        <TextBox Name="MaxAxis3TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>            
+                    </StackPanel>
                 </StackPanel>
                 <Separator Height="3" Background="Transparent"/>
-                <StackPanel Orientation="Horizontal">
-                    <ComboBox Name ="Axis1EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
-                    <Separator Width="30" Background="Transparent"/>
-                    <CheckBox Name="InvertedAxis1CheckBox" HorizontalAlignment="Center"></CheckBox>
-                    <Separator Width="30" Background="Transparent"/>
-                    <TextBox Name="MinAxis1TextBox" ToolTip="Most axis have 0 as min. Some -16383. For throttles, setting a negative nr (e.g. -5000) will allow reverse thrust. See the SDK" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
-                    <Separator Width="20" Background="Transparent"/>
-                    <TextBox Name="MaxAxis1TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>
-                </StackPanel>
-                <Separator Height="3" Background="Transparent"/>
-                <StackPanel Orientation="Horizontal">
-                    <ComboBox Name ="Axis2EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
-                    <Separator Width="30" Background="Transparent"/>
-                    <CheckBox Name="InvertedAxis2CheckBox" HorizontalAlignment="Center"></CheckBox>
-                    <Separator Width="30" Background="Transparent"/>
-                    <TextBox Name="MinAxis2TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
-                    <Separator Width="20" Background="Transparent"/>
-                    <TextBox Name="MaxAxis2TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>            
-                </StackPanel>
-                <Separator Height="3" Background="Transparent"/>
-                <StackPanel Orientation="Horizontal">
-                    <ComboBox Name ="Axis3EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
-                    <Separator Width="30" Background="Transparent"/>
-                    <CheckBox Name="InvertedAxis3CheckBox" HorizontalAlignment="Center"></CheckBox>
-                    <Separator Width="30" Background="Transparent"/>
-                    <TextBox Name="MinAxis3TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
-                    <Separator Width="20" Background="Transparent"/>
-                    <TextBox Name="MaxAxis3TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>            
+                <StackPanel Name="StackPanel46Axis" Orientation="Vertical" Visibility="Hidden">
+                    <StackPanel Name="StackPanelAxis4" Orientation="Horizontal" >
+                        <ComboBox Name ="Axis4EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                        <Separator Width="30" Background="Transparent"/>
+                        <CheckBox Name="InvertedAxis4CheckBox" HorizontalAlignment="Center"></CheckBox>
+                        <Separator Width="30" Background="Transparent"/>
+                        <TextBox Name="MinAxis4TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                        <Separator Width="20" Background="Transparent"/>
+                        <TextBox Name="MaxAxis4TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>
+                    </StackPanel>
+                    <Separator Height="3" Background="Transparent"/>
+                    <StackPanel Name="StackPanelAxis5" Orientation="Horizontal" >
+                        <ComboBox Name ="Axis5EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                        <Separator Width="30" Background="Transparent"/>
+                        <CheckBox Name="InvertedAxis5CheckBox" HorizontalAlignment="Center"></CheckBox>
+                        <Separator Width="30" Background="Transparent"/>
+                        <TextBox Name="MinAxis5TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                        <Separator Width="20" Background="Transparent"/>
+                        <TextBox Name="MaxAxis5TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>
+                    </StackPanel>
+                    <Separator Height="3" Background="Transparent"/>
+                    <StackPanel Name="StackPanelAxis6" Orientation="Horizontal" >
+                        <ComboBox Name ="Axis6EventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                        <Separator Width="30" Background="Transparent"/>
+                        <CheckBox Name="InvertedAxis6CheckBox" HorizontalAlignment="Center"></CheckBox>
+                        <Separator Width="30" Background="Transparent"/>
+                        <TextBox Name="MinAxis6TextBox" TextAlignment="Right" Width="50" Background="Black" Text="0" Foreground="White"/>
+                        <Separator Width="20" Background="Transparent"/>
+                        <TextBox Name="MaxAxis6TextBox" TextAlignment="Right"  Width="50" Background="Black" Text ="16383" Foreground="White"/>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
             <StackPanel Name="Add_button_event" Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Button Name="Add_button_event_button" Click="Add_button_event_button_Click" Margin="10,0,0,0">Add button events</Button>
             </StackPanel>
             <StackPanel Name="Add_2ndaxisevent_event" Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button Name="Add_2nd_axis_event_button" Click="Add_2nd_axis_event_button_Click" Margin="0,0,0,0">Add 2nd event for axis</Button>
+                <Button Name="Add_2nd_axis_event_button" Width="175" Click="Add_2nd_axis_event_button_Click" Margin="0,0,0,0">Add 2nd event for axis</Button>
+                <Separator Width="155" Background="Transparent"/>
+                <CheckBox Name="AddAxis46CheckBox" HorizontalAlignment="Center" Checked="AddAxis46CheckBoxChanged" Unchecked="AddAxis46CheckBoxChanged"></CheckBox>
+                <Label Content="Add axis 4-6" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" />
             </StackPanel>
             <StackPanel Name ="New_items" Grid.Column="0" Grid.Row="7" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
                 <Label Content="Enter new aircraft:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                 <Separator Height="3" Background="Transparent"/>
                 <Label Content="Enter new event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
             </StackPanel>
-
             <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="7" >
                 <StackPanel Name ="New_items_input" Grid.Column="1" Grid.Row="7" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
                     <TextBox Name ="NewAircraftName" ToolTip="Type here a new aircraft name and hit enter. Aircraft will then be selectable above." Text="" TextWrapping="Wrap" Width="300" Foreground="White" Background="Black" KeyUp="NewAircraftName_KeyUp"  />

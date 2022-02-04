@@ -21,6 +21,7 @@ namespace EasyControlforMSFS
     {
         public GameControllerReader mygamecontroller;
         public AircraftControls aircraftControls;
+        public SimConnectImplementer mysimconnect;
         public string selected_aircraft;
         public string selected_controller;
         public int controller_id;
@@ -28,7 +29,7 @@ namespace EasyControlforMSFS
         int pos;
         public bool[] buttonArray = new bool[160];
 
-        public AddButtonEventWindow(AircraftControls aircraftControlsInput, GameControllerReader myGameControllerInput, string selected_aircraftInput, string selected_controllerInput, int controller_idInput)
+        public AddButtonEventWindow(AircraftControls aircraftControlsInput, GameControllerReader myGameControllerInput, string selected_aircraftInput, string selected_controllerInput, int controller_idInput, SimConnectImplementer mysimconnectInput)
         {
             InitializeComponent();
             aircraftControls = aircraftControlsInput;
@@ -36,6 +37,7 @@ namespace EasyControlforMSFS
             selected_aircraft = selected_aircraftInput;
             controller_id = controller_idInput;
             mygamecontroller = myGameControllerInput;
+            mysimconnect = mysimconnectInput;
             index = aircraftControls.aircraft_controls.FindIndex(c => c.controller_name == selected_controller);
 
             if (index > -1)
@@ -55,11 +57,15 @@ namespace EasyControlforMSFS
             }
             if (index > -1)
             {
-                int nr_axes = aircraftControls.aircraft_controls[index].num_axis[pos];
-                for (int j = 0; j <= nr_axes; j++)
+                int pos = Array.IndexOf(aircraftControls.aircraft_controls[index].aircraft_names, selected_aircraft);
+                if (pos > -1)
                 {
-                    if (j == 0) { ButtonAxisLinkComboBox.Items.Add("None"); }
-                    else { ButtonAxisLinkComboBox.Items.Add("Axis " + j); }
+                    int nr_axes = aircraftControls.aircraft_controls[index].num_axis[pos];
+                    for (int j = 0; j <= nr_axes; j++)
+                    {
+                        if (j == 0) { ButtonAxisLinkComboBox.Items.Add("None"); }
+                        else { ButtonAxisLinkComboBox.Items.Add("Axis " + j); }
+                    }
                 }
             }
 
@@ -189,6 +195,12 @@ namespace EasyControlforMSFS
                 }
                 
             }
+        }
+
+        private void SendEventButton_Click(object sender, RoutedEventArgs e)
+        {
+            string sim_event = NewEventName.Text;
+            mysimconnect.SendEvent(sim_event, 1); Debug.WriteLine($"Event {sim_event} sent!");
         }
     }
 }

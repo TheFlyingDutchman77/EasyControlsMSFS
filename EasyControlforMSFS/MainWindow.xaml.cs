@@ -27,24 +27,35 @@ namespace EasyControlforMSFS
         public GameControllerReader mygamecontroller;
         public string[] available_controllers = new string[10];
         public AircraftControls aircraftControls;
+        public ProfilesMap profilesMap;
         public static int max_axis = 10;
         public static int max_buttons = 164;
         public double[,] axisArray = new double[10, max_axis]; //max 10 controllers with 10 axes each
         public bool[,] buttonArray = new bool[10, max_buttons]; //max 10 controllers with 30 buttons each
-        public SimConnectImplementer mysimconnect = new SimConnectImplementer();
+        public SimConnectImplementer mysimconnect; 
         public bool addDefWindowOpened = false;
         public string[] args;
+        public string title;
 
         public MainWindow()
         {
             mygamecontroller = new GameControllerReader();
             args = Environment.GetCommandLineArgs();
+            title = "";
+
+            profilesMap = new ProfilesMap();
+            profilesMap = profilesMap.LoadProfilesMapFile(profilesMap);
+
+            mysimconnect = new SimConnectImplementer(); 
 
             InitializeComponent();
+
 
             mysimconnect.LogResult += OnAddResult;
             aircraftControls = new AircraftControls();
             aircraftControls = aircraftControls.LoadControlsFile(aircraftControls);
+
+            
 
             //Now we add aircraft to the aircraft selector combobox
             aircraftControls.aircraft.Sort();
@@ -55,6 +66,8 @@ namespace EasyControlforMSFS
 
             if (args.Length > 1)
             { MessageTextBox.Text += args[1]; SelectAircraftComboBox.SelectedItem = args[1]; }
+            
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -78,7 +91,7 @@ namespace EasyControlforMSFS
         {
             if (!addDefWindowOpened)
             {
-                AddDefinitionWindow addDefWindow = new AddDefinitionWindow(aircraftControls, mygamecontroller);
+                AddDefinitionWindow addDefWindow = new AddDefinitionWindow(aircraftControls, mygamecontroller, mysimconnect);
                 addDefWindow.Closed += AddDefWindow_Closed;
                 addDefWindow.Show();
                 addDefWindowOpened = true;
@@ -103,6 +116,7 @@ namespace EasyControlforMSFS
         {
             //Debug.WriteLine($"Simconnect started");
             bool localbSimConnected = false;
+            bool title_registred = false;
             while (true)
             {
                 //Debug.Write($"Start loop");
@@ -122,7 +136,10 @@ namespace EasyControlforMSFS
                         if (localbSimConnected)
                         {
                             SimconnectStatusEllipse.Fill = Brushes.Green;
-                            
+                            //int i = mysimconnect.RegisterSimVar("TITLE", "unit", "string", "NOT_USED");
+                            //title_registred = true;
+                            //Debug.WriteLine($"Title registred {i}");
+                        
                         }
                         else
                         {
@@ -136,8 +153,15 @@ namespace EasyControlforMSFS
                 {
                     this.Dispatcher.Invoke(() =>
                     {
-                        SimconnectStatusEllipse.Fill = Brushes.Green; ;
-                    });
+                        SimconnectStatusEllipse.Fill = Brushes.Green;
+                    }); 
+                    if (!title_registred) 
+                    {
+                        int i = mysimconnect.RegisterSimVar("Title", "unit", "string", "NOT_USED");
+                        title_registred = true;
+                        Debug.WriteLine($"Title registred {i}");
+                    }
+                    
                 }
             }
         }
@@ -147,8 +171,42 @@ namespace EasyControlforMSFS
             this.Dispatcher.Invoke(() =>
             {
                 MessageTextBox.AppendText(sResult + "\r\n");
+                Debug.WriteLine(sResult);
             });
+
+            if (sResult.Contains("Title"))
+            {
+                title = sResult.Split("|")[1];
+                TitleTextBlock.Text = title;
+                CheckTitleReceived(title);
+            }
         }
+
+        private void CheckTitleReceived(string title)
+        {
+            int title_id = -1;
+            int profile_id = -1;
+            for (int i = 0; i < profilesMap.profiles_map.Count; i++)
+            {
+                title_id = Array.IndexOf(profilesMap.profiles_map[i].titles, title);
+                if (title_id > -1)
+                {
+                    profile_id = i;
+                    Debug.WriteLine($"Title index: {title_id} {title}");
+                }
+            }
+            if (profile_id > -1) //title is already mapped to profile
+            {
+                SelectAircraftComboBox.SelectedItem = profilesMap.profiles_map[profile_id].profile_name;
+            }
+            else
+            {
+                SelectAircraftComboBox.SelectedIndex = -1;
+                MapTitleButton.Visibility = Visibility.Visible;
+                MessageBox.Show("Title has not yet been mapped to a profile. Select a profile, and click map button to automatically load correct profile for this title next time.");
+            }
+        }
+
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
@@ -178,7 +236,7 @@ namespace EasyControlforMSFS
                     {
                         if ((selected_aircraft != "") && (!aircraftControls.aircraft_controls[j].aircraft_names.Contains(selected_aircraft)))
                         {
-                            Debug.WriteLine(aircraftControls.aircraft_controls[j].aircraft_names[0]);
+                            //Debug.WriteLine(aircraftControls.aircraft_controls[j].aircraft_names[0]);
                             MessageTextBox.Text += $"{selected_aircraft} has no events for controller {controller} \n";
                         }
                         else { }
@@ -241,7 +299,7 @@ namespace EasyControlforMSFS
                                 {
                                     // We search for the selected aircraft
                                     int aircraft_id = Array.IndexOf(aircraftControls.aircraft_controls[k].aircraft_names, str_aircraft_selected);
-                                    Debug.WriteLine(aircraft_id);//If the current axis is within the axis defined...
+                                    //Debug.WriteLine(aircraft_id);//If the current axis is within the axis defined...
                                     if (aircraft_id > -1)
                                     {
                                         if (j < aircraftControls.aircraft_controls[k].num_axis[aircraft_id])
@@ -249,19 +307,6 @@ namespace EasyControlforMSFS
                                             ExecuteAxisSimEvent(i, j, k, aircraft_id);
                                             //Debug.WriteLine($"{i},{j},{k},{l}");
                                         }
-                                        //for (int l = 1; l <= aircraftControls.aircraft_controls[k].num_aircraft; l++)
-                                        //{
-                                        //    // If an aircraft equals the aircraft selected...
-                                        //    if (aircraftControls.aircraft_controls[k].aircraft_names[l] == str_aircraft_selected)
-                                        //    {
-                                        //        //If the current axis is within the axis defined...
-                                        //        if (j < aircraftControls.aircraft_controls[k].num_axis[l])
-                                        //        {
-                                        //            ExecuteAxisSimEvent(i, j, k, l);
-                                        //            //Debug.WriteLine($"{i},{j},{k},{l}");
-                                        //        }
-                                        //    }
-                                        //}
                                     }
 
                                 }
@@ -280,13 +325,6 @@ namespace EasyControlforMSFS
                                 {
                                     if (aircraftControls.aircraft_controls[k].controller_name == available_controllers[i])
                                     {
-                                        //for (int l = 1; l <= aircraftControls.aircraft_controls[k].num_aircraft; l++)
-                                        //{
-                                        //    if (aircraftControls.aircraft_controls[k].aircraft_names[l] == str_aircraft_selected)
-                                        //    {
-                                        //if (j < aircraftControls.aircraft_controls[k].num_buttons[l])
-                                        //        {
-                                        //            //We check if the button is a switch
                                         int aircraft_id = Array.IndexOf(aircraftControls.aircraft_controls[k].aircraft_names, str_aircraft_selected);
                                         if ((aircraft_id > -1) && (j < aircraftControls.aircraft_controls[k].num_buttons[aircraft_id]))
                                         {
@@ -321,9 +359,6 @@ namespace EasyControlforMSFS
                                                 }
                                             }
                                         }
-                                        //        }
-                                        //    }
-                                        //}
                                     }
                                 }
                             }
@@ -418,6 +453,36 @@ namespace EasyControlforMSFS
                     mysimconnect.SendEvent(sim_event, 0); Debug.WriteLine($"Button {j} event sent!");
                 }
             }
+        }
+
+        private void MapTitleButton_Click(object sender, RoutedEventArgs e)
+        {
+            string profile_selected = SelectAircraftComboBox.SelectedItem.ToString();
+            if (profile_selected == "")
+            {
+                MessageBox.Show("Please select profile first.");
+            }
+            bool new_profile = true;
+            for (int i = 0; i < profilesMap.profiles_map.Count; i++)
+            { 
+                if (profilesMap.profiles_map[i].profile_name == profile_selected)
+                {
+                    new_profile = false;   
+                    Debug.WriteLine($"Aantal titles: {profilesMap.profiles_map[i].nr_titles}");
+                    profilesMap.profiles_map[i].AddTitle(profilesMap.profiles_map[i].nr_titles,title);
+                    profilesMap.profiles_map[i].nr_titles += 1;    
+                }
+            }
+            if (new_profile == true)
+            {
+                Debug.WriteLine($"Title added: {title}");
+                profilesMap.profiles_map.Add(new ProfilesMap.ProfilesMapData() { profile_name = profile_selected });
+                profilesMap.profiles_map[profilesMap.profiles_map.Count - 1].AddTitle(0, title);
+                profilesMap.profiles_map[profilesMap.profiles_map.Count - 1].nr_titles += 1;
+            }
+            profilesMap.SaveXML(profilesMap);
+            MapTitleButton.Visibility = Visibility.Hidden;
+
         }
     }
 }

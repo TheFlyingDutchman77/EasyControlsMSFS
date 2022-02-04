@@ -13,7 +13,7 @@
         mc:Ignorable="d"
         Loaded="Window_Loaded"
         ResizeMode="NoResize"
-        Title="EasyControls for MSFS" Height="450" Width="600" Icon="/flight_30822 (1).png">
+        Title="EasyControls for MSFS" Height="550" Width="700" Icon="/flight_30822 (1).png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
@@ -30,14 +30,23 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.1*" />
-                <RowDefinition Height="1*" />
-                <RowDefinition Height="4*" />
+                <RowDefinition Height="2.5*" />
+                <RowDefinition Height="3*" />
                 <RowDefinition Height="0.2*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <StackPanel Name ="Aircraft_text" Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                <Label Content="Select aircraft:" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-                <ComboBox Name="SelectAircraftComboBox" Margin="10,0,0,0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="200" SelectionChanged="SelectAircraftComboBox_SelectionChanged"/>
+            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+                <StackPanel Name ="Aircraft_text" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                    <Label Content="Select profile:" Width ="125" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <ComboBox Name="SelectAircraftComboBox" Margin="10,0,0,0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="200" SelectionChanged="SelectAircraftComboBox_SelectionChanged"/>
+                </StackPanel>
+                <Separator Height="20" Background="Transparent"/>
+                <StackPanel Name ="Aircraft_title" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                    <Label Content="MSFS aircraft title:" VerticalAlignment="Center" Width ="125" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+                    <TextBlock Name="TitleTextBlock" Text ="no title received" VerticalAlignment="Center"  Width="350" Margin="10,0,0,0" Foreground="White"/>
+                </StackPanel>
+                <Separator Height="10" Background="Transparent"/>
+                <Button Name="MapTitleButton" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="MapTitleButton_Click" Visibility="Hidden">Map title to selected profile</Button>
             </StackPanel>
             <StackPanel Name ="Aircrafty_input" Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
             </StackPanel>
@@ -46,7 +55,7 @@
                 <TextBox x:Name ="MessageTextBox" VerticalScrollBarVisibility="Visible" Margin ="0,0,0,0" Width="500" Height="100" TextWrapping="Wrap"  Background="DimGray" Foreground="White" FontWeight="Light"/>
                 <Separator Height="20" Background="Transparent"/>
                 <StackPanel Name ="Simconnect" Orientation="Horizontal">
-                    <Label Content="Simconnect status:" HorizontalAlignment="Left" Margin="0,0, 10,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Label Content="Simconnect status:" Width ="125" HorizontalAlignment="Left" Margin="0,0, 10,0" Grid.Row="2" VerticalAlignment="Top"/>
                     <Ellipse Name ="SimconnectStatusEllipse" Fill="Red" Height="15" Width="15" StrokeThickness="0" ></Ellipse>
                     <TextBox Name="Test1TextBox" Width="100" Margin="10,0,0,0" Visibility="Hidden"/>
                     <TextBox Name="Test2TextBox" Width="100" Margin="10,0,0,0" Visibility="Hidden"/>

@@ -38,7 +38,7 @@ namespace EasyControlforMSFS
         int counterIDevents = 0;
         int counterIDreqs = 0;
         public List<SimVarList> simvarlist;
-        public IntPtr wih; 
+        public IntPtr wih;
 
 
         // User-defined win32 event
@@ -46,12 +46,19 @@ namespace EasyControlforMSFS
         public SimConnectImplementer()
         {
             // Empty for stuff to do
-            
+
         }
 
         public struct StructSimVar
         {
             public double var;
+        }
+
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
+        public struct StructSimVarString
+        {
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
+            public String var_string;
         }
 
         /// <summary>
@@ -87,17 +94,17 @@ namespace EasyControlforMSFS
             ID_PRIORITY_HIGHEST = 1,
         };
 
-        
+
 
         public IntPtr ProcessSimConnectWin32Events(IntPtr Wih, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             handled = false;
-            
+
             if (msg == WM_USER_SIMCONNECT)
             {
                 ReceiveSimConnectMessage();
                 handled = true;
-                
+
             }
             return (IntPtr)0;
         }
@@ -130,7 +137,7 @@ namespace EasyControlforMSFS
             wih = new WindowInteropHelper(simconnectWindow).Handle;
             HwndSource hs = HwndSource.FromHwnd(wih);
             hs.AddHook(ProcessSimConnectWin32Events);
-           
+
             if (bSimConnected)
             {
                 LogResult?.Invoke(this, "Already connected");
@@ -216,7 +223,7 @@ namespace EasyControlforMSFS
         {
             foreach (var property in data.GetType().GetFields())
             {
-                LogResult?.Invoke(this, property.Name + " " + property.GetValue(data));
+                LogResult?.Invoke(this, $"Exception: {property.Name} {property.GetValue(data)}");
             }
 
         }
@@ -274,6 +281,30 @@ namespace EasyControlforMSFS
                             return -1;
                         }
                     }
+                    if (var_type == "string")
+                    {
+                        try
+                        {
+                            counterIDreqs += 1;
+                            // add one or more SimVar names and units to a client defined object definition
+                            simconnect.AddToDataDefinition((SIMVARDEF)counterIDreqs, simvar, null, SIMCONNECT_DATATYPE.STRING256, 0, SimConnect.SIMCONNECT_UNUSED);
+
+                            // tell SimConnect what type of value we are expecting to be returned
+                            simconnect.RegisterDataDefineStruct<StructSimVarString>((SIMVARDEF)counterIDreqs); // We'll presume default values being requested are numeric
+
+                            // request when the SimConnect client is to receive data values for a specific object
+                            simconnect.RequestDataOnSimObject((SIMVARREQ)counterIDreqs, (SIMVARDEF)counterIDreqs, 0, SIMCONNECT_PERIOD.SECOND, SIMCONNECT_DATA_REQUEST_FLAG.CHANGED, 0, 0, 0);
+                            LogResult?.Invoke(this, "String registered!");
+
+                            simvarlist.Add(new SimVarList(simvar, counterIDreqs, var_type));
+                        }
+                        catch (Exception ex)
+                        {
+                            LogResult?.Invoke(this, $"RegisterSimVar Error: {ex.Message}");
+                            SimConnect_OnRecvException(simconnect, new SIMCONNECT_RECV_EXCEPTION { dwException = (uint)ex.HResult });
+                            return -1;
+                        }
+                    }
                     return 0;
                 }
                 else
@@ -286,37 +317,57 @@ namespace EasyControlforMSFS
 
         private void SimConnect_OnRecvSimobjectData(SimConnect sender, SIMCONNECT_RECV_SIMOBJECT_DATA data)
         {
-
-            bSimConnected = true;
-            StructSimVar result = (StructSimVar)data.dwData[0];
             var reqid = data.dwRequestID;
-
             int index = simvarlist.FindIndex(item => item.ID == reqid);
+            string type = simvarlist[index].Format;
             string var = simvarlist[index].Key;
 
-            LogResult?.Invoke(this, $"{var}: {result.var:F3}, ReqID: {reqid}");
+            bSimConnected = true;
+
+            if (type == "float")
+            {
+                StructSimVar result = (StructSimVar)data.dwData[0];
+                LogResult?.Invoke(this, $"{var}: {result.var:F3}, ReqID: {reqid}");
+            }
+            if (type == "string")
+            {
+                StructSimVarString result = (StructSimVarString)data.dwData[0];
+                LogResult?.Invoke(this, $"{var} |{result.var_string}| ReqID: {reqid}");
+            }
         }
 
 
         /// <summary>
-        /// NOT IMPLEMENTED YET
+        /// Sets value for specified SimData
         /// </summary>
-        public void BtnSetData_Click()
+        /// <param name="simvar"></param>
+        /// <param name="unit"></param>
+        /// <param name="var_type"></param>
+        /// <param name="frequency"></param>
+        /// <param name="value"></param>
+        public void SetDataOnObject(string simvar, string unit, string var_type, string frequency, string value)
         {
+            if (simvarlist.FindIndex(item => item.Key == simvar) == -1)
+            {
+                int reg_succes = RegisterSimVar(simvar, unit, var_type, frequency);
+            }
+            int index = simvarlist.FindIndex(item => item.Key == simvar);
+            int req_id = simvarlist[index].ID;
+
+            StructSimVar s1 = new StructSimVar();
+            s1.var = float.Parse(value);
+
             try
             {
-                //StructSimVar s1 = new StructSimVar();
-                //s1.alt = 5000;
-                //simconnect.SetDataOnSimObject(SIMVARDEFINITION.Def1, 0, SIMCONNECT_DATA_SET_FLAG.DEFAULT, s1);
-                //LogResult?.Invoke(this, "Set!");
-
-
+                simconnect.SetDataOnSimObject((SIMVARREQ)req_id, 0, SIMCONNECT_DATA_SET_FLAG.DEFAULT, s1);
+                LogResult?.Invoke(this, $"Set! {req_id} {value}");
             }
             catch (Exception ex)
             {
-                LogResult?.Invoke(this, $"SetSimVar Error: {ex.Message}");
+                LogResult?.Invoke(this, $"SetSimVar Error: {ex.Message} {counterIDreqs} {value}");
             }
         }
+
 
     }
 }

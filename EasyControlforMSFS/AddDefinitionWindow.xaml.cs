@@ -31,16 +31,18 @@ namespace EasyControlforMSFS
         public bool[] buttonArray = new bool[160];
 
         public AircraftControls aircraftControls;
+        public SimConnectImplementer mysimconnect;
         
         
         /// <summary>
         /// This loads the window to add definitions
         /// </summary>
-        public AddDefinitionWindow(AircraftControls aircraftControlsInput, GameControllerReader myGameControllerInput)
+        public AddDefinitionWindow(AircraftControls aircraftControlsInput, GameControllerReader myGameControllerInput, SimConnectImplementer mysimconnectInput)        
         {
             InitializeComponent();
             mygamecontroller = myGameControllerInput;
             aircraftControls = aircraftControlsInput;
+            mysimconnect = mysimconnectInput;
 
 
             Thread readControllers = new Thread(ReadControllers);
@@ -63,6 +65,9 @@ namespace EasyControlforMSFS
                 Axis1EventsComboBox.Items.Add(aircraftControls.all_events[j]);
                 Axis2EventsComboBox.Items.Add(aircraftControls.all_events[j]);
                 Axis3EventsComboBox.Items.Add(aircraftControls.all_events[j]);
+                Axis4EventsComboBox.Items.Add(aircraftControls.all_events[j]);
+                Axis5EventsComboBox.Items.Add(aircraftControls.all_events[j]);
+                Axis6EventsComboBox.Items.Add(aircraftControls.all_events[j]);
             }
             aircraftControls.all_events.Sort();
             for (int j = 0; j < aircraftControls.all_events.Count; j++)
@@ -103,6 +108,7 @@ namespace EasyControlforMSFS
                         }
                     });
                 }
+                Thread.Sleep(500);
             }
         }
 
@@ -230,18 +236,30 @@ namespace EasyControlforMSFS
             if (Axis1EventsComboBox.SelectedIndex != -1) { aircraftControls.aircraft_controls[index].axis_events[pos, 0] = Axis1EventsComboBox.SelectedItem.ToString(); aircraftControls.aircraft_controls[index].AddAxis(pos, 1); }
             if (Axis2EventsComboBox.SelectedIndex != -1) { aircraftControls.aircraft_controls[index].axis_events[pos, 1] = Axis2EventsComboBox.SelectedItem.ToString(); aircraftControls.aircraft_controls[index].AddAxis(pos, 2); }
             if (Axis3EventsComboBox.SelectedIndex != -1) { aircraftControls.aircraft_controls[index].axis_events[pos, 2] = Axis3EventsComboBox.SelectedItem.ToString(); aircraftControls.aircraft_controls[index].AddAxis(pos, 3); }
+            if (Axis4EventsComboBox.SelectedIndex != -1) { aircraftControls.aircraft_controls[index].axis_events[pos, 3] = Axis4EventsComboBox.SelectedItem.ToString(); aircraftControls.aircraft_controls[index].AddAxis(pos, 4); }
+            if (Axis5EventsComboBox.SelectedIndex != -1) { aircraftControls.aircraft_controls[index].axis_events[pos, 4] = Axis5EventsComboBox.SelectedItem.ToString(); aircraftControls.aircraft_controls[index].AddAxis(pos, 5); }
+            if (Axis6EventsComboBox.SelectedIndex != -1) { aircraftControls.aircraft_controls[index].axis_events[pos, 5] = Axis6EventsComboBox.SelectedItem.ToString(); aircraftControls.aircraft_controls[index].AddAxis(pos, 6); }
             aircraftControls.aircraft_controls[index].axis_min[pos, 0] = Int32.Parse(MinAxis1TextBox.Text);
             aircraftControls.aircraft_controls[index].axis_min[pos, 1] = Int32.Parse(MinAxis2TextBox.Text);
             aircraftControls.aircraft_controls[index].axis_min[pos, 2] = Int32.Parse(MinAxis3TextBox.Text);
+            aircraftControls.aircraft_controls[index].axis_min[pos, 3] = Int32.Parse(MinAxis4TextBox.Text);
+            aircraftControls.aircraft_controls[index].axis_min[pos, 4] = Int32.Parse(MinAxis5TextBox.Text);
+            aircraftControls.aircraft_controls[index].axis_min[pos, 5] = Int32.Parse(MinAxis6TextBox.Text);
             aircraftControls.aircraft_controls[index].axis_max[pos, 0] = Int32.Parse(MaxAxis1TextBox.Text);
             aircraftControls.aircraft_controls[index].axis_max[pos, 1] = Int32.Parse(MaxAxis2TextBox.Text);
             aircraftControls.aircraft_controls[index].axis_max[pos, 2] = Int32.Parse(MaxAxis3TextBox.Text);
+            aircraftControls.aircraft_controls[index].axis_max[pos, 3] = Int32.Parse(MaxAxis4TextBox.Text);
+            aircraftControls.aircraft_controls[index].axis_max[pos, 4] = Int32.Parse(MaxAxis5TextBox.Text);
+            aircraftControls.aircraft_controls[index].axis_max[pos, 5] = Int32.Parse(MaxAxis6TextBox.Text);
             aircraftControls.aircraft_controls[index].axis_inverted[pos, 0] = (bool)InvertedAxis1CheckBox.IsChecked;
             aircraftControls.aircraft_controls[index].axis_inverted[pos, 1] = (bool)InvertedAxis2CheckBox.IsChecked;
             aircraftControls.aircraft_controls[index].axis_inverted[pos, 2] = (bool)InvertedAxis3CheckBox.IsChecked;
+            aircraftControls.aircraft_controls[index].axis_inverted[pos, 3] = (bool)InvertedAxis4CheckBox.IsChecked;
+            aircraftControls.aircraft_controls[index].axis_inverted[pos, 4] = (bool)InvertedAxis5CheckBox.IsChecked;
+            aircraftControls.aircraft_controls[index].axis_inverted[pos, 5] = (bool)InvertedAxis6CheckBox.IsChecked;
         }
 
-        
+
         /// <summary>
         /// What to do when an aircraft is selected
         /// </summary>
@@ -275,30 +293,54 @@ namespace EasyControlforMSFS
                     Axis1EventsComboBox.SelectedItem = aircraftControls.aircraft_controls[index].axis_events[pos, 0];
                     Axis2EventsComboBox.SelectedItem = aircraftControls.aircraft_controls[index].axis_events[pos, 1];
                     Axis3EventsComboBox.SelectedItem = aircraftControls.aircraft_controls[index].axis_events[pos, 2];
+                    Axis4EventsComboBox.SelectedItem = aircraftControls.aircraft_controls[index].axis_events[pos, 3];
+                    Axis5EventsComboBox.SelectedItem = aircraftControls.aircraft_controls[index].axis_events[pos, 4];
+                    Axis6EventsComboBox.SelectedItem = aircraftControls.aircraft_controls[index].axis_events[pos, 5];
                     MinAxis1TextBox.Text = aircraftControls.aircraft_controls[index].axis_min[pos, 0].ToString();
                     MinAxis2TextBox.Text = aircraftControls.aircraft_controls[index].axis_min[pos, 1].ToString();
                     MinAxis3TextBox.Text = aircraftControls.aircraft_controls[index].axis_min[pos, 2].ToString();
+                    MinAxis4TextBox.Text = aircraftControls.aircraft_controls[index].axis_min[pos, 3].ToString();
+                    MinAxis5TextBox.Text = aircraftControls.aircraft_controls[index].axis_min[pos, 4].ToString();
+                    MinAxis6TextBox.Text = aircraftControls.aircraft_controls[index].axis_min[pos, 5].ToString();
                     MaxAxis1TextBox.Text = aircraftControls.aircraft_controls[index].axis_max[pos, 0].ToString();
                     MaxAxis2TextBox.Text = aircraftControls.aircraft_controls[index].axis_max[pos, 1].ToString();
                     MaxAxis3TextBox.Text = aircraftControls.aircraft_controls[index].axis_max[pos, 2].ToString();
+                    MaxAxis4TextBox.Text = aircraftControls.aircraft_controls[index].axis_max[pos, 3].ToString();
+                    MaxAxis5TextBox.Text = aircraftControls.aircraft_controls[index].axis_max[pos, 4].ToString();
+                    MaxAxis6TextBox.Text = aircraftControls.aircraft_controls[index].axis_max[pos, 5].ToString();
                     InvertedAxis1CheckBox.IsChecked = aircraftControls.aircraft_controls[index].axis_inverted[pos, 0];
                     InvertedAxis2CheckBox.IsChecked = aircraftControls.aircraft_controls[index].axis_inverted[pos, 1];
                     InvertedAxis3CheckBox.IsChecked = aircraftControls.aircraft_controls[index].axis_inverted[pos, 2];
+                    InvertedAxis4CheckBox.IsChecked = aircraftControls.aircraft_controls[index].axis_inverted[pos, 3];
+                    InvertedAxis5CheckBox.IsChecked = aircraftControls.aircraft_controls[index].axis_inverted[pos, 4];
+                    InvertedAxis6CheckBox.IsChecked = aircraftControls.aircraft_controls[index].axis_inverted[pos, 5];
                 }
                 else
                 {
                     Axis1EventsComboBox.SelectedIndex = -1;
                     Axis2EventsComboBox.SelectedIndex = -1;
                     Axis3EventsComboBox.SelectedIndex = -1;
+                    Axis4EventsComboBox.SelectedIndex = -1;
+                    Axis5EventsComboBox.SelectedIndex = -1;
+                    Axis6EventsComboBox.SelectedIndex = -1;
                     MinAxis1TextBox.Text = "0";
                     MinAxis2TextBox.Text = "0";
                     MinAxis3TextBox.Text = "0";
+                    MinAxis4TextBox.Text = "0";
+                    MinAxis5TextBox.Text = "0";
+                    MinAxis6TextBox.Text = "0";
                     MaxAxis1TextBox.Text = "16383";
                     MaxAxis2TextBox.Text = "16383";
                     MaxAxis3TextBox.Text = "16383";
+                    MaxAxis4TextBox.Text = "16383";
+                    MaxAxis5TextBox.Text = "16383";
+                    MaxAxis6TextBox.Text = "16383";
                     InvertedAxis1CheckBox.IsChecked = false;
                     InvertedAxis2CheckBox.IsChecked = false;
                     InvertedAxis3CheckBox.IsChecked = false;
+                    InvertedAxis4CheckBox.IsChecked = false;
+                    InvertedAxis5CheckBox.IsChecked = false;
+                    InvertedAxis6CheckBox.IsChecked = false;
                 }
             }
         }
@@ -314,15 +356,27 @@ namespace EasyControlforMSFS
             Axis1EventsComboBox.SelectedIndex = -1;
             Axis2EventsComboBox.SelectedIndex = -1;
             Axis3EventsComboBox.SelectedIndex = -1;
+            Axis4EventsComboBox.SelectedIndex = -1;
+            Axis5EventsComboBox.SelectedIndex = -1;
+            Axis6EventsComboBox.SelectedIndex = -1;
             MinAxis1TextBox.Text = "0";
             MinAxis2TextBox.Text = "0";
             MinAxis3TextBox.Text = "0";
+            MinAxis4TextBox.Text = "0";
+            MinAxis5TextBox.Text = "0";
+            MinAxis6TextBox.Text = "0";
             MaxAxis1TextBox.Text = "16383";
             MaxAxis2TextBox.Text = "16383";
             MaxAxis3TextBox.Text = "16383";
+            MaxAxis4TextBox.Text = "16383";
+            MaxAxis5TextBox.Text = "16383";
+            MaxAxis6TextBox.Text = "16383";
             InvertedAxis1CheckBox.IsChecked = false;
             InvertedAxis2CheckBox.IsChecked = false;
             InvertedAxis3CheckBox.IsChecked = false;
+            InvertedAxis4CheckBox.IsChecked = false;
+            InvertedAxis5CheckBox.IsChecked = false;
+            InvertedAxis6CheckBox.IsChecked = false;
 
             string selected_item = ControllersComboBox.SelectedItem.ToString();
             if (selected_item != "")
@@ -382,22 +436,34 @@ namespace EasyControlforMSFS
                 var selectedAxis1 = Axis1EventsComboBox.SelectedItem;
                 var selectedAxis2 = Axis2EventsComboBox.SelectedItem;
                 var selectedAxis3 = Axis3EventsComboBox.SelectedItem;
+                var selectedAxis4 = Axis4EventsComboBox.SelectedItem;
+                var selectedAxis5 = Axis5EventsComboBox.SelectedItem;
+                var selectedAxis6 = Axis6EventsComboBox.SelectedItem;
 
                 aircraftControls.all_events.Add(NewEventName.Text);
                 aircraftControls.all_events.Sort();
                 Axis1EventsComboBox.Items.Clear();
                 Axis2EventsComboBox.Items.Clear();
                 Axis3EventsComboBox.Items.Clear();
+                Axis4EventsComboBox.Items.Clear();
+                Axis5EventsComboBox.Items.Clear();
+                Axis6EventsComboBox.Items.Clear();
                 for (int j = 0; j < aircraftControls.all_events.Count; j++)
                 {
                     Axis1EventsComboBox.Items.Add(aircraftControls.all_events[j]);
                     Axis2EventsComboBox.Items.Add(aircraftControls.all_events[j]);
                     Axis3EventsComboBox.Items.Add(aircraftControls.all_events[j]);
+                    Axis4EventsComboBox.Items.Add(aircraftControls.all_events[j]);
+                    Axis5EventsComboBox.Items.Add(aircraftControls.all_events[j]);
+                    Axis6EventsComboBox.Items.Add(aircraftControls.all_events[j]);
                 }
                 NewEventName.Text = "";
                 Axis1EventsComboBox.SelectedItem = selectedAxis1;
                 Axis2EventsComboBox.SelectedItem = selectedAxis2;
                 Axis3EventsComboBox.SelectedItem = selectedAxis3;
+                Axis4EventsComboBox.SelectedItem = selectedAxis4;
+                Axis5EventsComboBox.SelectedItem = selectedAxis5;
+                Axis6EventsComboBox.SelectedItem = selectedAxis6;
 
             }
         }
@@ -409,7 +475,7 @@ namespace EasyControlforMSFS
                 string selected_aircraft = ACnamesComboBox.SelectedItem.ToString();
                 string selected_controller = ControllersComboBox.SelectedItem.ToString();
                 int controller_id = Array.FindIndex(available_controllers, val => val.Equals(selected_controller));
-                AddButtonEventWindow addButtonEventWindow = new AddButtonEventWindow(aircraftControls, mygamecontroller, selected_aircraft, selected_controller, controller_id);
+                AddButtonEventWindow addButtonEventWindow = new AddButtonEventWindow(aircraftControls, mygamecontroller, selected_aircraft, selected_controller, controller_id, mysimconnect);
                 addButtonEventWindow.Closed += AddButtonEventWindow_Closed;
                 addButtonEventWindow.Show();
             }
@@ -469,5 +535,24 @@ namespace EasyControlforMSFS
             Debug.WriteLine("Add2ndAxisEventsWindow closed");
 
         }
+
+        private void AddAxis46CheckBoxChanged(object sender, EventArgs e)
+        {
+            if (AddAxis46CheckBox.IsChecked == true)
+            {
+                this.Height = 550;
+                Axis45labels.Visibility = Visibility.Visible;
+                StackPanel46Axis.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                this.Height = 450;
+                Axis45labels.Visibility = Visibility.Hidden;
+                StackPanel46Axis.Visibility = Visibility.Hidden;
+            }
+        }
+
+
+
     }
 }
