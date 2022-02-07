@@ -4,6 +4,7 @@
 		<title>Aerosoft DHC-6 Series 300 Wheels Cargo 3-Blade</title>
 		<title>Aerosoft DHC-6 Series 300 Tundra Cargo</title>
 		<title>Aerosoft DHC-6 Series 300 Ski Cargo</title>
+		<title>Aerosoft DHC-6 Series 300 Wheels REX Airlines</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G1000">
 		<title>Cessna Skyhawk G1000 Asobo</title>
@@ -11,5 +12,9 @@
 	<profile name="Milviz PC-6">
 		<title>Turbo Porter S5-CMA Glass</title>
 		<title>Turbo Porter EC-JXH Glass</title>
+	</profile>
+	<profile name="Airbus A320neo">
+		<title>FWB EUROWINGS ABFO</title>
+		<title>Airbus A320neo Easyjet</title>
 	</profile>
 </root>

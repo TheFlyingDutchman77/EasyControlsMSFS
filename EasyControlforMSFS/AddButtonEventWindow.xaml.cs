@@ -54,6 +54,7 @@ namespace EasyControlforMSFS
             for (int j = 0; j < aircraftControls.all_events.Count; j++)
             {
                 ButtonEventsComboBox.Items.Add(aircraftControls.all_events[j]);
+                ButtonEventsOFFComboBox.Items.Add(aircraftControls.all_events[j]);
             }
             if (index > -1)
             {
@@ -82,6 +83,7 @@ namespace EasyControlforMSFS
                 if (ButtonNrComboBox.SelectedIndex <= aircraftControls.aircraft_controls[index].num_buttons[pos])
                 {
                     ButtonEventsComboBox.SelectedItem = aircraftControls.aircraft_controls[index].button_events[pos, ButtonNrComboBox.SelectedIndex];
+                    ButtonEventsOFFComboBox.SelectedItem = aircraftControls.aircraft_controls[index].button_eventsOFF[pos, ButtonNrComboBox.SelectedIndex];
                     ButtonAxisLinkComboBox.SelectedIndex = aircraftControls.aircraft_controls[index].button_axis_link[pos, ButtonNrComboBox.SelectedIndex];
                     ButtonIsSwitchCheckbox.IsChecked = aircraftControls.aircraft_controls[index].button_is_switch[pos, ButtonNrComboBox.SelectedIndex];
 
@@ -130,7 +132,8 @@ namespace EasyControlforMSFS
         {
             if (ButtonEventsComboBox.SelectedIndex != -1) 
             { 
-                aircraftControls.aircraft_controls[index].button_events[pos, ButtonNrComboBox.SelectedIndex] = ButtonEventsComboBox.SelectedItem.ToString(); 
+                aircraftControls.aircraft_controls[index].button_events[pos, ButtonNrComboBox.SelectedIndex] = ButtonEventsComboBox.SelectedItem.ToString();
+                aircraftControls.aircraft_controls[index].button_eventsOFF[pos, ButtonNrComboBox.SelectedIndex] = ButtonEventsOFFComboBox.SelectedItem.ToString();
                 aircraftControls.aircraft_controls[index].AddButton(pos, ButtonNrComboBox.SelectedIndex+1);
                 if ((ButtonAxisLinkComboBox.SelectedIndex == -1) || (ButtonAxisLinkComboBox.SelectedItem.ToString() == "None"))
                 {
@@ -155,16 +158,20 @@ namespace EasyControlforMSFS
             if (e.Key == Key.Return)
             {
                 var selectedButtonEvent = ButtonEventsComboBox.SelectedItem;
-                
+                var selectedButtonEventOFF = ButtonEventsOFFComboBox.SelectedItem;
+
                 aircraftControls.all_events.Add(NewEventName.Text);
                 aircraftControls.all_events.Sort();
                 ButtonEventsComboBox.Items.Clear();
+                ButtonEventsOFFComboBox.Items.Clear();
                 for (int j = 0; j < aircraftControls.all_events.Count; j++)
                 {
                     ButtonEventsComboBox.Items.Add(aircraftControls.all_events[j]);
+                    ButtonEventsOFFComboBox.Items.Add(aircraftControls.all_events[j]);
                 }
                 NewEventName.Text = "";
                 ButtonEventsComboBox.SelectedItem = selectedButtonEvent;
+                ButtonEventsOFFComboBox.SelectedItem = selectedButtonEventOFF;
             }
         }
 
@@ -202,5 +209,22 @@ namespace EasyControlforMSFS
             string sim_event = NewEventName.Text;
             mysimconnect.SendEvent(sim_event, 1); Debug.WriteLine($"Event {sim_event} sent!");
         }
+
+        private void ButtonIsSwitchCheckBoxChanged(object sender, EventArgs e)
+        {
+            if (ButtonIsSwitchCheckbox.IsChecked == true)
+            {
+                ButtonEventLabel.Content = "Select event ON:";
+                ButtonEventOFFlabel.Visibility = Visibility.Visible;
+                ButtonEventsOFFComboBox.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ButtonEventLabel.Content = "Select event:";
+                ButtonEventOFFlabel.Visibility = Visibility.Hidden;
+                ButtonEventsOFFComboBox.Visibility = Visibility.Hidden;
+            }
+        }
+
     }
 }

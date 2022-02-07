@@ -32,17 +32,19 @@ namespace EasyControlforMSFS
 
         public AircraftControls aircraftControls;
         public SimConnectImplementer mysimconnect;
-        
+        public string str_selected_aircraft;
+
         
         /// <summary>
         /// This loads the window to add definitions
         /// </summary>
-        public AddDefinitionWindow(AircraftControls aircraftControlsInput, GameControllerReader myGameControllerInput, SimConnectImplementer mysimconnectInput)        
+        public AddDefinitionWindow(AircraftControls aircraftControlsInput, GameControllerReader myGameControllerInput, SimConnectImplementer mysimconnectInput, string str_selected_aircraftInput)        
         {
             InitializeComponent();
             mygamecontroller = myGameControllerInput;
             aircraftControls = aircraftControlsInput;
             mysimconnect = mysimconnectInput;
+            str_selected_aircraft = str_selected_aircraftInput;
 
 
             Thread readControllers = new Thread(ReadControllers);
@@ -59,6 +61,7 @@ namespace EasyControlforMSFS
             {
                 ACnamesComboBox.Items.Add(aircraftControls.aircraft[j]);
             }
+            ACnamesComboBox.SelectedItem = str_selected_aircraft;
             aircraftControls.all_events.Sort();
             for (int j = 0; j < aircraftControls.all_events.Count; j++)
             {
@@ -352,6 +355,7 @@ namespace EasyControlforMSFS
         /// <param name="e"></param>
         private void ControllersComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            string selected_aircraft = ACnamesComboBox.SelectedItem.ToString(); 
             ACnamesComboBox.SelectedIndex = -1;
             Axis1EventsComboBox.SelectedIndex = -1;
             Axis2EventsComboBox.SelectedIndex = -1;
@@ -394,11 +398,13 @@ namespace EasyControlforMSFS
                     ControllerConnectedLabel.Visibility = Visibility.Visible;
                     ControllerConnectedLabel.Content = "controller is not connected";
                 }
+                if (selected_aircraft != "") { ACnamesComboBox.SelectedItem = selected_aircraft; }
             }
             else
             {
                 ControllerConnectedLabel.Visibility = Visibility.Hidden;
             }
+
         }
 
         /// <summary>

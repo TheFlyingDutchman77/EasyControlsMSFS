@@ -223,7 +223,7 @@ namespace EasyControlforMSFS
         {
             foreach (var property in data.GetType().GetFields())
             {
-                LogResult?.Invoke(this, $"Exception: {property.Name} {property.GetValue(data)}");
+                LogResult?.Invoke(this, $"Exception (on exception): {property.Name} {property.GetValue(data)}");
             }
 
         }

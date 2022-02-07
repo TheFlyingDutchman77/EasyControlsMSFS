@@ -2,8 +2,13 @@
 <root>
 	<profile name="Aerosoft Twin Otter">
 		<title>Aerosoft DHC-6 Series 300 Wheels Cargo 3-Blade</title>
+		<title>Aerosoft DHC-6 Series 300 Wheels REX Airlines</title>
 	</profile>
 	<profile name="Milviz PC-6">
 		<title>Turbo Porter EC-JXH Glass</title>
+	</profile>
+	<profile name="Airbus A320neo">
+		<title>FWB EUROWINGS ABFO</title>
+		<title>Airbus A320neo Easyjet</title>
 	</profile>
 </root>

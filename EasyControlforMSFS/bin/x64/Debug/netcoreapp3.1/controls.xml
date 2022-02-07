@@ -21,7 +21,7 @@
 				<inverted>True</inverted>
 			</axis2>
 			<button0>
-				<event>TOGGLE_BEACON_LIGHTS</event>
+				<eventON>TOGGLE_BEACON_LIGHTS</eventON>
 				<axis_link>0</axis_link>
 				<is_switch>False</is_switch>
 			</button0>
@@ -46,27 +46,27 @@
 				<inverted>True</inverted>
 			</axis2>
 			<button0>
-				<event>Mobiflight.ASDHC6_COND1_ON</event>
+				<eventON>Mobiflight.ASDHC6_COND1_ON</eventON>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button0>
 			<button1>
-				<event>Mobiflight.ASDHC6_COND1_OFF</event>
+				<eventON>Mobiflight.ASDHC6_COND1_OFF</eventON>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button1>
 			<button2>
-				<event>Mobiflight.ASDHC6_COND2_ON</event>
+				<eventON>Mobiflight.ASDHC6_COND2_ON</eventON>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button2>
 			<button3>
-				<event>Mobiflight.ASDHC6_COND2_OFF</event>
+				<eventON>Mobiflight.ASDHC6_COND2_OFF</eventON>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button3>
 			<button8>
-				<event>PROP_PITCH_DECR</event>
+				<eventON>PROP_PITCH_DECR</eventON>
 				<axis_link>2</axis_link>
 				<is_switch>False</is_switch>
 			</button8>
@@ -151,12 +151,12 @@
 				<inverted>True</inverted>
 			</axis2>
 			<button6>
-				<event>DECREASE_THROTTLE</event>
+				<eventON>DECREASE_THROTTLE</eventON>
 				<axis_link>0</axis_link>
 				<is_switch>False</is_switch>
 			</button6>
 			<button7>
-				<event>PROP_PITCH_DECR</event>
+				<eventON>PROP_PITCH_DECR</eventON>
 				<axis_link>1</axis_link>
 				<is_switch>False</is_switch>
 			</button7>
@@ -181,12 +181,12 @@
 				<inverted>True</inverted>
 			</axis2>
 			<button6>
-				<event>DECREASE_THROTTLE</event>
+				<eventON>DECREASE_THROTTLE</eventON>
 				<axis_link>0</axis_link>
 				<is_switch>False</is_switch>
 			</button6>
 			<button7>
-				<event>PROP_PITCH_DECR</event>
+				<eventON>PROP_PITCH_DECR</eventON>
 				<axis_link>1</axis_link>
 				<is_switch>False</is_switch>
 			</button7>
@@ -195,120 +195,135 @@
 	<joystick name="HID-spelbesturing-9025-32823">
 		<aircraft name="Asobo Stock Aircraft G1000">
 			<button0>
-				<event>MASTER_BATTERY_SET</event>
+				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
 			<button1>
-				<event>ALTERNATOR_SET</event>
+				<eventON>ALTERNATOR_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
 			<button2>
-				<event>AVIONICS_MASTER_SET</event>
+				<eventON>AVIONICS_MASTER_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button2>
 			<button3>
-				<event>PITOT_HEAT_SET</event>
+				<eventON>PITOT_HEAT_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
 			<button4>
-				<event>WINDSHIELD_DEICE_SET</event>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
 		</aircraft>
 		<aircraft name="Quest Kodiak 100">
 			<button0>
-				<event>MASTER_BATTERY_SET</event>
+				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
 			<button1>
-				<event>ALTERNATOR_SET</event>
+				<eventON>ALTERNATOR_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
 			<button2>
-				<event>AVIONICS_MASTER_SET</event>
+				<eventON>AVIONICS_MASTER_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button2>
 			<button3>
-				<event>PITOT_HEAT_SET</event>
+				<eventON>PITOT_HEAT_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
 			<button4>
-				<event>WINDSHIELD_DEICE_SET</event>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
 		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<button0>
-				<event>MASTER_BATTERY_SET</event>
+				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
 			<button1>
-				<event>ALTERNATOR_SET</event>
+				<eventON>ALTERNATOR_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
 			<button2>
-				<event>AVIONICS_MASTER_SET</event>
+				<eventON>AVIONICS_MASTER_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button2>
 			<button3>
-				<event>PITOT_HEAT_SET</event>
+				<eventON>PITOT_HEAT_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
 			<button4>
-				<event>WINDSHIELD_DEICE_SET</event>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
 		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
 			<button0>
-				<event>Mobiflight.ASDHC6_DC_MASTER_TOGGLE</event>
+				<eventON>Mobiflight.ASDHC6_DC_MASTER_TOGGLE</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
 			<button1>
-				<event>Mobiflight.ASDHC6_GENERATORS_TOGGLE</event>
+				<eventON>Mobiflight.ASDHC6_GENERATORS_TOGGLE</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
 			<button2>
-				<event>AVIONICS_MASTER_SET</event>
+				<eventON>AVIONICS_MASTER_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button2>
 			<button3>
-				<event>Mobiflight.ASDHC6_PITOT_TOGGLE</event>
+				<eventON>Mobiflight.ASDHC6_PITOT_TOGGLE</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
 			<button4>
-				<event>Mobiflight.ASDHC6_WINDOW_HEAT_TOGGLE</event>
+				<eventON>Mobiflight.ASDHC6_WINDOW_HEAT_TOGGLE</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
 		</aircraft>
 		<aircraft name="Airbus A320neo">
 			<button0>
-				<event>Mobiflight.A32NX_BAT_TOGGLE</event>
+				<eventON>Mobiflight.A32NX_BAT_TOGGLE</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
 			<button1>
-				<event>Mobiflight.A32NX_OH_ELEC_EXTPWR_TOG</event>
+				<eventON>Mobiflight.A32NX_OH_ELEC_EXTPWR_TOG</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+		</aircraft>
+	</joystick>
+	<joystick name="HID-spelbesturing-1103-1029">
+		<aircraft name="Airbus A320neo">
+			<button0>
+				<eventON>Mobiflight.A32NX_BAT_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+			<button1>
+				<eventON>Mobiflight.A32NX_BAT_ON</eventON>
+				<eventOFF>Mobiflight.A32NX_BAT_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>

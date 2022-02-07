@@ -12,7 +12,7 @@
         FontFamily="{materialDesign:MaterialDesignFont}"
         xmlns:local="clr-namespace:EasyControlforMSFS"
         mc:Ignorable="d"
-        Title="EasyControls for MSFS - add button event" Height="350" Width="600"
+        Title="EasyControls for MSFS - add button event" Height="400" Width="600"
         ResizeMode="NoResize" Icon="/flight_30822 (1).png">
     <Grid>
         <Grid.RowDefinitions>
@@ -29,7 +29,7 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*" />
-                <RowDefinition Height="5.5*" />
+                <RowDefinition Height="6*" />
                 <RowDefinition Height="1.5*" />
                 <RowDefinition Height="2.5*" />
             </Grid.RowDefinitions>
@@ -37,7 +37,9 @@
             <StackPanel Name ="Selectevents_text" Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" >
                 <Label Content="Select button nr:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                 <Separator Height="3" Background="Transparent"/>
-                <Label Content="Select event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Label Name="ButtonEventLabel" Content="Select event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Separator Height="3" Background="Transparent"/>
+                <Label Name="ButtonEventOFFlabel" Visibility="Hidden" Content="Select event OFF:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                 <Separator Height="3" Background="Transparent"/>
                 <Label Content="Linked to axis (detent):" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                 <Separator Height="3" Background="Transparent"/>
@@ -51,9 +53,11 @@
             <Separator Height="3" Background="Transparent"/>
                 <ComboBox Name ="ButtonEventsComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
                 <Separator Height="3" Background="Transparent"/>
+                <ComboBox Name ="ButtonEventsOFFComboBox" Visibility="Hidden" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
+                <Separator Height="3" Background="Transparent"/>
                 <ComboBox Name ="ButtonAxisLinkComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" />
                 <Separator Height="3" Background="Transparent"/>
-                <CheckBox Name="ButtonIsSwitchCheckbox" ToolTip="If this is true, Simconnect event will only be fired once when switch is set to on. Used to prevent continuously firing of events with permanent on/off switches instead of push buttons."></CheckBox>
+                <CheckBox Name="ButtonIsSwitchCheckbox" Checked="ButtonIsSwitchCheckBoxChanged" Unchecked="ButtonIsSwitchCheckBoxChanged" ToolTip="If this is true, Simconnect event will only be fired once when switch is set to on. Used to prevent continuously firing of events with permanent on/off switches instead of push buttons."></CheckBox>
             </StackPanel>
             <StackPanel Name ="Newevent_text" Grid.Column="0" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" >
                 <Label Content="Enter new event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>

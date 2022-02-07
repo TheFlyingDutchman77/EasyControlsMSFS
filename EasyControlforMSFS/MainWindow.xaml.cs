@@ -91,7 +91,7 @@ namespace EasyControlforMSFS
         {
             if (!addDefWindowOpened)
             {
-                AddDefinitionWindow addDefWindow = new AddDefinitionWindow(aircraftControls, mygamecontroller, mysimconnect);
+                AddDefinitionWindow addDefWindow = new AddDefinitionWindow(aircraftControls, mygamecontroller, mysimconnect, SelectAircraftComboBox.SelectedItem.ToString() );
                 addDefWindow.Closed += AddDefWindow_Closed;
                 addDefWindow.Show();
                 addDefWindowOpened = true;
@@ -103,12 +103,14 @@ namespace EasyControlforMSFS
             aircraftControls = aircraftControls.LoadControlsFile(aircraftControls);
 
             //Now we again add aircraft to the aircraft selector combobox
+            var selected_item = SelectAircraftComboBox.SelectedItem;
             SelectAircraftComboBox.Items.Clear();
             aircraftControls.aircraft.Sort();
             for (int j = 0; j < aircraftControls.aircraft.Count; j++)
             {
                 SelectAircraftComboBox.Items.Add(aircraftControls.aircraft[j]);
             }
+            SelectAircraftComboBox.SelectedItem = selected_item;
             addDefWindowOpened = false;
         }
 
@@ -304,8 +306,20 @@ namespace EasyControlforMSFS
                                     {
                                         if (j < aircraftControls.aircraft_controls[k].num_axis[aircraft_id])
                                         {
-                                            ExecuteAxisSimEvent(i, j, k, aircraft_id);
-                                            //Debug.WriteLine($"{i},{j},{k},{l}");
+                                            if ((str_aircraft_selected == "Airbus A320neo") && (j == 0))
+                                            {
+                                                if (axisArray[i, j] > 0) //Special case for spoiler A320
+                                                {
+                                                    Debug.WriteLine($"Event not skipped for A320 neo {axisArray[i, j]}");
+                                                    ExecuteAxisSimEvent(i, j, k, aircraft_id); 
+                                                }
+                                            }
+                                            else
+                                            {
+                                                ExecuteAxisSimEvent(i, j, k, aircraft_id);
+                                                //Debug.WriteLine($"{i},{j},{k},{l}");
+                                            }
+
                                         }
                                     }
 
@@ -446,11 +460,17 @@ namespace EasyControlforMSFS
             {
                 if (turnon)
                 {
-                    mysimconnect.SendEvent(sim_event, 1); Debug.WriteLine($"Button {j} event sent!");
+                    mysimconnect.SendEvent(sim_event, 1); Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
+                    Thread.Sleep(200);
                 }
                 else
                 {
-                    mysimconnect.SendEvent(sim_event, 0); Debug.WriteLine($"Button {j} event sent!");
+                    if (aircraftControls.aircraft_controls[k].button_eventsOFF[l, j] != "")
+                    {
+                        sim_event = aircraftControls.aircraft_controls[k].button_eventsOFF[l, j];
+                    }
+                    mysimconnect.SendEvent(sim_event, 0); Debug.WriteLine($"Button {j} event OFF {sim_event} sent!");
+                    Thread.Sleep(200);
                 }
             }
         }

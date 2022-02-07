@@ -40,7 +40,8 @@ namespace EasyControlforMSFS
             public string[] aircraft_names = new string[max_num_ac];
             public string[,] axis_events = new string[max_num_ac, max_num_axis];
             public string[,] axis_events2 = new string[max_num_ac, max_num_axis];
-            public string[,] button_events = new string[max_num_ac, max_num_buttons];
+            public string[,] button_events = new string[max_num_ac, max_num_buttons]; //button ON event
+            public string[,] button_eventsOFF = new string[max_num_ac, max_num_buttons];
             public int[,] button_axis_link = new int[max_num_ac, max_num_buttons];
             public bool[,] button_is_switch = new bool[max_num_ac, max_num_buttons];
             public bool[,] switch_on = new bool[max_num_ac, max_num_buttons];
@@ -79,6 +80,10 @@ namespace EasyControlforMSFS
             public void AddButtonEvent(int aircraft, int button, string event_name)
             {
                 button_events[aircraft, button] = event_name;
+            }
+            public void AddButtonEventOFF(int aircraft, int button, string event_name)
+            {
+                button_eventsOFF[aircraft, button] = event_name;
             }
             public void AddButtonAxisLink(int aircraft, int button, int axis)
             {
@@ -162,6 +167,7 @@ namespace EasyControlforMSFS
                     for (int j = 0; j < aircraftControls.aircraft_controls[controller_id].max_nr_buttons; j++)
                     {
                         aircraftControls.aircraft_controls[controller_id].button_events[aircraft_id, j] = "";
+                        aircraftControls.aircraft_controls[controller_id].button_eventsOFF[aircraft_id, j] = "";
                     }
                     foreach (XElement level3Element in level2Element.Elements())
                     {
@@ -235,9 +241,14 @@ namespace EasyControlforMSFS
                             {
                                 var item_button = level4Element.Name.ToString();
                                 //Debug.WriteLine(item_button);
-                                if (item_button.Contains("event"))
+                                if (item_button.Contains("eventON"))
                                 {
                                     aircraftControls.aircraft_controls[controller_id].AddButtonEvent(aircraft_id, button_id, level4Element.Value);
+                                    if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
+                                }
+                                if (item_button.Contains("eventOFF"))
+                                {
+                                    aircraftControls.aircraft_controls[controller_id].AddButtonEventOFF(aircraft_id, button_id, level4Element.Value);
                                     if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
                                 }
                                 //Debug.WriteLine(level4Element.Value);
@@ -323,7 +334,11 @@ namespace EasyControlforMSFS
                         {
                             //Debug.WriteLine($"Button {k} event is:{aircraftControls.aircraft_controls[i].button_events[j, k]}");
                             output_file += "\t\t\t<button" + k + ">\r\n";
-                            output_file += "\t\t\t\t<event>" + aircraftControls.aircraft_controls[i].button_events[j, k] + "</event>\r\n";
+                            output_file += "\t\t\t\t<eventON>" + aircraftControls.aircraft_controls[i].button_events[j, k] + "</eventON>\r\n";
+                            if (aircraftControls.aircraft_controls[i].button_eventsOFF[j, k] != "")
+                            {
+                                output_file += "\t\t\t\t<eventOFF>" + aircraftControls.aircraft_controls[i].button_eventsOFF[j, k] + "</eventOFF>\r\n";
+                            }
                             if (aircraftControls.aircraft_controls[i].button_axis_link[j, k] != -1)
                             {
                                 output_file += "\t\t\t\t<axis_link>" + aircraftControls.aircraft_controls[i].button_axis_link[j, k] + "</axis_link>\r\n";
