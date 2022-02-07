@@ -1,11 +1,12 @@
 # EasyControls for MSFS
 EasyControls application for Microsoft Flight Simulator
 
-Zip downloadable here (please report any bugs you encounter):
+Zip downloadable here (please report any bugs you encounter). Just download, extract somewhere and run the executable:
 https://github.com/TheFlyingDutchman77/EasyControlsMSFS/blob/main/EasyControl%20v0.1.1.zip
 
 Upon first usage, you might be prompted to install a Dotnet core library from Microsoft.
 
+The controls are saved in the controls.xml file. You can manually edit these if you want to, as long as you respect the layout.
 
 
 **Feature list (to be developed)**
