@@ -2,19 +2,36 @@
 <root>
 	<profile name="Aerosoft Twin Otter">
 		<title>Aerosoft DHC-6 Series 300 Wheels Cargo 3-Blade</title>
-		<title>Aerosoft DHC-6 Series 300 Tundra Cargo</title>
-		<title>Aerosoft DHC-6 Series 300 Ski Cargo</title>
 		<title>Aerosoft DHC-6 Series 300 Wheels REX Airlines</title>
-	</profile>
-	<profile name="Asobo Stock Aircraft G1000">
-		<title>Cessna Skyhawk G1000 Asobo</title>
+		<title>Aerosoft DHC-6 Series 300 Wheels Pax Canadian Forces 1954</title>
+		<title>Aerosoft DHC-6 Series 100 Wheels Pax</title>
 	</profile>
 	<profile name="Milviz PC-6">
-		<title>Turbo Porter S5-CMA Glass</title>
 		<title>Turbo Porter EC-JXH Glass</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
 		<title>Airbus A320neo Easyjet</title>
+		<title>Airbus A320neo Lufthansa</title>
+		<title>FWB Swiss HB-JDA</title>
+	</profile>
+	<profile name="Asobo Stock Aircraft G1000">
+		<title>Cessna Skyhawk G1000 Skis Asobo</title>
+	</profile>
+	<profile name="Cessna Citation CJ4">
+		<title>Cessna CJ4 Citation Asobo</title>
+	</profile>
+	<profile name="Quest Kodiak 100">
+		<title>Kodiak 100 Factory paint A5</title>
+		<title>Kodiak 100 Factory paint A1</title>
+	</profile>
+	<profile name="Aerosoft CRJ">
+		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
+	</profile>
+	<profile name="Asobo Stock Aircraft G3X">
+		<title>Asobo XCub Floats</title>
+	</profile>
+	<profile name="TBM930">
+		<title>TBM 930 Asobo</title>
 	</profile>
 </root>

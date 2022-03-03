@@ -133,7 +133,7 @@ namespace EasyControlforMSFS
             if (ButtonEventsComboBox.SelectedIndex != -1) 
             { 
                 aircraftControls.aircraft_controls[index].button_events[pos, ButtonNrComboBox.SelectedIndex] = ButtonEventsComboBox.SelectedItem.ToString();
-                aircraftControls.aircraft_controls[index].button_eventsOFF[pos, ButtonNrComboBox.SelectedIndex] = ButtonEventsOFFComboBox.SelectedItem.ToString();
+                if (ButtonEventsOFFComboBox.SelectedIndex != -1) { aircraftControls.aircraft_controls[index].button_eventsOFF[pos, ButtonNrComboBox.SelectedIndex] = ButtonEventsOFFComboBox.SelectedItem.ToString(); }
                 aircraftControls.aircraft_controls[index].AddButton(pos, ButtonNrComboBox.SelectedIndex+1);
                 if ((ButtonAxisLinkComboBox.SelectedIndex == -1) || (ButtonAxisLinkComboBox.SelectedItem.ToString() == "None"))
                 {

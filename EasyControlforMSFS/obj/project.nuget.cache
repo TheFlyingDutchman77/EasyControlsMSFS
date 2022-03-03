@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rLZD82IBs0hTEbdtaKgS6aw6/HmgL9/hijb7+wDa1uIhBoijugqufm551OyelXQLVR6uHygFLMiEZpuEamlZJQ==",
+  "dgSpecHash": "053gzXBb2q83CqtMr9q8fJKlWcOH11SD5jGbkFllB07AyYXxJGir492VM+7GlUeizFaqDDfzEoFuN7DU623qag==",
   "success": true,
-  "projectFilePath": "C:\\Erik\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
+  "projectFilePath": "D:\\Github\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Z003WD1U\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
     "C:\\Users\\Z003WD1U\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512",

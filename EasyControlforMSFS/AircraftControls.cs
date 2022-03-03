@@ -21,7 +21,7 @@ namespace EasyControlforMSFS
 
         public class AircraftControlsData
         {
-            public static int max_num_ac = 10;
+            public static int max_num_ac = 30;
             public static int max_num_events = 10;
             public static int max_num_axis = 30;
             public static int max_num_buttons = 160;

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Erik\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\
+D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\
 EasyControlforMSFS
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-C:\Erik\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\App.xaml
+D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\App.xaml
 4-1645631414
 
 12489549140
-286-281058342
+286187943491
 Add2ndAxisEventsWindow.xaml;AddButtonEventWindow.xaml;AddDefinitionWindow.xaml;MainWindow.xaml;
 
 True

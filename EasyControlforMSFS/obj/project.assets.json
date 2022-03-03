@@ -827,11 +827,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Erik\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
+      "projectUniqueName": "D:\\Github\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
       "projectName": "EasyControlforMSFS",
-      "projectPath": "C:\\Erik\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
+      "projectPath": "D:\\Github\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
       "packagesPath": "C:\\Users\\Z003WD1U\\.nuget\\packages\\",
-      "outputPath": "C:\\Erik\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\obj\\",
+      "outputPath": "D:\\Github\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

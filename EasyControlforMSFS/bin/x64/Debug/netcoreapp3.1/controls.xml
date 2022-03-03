@@ -110,6 +110,26 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+			<button2>
+				<eventON>Mobiflight.ASCRJ_REV_1_ARM_SWITCH_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>Mobiflight.ASCRJ_REV_1_ARM_SWITCH_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button3>
+			<button4>
+				<eventON>Mobiflight.ASCRJ_REV_2_ARM_SWITCH_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.ASCRJ_REV_2_ARM_SWITCH_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G1000">
 			<axis0>
@@ -131,9 +151,63 @@
 				<inverted>True</inverted>
 			</axis2>
 		</aircraft>
-		<aircraft name="Milviz PC-6">
+		<aircraft name="TBM930">
 			<axis0>
 				<event>THROTTLE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>MIXTURE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+				<event2>AXIS_PROPELLER_SET</event2>
+				<min2>-16383</min2>
+				<max2>16383</max2>
+				<inverted2>True</inverted2>
+			</axis1>
+			<button6>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button6>
+			<button7>
+				<eventON>PROP_PITCH_DECR</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
+				<eventOFF>TOGGLE_FUEL_VALVE_ALL</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+		</aircraft>
+		<aircraft name="Asobo Stock Aircraft G3X">
+			<axis0>
+				<event>THROTTLE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>MIXTURE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+		</aircraft>
+		<aircraft name="Milviz PC-6">
+			<axis0>
+				<event>THROTTLE1_SET</event>
 				<min>0</min>
 				<max>16383</max>
 				<inverted>True</inverted>
@@ -191,9 +265,129 @@
 				<is_switch>False</is_switch>
 			</button7>
 		</aircraft>
+		<aircraft name="Asobo Stock Aircraft G3000">
+			<axis0>
+				<event>THROTTLE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>MIXTURE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-9025-32823">
+		<aircraft name="Aerosoft CRJ">
+			<button0>
+				<eventON>Mobiflight.ASCRJ_ELEC_BATTMASTER_SWITCH_ON</eventON>
+				<eventOFF>Mobiflight.ASCRJ_ELEC_BATTMASTER_SWITCH_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button5>
+				<eventON>Mobiflight.ASCRJ_NW_STRG_ARMED</eventON>
+				<eventOFF>Mobiflight.ASCRJ_NW_STRG_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
+		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G1000">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="Asobo Stock Aircraft G3000">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.TOGGLE_PROPELLER_DEICE</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
+		</aircraft>
+		<aircraft name="TBM930">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="Asobo Stock Aircraft G3X">
 			<button0>
 				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
@@ -276,7 +470,8 @@
 		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
 			<button0>
-				<eventON>Mobiflight.ASDHC6_DC_MASTER_TOGGLE</eventON>
+				<eventON>Mobiflight.ASDHC6_DC_ALL_ON</eventON>
+				<eventOFF>Mobiflight.ASDHC6_DC_ALL_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
@@ -312,6 +507,32 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
+		</aircraft>
+		<aircraft name="Milviz PC-6">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<eventOFF>MASTER_BATTERY_SET</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<eventOFF>ALTERNATOR_SET</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<eventOFF>PITOT_HEAT_SET</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button5>
+				<eventON>Mobiflight.TOGGLE_PROPELLER_DEICE</eventON>
+				<eventOFF>Mobiflight.TOGGLE_PROPELLER_DEICE</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
 		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-1103-1029">

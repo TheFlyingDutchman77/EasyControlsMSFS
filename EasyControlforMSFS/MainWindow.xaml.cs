@@ -353,6 +353,7 @@ namespace EasyControlforMSFS
                                                     {
                                                         ExecuteButtonSimEvent(i, j, k, aircraft_id, true); //execute button event with state true (turn event on)
                                                         aircraftControls.aircraft_controls[k].switch_on[aircraft_id, j] = true;
+                                                        Debug.WriteLine("EVENT ON SEND");
                                                     }
                                                 }
                                                 else // Case switch is on
@@ -361,6 +362,7 @@ namespace EasyControlforMSFS
                                                     {
                                                         ExecuteButtonSimEvent(i, j, k, aircraft_id, false); //execute button event with state true (turn event off)
                                                         aircraftControls.aircraft_controls[k].switch_on[aircraft_id, j] = false;
+                                                        Debug.WriteLine("EVENT OFF SEND");
                                                     }
                                                 }
                                             }
@@ -370,6 +372,7 @@ namespace EasyControlforMSFS
                                                 if (buttonArray[i, j] == true)
                                                 {
                                                     ExecuteButtonSimEvent(i, j, k, aircraft_id, true); //execute button event with state true (turn event on)
+                                                    Debug.WriteLine("EVENT NOT SWITCH SEND");
                                                 }
                                             }
                                         }
