@@ -2,7 +2,7 @@
 EasyControls application for Microsoft Flight Simulator
 
 Zip downloadable here (please report any bugs you encounter). Just download, extract somewhere and run the executable:
-https://github.com/TheFlyingDutchman77/EasyControlsMSFS/blob/main/EasyControls%20v0.1.2.zip
+https://github.com/TheFlyingDutchman77/EasyControlsMSFS/blob/main/EasyControlforMSFS%20v0.1.3.zip
 
 Upon first usage, you might be prompted to install a Dotnet core library from Microsoft.
 
@@ -10,10 +10,11 @@ The controls are saved in the controls.xml file. You can manually edit these if 
 
 
 **Feature list (to be developed)**
-- Create a walkthrough and proper manual
-- Add posibility to use a key to get a different set of bindings (e.g. with CTRL)
+- Create a walkthrough and proper manual - TO BE DONE
+- Add posibility to use a key to get a different set of bindings (e.g. with CTRL) - TO BE DONE
 - Add ability to enter more than 3 axis via the menu (instead of editing the control.xml file)  -- INCLUDED in v0.1
 - Automatically load correct aircraft by checking sim aircraft -- INCLUDED in v0.1
+- Directly setting LVar events using FSUIPC wasm module -- INCLUDED in v0.1.3
 
 ![image](https://user-images.githubusercontent.com/72393912/152812045-d4caceb5-fc0b-48b5-890a-7309ecc2de65.png)
 
