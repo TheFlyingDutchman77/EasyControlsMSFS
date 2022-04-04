@@ -139,17 +139,47 @@
 				<inverted>True</inverted>
 			</axis0>
 			<axis1>
-				<event>MIXTURE_SET</event>
+				<event>AXIS_PROPELLER_SET</event>
 				<min>0</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
 			<axis2>
-				<event>AXIS_PROPELLER_SET</event>
+				<event>MIXTURE_SET</event>
 				<min>-16383</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+		</aircraft>
+		<aircraft name="Boeing 247D">
+			<axis0>
+				<event>FSUIPC.ENG THROTTLE 1</event>
+				<min>0</min>
+				<max>100</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>FSUIPC.ENG THROTTLE 2</event>
+				<min>0</min>
+				<max>100</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>FSUIPC.ENG PROPELLER 1</event>
+				<min>0</min>
+				<max>100</max>
+				<inverted>True</inverted>
+				<event2>FSUIPC.ENG PROPELLER 2</event2>
+				<min2>0</min2>
+				<max2>100</max2>
+				<inverted2>True</inverted2>
+			</axis2>
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<eventOFF>MASTER_BATTERY_SET</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
 		</aircraft>
 		<aircraft name="TBM930">
 			<axis0>
@@ -498,7 +528,8 @@
 		</aircraft>
 		<aircraft name="Airbus A320neo">
 			<button0>
-				<eventON>Mobiflight.A32NX_BAT_TOGGLE</eventON>
+				<eventON>Mobiflight.A32NX_BAT_ON</eventON>
+				<eventOFF>Mobiflight.A32NX_BAT_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
@@ -534,6 +565,13 @@
 				<is_switch>True</is_switch>
 			</button5>
 		</aircraft>
+		<aircraft name="Boeing 247D">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-1103-1029">
 		<aircraft name="Airbus A320neo">
@@ -548,6 +586,28 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
+		</aircraft>
+	</joystick>
+	<joystick name="HID-spelbesturing-1699-3117">
+		<aircraft name="Asobo Stock Aircraft G1000">
+			<axis0>
+				<event>THROTTLE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>MIXTURE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
 		</aircraft>
 	</joystick>
 </root>

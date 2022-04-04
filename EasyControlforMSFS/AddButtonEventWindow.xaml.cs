@@ -207,7 +207,13 @@ namespace EasyControlforMSFS
         private void SendEventButton_Click(object sender, RoutedEventArgs e)
         {
             string sim_event = NewEventName.Text;
-            mysimconnect.SendEvent(sim_event, 1); Debug.WriteLine($"Event {sim_event} sent!");
+            if (sim_event.Substring(0, 6) == "FSUIPC")
+            {
+                string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                MainWindow.myMSFSVarServices.VS_EventSet(sim_event_new, 1);
+            }
+            else { mysimconnect.SendEvent(sim_event, 1); }
+            Debug.WriteLine($"Event {sim_event} sent!");
         }
 
         private void ButtonIsSwitchCheckBoxChanged(object sender, EventArgs e)

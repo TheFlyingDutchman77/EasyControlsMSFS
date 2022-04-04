@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FSUIPCClientDLL" Version="3.2.19" />
     <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
     <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.22000.196" />
     <PackageReference Include="YamlDotNet" Version="11.2.1" />
@@ -25,6 +26,12 @@
 
   <ItemGroup>
     <Resource Include="flight_30822 (1).png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="FSUIPC_WAPID.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

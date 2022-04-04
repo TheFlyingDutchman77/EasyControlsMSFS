@@ -34,4 +34,7 @@
 	<profile name="TBM930">
 		<title>TBM 930 Asobo</title>
 	</profile>
+	<profile name="Boeing 247D">
+		<title>Boeing 247D Wing42</title>
+	</profile>
 </root>

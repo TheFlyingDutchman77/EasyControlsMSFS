@@ -64,3 +64,5 @@ C:\Erik\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\obj\x64\Debug\netco
 C:\Erik\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\Add2ndAxisEventsWindow.baml
 D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\Add2ndAxisEventsWindow.g.cs
 D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\Add2ndAxisEventsWindow.baml
+D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\bin\x64\Debug\netcoreapp3.1\FSUIPC_WAPID.dll
+D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\bin\x64\Debug\netcoreapp3.1\fsuipcClient.dll

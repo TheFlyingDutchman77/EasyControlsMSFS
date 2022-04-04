@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "EasyControlforMSFS/1.0.0": {
         "dependencies": {
+          "FSUIPCClientDLL": "3.2.19",
           "MaterialDesignThemes": "4.3.0",
           "Microsoft.Windows.SDK.Contracts": "10.0.22000.196",
           "YamlDotNet": "11.2.1",
@@ -15,6 +16,14 @@
         },
         "runtime": {
           "EasyControlforMSFS.dll": {}
+        }
+      },
+      "FSUIPCClientDLL/3.2.19": {
+        "runtime": {
+          "lib/net40/fsuipcClient.dll": {
+            "assemblyVersion": "3.2.19.388",
+            "fileVersion": "3.2.19.388"
+          }
         }
       },
       "MaterialDesignColors/2.0.4": {
@@ -90,6 +99,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FSUIPCClientDLL/3.2.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b8GQvcUbOWOFmcSHT49q+HzhFVOxZTUqBHadWGDcPVoiJVIhe9NZUyqPEkJCu7lCZQOjOcPGzPDwIvHKEzqGHg==",
+      "path": "fsuipcclientdll/3.2.19",
+      "hashPath": "fsuipcclientdll.3.2.19.nupkg.sha512"
     },
     "MaterialDesignColors/2.0.4": {
       "type": "package",

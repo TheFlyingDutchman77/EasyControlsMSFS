@@ -16,6 +16,7 @@ using System.Threading;
 using System.Configuration;
 using System.Diagnostics;
 
+
 namespace EasyControlforMSFS
 {
     /// <summary>
@@ -23,7 +24,7 @@ namespace EasyControlforMSFS
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        public static readonly MSFSVarServices myMSFSVarServices = new MSFSVarServices(); 
         public GameControllerReader mygamecontroller;
         public string[] available_controllers = new string[10];
         public AircraftControls aircraftControls;
@@ -46,8 +47,8 @@ namespace EasyControlforMSFS
             profilesMap = new ProfilesMap();
             profilesMap = profilesMap.LoadProfilesMapFile(profilesMap);
 
-            mysimconnect = new SimConnectImplementer(); 
-
+            mysimconnect = new SimConnectImplementer();
+            myMSFSVarServices.InitMSFSServices();
             InitializeComponent();
 
 
@@ -146,7 +147,7 @@ namespace EasyControlforMSFS
                         else
                         {
                             SimconnectStatusEllipse.Fill = Brushes.Red;
-                            MessageTextBox.Text = "Looking for simulator...\r\n";
+                            MessageTextBox.Text += "Looking for simulator...\r\n";
                             Thread.Sleep(200);
                         }
                     });
@@ -174,6 +175,7 @@ namespace EasyControlforMSFS
             {
                 MessageTextBox.AppendText(sResult + "\r\n");
                 Debug.WriteLine(sResult);
+                MessageTextBox.ScrollToEnd();
             });
 
             if (sResult.Contains("Title"))
@@ -436,15 +438,24 @@ namespace EasyControlforMSFS
                 }
             }
             if (!axis_surpressed) //fire events if axis is not surpressed
-            { 
-                mysimconnect.SendEvent(sim_event, set_value);
+            {
+                Debug.WriteLine(sim_event.Substring(0, 6));
+                if (sim_event.Substring(0,6) == "FSUIPC")
+                {
+                    string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                    myMSFSVarServices.VS_EventSet(sim_event_new, set_value);
+                }
+                else { mysimconnect.SendEvent(sim_event, set_value); }
+
                 if (sim_event2 != "") 
-                { 
-                    mysimconnect.SendEvent(sim_event2, set_value2);
-                    //this.Dispatcher.Invoke(() =>
-                    //{
-                    //    Test1TextBox.Text = set_value.ToString(); Test2TextBox.Text = set_value.ToString();
-                    //});
+                {
+                    if (sim_event2.Substring(0, 6) == "FSUIPC")
+                    {
+                        string sim_event_new2 = sim_event2.Replace("FSUIPC.", "");
+                        myMSFSVarServices.VS_EventSet(sim_event_new2, set_value2);
+                    }
+                    else
+                    { mysimconnect.SendEvent(sim_event2, set_value2); }
                 }
             }
             else { Debug.WriteLine("Axis supressed, no event sent!"); }
@@ -463,7 +474,13 @@ namespace EasyControlforMSFS
             {
                 if (turnon)
                 {
-                    mysimconnect.SendEvent(sim_event, 1); Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
+                    if (sim_event.Substring(0, 6) == "FSUIPC")
+                    {
+                        string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                        myMSFSVarServices.VS_EventSet(sim_event_new, 1);
+                    }
+                    else { mysimconnect.SendEvent(sim_event, 1); }
+                    Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
                     Thread.Sleep(200);
                 }
                 else
@@ -472,7 +489,13 @@ namespace EasyControlforMSFS
                     {
                         sim_event = aircraftControls.aircraft_controls[k].button_eventsOFF[l, j];
                     }
-                    mysimconnect.SendEvent(sim_event, 0); Debug.WriteLine($"Button {j} event OFF {sim_event} sent!");
+                    if (sim_event.Substring(0, 6) == "FSUIPC")
+                    {
+                        string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                        myMSFSVarServices.VS_EventSet(sim_event_new, 0);
+                    }
+                    else { mysimconnect.SendEvent(sim_event, 0); }
+                    Debug.WriteLine($"Button {j} event OFF {sim_event} sent!");
                     Thread.Sleep(200);
                 }
             }

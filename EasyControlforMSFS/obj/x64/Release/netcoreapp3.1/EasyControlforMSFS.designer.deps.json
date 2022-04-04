@@ -6,6 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "FSUIPCClientDLL/3.2.19": {
+        "runtime": {
+          "lib/net40/fsuipcClient.dll": {
+            "assemblyVersion": "3.2.19.388",
+            "fileVersion": "3.2.19.388"
+          }
+        }
+      },
       "MaterialDesignColors/2.0.4": {
         "runtime": {
           "lib/netcoreapp3.1/MaterialDesignColors.dll": {
@@ -101,6 +109,13 @@
     }
   },
   "libraries": {
+    "FSUIPCClientDLL/3.2.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b8GQvcUbOWOFmcSHT49q+HzhFVOxZTUqBHadWGDcPVoiJVIhe9NZUyqPEkJCu7lCZQOjOcPGzPDwIvHKEzqGHg==",
+      "path": "fsuipcclientdll/3.2.19",
+      "hashPath": "fsuipcclientdll.3.2.19.nupkg.sha512"
+    },
     "MaterialDesignColors/2.0.4": {
       "type": "package",
       "serviceable": true,
