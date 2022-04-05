@@ -8,7 +8,7 @@ Upon first usage, you might be prompted to install a Dotnet core library from Mi
 
 The controls are saved in the controls.xml file. You can manually edit these if you want to, as long as you respect the layout.
 
-To set LVars using FSUIPC, you can now add events with the prefix "FSUIPC." These events will require the FSUIPC wasm module in the community folder that can be found at www.fsuipc.com (http://www.fsuipc.com/download/FSUIPC-WASMv0.5.6.zip)
+To set LVars using FSUIPC, you can now add events with the prefix "FSUIPC." These events will require the FSUIPC wasm module in the community folder that can be found at www.fsuipc.com (http://www.fsuipc.com/download/FSUIPC-WASMv0.5.6.zip) NOTE: I AM CURRENTLY EXPERIENCING ISSUES WITH FSUIPC / Boeing 247D / SU9 BETA WHEN USING LVARs TO SET AXIS EVENTS. THE APP WILL THEN FREEZE/CRASH. THIS IS BEING WORKED ON.
 
 **Feature list (to be developed)**
 - Create a walkthrough and proper manual - TO BE DONE
