@@ -24,7 +24,9 @@ namespace EasyControlforMSFS
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static readonly MSFSVarServices myMSFSVarServices = new MSFSVarServices(); 
+
+        public static readonly MSFSVarServices myMSFSVarServices = new MSFSVarServices();
+        public MQTTclient myMQTTclient;
         public GameControllerReader mygamecontroller;
         public string[] available_controllers = new string[10];
         public AircraftControls aircraftControls;
@@ -48,11 +50,14 @@ namespace EasyControlforMSFS
             profilesMap = profilesMap.LoadProfilesMapFile(profilesMap);
 
             mysimconnect = new SimConnectImplementer();
-            myMSFSVarServices.InitMSFSServices();
+            myMQTTclient = new MQTTclient();
             InitializeComponent();
 
 
             mysimconnect.LogResult += OnAddResult;
+            myMQTTclient.LogResult += OnAddResult;
+            myMSFSVarServices.LogResult += OnAddResult;
+            myMSFSVarServices.InitMSFSServices();
             aircraftControls = new AircraftControls();
             aircraftControls = aircraftControls.LoadControlsFile(aircraftControls);
 
@@ -183,6 +188,7 @@ namespace EasyControlforMSFS
                 title = sResult.Split("|")[1];
                 TitleTextBlock.Text = title;
                 CheckTitleReceived(title);
+                myMQTTclient.SetTitle(title);
             }
         }
 
@@ -284,7 +290,7 @@ namespace EasyControlforMSFS
                     if (aircraft_selected != -1) { str_aircraft_selected = SelectAircraftComboBox.SelectedItem.ToString(); }
                 });
                 Thread.Sleep(30);
-                if ((aircraft_selected != -1) && (mysimconnect.bSimConnected))
+                if ((aircraft_selected != -1) && (mysimconnect.bSimConnected) && (addDefWindowOpened==false))
                 {
                     //First we updated all the axis and values
                     //We loop through all available controllers 
@@ -370,11 +376,11 @@ namespace EasyControlforMSFS
                                             }
                                         
                                             else
-                                            { 
-                                                if (buttonArray[i, j] == true)
+                                            {
+                                                if ((buttonArray[i, j] == true) && (aircraftControls.aircraft_controls[k].button_events[aircraft_id, j] != ""))
                                                 {
                                                     ExecuteButtonSimEvent(i, j, k, aircraft_id, true); //execute button event with state true (turn event on)
-                                                    Debug.WriteLine("EVENT NOT SWITCH SEND");
+                                                    Debug.WriteLine($"EVENT NOT SWITCH SEND event: {i} {j} {k} {aircraftControls.aircraft_controls[k].button_events[aircraft_id, j]}");
                                                 }
                                             }
                                         }
@@ -402,6 +408,7 @@ namespace EasyControlforMSFS
             string sim_event2 = aircraftControls.aircraft_controls[k].axis_events2[l, j];
 
             double set_value_double = 0;
+            double set_value_double2 = 0;
             if (!aircraftControls.aircraft_controls[k].axis_inverted[l, j])
             {
                 set_value_double = aircraftControls.aircraft_controls[k].axis_min[l, j] + (axisArray[i, j]) * ((aircraftControls.aircraft_controls[k].axis_max[l, j] - aircraftControls.aircraft_controls[k].axis_min[l, j]));
@@ -415,7 +422,6 @@ namespace EasyControlforMSFS
             // If 2nd event linked to axis
             if (sim_event2 != "")
             {
-                double set_value_double2 = 0;
                 if (!aircraftControls.aircraft_controls[k].axis_inverted2[l, j])
                 {
                     set_value_double2 = aircraftControls.aircraft_controls[k].axis_min2[l, j] + (axisArray[i, j]) * ((aircraftControls.aircraft_controls[k].axis_max2[l, j] - aircraftControls.aircraft_controls[k].axis_min2[l, j]));
@@ -439,11 +445,12 @@ namespace EasyControlforMSFS
             }
             if (!axis_surpressed) //fire events if axis is not surpressed
             {
-                Debug.WriteLine(sim_event.Substring(0, 6));
                 if (sim_event.Substring(0,6) == "FSUIPC")
                 {
                     string sim_event_new = sim_event.Replace("FSUIPC.", "");
-                    myMSFSVarServices.VS_EventSet(sim_event_new, set_value);
+                    int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(sim_event_new);
+                    //Debug.WriteLine($"Set value {sim_event}  {set_value_double}");
+                    if (Math.Abs(current_value - Math.Round(set_value_double)) > 1) { myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); }
                 }
                 else { mysimconnect.SendEvent(sim_event, set_value); }
 
@@ -452,7 +459,8 @@ namespace EasyControlforMSFS
                     if (sim_event2.Substring(0, 6) == "FSUIPC")
                     {
                         string sim_event_new2 = sim_event2.Replace("FSUIPC.", "");
-                        myMSFSVarServices.VS_EventSet(sim_event_new2, set_value2);
+                        int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(sim_event_new2);
+                        if (Math.Abs(current_value - Math.Round(set_value_double2)) > 1) { myMSFSVarServices.VS_EventSet(sim_event_new2, set_value_double2); Thread.Sleep(10); }
                     }
                     else
                     { mysimconnect.SendEvent(sim_event2, set_value2); }

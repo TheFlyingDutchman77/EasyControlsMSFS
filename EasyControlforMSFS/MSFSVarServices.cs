@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using FSUIPC;
+using System.Threading;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
@@ -17,6 +18,7 @@ namespace EasyControlforMSFS
     public class MSFSVarServices
     {
         public List<LVarData> lVarData;
+        public event EventHandler<string> LogResult = null;
 
         public class LVarData
         {
@@ -30,11 +32,6 @@ namespace EasyControlforMSFS
 
         // Keep track of when the MSFSVariableServices starts and stops
         private bool started = false;
-
-        public MSFSVarServices()
-        {
-            lVarData = new List<LVarData>();
-        }
 
 
         public void InitMSFSServices()
@@ -62,39 +59,48 @@ namespace EasyControlforMSFS
             started = VS.IsRunning;
             Debug.WriteLine("MSFSServices has started");
 
-            AddLvarsToList();
+
 
         }
 
         public void AddLvarsToList()
         {
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FCP_WHEEL_INFO", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FCP_SPEED_INFO", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FCP_HDG_INFO", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FCP_APPR_LED", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FCP_VS_LED", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_APU_STARTSTOP_AVAIL", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_ENGS_CONT_IGN_ON", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FUEL_PUMP_L", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FUEL_PUMP_L_ON", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FUEL_PUMP_L_INOP", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FUEL_PUMP_R", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FUEL_PUMP_R_ON", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_FUEL_PUMP_R_INOP", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_ENGS_START_L_ON", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ASCRJ_ENGS_START_R_ON", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "XMLVAR_A320_WeatherRadar_Sys", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "A32NX_SWITCH_RADAR_PWS_Position", value = 0 });
-
-
+            lVarData.Add(new LVarData() { lvar = "ELEVATOR TRIM", value = 0 });
+            lVarData.Add(new LVarData() { lvar = "RUDDER TRIM", value = 0 });
+            lVarData.Add(new LVarData() { lvar = "AILERON TRIM", value = 0 });
+            lVarData.Add(new LVarData() { lvar = "ENG THROTTLE 1", value = 0 });
+            lVarData.Add(new LVarData() { lvar = "ENG THROTTLE 2", value = 0 });
+            lVarData.Add(new LVarData() { lvar = "ENG PROPELLER 1", value = 0 });
+            lVarData.Add(new LVarData() { lvar = "ENG PROPELLER 2", value = 0 });
+            
         }
-
 
         public void VS_EventSet(string eventname, double value) 
         {
-            VS.LVars[eventname].SetValue(value);
-            Debug.WriteLine($"Event {eventname} set to {value}");            
+            FsLVar lvar = VS.LVars[eventname];
+            if (lvar != null)
+            {
+                lvar.SetValue(value);
+                Debug.WriteLine($"Event {eventname} set to {value}");
+                LogResult?.Invoke(this, $"Event {eventname} set to {value}");
+            }
         }
+
+
+        public double VS_GetLvarValue(string eventname)
+        {
+            FsLVar lvar = VS.LVars[eventname];
+            if (lvar != null)
+            {
+                Debug.WriteLine($"Value requested, event {eventname} with value {lvar.Value}");
+                return lvar.Value;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
 
 
 
@@ -104,7 +110,13 @@ namespace EasyControlforMSFS
             // Writing to the list box on the form must be done on the UI Thread.
             // This event handler might be on a different thread, so we must use invoke to get back to the main UI thread.
             Debug.WriteLine($"Log MSFSServices received {e.LogEntry}");
-
+            LogResult?.Invoke(this, $"Log MSFSServices received {e.LogEntry}");
+            //MessageBox.Show(e.LogEntry);
+            //if (e.LogEntry.Contains("ERROR"))
+            //{
+            //    VS.Stop();
+            //    VS.Start();
+            //}
         }
 
 
@@ -130,23 +142,7 @@ namespace EasyControlforMSFS
                 //Debug.WriteLine($"Lvar received: {lvar.Name}");
             }
 
-            foreach (LVarData item in lVarData)
-            {
-                try
-                {
-                    FsLVar myLVar = VS.LVars[item.lvar];
-                    if (myLVar is null)
-                    {
-
-                    }
-                    else
-                    {
-                        item.value = (float)myLVar.Value;
-                        //Debug.WriteLine($"LVar {myLVar.Name} en value {myLVar.Value}");
-                    }
-                }
-                catch { };
-            }
+            
 
         }
 
