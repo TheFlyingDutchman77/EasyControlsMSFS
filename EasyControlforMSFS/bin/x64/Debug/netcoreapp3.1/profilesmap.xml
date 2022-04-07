@@ -17,6 +17,7 @@
 	</profile>
 	<profile name="Asobo Stock Aircraft G1000">
 		<title>Cessna Skyhawk G1000 Skis Asobo</title>
+		<title>Bonanza G36 Asobo</title>
 	</profile>
 	<profile name="Cessna Citation CJ4">
 		<title>Cessna CJ4 Citation Asobo</title>
@@ -36,5 +37,6 @@
 	</profile>
 	<profile name="Boeing 247D">
 		<title>Boeing 247D Wing42</title>
+		<title>Boeing 247D United Air Lines (1941)</title>
 	</profile>
 </root>

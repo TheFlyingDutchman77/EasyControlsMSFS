@@ -8,6 +8,8 @@ using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using System.Windows;
 using VS = FSUIPC.MSFSVariableServices;
+using System.IO;
+
 
 
 namespace EasyControlforMSFS
@@ -19,7 +21,8 @@ namespace EasyControlforMSFS
     {
         public List<LVarData> lVarData;
         public event EventHandler<string> LogResult = null;
-
+        
+        public bool writeLogFile = false;
         public class LVarData
         {
             public string lvar { get; set; }
@@ -52,7 +55,7 @@ namespace EasyControlforMSFS
 
 
             VS.Init(wih); // Initialise by passing in the windows handle of this form
-            VS.LVARUpdateFrequency = 10; // Check for changes in lvar values 10 times per second (Hz)
+            VS.LVARUpdateFrequency = 0; // CONTROLLED BY THE WASM Check for changes in lvar values 10 times per second (Hz)
             VS.LogLevel = LOGLEVEL.LOG_LEVEL_INFO; // Set the level of logging
 
             VS.Start();
@@ -61,18 +64,6 @@ namespace EasyControlforMSFS
 
 
 
-        }
-
-        public void AddLvarsToList()
-        {
-            lVarData.Add(new LVarData() { lvar = "ELEVATOR TRIM", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "RUDDER TRIM", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "AILERON TRIM", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ENG THROTTLE 1", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ENG THROTTLE 2", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ENG PROPELLER 1", value = 0 });
-            lVarData.Add(new LVarData() { lvar = "ENG PROPELLER 2", value = 0 });
-            
         }
 
         public void VS_EventSet(string eventname, double value) 
@@ -110,13 +101,21 @@ namespace EasyControlforMSFS
             // Writing to the list box on the form must be done on the UI Thread.
             // This event handler might be on a different thread, so we must use invoke to get back to the main UI thread.
             Debug.WriteLine($"Log MSFSServices received {e.LogEntry}");
-            LogResult?.Invoke(this, $"Log MSFSServices received {e.LogEntry}");
-            //MessageBox.Show(e.LogEntry);
-            //if (e.LogEntry.Contains("ERROR"))
-            //{
-            //    VS.Stop();
-            //    VS.Start();
-            //}
+            LogResult?.Invoke(this, $"{e.LogEntry}");
+            if (writeLogFile)
+            {
+                string logfile = AppDomain.CurrentDomain.BaseDirectory + "MSFSVarServices.log";
+                using (StreamWriter writer = new StreamWriter(logfile, true)) //// true to append data to the file
+                {
+                    writer.WriteLine($"{DateTime.Now} - {e.LogEntry}");
+                }
+            }
+            if (e.LogEntry.Contains("Error"))
+            {
+                VS.Stop();
+                LogResult?.Invoke(this, $"MSFSVarServices Stop command given");
+                //VS.Start();
+            }
         }
 
 

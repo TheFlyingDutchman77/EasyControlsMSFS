@@ -30,8 +30,8 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.1*" />
-                <RowDefinition Height="2.5*" />
-                <RowDefinition Height="3*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="3.5*" />
                 <RowDefinition Height="0.2*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
@@ -51,14 +51,14 @@
             <StackPanel Name ="Aircrafty_input" Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
             </StackPanel>
             <StackPanel Name ="Messages" Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                <Label Content="System messages:" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-                <TextBox x:Name ="MessageTextBox" VerticalScrollBarVisibility="Visible" Margin ="0,0,0,0" Width="500" Height="100" TextWrapping="Wrap"  Background="DimGray" Foreground="White" FontWeight="Light"/>
+                <Label Content="System messages:"/>
+                <TextBox x:Name ="MessageTextBox" VerticalScrollBarVisibility="Visible" Margin ="0,0,0,0" Width="500" Height="125" TextWrapping="Wrap"  Background="DimGray" Foreground="White" FontWeight="Light"/>
                 <Separator Height="20" Background="Transparent"/>
-                <StackPanel Name ="Simconnect" Orientation="Horizontal">
+                <StackPanel x:Name ="Simconnect" Orientation="Horizontal">
                     <Label Content="Simconnect status:" Width ="125" HorizontalAlignment="Left" Margin="0,0, 10,0" Grid.Row="2" VerticalAlignment="Top"/>
-                    <Ellipse Name ="SimconnectStatusEllipse" Fill="Red" Height="15" Width="15" StrokeThickness="0" ></Ellipse>
-                    <TextBox Name="Test1TextBox" Width="100" Margin="10,0,0,0" Visibility="Hidden"/>
-                    <TextBox Name="Test2TextBox" Width="100" Margin="10,0,0,0" Visibility="Hidden"/>
+                    <Ellipse x:Name ="SimconnectStatusEllipse" Fill="Red" Height="15" Width="15" StrokeThickness="0" />
+                    <TextBox x:Name="Test1TextBox" Width="100" Margin="10,0,0,0" Visibility="Hidden"/>
+                    <TextBox x:Name="Test2TextBox" Width="100" Margin="10,0,0,0" Visibility="Hidden"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Name ="Buttonsexit" Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">

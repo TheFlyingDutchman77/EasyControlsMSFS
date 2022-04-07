@@ -50,12 +50,10 @@ namespace EasyControlforMSFS
             profilesMap = profilesMap.LoadProfilesMapFile(profilesMap);
 
             mysimconnect = new SimConnectImplementer();
-            myMQTTclient = new MQTTclient();
             InitializeComponent();
 
 
             mysimconnect.LogResult += OnAddResult;
-            myMQTTclient.LogResult += OnAddResult;
             myMSFSVarServices.LogResult += OnAddResult;
             myMSFSVarServices.InitMSFSServices();
             aircraftControls = new AircraftControls();
@@ -90,6 +88,18 @@ namespace EasyControlforMSFS
             Thread connectSimConnect = new Thread(ConnectSimConnect);
             connectSimConnect.IsBackground = true;
             connectSimConnect.Start();
+
+            Thread connectMQTT = new Thread(ConnectMQTT);
+            connectMQTT.IsBackground = true;
+            connectMQTT.Start();
+
+        }
+
+        public void ConnectMQTT()
+        {
+            myMQTTclient = new MQTTclient();
+            myMQTTclient.LogResult += OnAddResult;
+
         }
 
 

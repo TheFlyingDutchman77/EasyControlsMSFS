@@ -140,13 +140,13 @@
 			</axis0>
 			<axis1>
 				<event>AXIS_PROPELLER_SET</event>
-				<min>0</min>
+				<min>-16383</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
 			<axis2>
 				<event>MIXTURE_SET</event>
-				<min>-16383</min>
+				<min>0</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
@@ -174,12 +174,16 @@
 				<max2>100</max2>
 				<inverted2>True</inverted2>
 			</axis2>
-			<button0>
-				<eventON>MASTER_BATTERY_SET</eventON>
-				<eventOFF>MASTER_BATTERY_SET</eventOFF>
+			<button4>
+				<eventON>Mobiflight.B247D_MIXTURE_UP</eventON>
 				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button0>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.B247D_MIXTURE_DOWN</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
 		</aircraft>
 		<aircraft name="TBM930">
 			<axis0>
@@ -567,10 +571,15 @@
 		</aircraft>
 		<aircraft name="Boeing 247D">
 			<button0>
-				<eventON>MASTER_BATTERY_SET</eventON>
+				<eventON>FSUIPC.ELECTRICAL MASTER BATTERY</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
+			<button3>
+				<eventON>FSUIPC.PITOT HEAT</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
 		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-1103-1029">

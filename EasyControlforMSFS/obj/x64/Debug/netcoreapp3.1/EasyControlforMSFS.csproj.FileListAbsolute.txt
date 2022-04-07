@@ -66,3 +66,4 @@ D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\obj\x64\Debug\net
 D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\Add2ndAxisEventsWindow.baml
 D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\bin\x64\Debug\netcoreapp3.1\FSUIPC_WAPID.dll
 D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\bin\x64\Debug\netcoreapp3.1\fsuipcClient.dll
+D:\Github\CsharpProjects\EasyControlforMSFS\EasyControlforMSFS\bin\x64\Debug\netcoreapp3.1\M2Mqtt.dll
