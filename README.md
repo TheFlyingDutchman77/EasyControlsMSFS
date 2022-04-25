@@ -11,8 +11,8 @@ The controls are saved in the controls.xml file. You can manually edit these if 
 To set LVars using FSUIPC, you can now add events with the prefix "FSUIPC." These events will require the FSUIPC wasm module in the community folder that can be found at www.fsuipc.com (http://www.fsuipc.com/download/FSUIPC-WASMv0.5.6.zip)
 
 
-**Quick explanation of how to use:
-**
+   
+**Quick explanation of how to use:**
 Start program 
 Click Define Events on first window (it might be that you have to select a random profile first to prevent a crash, this is fixed in the upcoming version)
 In new window:
@@ -28,9 +28,9 @@ In the main window, at select profile select the aircraft description you have j
 Now you should be able to move the axis and see the effect in the sim.
 
 Editing of the events sent can be done via the menu's, but also quite easily in the controls.xml found in the same folder. Plenty of control profile examples are included in the controls.xml file that comes in the zip.  
-
-
-
+   
+   
+   
 **Feature list (to be developed)**
 - Create a walkthrough and proper manual - TO BE DONE
 - Add posibility to use a key to get a different set of bindings (e.g. with CTRL) - TO BE DONE
