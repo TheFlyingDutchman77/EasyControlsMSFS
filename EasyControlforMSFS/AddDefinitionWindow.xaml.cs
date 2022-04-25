@@ -177,7 +177,7 @@ namespace EasyControlforMSFS
         /// <param name="e"></param>
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if ((ACnamesComboBox.SelectedIndex != -1)  || (ControllersComboBox.SelectedIndex != -1))
+            if ((ACnamesComboBox.SelectedIndex != -1) && (ControllersComboBox.SelectedIndex != -1))
             {
                 string selected_aircraft = ACnamesComboBox.SelectedItem.ToString();
                 string selected_controller = ControllersComboBox.SelectedItem.ToString();
@@ -275,12 +275,8 @@ namespace EasyControlforMSFS
             string selected_aircraft = "";
             string selected_controller = "";
 
-            try
-            {
-                selected_aircraft = ACnamesComboBox.SelectedItem.ToString();
-                selected_controller = ControllersComboBox.SelectedItem.ToString();
-            }
-            catch { }
+            if (ACnamesComboBox.SelectedIndex > -1) { selected_aircraft = ACnamesComboBox.SelectedItem.ToString(); }
+            if (ControllersComboBox.SelectedIndex > -1) { selected_controller = ControllersComboBox.SelectedItem.ToString(); }
             Debug.WriteLine(selected_aircraft);
             //First, we look if the controller is already in the aircraft_controls definition
             index = aircraftControls.aircraft_controls.FindIndex(c => c.controller_name == selected_controller);
@@ -558,7 +554,10 @@ namespace EasyControlforMSFS
             }
         }
 
-
-
+        private void MIDIMapperWindow_Click(object sender, RoutedEventArgs e)
+        {
+            MIDIMapWindow midiMapWindow = new MIDIMapWindow(str_selected_aircraft);
+            midiMapWindow.Show();
+        }
     }
 }

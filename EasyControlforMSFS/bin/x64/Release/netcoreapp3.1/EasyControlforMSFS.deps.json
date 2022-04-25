@@ -11,6 +11,7 @@
           "FSUIPCClientDLL": "3.2.19",
           "M2MqttDotnetCore": "1.1.0",
           "MaterialDesignThemes": "4.3.0",
+          "Melanchall.DryWetMidi": "6.0.1",
           "Microsoft.Windows.SDK.Contracts": "10.0.22000.196",
           "YamlDotNet": "11.2.1",
           "Microsoft.FlightSimulator.SimConnect": "11.0.62651.3"
@@ -59,6 +60,14 @@
           "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
             "assemblyVersion": "4.3.0.3",
             "fileVersion": "4.3.0.3"
+          }
+        }
+      },
+      "Melanchall.DryWetMidi/6.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Melanchall.DryWetMidi.dll": {
+            "assemblyVersion": "6.0.1.0",
+            "fileVersion": "6.0.1.0"
           }
         }
       },
@@ -612,6 +621,13 @@
       "sha512": "sha512-edXh0Hl2LukyEZN+REVFuN+gaaUFo6AfHSaBjuZ95k4Qz1TljcxnfCznMKkGaQoEsy5ryk85ZbeRY/tOzFmKxg==",
       "path": "materialdesignthemes/4.3.0",
       "hashPath": "materialdesignthemes.4.3.0.nupkg.sha512"
+    },
+    "Melanchall.DryWetMidi/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BcZSMCXux3I88SUVWTjYAUsDX4tchGhrfi1imkPmjHc+lR2T6OULhN5rlJrbyYldQUKwOdf+oK/KPTcBMCWmAA==",
+      "path": "melanchall.drywetmidi/6.0.1",
+      "hashPath": "melanchall.drywetmidi.6.0.1.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.0.0": {
       "type": "package",

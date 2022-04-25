@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tbxBZwelCd9as2MkwYQqRwHKQlN41ZGCOAaG2+2y2S/JXAObRGN10kGdQU1bQrD1btBv+fquN6Wdja1z86Y9Rg==",
+  "dgSpecHash": "UqDiw7CNQgu3RSXe4YeP6zRbAbaRYL8cfVrqVfUJ+tgSTN7W0TEouGGSkJqD+l3DOKPEgn5MSbVtrrqd+EET7w==",
   "success": true,
   "projectFilePath": "D:\\Github\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\erikv\\.nuget\\packages\\m2mqttdotnetcore\\1.1.0\\m2mqttdotnetcore.1.1.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512",
+    "C:\\Users\\erikv\\.nuget\\packages\\melanchall.drywetmidi\\6.0.1\\melanchall.drywetmidi.6.0.1.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",

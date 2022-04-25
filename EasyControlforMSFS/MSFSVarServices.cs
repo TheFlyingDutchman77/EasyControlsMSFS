@@ -83,7 +83,7 @@ namespace EasyControlforMSFS
             FsLVar lvar = VS.LVars[eventname];
             if (lvar != null)
             {
-                Debug.WriteLine($"Value requested, event {eventname} with value {lvar.Value}");
+                //Debug.WriteLine($"Value requested, event {eventname} with value {lvar.Value}");
                 return lvar.Value;
             }
             else

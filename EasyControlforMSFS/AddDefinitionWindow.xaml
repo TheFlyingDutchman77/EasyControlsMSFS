@@ -46,7 +46,7 @@
             </StackPanel>
             <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="2">
                 <StackPanel Name ="ACname_text" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                    <Label Content="Select aircraft:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                    <Label Content="Select profile:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                     <Separator Height="3" Background="Transparent"/>
                     <Label Content="Axis 1 event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                     <Separator Height="3" Background="Transparent"/>
@@ -66,7 +66,7 @@
             <StackPanel Name ="ACname_input" Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
-                        <ComboBox Name="ACnamesComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" SelectionChanged="ACnamesComboBox_SelectionChanged"/>
+                        <ComboBox Name="ACnamesComboBox" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="300" SelectionChanged="ACnamesComboBox_SelectionChanged" IsReadOnly="True"/>
                         <Label Content="Inverted?" Width ="70" Name="Inverted"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                         <Label Content="Min/max values:" Width ="110" Name="Minmax"  HorizontalAlignment="Center" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                     </StackPanel>
@@ -139,12 +139,13 @@
             </StackPanel>
             <StackPanel Name="Add_2ndaxisevent_event" Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Button Name="Add_2nd_axis_event_button" Width="175" Click="Add_2nd_axis_event_button_Click" Margin="0,0,0,0">Add 2nd event for axis</Button>
-                <Separator Width="155" Background="Transparent"/>
+                <Separator Width="10" Background="Transparent"/>
+                <Button Name="MIDIMapperWindow" Width="115" Click="MIDIMapperWindow_Click" Margin="0,0,30,0">MIDI mapper</Button>
                 <CheckBox Name="AddAxis46CheckBox" HorizontalAlignment="Center" Checked="AddAxis46CheckBoxChanged" Unchecked="AddAxis46CheckBoxChanged"></CheckBox>
                 <Label Content="Add axis 4-6" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" />
             </StackPanel>
             <StackPanel Name ="New_items" Grid.Column="0" Grid.Row="7" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                <Label Content="Enter new aircraft:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                <Label Content="Enter new profile:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
                 <Separator Height="3" Background="Transparent"/>
                 <Label Content="Enter new event:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top"/>
             </StackPanel>

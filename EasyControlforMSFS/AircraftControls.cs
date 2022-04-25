@@ -14,7 +14,7 @@ namespace EasyControlforMSFS
         public List<string> all_events = new List<string>();
         public List<string> aircraft = new List<string>();
         public List<string> defined_controllers = new List<string>();
-
+        public bool XMLImportSuccess = false;
 
         public List<AircraftControlsData> aircraft_controls;
 
@@ -141,142 +141,150 @@ namespace EasyControlforMSFS
 
             int controller_id = 0;
             aircraftControls.aircraft_controls.Clear();
-            foreach (XElement level1Element in XElement.Load(@controls_file).Elements())
+            try
             {
-                //Debug.WriteLine(level1Element.Attribute("name").Value);
-                aircraftControls.aircraft_controls.Add(new AircraftControls.AircraftControlsData() { controller_name = level1Element.Attribute("name").Value });
-                aircraftControls.defined_controllers.Add(level1Element.Attribute("name").Value);
-                int aircraft_id = 0;
-                Debug.WriteLine($"Controller : {level1Element.Attribute("name").Value} is controller nr {controller_id}");
-                
-
-                foreach (XElement level2Element in level1Element.Elements())
+                foreach (XElement level1Element in XElement.Load(@controls_file).Elements())
                 {
-                    aircraft_id += 1;
-                    //Debug.WriteLine("test");
-                    aircraftControls.aircraft_controls[controller_id].AddAircraft(aircraft_id, level2Element.Attribute("name").Value);
-                    aircraftControls.aircraft_controls[controller_id].num_aircraft = aircraft_id;
-                    if (!aircraftControls.aircraft.Contains(level2Element.Attribute("name").Value)) { aircraftControls.aircraft.Add(level2Element.Attribute("name").Value); }
-                    int axis_id = 0;
-                    int button_id = 0;
-                    for (int j = 0; j < aircraftControls.aircraft_controls[controller_id].max_nr_axis; j++)
-                    {
-                        aircraftControls.aircraft_controls[controller_id].axis_events[aircraft_id, j] = "";
-                        aircraftControls.aircraft_controls[controller_id].axis_events2[aircraft_id, j] = "";
-                    }
-                    for (int j = 0; j < aircraftControls.aircraft_controls[controller_id].max_nr_buttons; j++)
-                    {
-                        aircraftControls.aircraft_controls[controller_id].button_events[aircraft_id, j] = "";
-                        aircraftControls.aircraft_controls[controller_id].button_eventsOFF[aircraft_id, j] = "";
-                    }
-                    foreach (XElement level3Element in level2Element.Elements())
-                    {
-                        //Debug.WriteLine($"Value: {level3Element.Value}");
-                        var item = level3Element.Name.ToString();
-                        //Debug.WriteLine($"Item level 3: {item}");
-                        if (item.Contains("axis"))
-                        {
-                            aircraftControls.aircraft_controls[controller_id].AddAxis(aircraft_id, axis_id + 1);
-                            //Debug.WriteLine($"Nr of axis set to: {axis_id+1}");
-                            foreach (XElement level4Element in level3Element.Elements())
-                            {
-                                var item_axis = level4Element.Name.ToString();
-                                //Debug.WriteLine($"Item level 4: {item_axis}");
-                                if (item_axis.Contains("event"))
-                                { 
-                                    if (item_axis.Contains("event2"))
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddAxisEvent2(aircraft_id, axis_id, level4Element.Value);
-                                        if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
-                                    }
-                                    else
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddAxisEvent(aircraft_id, axis_id, level4Element.Value);
-                                        if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
-                                    }
-                                }
-                                if (item_axis.Contains("min")) 
-                                {
-                                    if (item_axis.Contains("min2"))
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddAxisMin2(aircraft_id, axis_id, Int32.Parse(level4Element.Value));
-                                    }
-                                    else
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddAxisMin(aircraft_id, axis_id, Int32.Parse(level4Element.Value));
-                                    }
-                                }
-                                if (item_axis.Contains("max"))
-                                {
-                                    if (item_axis.Contains("max2"))
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddAxisMax2(aircraft_id, axis_id, Int32.Parse(level4Element.Value));
-                                    }
-                                    else
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddAxisMax(aircraft_id, axis_id, Int32.Parse(level4Element.Value));
-                                    }
-                                }
-                                if (item_axis.Contains("inverted"))
-                                {
-                                    if (item_axis.Contains("inverted2"))
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddAxisInverted2(aircraft_id, axis_id, bool.Parse(level4Element.Value));
-                                    }
-                                    else
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddAxisInverted(aircraft_id, axis_id, bool.Parse(level4Element.Value));
-                                    }
-                                }
-                            }
-                            axis_id += 1;
-                        }
-                        if (item.Contains("button"))
-                        {
-                            button_id = Int32.Parse(item.Replace("button", ""));
-                            //Debug.WriteLine($"Button nr: {button_id}");
+                    //Debug.WriteLine(level1Element.Attribute("name").Value);
+                    aircraftControls.aircraft_controls.Add(new AircraftControls.AircraftControlsData() { controller_name = level1Element.Attribute("name").Value });
+                    aircraftControls.defined_controllers.Add(level1Element.Attribute("name").Value);
+                    int aircraft_id = 0;
+                    Debug.WriteLine($"Controller : {level1Element.Attribute("name").Value} is controller nr {controller_id}");
 
-                            aircraftControls.aircraft_controls[controller_id].AddButton(aircraft_id, button_id+1);
-                            foreach (XElement level4Element in level3Element.Elements())
-                            {
-                                var item_button = level4Element.Name.ToString();
-                                //Debug.WriteLine(item_button);
-                                if (item_button.Contains("eventON"))
-                                {
-                                    aircraftControls.aircraft_controls[controller_id].AddButtonEvent(aircraft_id, button_id, level4Element.Value);
-                                    if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
-                                }
-                                if (item_button.Contains("eventOFF"))
-                                {
-                                    aircraftControls.aircraft_controls[controller_id].AddButtonEventOFF(aircraft_id, button_id, level4Element.Value);
-                                    if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
-                                }
-                                //Debug.WriteLine(level4Element.Value);
-                                if (item_button.Contains("axis_link")) 
-                                {
-                                    if (level4Element.Value != "")
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddButtonAxisLink(aircraft_id, button_id, Int32.Parse(level4Element.Value));
-                                    }
-                                    else
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddButtonAxisLink(aircraft_id, button_id, -1);
-                                    }
-                                }
-                                if (item_button.Contains("is_switch"))
-                                {
-                                    if (level4Element.Value != "")
-                                    {
-                                        aircraftControls.aircraft_controls[controller_id].AddButtonIsSwitch(aircraft_id, button_id, bool.Parse(level4Element.Value));
-                                    }
-                                }
-                            }
-                            //button_id += 1;
+                    foreach (XElement level2Element in level1Element.Elements())
+                    {
+                        XMLImportSuccess = false;
+                        aircraft_id += 1;
+                        //Debug.WriteLine("test");
+                        aircraftControls.aircraft_controls[controller_id].AddAircraft(aircraft_id, level2Element.Attribute("name").Value);
+                        aircraftControls.aircraft_controls[controller_id].num_aircraft = aircraft_id;
+                        if (!aircraftControls.aircraft.Contains(level2Element.Attribute("name").Value)) { aircraftControls.aircraft.Add(level2Element.Attribute("name").Value); }
+                        int axis_id = 0;
+                        int button_id = 0;
+                        for (int j = 0; j < aircraftControls.aircraft_controls[controller_id].max_nr_axis; j++)
+                        {
+                            aircraftControls.aircraft_controls[controller_id].axis_events[aircraft_id, j] = "";
+                            aircraftControls.aircraft_controls[controller_id].axis_events2[aircraft_id, j] = "";
                         }
+                        for (int j = 0; j < aircraftControls.aircraft_controls[controller_id].max_nr_buttons; j++)
+                        {
+                            aircraftControls.aircraft_controls[controller_id].button_events[aircraft_id, j] = "";
+                            aircraftControls.aircraft_controls[controller_id].button_eventsOFF[aircraft_id, j] = "";
+                        }
+                        foreach (XElement level3Element in level2Element.Elements())
+                        {
+                            //Debug.WriteLine($"Value: {level3Element.Value}");
+                            var item = level3Element.Name.ToString();
+                            //Debug.WriteLine($"Item level 3: {item}");
+                            if (item.Contains("axis"))
+                            {
+                                aircraftControls.aircraft_controls[controller_id].AddAxis(aircraft_id, axis_id + 1);
+                                //Debug.WriteLine($"Nr of axis set to: {axis_id+1}");
+                                foreach (XElement level4Element in level3Element.Elements())
+                                {
+                                    var item_axis = level4Element.Name.ToString();
+                                    //Debug.WriteLine($"Item level 4: {item_axis}");
+                                    if (item_axis.Contains("event"))
+                                    {
+                                        if (item_axis.Contains("event2"))
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddAxisEvent2(aircraft_id, axis_id, level4Element.Value);
+                                            if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
+                                        }
+                                        else
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddAxisEvent(aircraft_id, axis_id, level4Element.Value);
+                                            if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
+                                        }
+                                    }
+                                    if (item_axis.Contains("min"))
+                                    {
+                                        if (item_axis.Contains("min2"))
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddAxisMin2(aircraft_id, axis_id, Int32.Parse(level4Element.Value));
+                                        }
+                                        else
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddAxisMin(aircraft_id, axis_id, Int32.Parse(level4Element.Value));
+                                        }
+                                    }
+                                    if (item_axis.Contains("max"))
+                                    {
+                                        if (item_axis.Contains("max2"))
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddAxisMax2(aircraft_id, axis_id, Int32.Parse(level4Element.Value));
+                                        }
+                                        else
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddAxisMax(aircraft_id, axis_id, Int32.Parse(level4Element.Value));
+                                        }
+                                    }
+                                    if (item_axis.Contains("inverted"))
+                                    {
+                                        if (item_axis.Contains("inverted2"))
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddAxisInverted2(aircraft_id, axis_id, bool.Parse(level4Element.Value));
+                                        }
+                                        else
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddAxisInverted(aircraft_id, axis_id, bool.Parse(level4Element.Value));
+                                        }
+                                    }
+                                }
+                                axis_id += 1;
+                            }
+                            if (item.Contains("button"))
+                            {
+                                button_id = Int32.Parse(item.Replace("button", ""));
+                                //Debug.WriteLine($"Button nr: {button_id}");
+
+                                aircraftControls.aircraft_controls[controller_id].AddButton(aircraft_id, button_id + 1);
+                                foreach (XElement level4Element in level3Element.Elements())
+                                {
+                                    var item_button = level4Element.Name.ToString();
+                                    //Debug.WriteLine(item_button);
+                                    if (item_button.Contains("eventON"))
+                                    {
+                                        aircraftControls.aircraft_controls[controller_id].AddButtonEvent(aircraft_id, button_id, level4Element.Value);
+                                        if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
+                                    }
+                                    if (item_button.Contains("eventOFF"))
+                                    {
+                                        aircraftControls.aircraft_controls[controller_id].AddButtonEventOFF(aircraft_id, button_id, level4Element.Value);
+                                        if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
+                                    }
+                                    //Debug.WriteLine(level4Element.Value);
+                                    if (item_button.Contains("axis_link"))
+                                    {
+                                        if (level4Element.Value != "")
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddButtonAxisLink(aircraft_id, button_id, Int32.Parse(level4Element.Value));
+                                        }
+                                        else
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddButtonAxisLink(aircraft_id, button_id, -1);
+                                        }
+                                    }
+                                    if (item_button.Contains("is_switch"))
+                                    {
+                                        if (level4Element.Value != "")
+                                        {
+                                            aircraftControls.aircraft_controls[controller_id].AddButtonIsSwitch(aircraft_id, button_id, bool.Parse(level4Element.Value));
+                                        }
+                                    }
+                                }
+                                //button_id += 1;
+                            }
+                        }
+                        XMLImportSuccess = true;
                     }
+                    //Debug line
+                    controller_id += 1;
                 }
-                //Debug line
-                controller_id += 1;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString()); 
             }
 
             for (int j = 0; j < aircraftControls.aircraft_controls.Count; j++)

@@ -11,7 +11,7 @@ using Microsoft.FlightSimulator.SimConnect;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using System.Threading;
-
+using System.Diagnostics;
 
 namespace EasyControlforMSFS
 {
@@ -37,7 +37,9 @@ namespace EasyControlforMSFS
         public event EventHandler<string> LogResult = null;
         int counterIDevents = 0;
         int counterIDreqs = 0;
+        int counterIDevents_max = 0;
         public List<SimVarList> simvarlist;
+        public List<SimVarList> simeventlist;
         public IntPtr wih;
 
 
@@ -160,6 +162,7 @@ namespace EasyControlforMSFS
 
                 // create object to register requested simvars
                 simvarlist = new List<SimVarList>();
+                simeventlist = new List<SimVarList>();
 
                 LogResult?.Invoke(this, "Connected");
             }
@@ -224,6 +227,7 @@ namespace EasyControlforMSFS
             foreach (var property in data.GetType().GetFields())
             {
                 LogResult?.Invoke(this, $"Exception (on exception): {property.Name} {property.GetValue(data)}");
+                Debug.WriteLine($"Exception (on exception): {property.Name} {property.GetValue(data)}");
             }
 
         }
@@ -235,17 +239,36 @@ namespace EasyControlforMSFS
         /// <param name="simconnect_event_dataset"> data value to set</param>
         public void SendEvent(string simconnect_event_key, int simconnect_event_dataset)
         {
-            try
+            if (bSimConnected)
             {
-                counterIDevents += 1;
-                simconnect.MapClientEventToSimEvent((EVENTS)counterIDevents, simconnect_event_key);
-                simconnect.TransmitClientEvent(SimConnect.SIMCONNECT_OBJECT_ID_USER, (EVENTS)counterIDevents, (uint)simconnect_event_dataset, GROUP.ID_PRIORITY_HIGHEST, SIMCONNECT_EVENT_FLAG.GROUPID_IS_PRIORITY);
-                //LogResult?.Invoke(this, $"Event send, ID: {counterIDevents} and event: {simconnect_event_key}, with set value: {simconnect_event_dataset}");
+                if (simeventlist.FindIndex(item => item.Key == simconnect_event_key) == -1)
+                {
+                    string var_type = "float";
+                    counterIDevents_max += 1;
+                    counterIDevents = counterIDevents_max;
+                    simconnect.MapClientEventToSimEvent((EVENTS)counterIDevents, simconnect_event_key);
+                    simeventlist.Add(new SimVarList(simconnect_event_key, counterIDevents, var_type));
+                }
+                else
+                {
+                    int index = simeventlist.FindIndex(item => item.Key == simconnect_event_key);
+                    counterIDevents = simeventlist[index].ID;
+                }
+                
+                try
+                {
+
+                    simconnect.TransmitClientEvent(SimConnect.SIMCONNECT_OBJECT_ID_USER, (EVENTS)counterIDevents, (uint)simconnect_event_dataset, GROUP.ID_PRIORITY_HIGHEST, SIMCONNECT_EVENT_FLAG.GROUPID_IS_PRIORITY);
+                    Thread.Sleep(10);
+                    //LogResult?.Invoke(this, $"Event send, ID: {counterIDevents} and event: {simconnect_event_key}, with set value: {simconnect_event_dataset}");
+                }
+                catch (Exception ex)
+                {
+                    LogResult?.Invoke(this, $"SetSimVar Error: {ex.Message}");
+                    Debug.WriteLine($"SetSimVar Error: {ex.Message}");
+                }
             }
-            catch (Exception ex)
-            {
-                LogResult?.Invoke(this, $"SetSimVar Error: {ex.Message}");
-            }
+            
         }
 
 
@@ -270,7 +293,7 @@ namespace EasyControlforMSFS
 
                             // request when the SimConnect client is to receive data values for a specific object
                             simconnect.RequestDataOnSimObject((SIMVARREQ)counterIDreqs, (SIMVARDEF)counterIDreqs, 0, SIMCONNECT_PERIOD.SECOND, SIMCONNECT_DATA_REQUEST_FLAG.DEFAULT, 0, 0, 0);
-                            LogResult?.Invoke(this, "Registered!");
+                            //LogResult?.Invoke(this, "Registered!");
 
                             simvarlist.Add(new SimVarList(simvar, counterIDreqs, var_type));
                         }
@@ -327,7 +350,7 @@ namespace EasyControlforMSFS
             if (type == "float")
             {
                 StructSimVar result = (StructSimVar)data.dwData[0];
-                LogResult?.Invoke(this, $"{var}: {result.var:F3}, ReqID: {reqid}");
+                LogResult?.Invoke(this, $"{var} |{result.var:F3}| ReqID: {reqid}");
             }
             if (type == "string")
             {

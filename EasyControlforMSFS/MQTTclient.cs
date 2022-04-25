@@ -14,11 +14,12 @@ namespace EasyControlforMSFS
     {
         public event EventHandler<string> LogResult = null;
         public string title = "";
+        public MqttClient client;
 
         public MQTTclient()
         {
             // create client instance
-            MqttClient client = new MqttClient("192.168.0.137");
+            client = new MqttClient("192.168.0.137");
             try
             {
                 // register to message received
@@ -54,12 +55,16 @@ namespace EasyControlforMSFS
             Debug.WriteLine($"Title for mqtt set to {title}");
         }
 
+        public void PublishMessage(string message, string value)
+        {
+            client.Publish(message, Encoding.UTF8.GetBytes(value), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        }
 
         public void ProcessMessageReceived(string topic, int value)
         {
             if (title.Contains("Boeing 247D"))
             {
-                if (topic == "msfs/settrim")
+                if (topic == "msfs/XXXsettrim") /// NOT USED ANYMORE
                 {
                     string Lvar = "ELEVATOR TRIM";
                     int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(Lvar);
@@ -69,7 +74,7 @@ namespace EasyControlforMSFS
                         if (value == -1) { MainWindow.myMSFSVarServices.VS_EventSet(Lvar, current_value + 1); }
                     }
                 }
-                if (topic == "msfs/aileron_trim")
+                if (topic == "msfs/XXXXaileron_trim") /// NOT USED ANYMORE
                 {
                     string Lvar = "AILERON TRIM";
                     int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(Lvar);
@@ -79,7 +84,7 @@ namespace EasyControlforMSFS
                         if (value == -1) { MainWindow.myMSFSVarServices.VS_EventSet(Lvar, current_value + 1); }
                     }
                 }
-                if (topic == "msfs/rudder_trim")
+                if (topic == "msfs/XXXXrudder_trim") /// NOT USED ANYMORE
                 {
                     string Lvar = "RUDDER TRIM";
                     int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(Lvar);

@@ -11,6 +11,7 @@
 	</profile>
 	<profile name="Milviz PC-6">
 		<title>Turbo Porter EC-JXH Glass</title>
+		<title>Turbo Porter S5-CMA Glass</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
@@ -18,6 +19,7 @@
 		<title>Airbus A320neo Lufthansa</title>
 		<title>FWB Swiss HB-JDA</title>
 		<title>Airbus A32NX British Airways</title>
+		<title>Airbus A320neo TAP CS-TVG</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G1000">
 		<title>Cessna Skyhawk G1000 Skis Asobo</title>
@@ -33,6 +35,7 @@
 		<title>Kodiak 100 Factory paint A1</title>
 		<title>Kodiak 100 tundra tyres, Safari Wings</title>
 		<title>Kodiak 100 Safari Wings</title>
+		<title>Kodiak 100 Legacy Livery 6</title>
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
@@ -49,5 +52,14 @@
 	<profile name="Boeing 247D">
 		<title>Boeing 247D United Air Lines (1941)</title>
 		<title>Boeing 247D Wing42</title>
+	</profile>
+	<profile name="Asobo Stock Aircraft G3000">
+		<title>Savage Carbon - Batman</title>
+	</profile>
+	<profile name="Flysimware Cessna 414">
+		<title>Cessna 414AW N427RC GNS530</title>
+	</profile>
+	<profile name="Just Flight Turbo Arrow">
+		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
 	</profile>
 </root>

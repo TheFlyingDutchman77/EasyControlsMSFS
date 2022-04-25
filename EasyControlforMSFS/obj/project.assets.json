@@ -52,6 +52,18 @@
           "build/MaterialDesignThemes.targets": {}
         }
       },
+      "Melanchall.DryWetMidi/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Melanchall.DryWetMidi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Melanchall.DryWetMidi.dll": {}
+        },
+        "build": {
+          "build/Melanchall.DryWetMidi.targets": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/3.0.0": {
         "type": "package",
         "compile": {
@@ -1214,6 +1226,27 @@
         "materialdesignthemes.4.3.0.nupkg.sha512",
         "materialdesignthemes.nuspec",
         "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Melanchall.DryWetMidi/6.0.1": {
+      "sha512": "BcZSMCXux3I88SUVWTjYAUsDX4tchGhrfi1imkPmjHc+lR2T6OULhN5rlJrbyYldQUKwOdf+oK/KPTcBMCWmAA==",
+      "type": "package",
+      "path": "melanchall.drywetmidi/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Melanchall.DryWetMidi.targets",
+        "build/Melanchall_DryWetMidi_Native32.dll",
+        "build/Melanchall_DryWetMidi_Native64.dll",
+        "build/Melanchall_DryWetMidi_Native64.dylib",
+        "icon.png",
+        "lib/net45/Melanchall.DryWetMidi.dll",
+        "lib/net45/Melanchall.DryWetMidi.xml",
+        "lib/netstandard2.0/Melanchall.DryWetMidi.dll",
+        "lib/netstandard2.0/Melanchall.DryWetMidi.xml",
+        "melanchall.drywetmidi.6.0.1.nupkg.sha512",
+        "melanchall.drywetmidi.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/3.0.0": {
@@ -4118,6 +4151,7 @@
       "FSUIPCClientDLL >= 3.2.19",
       "M2MqttDotnetCore >= 1.1.0",
       "MaterialDesignThemes >= 4.3.0",
+      "Melanchall.DryWetMidi >= 6.0.1",
       "Microsoft.Windows.SDK.Contracts >= 10.0.22000.196",
       "YamlDotNet >= 11.2.1"
     ]
@@ -4178,6 +4212,10 @@
             "target": "Package",
             "version": "[4.3.0, )"
           },
+          "Melanchall.DryWetMidi": {
+            "target": "Package",
+            "version": "[6.0.1, )"
+          },
           "Microsoft.Windows.SDK.Contracts": {
             "target": "Package",
             "version": "[10.0.22000.196, )"
@@ -4206,7 +4244,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },

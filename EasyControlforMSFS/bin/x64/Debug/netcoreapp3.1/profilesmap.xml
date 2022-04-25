@@ -8,16 +8,20 @@
 	</profile>
 	<profile name="Milviz PC-6">
 		<title>Turbo Porter EC-JXH Glass</title>
+		<title>Turbo Porter S5-CMA Glass</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
 		<title>Airbus A320neo Easyjet</title>
 		<title>Airbus A320neo Lufthansa</title>
 		<title>FWB Swiss HB-JDA</title>
+		<title>Airbus A320neo FlyByWire</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G1000">
 		<title>Cessna Skyhawk G1000 Skis Asobo</title>
 		<title>Bonanza G36 Asobo</title>
+		<title>Cessna Skyhawk G1000 Asobo</title>
+		<title>Cessna 152 Asobo</title>
 	</profile>
 	<profile name="Cessna Citation CJ4">
 		<title>Cessna CJ4 Citation Asobo</title>
@@ -28,6 +32,7 @@
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
+		<title>CRJ700ER Lufthansa Regional D-ACSB</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G3X">
 		<title>Asobo XCub Floats</title>
@@ -38,5 +43,14 @@
 	<profile name="Boeing 247D">
 		<title>Boeing 247D Wing42</title>
 		<title>Boeing 247D United Air Lines (1941)</title>
+	</profile>
+	<profile name="Cessna C414">
+		<title>Cessna 414AW N427RC GNS530</title>
+	</profile>
+	<profile name="">
+		<title>Icon A5 Asobo</title>
+	</profile>
+	<profile name="Just Flight Turbo Arrow">
+		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
 	</profile>
 </root>

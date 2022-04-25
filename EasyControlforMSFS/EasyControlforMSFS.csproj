@@ -15,6 +15,7 @@
     <PackageReference Include="FSUIPCClientDLL" Version="3.2.19" />
     <PackageReference Include="M2MqttDotnetCore" Version="1.1.0" />
     <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+    <PackageReference Include="Melanchall.DryWetMidi" Version="6.0.1" />
     <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.22000.196" />
     <PackageReference Include="YamlDotNet" Version="11.2.1" />
   </ItemGroup>
@@ -30,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="FSUIPC_WAPID.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

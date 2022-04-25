@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +33,7 @@ namespace EasyControlforMSFS
         public string[] available_controllers = new string[10];
         public AircraftControls aircraftControls;
         public ProfilesMap profilesMap;
+        public MIDIcontroller myMIDIcontroller;
         public static int max_axis = 10;
         public static int max_buttons = 164;
         public double[,] axisArray = new double[10, max_axis]; //max 10 controllers with 10 axes each
@@ -39,6 +42,9 @@ namespace EasyControlforMSFS
         public bool addDefWindowOpened = false;
         public string[] args;
         public string title;
+        string sAttr;
+        bool MIDIused = false;
+        bool MIDIconnected = false;
 
         public MainWindow()
         {
@@ -49,17 +55,25 @@ namespace EasyControlforMSFS
             profilesMap = new ProfilesMap();
             profilesMap = profilesMap.LoadProfilesMapFile(profilesMap);
 
-            mysimconnect = new SimConnectImplementer();
             InitializeComponent();
 
 
-            mysimconnect.LogResult += OnAddResult;
             myMSFSVarServices.LogResult += OnAddResult;
             myMSFSVarServices.InitMSFSServices();
-            aircraftControls = new AircraftControls();
-            aircraftControls = aircraftControls.LoadControlsFile(aircraftControls);
 
             
+            
+            aircraftControls = new AircraftControls();
+            aircraftControls = aircraftControls.LoadControlsFile(aircraftControls);
+            if (!aircraftControls.XMLImportSuccess)
+            {
+                Debug.WriteLine($"ERROR IN XML CONTROLS FILE");
+                MessageTextBox.AppendText($"POTENTIAL ERROR IN XML CONTROLS FILE \n Check syntax of controls.xml \r\n");
+                MessageTextBox.ScrollToEnd();
+
+            }
+
+
 
             //Now we add aircraft to the aircraft selector combobox
             aircraftControls.aircraft.Sort();
@@ -89,9 +103,22 @@ namespace EasyControlforMSFS
             connectSimConnect.IsBackground = true;
             connectSimConnect.Start();
 
-            Thread connectMQTT = new Thread(ConnectMQTT);
-            connectMQTT.IsBackground = true;
-            connectMQTT.Start();
+            //Thread connectMQTT = new Thread(ConnectMQTT);
+            //connectMQTT.IsBackground = true;
+            //connectMQTT.Start();
+
+            sAttr = ConfigurationManager.AppSettings.Get("MIDI");
+            MIDIused = System.Convert.ToBoolean(sAttr);
+            Debug.WriteLine($"MIDI key is set to: {sAttr} {MIDIused}");
+            MessageTextBox.AppendText($"MIDI key is set to: {MIDIused} \r\n");
+            MessageTextBox.ScrollToEnd();
+
+            if (MIDIused)
+            {
+                Thread connectMIDI = new Thread(ConnectMIDI);
+                connectMIDI.IsBackground = true;
+                connectMIDI.Start();
+            }
 
         }
 
@@ -99,15 +126,50 @@ namespace EasyControlforMSFS
         {
             myMQTTclient = new MQTTclient();
             myMQTTclient.LogResult += OnAddResult;
-
         }
 
+
+        public void ConnectMIDI()
+        {
+            while (true)
+            {
+                if (mysimconnect != null)
+                {
+                    if (mysimconnect.bSimConnected)
+                    {
+                        myMIDIcontroller = new MIDIcontroller(mysimconnect);
+                        if (!myMIDIcontroller.XMLloadedsuccessfully)
+                        {
+                            this.Dispatcher.Invoke(() =>
+                            {
+                                MessageTextBox.AppendText("MIDI DEVICE NOT CONNECTED OR ERROR IN LOADING MIDI XML FILE! \n Check connection or MIDI XML file syntax" + "\r\n");
+                                MessageTextBox.ScrollToEnd();
+                            });
+                        }
+                        myMIDIcontroller.LogResult += OnAddResult;
+                        MIDIconnected = myMIDIcontroller.MIDIconnected;
+                        break;
+                    }
+                }
+                else
+                {
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        MessageTextBox.AppendText("MIDI connector waiting for Simconnect connection" + "\r\n");
+                        MessageTextBox.ScrollToEnd();
+                    });
+                    Thread.Sleep(1000);
+                }
+            }
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (!addDefWindowOpened)
             {
-                AddDefinitionWindow addDefWindow = new AddDefinitionWindow(aircraftControls, mygamecontroller, mysimconnect, SelectAircraftComboBox.SelectedItem.ToString() );
+                string SelectedAircraftString = "";
+                if (SelectAircraftComboBox.SelectedIndex > -1) { SelectedAircraftString = SelectAircraftComboBox.SelectedItem.ToString(); }
+                AddDefinitionWindow addDefWindow = new AddDefinitionWindow(aircraftControls, mygamecontroller, mysimconnect, SelectedAircraftString );
                 addDefWindow.Closed += AddDefWindow_Closed;
                 addDefWindow.Show();
                 addDefWindowOpened = true;
@@ -132,6 +194,9 @@ namespace EasyControlforMSFS
 
         public void ConnectSimConnect()
         {
+            mysimconnect = new SimConnectImplementer();
+            mysimconnect.LogResult += OnAddResult;
+
             //Debug.WriteLine($"Simconnect started");
             bool localbSimConnected = false;
             bool title_registred = false;
@@ -186,11 +251,17 @@ namespace EasyControlforMSFS
 
         private void OnAddResult(object sender, string sResult)
         {
+            if (sResult.Contains("AUTOPILOT ") || sResult.Contains("LIGHT ") || sResult.Contains("PLANE HEADING DEGREES ")) { myMIDIcontroller.NewSimConnectData(sResult); }
+            
             this.Dispatcher.Invoke(() =>
             {
-                MessageTextBox.AppendText(sResult + "\r\n");
-                Debug.WriteLine(sResult);
-                MessageTextBox.ScrollToEnd();
+                if (!sResult.Contains("|"))
+                {
+                    MessageTextBox.AppendText(sResult + "\r\n");
+                    MessageTextBox.ScrollToEnd();
+                }
+                //Debug.WriteLine(sResult);
+
             });
 
             if (sResult.Contains("Title"))
@@ -198,7 +269,6 @@ namespace EasyControlforMSFS
                 title = sResult.Split("|")[1];
                 TitleTextBlock.Text = title;
                 CheckTitleReceived(title);
-                myMQTTclient.SetTitle(title);
             }
         }
 
@@ -218,6 +288,10 @@ namespace EasyControlforMSFS
             if (profile_id > -1) //title is already mapped to profile
             {
                 SelectAircraftComboBox.SelectedItem = profilesMap.profiles_map[profile_id].profile_name;
+                if (MIDIused)
+                {
+                    myMIDIcontroller.SetTitle(profilesMap.profiles_map[profile_id].profile_name);
+                }
             }
             else
             {
@@ -231,6 +305,7 @@ namespace EasyControlforMSFS
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             mysimconnect.Disconnect();
+            if (MIDIused && MIDIconnected) { myMIDIcontroller.StopMIDIconnection(); }
             Environment.Exit(0);
             System.Windows.Application.Current.Shutdown();
         }
@@ -241,11 +316,16 @@ namespace EasyControlforMSFS
         {
             // Checking if selected aircraft has any controls defined for all available controllers
             string selected_aircraft = "";
-            try
+            if (SelectAircraftComboBox.SelectedIndex > -1)
             {
                 selected_aircraft = SelectAircraftComboBox.SelectedItem.ToString();
+                if (MIDIused)
+                {
+                    if (MIDIconnected) { myMIDIcontroller.SetTitle(selected_aircraft); }
+                    
+                }
             }
-            catch { }
+
             Debug.WriteLine(available_controllers[0]);
             for (int i = 0; i < available_controllers.Length; i++)
             {
@@ -275,7 +355,7 @@ namespace EasyControlforMSFS
             {
                 available_controllers = mygamecontroller.ReadAvailableGameControllers();
                 //Debug.WriteLine($"Controller gevonden: {available_controllers[0]}");
-                Thread.Sleep(100);
+                Thread.Sleep(1000);
             }
             for (int i = 0; i < available_controllers.Length; i++)
             {
@@ -455,15 +535,21 @@ namespace EasyControlforMSFS
             }
             if (!axis_surpressed) //fire events if axis is not surpressed
             {
-                if (sim_event.Substring(0,6) == "FSUIPC")
+                if (sim_event != "")
                 {
-                    string sim_event_new = sim_event.Replace("FSUIPC.", "");
-                    int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(sim_event_new);
-                    //Debug.WriteLine($"Set value {sim_event}  {set_value_double}");
-                    if (Math.Abs(current_value - Math.Round(set_value_double)) > 1) { myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); }
+                    if (sim_event.Length > 6)
+                    {
+                        if (sim_event.Substring(0, 6) == "FSUIPC")
+                        {
+                            string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                            int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(sim_event_new);
+                            //Debug.WriteLine($"Set value {sim_event}  {set_value_double}");
+                            if (Math.Abs(current_value - Math.Round(set_value_double)) > 1) { myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); }
+                        }
+                    else { mysimconnect.SendEvent(sim_event, set_value); }
+                    }
                 }
-                else { mysimconnect.SendEvent(sim_event, set_value); }
-
+                
                 if (sim_event2 != "") 
                 {
                     if (sim_event2.Substring(0, 6) == "FSUIPC")
@@ -521,7 +607,11 @@ namespace EasyControlforMSFS
 
         private void MapTitleButton_Click(object sender, RoutedEventArgs e)
         {
-            string profile_selected = SelectAircraftComboBox.SelectedItem.ToString();
+            string profile_selected = "";
+            if (SelectAircraftComboBox.SelectedIndex > -1)
+            {
+                profile_selected = SelectAircraftComboBox.SelectedItem.ToString();
+            }
             if (profile_selected == "")
             {
                 MessageBox.Show("Please select profile first.");

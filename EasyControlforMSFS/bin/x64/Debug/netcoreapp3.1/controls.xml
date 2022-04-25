@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <root>
 	<joystick name="Flight Throttle Quadrant (HID)-1699-3117">
+		<aircraft name="Test case">
+			<axis0>
+				<event></event>
+				<min>0</min>
+				<max>0</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event></event>
+				<min>0</min>
+				<max>0</max>
+				<inverted>False</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button0>
+				<eventON>TOGGLE_BEACON_LIGHTS</eventON>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+		</aircraft>
 		<aircraft name="Airbus A320neo">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -65,6 +90,31 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button3>
+			<button8>
+				<eventON>PROP_PITCH_DECR</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>False</is_switch>
+			</button8>
+		</aircraft>
+		<aircraft name="Cessna C414">
+			<axis0>
+				<event>THROTTLE1_SET</event>
+				<min>-5000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE2_SET</event>
+				<min>-5000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
 			<button8>
 				<eventON>PROP_PITCH_DECR</eventON>
 				<axis_link>2</axis_link>
@@ -151,20 +201,8 @@
 				<inverted>True</inverted>
 			</axis2>
 		</aircraft>
-		<aircraft name="Boeing 247D">
+				<aircraft name="Boeing 247D">
 			<axis0>
-				<event>FSUIPC.ENG THROTTLE 1</event>
-				<min>0</min>
-				<max>100</max>
-				<inverted>True</inverted>
-			</axis0>
-			<axis1>
-				<event>FSUIPC.ENG THROTTLE 2</event>
-				<min>0</min>
-				<max>100</max>
-				<inverted>True</inverted>
-			</axis1>
-			<axis2>
 				<event>FSUIPC.ENG PROPELLER 1</event>
 				<min>0</min>
 				<max>100</max>
@@ -173,7 +211,39 @@
 				<min2>0</min2>
 				<max2>100</max2>
 				<inverted2>True</inverted2>
+			</axis0>
+			<axis1>
+				<event>FSUIPC.ENG THROTTLE 1</event>
+				<min>0</min>
+				<max>100</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>FSUIPC.ENG THROTTLE 2</event>
+				<min>0</min>
+				<max>100</max>
+				<inverted>True</inverted>
 			</axis2>
+			<button0>
+				<eventON>Mobiflight.B247D_OIL_SHUTTER_LEVER_UP</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+			<button1>
+				<eventON>Mobiflight.B247D_OIL_SHUTTER_LEVER_DOWN</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button1>
+			<button2>
+				<eventON>Mobiflight.B247D_CARB_HEAT_LEVER_UP</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>Mobiflight.B247D_CARB_HEAT_LEVER_DOWN</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button3>
 			<button4>
 				<eventON>Mobiflight.B247D_MIXTURE_UP</eventON>
 				<axis_link></axis_link>
@@ -394,6 +464,33 @@
 				<is_switch>True</is_switch>
 			</button5>
 		</aircraft>
+		<aircraft name="Just Flight Turbo Arrow">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
 		<aircraft name="TBM930">
 			<button0>
 				<eventON>MASTER_BATTERY_SET</eventON>
@@ -580,6 +677,13 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
+		</aircraft>
+		<aircraft name="Cessna C414">
+			<button0>
+				<eventON>FSUIPC.ELECTRICAL_Switch_Battery_Master</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
 		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-1103-1029">
