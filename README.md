@@ -21,7 +21,7 @@ Enter new aircraft  profile (give description of aircraft you are using) and hit
 Select aircraft
 Select controller for which you want to set up the controls
 Select e.g. an Axis 1 event (or enter new event yourself)
-Click Save
+Click Save  
 Click Exit
 In the main window, at select profile select the aircraft description you have just used.
 
