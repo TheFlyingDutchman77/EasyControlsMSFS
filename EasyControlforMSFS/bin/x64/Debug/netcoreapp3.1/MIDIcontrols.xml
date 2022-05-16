@@ -473,5 +473,7 @@
 				<eventOFF>MobiFlight.AUTOPILOT_hdg_OFF_PRESS</eventOFF>
 			</button9>
 		</aircraft>
+		<aircraft name="Test case">
+		</aircraft>
 	</MIDIcontroller>
 </root>

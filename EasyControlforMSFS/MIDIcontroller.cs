@@ -432,6 +432,14 @@ namespace EasyControlforMSFS
             string controls_file = AppDomain.CurrentDomain.BaseDirectory + "MIDIcontrols.xml";
             bool controller_loaded = false;
 
+            Array.Clear(button_events,0, button_events.Length);
+            Array.Clear(button_events_off, 0, button_events_off.Length);
+            Array.Clear(button_status_var, 0, button_status_var.Length);
+            Array.Clear(knob_events_left, 0, knob_events_left.Length);
+            Array.Clear(knob_events_left_alt, 0, knob_events_left_alt.Length);
+            Array.Clear(knob_events_right, 0, knob_events_right.Length);
+            Array.Clear(knob_events_right_alt, 0, knob_events_right_alt.Length);
+
             MIDIcontroller_name = "";
             try
             {
@@ -513,6 +521,7 @@ namespace EasyControlforMSFS
                 }
                 
             }
+
             catch (System.Xml.XmlException e)
             {
                 LogResult?.Invoke(this, $"Error in loading xml file: {e}");

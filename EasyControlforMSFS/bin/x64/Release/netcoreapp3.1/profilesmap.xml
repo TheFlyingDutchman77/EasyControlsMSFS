@@ -8,6 +8,7 @@
 		<title>Aerosoft DHC-6 Series 300</title>
 		<title>Aerosoft DHC6-300 Wheels Buffalo C-GFYN</title>
 		<title>Flybe </title>
+		<title>Aerosoft DHC-6 Series 300 Wheels Pax Canadian Forces JM-1954</title>
 	</profile>
 	<profile name="Milviz PC-6">
 		<title>Turbo Porter EC-JXH Glass</title>
@@ -61,5 +62,11 @@
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
+	</profile>
+	<profile name="Just Flight BAe 146">
+		<title>Just Flight 146-200 Cobham Aviation</title>
+	</profile>
+	<profile name="PMDG Boeing 737">
+		<title>PMDG 737-700 KLM Royal Dutch Airlines (PH-BGG </title>
 	</profile>
 </root>

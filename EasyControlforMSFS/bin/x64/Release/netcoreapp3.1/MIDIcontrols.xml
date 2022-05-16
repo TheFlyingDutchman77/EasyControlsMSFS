@@ -32,10 +32,6 @@
 				<event_left>RUDDER_TRIM_LEFT</event_left>
 				<event_right>RUDDER_TRIM_RIGHT</event_right>
 			</knob7>
-			<knob8>
-				<event_left>Mobiflight.GEAR_DOWN</event_left>
-				<event_right>Mobiflight.GEAR_UP</event_right>
-			</knob8>
 			<knob9>
 				<event_left>Mobiflight.GEAR_DOWN</event_left>
 				<event_right>Mobiflight.GEAR_UP</event_right>
@@ -235,7 +231,8 @@
 			</button41>
 			<button42>
 				<event>Mobiflight.PC6_AV_BUS2</event>
-			</button42>		</aircraft>
+			</button42>
+		</aircraft>
 		<aircraft name="Boeing 247D">
 			<knob0>
 				<event_left>Mobiflight.B247D_AILERON_TRIM_UP</event_left>
@@ -470,6 +467,111 @@
 				<event>MobiFlight.AUTOPILOT_hdg_ON_PRESS</event>
 				<eventOFF>MobiFlight.AUTOPILOT_hdg_OFF_PRESS</eventOFF>
 			</button9>
+		</aircraft>
+		<aircraft name="Just Flight BAe 146">
+			<knob1>
+				<event_left>Mobiflight.BAE146_ALT_DEC</event_left>
+				<event_right>Mobiflight.BAE146_ALT_INC</event_right>
+			</knob1>
+			<knob6>
+				<event_left>Mobiflight.BAE146_DH_DEC</event_left>
+				<event_right>Mobiflight.BAE146_DH_INC</event_right>
+			</knob6>
+			<knob7>
+				<event_left>Mobiflight.BAE146_PRESS_SET_DEC</event_left>
+				<event_right>Mobiflight.BAE146_PRESS_SET_INC</event_right>
+			</knob7>
+			<button9>
+				<event>FSUIPC.MCP_Mode_HDG</event>
+			</button9>
+			<button10>
+				<event>FSUIPC.MCP_Mode_LNAV</event>
+			</button10>
+			<button11>
+				<event>FSUIPC.MCP_Alt_arm</event>
+			</button11>
+			<button13>
+				<event>FSUIPC.MCP_Mode_IAS</event>
+			</button13>
+			<button15>
+				<event>FSUIPC.FLTCTRLS_RT_button_L</event>
+			</button15>
+			<button16>
+				<event>Mobiflight.BAE146_LANDING_LIGHTS_ON</event>
+				<eventOFF>Mobiflight.BAE146_LANDING_LIGHTS_OFF</eventOFF>
+			</button16>
+			<button17>
+				<event>Mobiflight.BAE146_TAXI_LIGHTS_ON</event>
+				<eventOFF>Mobiflight.BAE146_TAXI_LIGHTS_OFF</eventOFF>
+			</button17>
+			<button18>
+				<event>FSUIPC.OVHD_LTS_Strobe</event>
+			</button18>
+			<button22>
+				<event>FSUIPC.OVHD_LTS_NoSmkg</event>
+			</button22>
+			<button23>
+				<event>FSUIPC.OVHD_CTR_LWR_FastenBelts</event>
+			</button23>
+			<button32>
+				<event>FSUIPC.OVHD_APU_StartStop</event>
+			</button32>
+			<button33>
+				<event>FSUIPC.OVHD_APU_StartStop</event>
+			</button33>
+			<button37>
+				<event>FSUIPC.PED_AFT_AP_YD</event>
+				<eventOFF>FSUIPC.PED_AFT_AP_YD</eventOFF>
+				<status_var>FSUIPC.PED_AFT_AP_YD1_il</status_var>
+			</button37>
+		</aircraft>
+		<aircraft name="PMDG Boeing 737">
+			<knob1>
+				<event_left>AP_ALT_VAR_DEC</event_left>
+				<event_right>AP_ALT_VAR_INC</event_right>
+			</knob1>
+			<knob5>
+				<event_left>Mobiflight.737_BARO_DEC</event_left>
+				<event_right>Mobiflight.737_BARO_INC</event_right>
+			</knob5>
+			<knob6>
+				<event_left>Mobiflight.737_DH_DEC</event_left>
+				<event_right>Mobiflight.737_DH_INC</event_right>
+			</knob6>
+			<knob7>
+				<event_left>Mobiflight.737_ELEV_DEC</event_left>
+				<event_right>Mobiflight.737_ELEV_INC</event_right>
+			</knob7>
+			<button16>
+				<event>Mobiflight.737_LANDING_LIGHT_ON</event>
+				<eventOFF>Mobiflight.737_LANDING_LIGHT_OFF</eventOFF>
+			</button16>
+			<button17>
+				<event>Mobiflight.737_TAXI_LIGHT_TOGGLE</event>
+			</button17>
+			<button22>
+				<event>Mobiflight.737_CHIME_TOGGLE</event>
+			</button22>
+			<button23>
+				<event>Mobiflight.737_SEAT_BELT_ON</event>
+				<eventOFF>Mobiflight.737_SEAT_BELT_OFF</eventOFF>
+			</button23>
+			<button32>
+				<event>Mobiflight.737_APU_START</event>
+			</button32>
+			<button33>
+				<event>Mobiflight.737_APU_STOP</event>
+			</button33>
+			<button34>
+				<event>Mobiflight.737_WINDSHIELD_LEFT_TOGGLE</event>
+			</button34>
+			<button35>
+				<event>Mobiflight.737_WINDSHIELD_RIGHT_TOGGLE</event>
+			</button35>
+			<button36>
+				<event>Mobiflight.737_EMER_ARM_ON</event>
+				<eventOFF>Mobiflight.737_EMER_ARM_OFF</eventOFF>
+			</button36>
 		</aircraft>
 	</MIDIcontroller>
 </root>

@@ -190,6 +190,12 @@ namespace EasyControlforMSFS
             }
             SelectAircraftComboBox.SelectedItem = selected_item;
             addDefWindowOpened = false;
+
+            //Reload MIDI controls
+            if (myMIDIcontroller != null)
+            {
+                myMIDIcontroller.LoadControlsFile();
+            }
         }
 
         public void ConnectSimConnect()

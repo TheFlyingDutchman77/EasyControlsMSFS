@@ -524,6 +524,11 @@ namespace EasyControlforMSFS
             MIDIButton21.Fill = Brushes.LightGray;
             MIDIButton22.Fill = Brushes.LightGray;
             MIDIButton23.Fill = Brushes.LightGray;
+            TextBoxMIDIEventOn.Text = "";
+            TextBoxMIDIEventOFF.Text = "";
+            TextBoxMIDIEventLeft.Text = "";
+            TextBoxMIDIEventRight.Text = "";
+            TextBoxMIDIStatusVar.Text = "";
         }
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
@@ -566,12 +571,12 @@ namespace EasyControlforMSFS
                 selected_aircraft = ComboBoxACnames.SelectedItem.ToString();
                 selected_ac_id = Array.IndexOf(aircraft, selected_aircraft);
                 button_pressed = -1;
+                SetAllKnobsButtonsUnselected();
                 TextBoxMIDIEventOn.Text = "Select knob or button...";
                 TextBoxMIDIEventOFF.Text = "Select knob or button...";
                 TextBoxMIDIEventLeft.Text = "Select knob or button...";
                 TextBoxMIDIEventRight.Text = "Select knob or button...";
                 TextBoxMIDIStatusVar.Text = "Select knob or button...";
-                SetAllKnobsButtonsUnselected();
             }
         }
 
