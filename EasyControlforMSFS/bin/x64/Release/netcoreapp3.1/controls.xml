@@ -816,4 +816,18 @@
 			</axis2>
 		</aircraft>
 	</joystick>
+	<joystick name="HID-spelbesturing-8989-513">
+		<aircraft name="Airbus A320neo">
+			<axis3>
+			</axis3>
+			<axis3>
+			</axis3>
+			<axis4>
+				<event>AXIS_STEERING_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis4>
+		</aircraft>
+	</joystick>
 </root>

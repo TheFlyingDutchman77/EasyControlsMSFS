@@ -127,6 +127,7 @@ namespace EasyControlforMSFS
                 var tempAxisArray = resulttuple.Item1;
                 for (int i = 0; i<tempAxisArray.Length; i++)
                 {
+                    //Debug.WriteLine($"Axis value {i} is {tempAxisArray[i]}");
                     axisArray[id,i] = tempAxisArray[i];
                     for (int j = 0 ; j <smoothing_factor-1; j++)
                     {

@@ -200,6 +200,14 @@
 			<button23>
 				<event>Mobiflight.ASDHC6_SEATBELTS_TOGGLE</event>
 			</button23>
+			<button36>
+				<event>Mobiflight.ASDHC6_EMER_LIGHTS_ARM</event>
+				<eventOFF>Mobiflight.ASDHC6_EMER_LIGHTS_DISARM</eventOFF>
+			</button36>
+			<button37>
+				<event>YAW_DAMPER_TOGGLE</event>
+				<status_var>AP</status_var>
+			</button37>
 		</aircraft>
 		<aircraft name="Quest Kodiak 100">
 			<button16>
@@ -391,10 +399,6 @@
 			</button39>
 		</aircraft>
 		<aircraft name="Airbus A320neo">
-			<knob8>
-				<event_left>Mobiflight.GEAR_DOWN_SET</event_left>
-				<event_right>Mobiflight.GEAR_UP_SET</event_right>
-			</knob8>
 			<knob9>
 				<event_left>Mobiflight.GEAR_DOWN_SET</event_left>
 				<event_right>Mobiflight.GEAR_UP_SET</event_right>
@@ -553,8 +557,7 @@
 				<event>Mobiflight.737_CHIME_TOGGLE</event>
 			</button22>
 			<button23>
-				<event>Mobiflight.737_SEAT_BELT_ON</event>
-				<eventOFF>Mobiflight.737_SEAT_BELT_OFF</eventOFF>
+				<event>Mobiflight.737_SEAT_BELT_TOGGLE</event>
 			</button23>
 			<button32>
 				<event>Mobiflight.737_APU_START</event>

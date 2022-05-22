@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <root>
 	<joystick name="Flight Throttle Quadrant (HID)-1699-3117">
-		<aircraft name="Test case">
-			<axis0>
-				<event></event>
-				<min>0</min>
-				<max>0</max>
-				<inverted>False</inverted>
-			</axis0>
-			<axis1>
-				<event></event>
-				<min>0</min>
-				<max>0</max>
-				<inverted>False</inverted>
-			</axis1>
-			<axis2>
-				<event>THROTTLE_SET</event>
-				<min>-16383</min>
-				<max>16383</max>
-				<inverted>True</inverted>
-			</axis2>
-			<button0>
-				<eventON>TOGGLE_BEACON_LIGHTS</eventON>
-				<axis_link>0</axis_link>
-				<is_switch>False</is_switch>
-			</button0>
-		</aircraft>
 		<aircraft name="Airbus A320neo">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -96,31 +71,6 @@
 				<is_switch>False</is_switch>
 			</button8>
 		</aircraft>
-		<aircraft name="Cessna C414">
-			<axis0>
-				<event>THROTTLE1_SET</event>
-				<min>-5000</min>
-				<max>16383</max>
-				<inverted>True</inverted>
-			</axis0>
-			<axis1>
-				<event>THROTTLE2_SET</event>
-				<min>-5000</min>
-				<max>16383</max>
-				<inverted>True</inverted>
-			</axis1>
-			<axis2>
-				<event>AXIS_PROPELLER_SET</event>
-				<min>-16383</min>
-				<max>16383</max>
-				<inverted>True</inverted>
-			</axis2>
-			<button8>
-				<eventON>PROP_PITCH_DECR</eventON>
-				<axis_link>2</axis_link>
-				<is_switch>False</is_switch>
-			</button8>
-		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -140,6 +90,41 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+		</aircraft>
+		<aircraft name="PMDG Boeing 737">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button2>
+				<eventON>Mobiflight.737_ENG1_FUEL_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button4>
+				<eventON>Mobiflight.737_ENG2_FUEL_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button7>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
 		</aircraft>
 		<aircraft name="Aerosoft CRJ">
 			<axis0>
@@ -201,7 +186,27 @@
 				<inverted>True</inverted>
 			</axis2>
 		</aircraft>
-				<aircraft name="Boeing 247D">
+		<aircraft name="Just Flight Turbo Arrow">
+			<axis0>
+				<event>THROTTLE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>MIXTURE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+		</aircraft>
+		<aircraft name="Boeing 247D">
 			<axis0>
 				<event>FSUIPC.ENG PROPELLER 1</event>
 				<min>0</min>
@@ -389,6 +394,74 @@
 				<inverted>True</inverted>
 			</axis2>
 		</aircraft>
+		<aircraft name="Flysimware Cessna 414">
+			<axis0>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+		</aircraft>
+		<aircraft name="Just Flight BAe 146">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+				<event2>THROTTLE2_SET</event2>
+				<min2>-16383</min2>
+				<max2>16383</max2>
+				<inverted2>True</inverted2>
+			</axis1>
+			<axis2>
+				<event>THROTTLE3_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+				<event2>THROTTLE4_SET</event2>
+				<min2>-16383</min2>
+				<max2>16383</max2>
+				<inverted2>True</inverted2>
+			</axis2>
+			<button2>
+				<eventON>FSUIPC.PED_MID_Eng1_latch</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>FSUIPC.PED_MID_Eng2_latch</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>FSUIPC.PED_MID_Eng3_latch</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>FSUIPC.PED_MID_Eng4_latch</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-9025-32823">
 		<aircraft name="Aerosoft CRJ">
@@ -405,7 +478,47 @@
 				<is_switch>True</is_switch>
 			</button5>
 		</aircraft>
+		<aircraft name="PMDG Boeing 737">
+			<button0>
+				<eventON>Mobiflight.737_BATT_ON</eventON>
+				<eventOFF>Mobiflight.737_BATT_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button3>
+				<eventON>Mobiflight.737_PITOT_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G1000">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="Just Flight Turbo Arrow">
 			<button0>
 				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
@@ -463,33 +576,6 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button5>
-		</aircraft>
-		<aircraft name="Just Flight Turbo Arrow">
-			<button0>
-				<eventON>MASTER_BATTERY_SET</eventON>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button0>
-			<button1>
-				<eventON>ALTERNATOR_SET</eventON>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button1>
-			<button2>
-				<eventON>AVIONICS_MASTER_SET</eventON>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button2>
-			<button3>
-				<eventON>PITOT_HEAT_SET</eventON>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button3>
-			<button4>
-				<eventON>WINDSHIELD_DEICE_SET</eventON>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button4>
 		</aircraft>
 		<aircraft name="TBM930">
 			<button0>
@@ -678,9 +764,16 @@
 				<is_switch>True</is_switch>
 			</button3>
 		</aircraft>
-		<aircraft name="Cessna C414">
+		<aircraft name="Flysimware Cessna 414">
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+		</aircraft>
+		<aircraft name="Just Flight BAe 146">
 			<button0>
-				<eventON>FSUIPC.ELECTRICAL_Switch_Battery_Master</eventON>
+				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
@@ -721,6 +814,20 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+		</aircraft>
+	</joystick>
+	<joystick name="HID-spelbesturing-8989-513">
+		<aircraft name="Airbus A320neo">
+			<axis3>
+			</axis3>
+			<axis3>
+			</axis3>
+			<axis4>
+				<event>AXIS_STEERING_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis4>
 		</aircraft>
 	</joystick>
 </root>

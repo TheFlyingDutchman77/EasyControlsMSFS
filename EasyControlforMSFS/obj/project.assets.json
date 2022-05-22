@@ -4157,23 +4157,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Z003WD1U\\.nuget\\packages\\": {},
+    "C:\\Users\\erikv\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
+      "projectUniqueName": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
       "projectName": "EasyControlforMSFS",
-      "projectPath": "D:\\Github\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
-      "packagesPath": "C:\\Users\\Z003WD1U\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\CsharpProjects\\EasyControlforMSFS\\EasyControlforMSFS\\obj\\",
+      "projectPath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
+      "packagesPath": "C:\\Users\\erikv\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Z003WD1U\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\erikv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4236,24 +4236,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.22, 3.1.22]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -4262,7 +4244,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -82,8 +82,12 @@ namespace EasyControlforMSFS
                 SelectAircraftComboBox.Items.Add(aircraftControls.aircraft[j]);
             }
 
+            //If an aircraft has been given as input to the programme
             if (args.Length > 1)
-            { MessageTextBox.Text += args[1]; SelectAircraftComboBox.SelectedItem = args[1]; }
+            { 
+                MessageTextBox.Text += "Preselected aircraft: " + args[1] + "\r\n"; 
+                SelectAircraftComboBox.SelectedItem = args[1]; 
+            }
             
 
         }
@@ -549,10 +553,10 @@ namespace EasyControlforMSFS
                         {
                             string sim_event_new = sim_event.Replace("FSUIPC.", "");
                             int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(sim_event_new);
-                            //Debug.WriteLine($"Set value {sim_event}  {set_value_double}");
+                            Debug.WriteLine($"Set value {sim_event}  {set_value_double}");
                             if (Math.Abs(current_value - Math.Round(set_value_double)) > 1) { myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); }
                         }
-                    else { mysimconnect.SendEvent(sim_event, set_value); }
+                    else { mysimconnect.SendEvent(sim_event, set_value);  }
                     }
                 }
                 
