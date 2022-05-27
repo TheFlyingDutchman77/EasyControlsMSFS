@@ -60,6 +60,7 @@
 	<profile name="Flysimware Cessna 414">
 		<title>Cessna 414AW N427RC GNS530</title>
 		<title>Cessna 414AW N100JD GNS530</title>
+		<title>Cessna 414AW N5AM GNS530</title>
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
@@ -70,5 +71,6 @@
 	</profile>
 	<profile name="PMDG Boeing 737">
 		<title>PMDG 737-700 KLM Royal Dutch Airlines (PH-BGG </title>
+		<title>PMDG 737-700 Transavia (PH-XRX </title>
 	</profile>
 </root>

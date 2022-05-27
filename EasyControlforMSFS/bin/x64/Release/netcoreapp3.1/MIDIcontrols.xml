@@ -457,6 +457,26 @@
 			</button36>
 		</aircraft>
 		<aircraft name="Flysimware Cessna 414">
+			<knob1>
+				<event_left>Mobiflight.C414_ALT_1000_DEC</event_left>
+				<event_right>Mobiflight.C414_ALT_1000_INC</event_right>
+				<alt_event_left>Mobiflight.C414_ALT_100_DEC</alt_event_left>
+				<alt_event_right>Mobiflight.C414_ALT_100_INC</alt_event_right>
+			</knob1>
+			<knob5>
+				<event_left>Mobiflight.C414_ALT_10000_DEC</event_left>
+				<event_right>Mobiflight.C414_ALT_10000_INC</event_right>
+			</knob5>
+			<button8>
+				<event>Mobiflight.C414_AP_ON</event>
+				<eventOFF>Mobiflight.C414_AP_OFF</eventOFF>
+			</button8>
+			<button11>
+				<event>Mobiflight.C414_ALT_ARM_SWITCH_TOGGLE</event>
+			</button11>
+			<button13>
+				<event>Mobiflight.C414_ALT_MODE_TOGGLE</event>
+			</button13>
 			<button16>
 				<event>Mobiflight.C414_LANDING_LIGHTS_ON</event>
 				<status_var>LDG</status_var>
@@ -465,6 +485,10 @@
 				<event>FSUIPC.LIGHT_TAXI</event>
 				<status_var>TAXI</status_var>
 			</button17>
+			<button37>
+				<event>Mobiflight.C414_YD_ON</event>
+				<eventOFF>Mobiflight.C414_YD_OFF</eventOFF>
+			</button37>
 		</aircraft>
 		<aircraft name="Just Flight Turbo Arrow">
 			<button9>
