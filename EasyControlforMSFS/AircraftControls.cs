@@ -42,6 +42,7 @@ namespace EasyControlforMSFS
             public string[,] axis_events2 = new string[max_num_ac, max_num_axis];
             public string[,] button_events = new string[max_num_ac, max_num_buttons]; //button ON event
             public string[,] button_eventsOFF = new string[max_num_ac, max_num_buttons];
+            public string[,] button_eventsWAIT = new string[max_num_ac, max_num_buttons];
             public int[,] button_axis_link = new int[max_num_ac, max_num_buttons];
             public bool[,] button_is_switch = new bool[max_num_ac, max_num_buttons];
             public bool[,] switch_on = new bool[max_num_ac, max_num_buttons];
@@ -84,6 +85,10 @@ namespace EasyControlforMSFS
             public void AddButtonEventOFF(int aircraft, int button, string event_name)
             {
                 button_eventsOFF[aircraft, button] = event_name;
+            }
+            public void AddButtonEventWAIT(int aircraft, int button, string event_name)
+            {
+                button_eventsWAIT[aircraft, button] = event_name;
             }
             public void AddButtonAxisLink(int aircraft, int button, int axis)
             {
@@ -251,6 +256,11 @@ namespace EasyControlforMSFS
                                     if (item_button.Contains("eventOFF"))
                                     {
                                         aircraftControls.aircraft_controls[controller_id].AddButtonEventOFF(aircraft_id, button_id, level4Element.Value);
+                                        if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
+                                    }
+                                    if (item_button.Contains("eventWAIT"))
+                                    {
+                                        aircraftControls.aircraft_controls[controller_id].AddButtonEventWAIT(aircraft_id, button_id, level4Element.Value);
                                         if (!aircraftControls.all_events.Contains(level4Element.Value)) { aircraftControls.all_events.Add(level4Element.Value); }
                                     }
                                     //Debug.WriteLine(level4Element.Value);

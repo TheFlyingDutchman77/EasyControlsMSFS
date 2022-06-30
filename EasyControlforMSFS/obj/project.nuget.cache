@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wzjjPK4L5oaOF0wVVA6X5gt/vHlCHihpg9A/UI5U8gOcUoASu7MJ60A9xbCMHx47Qhm61stDYqdY2tpyPWtEwQ==",
+  "dgSpecHash": "fZPb+z7ayd5Y2S2Cw9H3TvzrFFHHxcQccb+KHCQgpc1Y9F/oFNJZcfcBmzaVGVw6SFOujsVw8ji25UGHwToehg==",
   "success": true,
   "projectFilePath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
   "expectedPackageFiles": [
@@ -71,7 +71,8 @@
     "C:\\Users\\erikv\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.threading.thread\\4.3.0\\system.threading.thread.4.3.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
-    "C:\\Users\\erikv\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512"
+    "C:\\Users\\erikv\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512",
+    "C:\\Users\\erikv\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
   ],
   "logs": [
     {

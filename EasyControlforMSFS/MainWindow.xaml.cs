@@ -584,6 +584,7 @@ namespace EasyControlforMSFS
             bool turnon = set_value; //true = turn event on 
 
             string sim_event = aircraftControls.aircraft_controls[k].button_events[l, j];
+            string sim_eventWAIT = aircraftControls.aircraft_controls[k].button_eventsWAIT[l, j];
             if (sim_event != "")
             {
                 if (turnon)
@@ -596,6 +597,20 @@ namespace EasyControlforMSFS
                     else { mysimconnect.SendEvent(sim_event, 1); }
                     Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
                     Thread.Sleep(200);
+                    if (sim_eventWAIT != null)
+                    {
+                        Debug.WriteLine("WAIT event detected");
+                        sim_event = sim_eventWAIT;
+                        if (sim_event.Substring(0, 6) == "FSUIPC")
+                        {
+                            string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                            myMSFSVarServices.VS_EventSet(sim_event_new, 1);
+                        }
+                        else { mysimconnect.SendEvent(sim_event, 1); }
+                        Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
+
+                    }
+
                 }
                 else
                 {

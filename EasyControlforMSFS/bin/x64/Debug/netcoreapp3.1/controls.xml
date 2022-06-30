@@ -413,6 +413,31 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+			<button0>
+				<eventON>MIXTURE1_INCR</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+			<button1>
+				<eventON>MIXTURE1_DECR</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button1>
+			<button2>
+				<eventON>MIXTURE2_INCR</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>MIXTURE2_DECR</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button3>
+			<button8>
+				<eventON>PROP_PITCH_DECR</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>False</is_switch>
+			</button8>
 		</aircraft>
 		<aircraft name="Just Flight BAe 146">
 			<axis0>
@@ -461,6 +486,31 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button5>
+		</aircraft>
+		<aircraft name="Fenix A320">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_AXIS_SET_EX1</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_AXIS_SET_EX1</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button7>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
 		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-9025-32823">
@@ -765,11 +815,29 @@
 			</button3>
 		</aircraft>
 		<aircraft name="Flysimware Cessna 414">
+			<button0>
+				<eventON>Mobiflight.C414_BAT_MASTER_ON</eventON>
+				<eventOFF>Mobiflight.C414_BAT_MASTER_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>Mobiflight.C414_ALTERNATORS_ON</eventON>
+				<eventOFF>Mobiflight.C414_ALTERNATORS_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
 			<button2>
 				<eventON>AVIONICS_MASTER_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<eventOFF>PITOT_HEAT_SET</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
 		</aircraft>
 		<aircraft name="Just Flight BAe 146">
 			<button0>
@@ -777,6 +845,20 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
+		</aircraft>
+		<aircraft name="Fenix A320">
+			<button0>
+				<eventON>Mobiflight.FNX320_BAT_ON</eventON>
+				<eventOFF>Mobiflight.FNX320_BAT_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>Mobiflight.FNX320_EXT_PWR_PRESS</eventON>
+				<eventWAIT>Mobiflight.FNX320_EXT_PWR_RELEASE</eventWAIT>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
 		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-1103-1029">
@@ -814,20 +896,6 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
-		</aircraft>
-	</joystick>
-	<joystick name="HID-spelbesturing-8989-513">
-		<aircraft name="Airbus A320neo">
-			<axis3>
-			</axis3>
-			<axis3>
-			</axis3>
-			<axis4>
-				<event>AXIS_STEERING_SET</event>
-				<min>-16383</min>
-				<max>16383</max>
-				<inverted>True</inverted>
-			</axis4>
 		</aircraft>
 	</joystick>
 </root>

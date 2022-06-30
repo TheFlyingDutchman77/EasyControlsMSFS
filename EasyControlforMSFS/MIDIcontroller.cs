@@ -32,6 +32,7 @@ namespace EasyControlforMSFS
         public string[] aircraft = new string[max_num_ac];
         public string[,] button_events = new string[max_num_ac, max_num_buttons]; //16 knobs x 2 + 8 knob presses x 2
         public string[,] button_events_off = new string[max_num_ac, max_num_buttons]; //16 knobs x 2 + 8 knob presses x 2
+        public string[,] button_events_wait = new string[max_num_ac, max_num_buttons]; //16 knobs x 2 + 8 knob presses x 2
         public string[,] button_status_var = new string[max_num_ac, max_num_buttons]; //16 knobs x 2 + 8 knob presses x 2
         public string[,] knob_events_left = new string[max_num_ac, max_num_knobs]; //including volume lever
         public string[,] knob_events_right = new string[max_num_ac, max_num_knobs]; //including volume lever
@@ -115,8 +116,10 @@ namespace EasyControlforMSFS
                     direction = "left";
                 }
                 //Debug.WriteLine($"Knob: {note_nr}, direction: {direction}");
+                
+                // HERE WE REDUCE KNOB NR BY 1 BECAUSE KNOBS START AT 1 AND BUTTONS AT 0 IN THE MIDI LIBRARY
                 SendKnobEvent(note_nr-1, direction, aircraft_id);
-                Debug.WriteLine($"knob {note_nr}");
+                Debug.WriteLine($"knob {note_nr-1}");
             }
             if (e.Event.EventType.ToString() == "NoteOn")
             {
@@ -217,8 +220,24 @@ namespace EasyControlforMSFS
                         else
                         {
                             mysimconnect.SendEvent(sim_event, 1);
+                            Debug.WriteLine($"Button event {sim_event} sent!");
                         }
-                        button_status[button] = true; //button now set to on 
+                        button_status[button] = true; //button now set to on
+                        if (button_events_wait[aircraft_id, button] != null)
+                        {
+                            Thread.Sleep(50);
+                            sim_event = button_events_wait[aircraft_id, button];
+                            if (sim_event.Substring(0, 6) == "FSUIPC")
+                            {
+                                string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                                MainWindow.myMSFSVarServices.VS_EventSet(sim_event_new, 1);
+                            }
+                            else
+                            {
+                                mysimconnect.SendEvent(sim_event, 1);
+                                Debug.WriteLine($"Button event {sim_event} sent!");
+                            }
+                        }
                     };
                 }
                 Debug.WriteLine($"Button event {sim_event} sent!");
@@ -269,6 +288,7 @@ namespace EasyControlforMSFS
                 if (direction == "left")
                 {
                     sim_event = knob_events_left[aircraft_id_generic, knob];
+                    Debug.WriteLine($"Sim event set {sim_event} for knob {knob}");
                     if (button_status[knob] && knob_events_left_alt != null) { sim_event = knob_events_left_alt[aircraft_id_generic, knob]; }
                     if (knob == 8 || knob == 9)
                     {
@@ -478,6 +498,11 @@ namespace EasyControlforMSFS
                                         {
                                             button_events_off[aircraft_id, button_nr] = level4Element.Value;
                                             Debug.WriteLine($"Event OFF: {button_events_off[aircraft_id, button_nr]} for aircraft {aircraft[aircraft_id]} and button {button_nr} loaded from file.");
+                                        }
+                                        if (item_button == "eventWAIT")
+                                        {
+                                            button_events_wait[aircraft_id, button_nr] = level4Element.Value;
+                                            Debug.WriteLine($"Event WAIT: {button_events_wait[aircraft_id, button_nr]} for aircraft {aircraft[aircraft_id]} and button {button_nr} loaded from file.");
                                         }
                                         if (item_button.Contains("status_var"))
                                         {
