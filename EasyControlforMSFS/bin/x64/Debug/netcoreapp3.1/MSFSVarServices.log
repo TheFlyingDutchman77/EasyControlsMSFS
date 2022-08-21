@@ -2,3 +2,972 @@
  [ERROR]: Failed on SimConnect Open: cannot connect: E_FAIL
 6-4-2022 16:43:07 -   [INFO]: **** Starting FSUIPC7 WASM Interface (WAPI) version 0.5.6 (WASM version 0.5.6)
 6-4-2022 16:43:07 -  [ERROR]: Failed on SimConnect Open: cannot connect: E_FAIL
+3-7-2022 14:47:45 -   [INFO]: **** Starting FSUIPC7 WASM Interface (WAPI) version 0.5.10 (WASM version 0.5.9)
+3-7-2022 14:47:45 -   [INFO]: Connected to MSFS
+3-7-2022 14:47:46 -  [DEBUG]: Config Data 0: name=FSUIPC_VNAME7, size=8176, type=0
+3-7-2022 14:47:46 -  [DEBUG]: Config Data 1: name=FSUIPC_VNAME8, size=8176, type=0
+3-7-2022 14:47:46 -  [DEBUG]: Config Data 2: name=FSUIPC_VNAME9, size=3976, type=0
+3-7-2022 14:47:46 -  [DEBUG]: Config Data 3: name=FSUIPC_lvalues0, size=8192, type=2
+3-7-2022 14:47:46 -  [DEBUG]: Config Data 4: name=FSUIPC_lvalues1, size=8192, type=2
+3-7-2022 14:47:46 -  [DEBUG]: Config Data 5: name=FSUIPC_lvalues2, size=8192, type=2
+3-7-2022 14:47:47 -  [DEBUG]: CDA name FSUIPC_VNAME7 mapped to ID 4 [requestId=16]
+3-7-2022 14:47:47 -  [DEBUG]: Client data area created with id=4 (size=8176) [requestID=17]
+3-7-2022 14:47:47 -  [DEBUG]: Client data definition added with id=4 (size=8176)
+3-7-2022 14:47:47 -  [DEBUG]: CDA 'FSUIPC_VNAME7 with id=4 and definitionId=4 requested
+3-7-2022 14:47:47 -  [DEBUG]: CDA name FSUIPC_VNAME8 mapped to ID 5 [requestId=20]
+3-7-2022 14:47:47 -  [DEBUG]: Client data area created with id=5 (size=8176) [requestID=21]
+3-7-2022 14:47:47 -  [DEBUG]: Client data definition added with id=5 (size=8176)
+3-7-2022 14:47:47 -  [DEBUG]: CDA 'FSUIPC_VNAME8 with id=5 and definitionId=5 requested
+3-7-2022 14:47:47 -  [DEBUG]: CDA name FSUIPC_VNAME9 mapped to ID 6 [requestId=24]
+3-7-2022 14:47:47 -  [DEBUG]: Client data area created with id=6 (size=3976) [requestID=25]
+3-7-2022 14:47:47 -  [DEBUG]: Client data definition added with id=6 (size=3976)
+3-7-2022 14:47:47 -  [DEBUG]: CDA 'FSUIPC_VNAME9 with id=6 and definitionId=6 requested
+3-7-2022 14:47:47 -  [DEBUG]: CDA name FSUIPC_lvalues0 mapped to ID 7 [requestId=28]
+3-7-2022 14:47:47 -  [DEBUG]: Client data area created with id=7 (size=8192) [requestID=29]
+3-7-2022 14:47:47 -  [DEBUG]: Client data definition added with id=7 (size=8192)
+3-7-2022 14:47:47 -  [DEBUG]: CDA 'FSUIPC_lvalues0 with id=7 and definitionId=7 requested
+3-7-2022 14:47:47 -  [DEBUG]: CDA name FSUIPC_lvalues1 mapped to ID 8 [requestId=32]
+3-7-2022 14:47:47 -  [DEBUG]: Client data area created with id=8 (size=8192) [requestID=33]
+3-7-2022 14:47:47 -  [DEBUG]: Client data definition added with id=8 (size=8192)
+3-7-2022 14:47:47 -  [DEBUG]: CDA 'FSUIPC_lvalues1 with id=8 and definitionId=8 requested
+3-7-2022 14:47:47 -  [DEBUG]: CDA name FSUIPC_lvalues2 mapped to ID 9 [requestId=36]
+3-7-2022 14:47:47 -  [DEBUG]: Client data area created with id=9 (size=8192) [requestID=37]
+3-7-2022 14:47:47 -  [DEBUG]: Client data definition added with id=9 (size=8192)
+3-7-2022 14:47:47 -  [DEBUG]: CDA 'FSUIPC_lvalues2 with id=9 and definitionId=9 requested
+3-7-2022 14:47:47 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=4, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 14:47:47 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=5, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 14:47:47 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=6, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=26
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=30
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=34
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=35
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=36
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=37
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=38
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=39
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=40
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=41
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=42
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=43
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=44
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=69
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=227
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=270
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=271
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=272
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=273
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=274
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=276
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=277
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=278
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=279
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=281
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=283
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=284
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=289
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=290
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=291
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=292
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=295
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=296
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=301
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=302
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=303
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=336
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=337
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=351
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=352
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:47 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:48 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:49 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:50 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:51 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:52 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:53 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:54 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:55 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:56 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:57 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:58 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:47:59 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:00 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:48:01 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:29 -   [INFO]: **** Starting FSUIPC7 WASM Interface (WAPI) version 0.5.10 (WASM version 0.5.9)
+3-7-2022 14:54:29 -   [INFO]: Connected to MSFS
+3-7-2022 14:54:29 -  [DEBUG]: Config Data 0: name=FSUIPC_VNAME7, size=8176, type=0
+3-7-2022 14:54:29 -  [DEBUG]: Config Data 1: name=FSUIPC_VNAME8, size=8176, type=0
+3-7-2022 14:54:29 -  [DEBUG]: Config Data 2: name=FSUIPC_VNAME9, size=3976, type=0
+3-7-2022 14:54:29 -  [DEBUG]: Config Data 3: name=FSUIPC_lvalues0, size=8192, type=2
+3-7-2022 14:54:29 -  [DEBUG]: Config Data 4: name=FSUIPC_lvalues1, size=8192, type=2
+3-7-2022 14:54:29 -  [DEBUG]: Config Data 5: name=FSUIPC_lvalues2, size=8192, type=2
+3-7-2022 14:54:29 -  [DEBUG]: CDA name FSUIPC_VNAME7 mapped to ID 4 [requestId=16]
+3-7-2022 14:54:29 -  [DEBUG]: Client data area created with id=4 (size=8176) [requestID=17]
+3-7-2022 14:54:29 -  [DEBUG]: Client data definition added with id=4 (size=8176)
+3-7-2022 14:54:29 -  [DEBUG]: CDA 'FSUIPC_VNAME7 with id=4 and definitionId=4 requested
+3-7-2022 14:54:29 -  [DEBUG]: CDA name FSUIPC_VNAME8 mapped to ID 5 [requestId=20]
+3-7-2022 14:54:29 -  [DEBUG]: Client data area created with id=5 (size=8176) [requestID=21]
+3-7-2022 14:54:29 -  [DEBUG]: Client data definition added with id=5 (size=8176)
+3-7-2022 14:54:29 -  [DEBUG]: CDA 'FSUIPC_VNAME8 with id=5 and definitionId=5 requested
+3-7-2022 14:54:29 -  [DEBUG]: CDA name FSUIPC_VNAME9 mapped to ID 6 [requestId=24]
+3-7-2022 14:54:29 -  [DEBUG]: Client data area created with id=6 (size=3976) [requestID=25]
+3-7-2022 14:54:29 -  [DEBUG]: Client data definition added with id=6 (size=3976)
+3-7-2022 14:54:29 -  [DEBUG]: CDA 'FSUIPC_VNAME9 with id=6 and definitionId=6 requested
+3-7-2022 14:54:29 -  [DEBUG]: CDA name FSUIPC_lvalues0 mapped to ID 7 [requestId=28]
+3-7-2022 14:54:29 -  [DEBUG]: Client data area created with id=7 (size=8192) [requestID=29]
+3-7-2022 14:54:29 -  [DEBUG]: Client data definition added with id=7 (size=8192)
+3-7-2022 14:54:29 -  [DEBUG]: CDA 'FSUIPC_lvalues0 with id=7 and definitionId=7 requested
+3-7-2022 14:54:29 -  [DEBUG]: CDA name FSUIPC_lvalues1 mapped to ID 8 [requestId=32]
+3-7-2022 14:54:29 -  [DEBUG]: Client data area created with id=8 (size=8192) [requestID=33]
+3-7-2022 14:54:29 -  [DEBUG]: Client data definition added with id=8 (size=8192)
+3-7-2022 14:54:29 -  [DEBUG]: CDA 'FSUIPC_lvalues1 with id=8 and definitionId=8 requested
+3-7-2022 14:54:29 -  [DEBUG]: CDA name FSUIPC_lvalues2 mapped to ID 9 [requestId=36]
+3-7-2022 14:54:29 -  [DEBUG]: Client data area created with id=9 (size=8192) [requestID=37]
+3-7-2022 14:54:29 -  [DEBUG]: Client data definition added with id=9 (size=8192)
+3-7-2022 14:54:29 -  [DEBUG]: CDA 'FSUIPC_lvalues2 with id=9 and definitionId=9 requested
+3-7-2022 14:54:30 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=4, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 14:54:30 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=5, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 14:54:30 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=6, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=26
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=30
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=34
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=35
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=36
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=37
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=38
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=39
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=40
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=41
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=42
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=43
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=44
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=69
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=227
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=270
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=271
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=272
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=273
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=274
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=276
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=277
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=278
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=279
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=281
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=283
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=284
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=289
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=290
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=291
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=292
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=295
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=296
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=301
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=302
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=303
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=336
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=337
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=351
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=352
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:30 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:31 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:32 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:33 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:34 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:35 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:36 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:37 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:38 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:39 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:40 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:40 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:40 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:40 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:40 -  [DEBUG]: Flagging lvar for callback: id=59
+3-7-2022 14:54:40 -  [DEBUG]: Flagging lvar for callback: id=294
+3-7-2022 14:54:40 -  [DEBUG]: Flagging lvar for callback: id=297
+3-7-2022 14:54:40 -  [DEBUG]: Flagging lvar for callback: id=340
+3-7-2022 14:54:40 -  [DEBUG]: Config Data 0: name=FSUIPC_VNAME7, size=8176, type=0
+3-7-2022 14:54:40 -  [DEBUG]: Config Data 1: name=FSUIPC_VNAME8, size=8176, type=0
+3-7-2022 14:54:40 -  [DEBUG]: Config Data 2: name=FSUIPC_VNAME10, size=8176, type=0
+3-7-2022 14:54:40 -  [DEBUG]: Config Data 3: name=FSUIPC_VNAME11, size=8176, type=0
+3-7-2022 14:54:40 -  [DEBUG]: Config Data 4: name=FSUIPC_VNAME12, size=4928, type=0
+3-7-2022 14:54:40 -  [DEBUG]: Config Data 5: name=FSUIPC_lvalues0, size=8192, type=2
+3-7-2022 14:54:40 -  [DEBUG]: Config Data 6: name=FSUIPC_lvalues1, size=8192, type=2
+3-7-2022 14:54:40 -  [DEBUG]: Config Data 7: name=FSUIPC_lvalues2, size=8192, type=2
+3-7-2022 14:54:40 -  [DEBUG]: CDA name FSUIPC_VNAME7 mapped to ID 10 [requestId=48]
+3-7-2022 14:54:40 -  [DEBUG]: Client data area created with id=10 (size=8176) [requestID=49]
+3-7-2022 14:54:40 -  [DEBUG]: Client data definition added with id=10 (size=8176)
+3-7-2022 14:54:40 -  [DEBUG]: CDA 'FSUIPC_VNAME7 with id=10 and definitionId=10 requested
+3-7-2022 14:54:40 -  [DEBUG]: CDA name FSUIPC_VNAME8 mapped to ID 11 [requestId=52]
+3-7-2022 14:54:40 -  [DEBUG]: Client data area created with id=11 (size=8176) [requestID=53]
+3-7-2022 14:54:40 -  [DEBUG]: Client data definition added with id=11 (size=8176)
+3-7-2022 14:54:40 -  [DEBUG]: CDA 'FSUIPC_VNAME8 with id=11 and definitionId=11 requested
+3-7-2022 14:54:40 -  [DEBUG]: CDA name FSUIPC_VNAME10 mapped to ID 12 [requestId=56]
+3-7-2022 14:54:40 -  [DEBUG]: Client data area created with id=12 (size=8176) [requestID=57]
+3-7-2022 14:54:40 -  [DEBUG]: Client data definition added with id=12 (size=8176)
+3-7-2022 14:54:40 -  [DEBUG]: CDA 'FSUIPC_VNAME10 with id=12 and definitionId=12 requested
+3-7-2022 14:54:40 -  [DEBUG]: CDA name FSUIPC_VNAME11 mapped to ID 13 [requestId=60]
+3-7-2022 14:54:40 -  [DEBUG]: Client data area created with id=13 (size=8176) [requestID=61]
+3-7-2022 14:54:40 -  [DEBUG]: Client data definition added with id=13 (size=8176)
+3-7-2022 14:54:40 -  [DEBUG]: CDA 'FSUIPC_VNAME11 with id=13 and definitionId=13 requested
+3-7-2022 14:54:40 -  [DEBUG]: CDA name FSUIPC_VNAME12 mapped to ID 14 [requestId=64]
+3-7-2022 14:54:40 -  [DEBUG]: Client data area created with id=14 (size=4928) [requestID=65]
+3-7-2022 14:54:40 -  [DEBUG]: Client data definition added with id=14 (size=4928)
+3-7-2022 14:54:40 -  [DEBUG]: CDA 'FSUIPC_VNAME12 with id=14 and definitionId=14 requested
+3-7-2022 14:54:40 -  [DEBUG]: CDA name FSUIPC_lvalues0 mapped to ID 15 [requestId=68]
+3-7-2022 14:54:40 -  [DEBUG]: Client data area created with id=15 (size=8192) [requestID=69]
+3-7-2022 14:54:40 -  [DEBUG]: Client data definition added with id=15 (size=8192)
+3-7-2022 14:54:40 -  [DEBUG]: CDA 'FSUIPC_lvalues0 with id=15 and definitionId=15 requested
+3-7-2022 14:54:40 -  [DEBUG]: CDA name FSUIPC_lvalues1 mapped to ID 16 [requestId=72]
+3-7-2022 14:54:40 -  [DEBUG]: Client data area created with id=16 (size=8192) [requestID=73]
+3-7-2022 14:54:40 -  [DEBUG]: Client data definition added with id=16 (size=8192)
+3-7-2022 14:54:40 -  [DEBUG]: CDA 'FSUIPC_lvalues1 with id=16 and definitionId=16 requested
+3-7-2022 14:54:40 -  [DEBUG]: CDA name FSUIPC_lvalues2 mapped to ID 17 [requestId=76]
+3-7-2022 14:54:40 -  [DEBUG]: Client data area created with id=17 (size=8192) [requestID=77]
+3-7-2022 14:54:40 -  [DEBUG]: Client data definition added with id=17 (size=8192)
+3-7-2022 14:54:40 -  [DEBUG]: CDA 'FSUIPC_lvalues2 with id=17 and definitionId=17 requested
+3-7-2022 14:54:45 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=10, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 14:54:45 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=11, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 14:55:55 -   [INFO]: **** Starting FSUIPC7 WASM Interface (WAPI) version 0.5.10 (WASM version 0.5.9)
+3-7-2022 14:55:56 -  [ERROR]: Failed on SimConnect Open: cannot connect: E_FAIL
+3-7-2022 15:03:37 -   [INFO]: **** Starting FSUIPC7 WASM Interface (WAPI) version 0.5.10 (WASM version 0.5.9)
+3-7-2022 15:03:37 -   [INFO]: Connected to MSFS
+3-7-2022 15:03:40 -  [DEBUG]: Config Data 0: name=FSUIPC_VNAME7, size=8176, type=0
+3-7-2022 15:03:40 -  [DEBUG]: Config Data 1: name=FSUIPC_VNAME8, size=8176, type=0
+3-7-2022 15:03:40 -  [DEBUG]: Config Data 2: name=FSUIPC_VNAME9, size=6384, type=0
+3-7-2022 15:03:40 -  [DEBUG]: Config Data 3: name=FSUIPC_lvalues0, size=8192, type=2
+3-7-2022 15:03:40 -  [DEBUG]: Config Data 4: name=FSUIPC_lvalues1, size=8192, type=2
+3-7-2022 15:03:40 -  [DEBUG]: Config Data 5: name=FSUIPC_lvalues2, size=8192, type=2
+3-7-2022 15:03:40 -  [DEBUG]: CDA name FSUIPC_VNAME7 mapped to ID 4 [requestId=26]
+3-7-2022 15:03:40 -  [DEBUG]: Client data area created with id=4 (size=8176) [requestID=27]
+3-7-2022 15:03:40 -  [DEBUG]: Client data definition added with id=4 (size=8176)
+3-7-2022 15:03:40 -  [DEBUG]: CDA 'FSUIPC_VNAME7 with id=4 and definitionId=4 requested
+3-7-2022 15:03:40 -  [DEBUG]: CDA name FSUIPC_VNAME8 mapped to ID 5 [requestId=30]
+3-7-2022 15:03:41 -  [DEBUG]: Client data area created with id=5 (size=8176) [requestID=31]
+3-7-2022 15:03:41 -  [DEBUG]: Client data definition added with id=5 (size=8176)
+3-7-2022 15:03:41 -  [DEBUG]: CDA 'FSUIPC_VNAME8 with id=5 and definitionId=5 requested
+3-7-2022 15:03:41 -  [DEBUG]: CDA name FSUIPC_VNAME9 mapped to ID 6 [requestId=34]
+3-7-2022 15:03:41 -  [DEBUG]: Client data area created with id=6 (size=6384) [requestID=35]
+3-7-2022 15:03:41 -  [DEBUG]: Client data definition added with id=6 (size=6384)
+3-7-2022 15:03:41 -  [DEBUG]: CDA 'FSUIPC_VNAME9 with id=6 and definitionId=6 requested
+3-7-2022 15:03:41 -  [DEBUG]: CDA name FSUIPC_lvalues0 mapped to ID 7 [requestId=38]
+3-7-2022 15:03:41 -  [DEBUG]: Client data area created with id=7 (size=8192) [requestID=39]
+3-7-2022 15:03:41 -  [DEBUG]: Client data definition added with id=7 (size=8192)
+3-7-2022 15:03:41 -  [DEBUG]: CDA 'FSUIPC_lvalues0 with id=7 and definitionId=7 requested
+3-7-2022 15:03:41 -  [DEBUG]: CDA name FSUIPC_lvalues1 mapped to ID 8 [requestId=42]
+3-7-2022 15:03:41 -  [DEBUG]: Client data area created with id=8 (size=8192) [requestID=43]
+3-7-2022 15:03:41 -  [DEBUG]: Client data definition added with id=8 (size=8192)
+3-7-2022 15:03:41 -  [DEBUG]: CDA 'FSUIPC_lvalues1 with id=8 and definitionId=8 requested
+3-7-2022 15:03:41 -  [DEBUG]: CDA name FSUIPC_lvalues2 mapped to ID 9 [requestId=46]
+3-7-2022 15:03:41 -  [DEBUG]: Client data area created with id=9 (size=8192) [requestID=47]
+3-7-2022 15:03:41 -  [DEBUG]: Client data definition added with id=9 (size=8192)
+3-7-2022 15:03:41 -  [DEBUG]: CDA 'FSUIPC_lvalues2 with id=9 and definitionId=9 requested
+3-7-2022 15:03:41 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=4, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 15:03:41 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=5, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 15:03:41 -  [DEBUG]: EVENT_LVARS_RECEIVED: dwObjectID=0, dwDefineID=6, dwDefineCount=1, dwentrynumber=1, dwoutof=1
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=26
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=30
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=34
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=35
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=36
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=37
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=38
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=39
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=40
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=41
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=42
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=43
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=44
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=52
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=55
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=102
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=103
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=116
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=117
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=121
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=124
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=126
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=127
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=128
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=129
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=131
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=134
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=136
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=139
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=141
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=142
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=146
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=147
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=149
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=154
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=158
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=160
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=161
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=163
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=183
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=226
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=227
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=228
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=236
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=241
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=249
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=253
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=254
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=257
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=259
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=278
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=279
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=281
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=282
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=287
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=302
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=307
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=328
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=329
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=351
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=373
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=384
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=386
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=390
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=391
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=392
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=397
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=399
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=400
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=402
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=53
+3-7-2022 15:03:44 -  [DEBUG]: Flagging lvar for callback: id=245
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=244
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=246
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=53
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=384
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=386
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=404
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=32
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=33
+3-7-2022 15:04:13 -  [DEBUG]: Flagging lvar for callback: id=183

@@ -370,11 +370,11 @@
 			</button23>
 			<button32>
 				<event>Mobiflight.ASCRJ_APU_PWRFUEL_PRESS</event>
-				<eventOFF>Mobiflight.ASCRJ_APU_PWRFUEL_RELEASE</eventOFF>
+				<eventWAIT>Mobiflight.ASCRJ_APU_PWRFUEL_RELEASE</eventWAIT>
 			</button32>
 			<button33>
 				<event>Mobiflight.ASCRJ_APU_STARTSTOP_PRESS</event>
-				<eventOFF>Mobiflight.ASCRJ_APU_STARTSTOP_RELEASE</eventOFF>
+				<eventWAIT>Mobiflight.ASCRJ_APU_STARTSTOP_RELEASE</eventWAIT>
 			</button33>
 			<button34>
 				<event>Mobiflight.ASCRJ_AICE_WSHLD_L_SWITCH</event>
@@ -387,15 +387,15 @@
 			</button36>
 			<button37>
 				<event>Mobiflight.ASCRJ_YD12_SWITCH</event>
-				<eventOFF>Mobiflight.ASCRJ_YD12_SWITCH_RELEASE</eventOFF>
+				<eventWAIT>Mobiflight.ASCRJ_YD12_SWITCH_RELEASE</eventWAIT>
 			</button37>
 			<button38>
 				<event>Mobiflight.ASCRJ_STAB_TRIM</event>
-				<eventOFF>Mobiflight.ASCRJ_STAB_TRIM_RELEASE</eventOFF>
+				<eventWAIT>Mobiflight.ASCRJ_STAB_TRIM_RELEASE</eventWAIT>
 			</button38>
 			<button39>
 				<event>Mobiflight.ASCRJ_MACH_TRIM</event>
-				<eventOFF>Mobiflight.ASCRJ_MACH_TRIM_RELEASE</eventOFF>
+				<eventWAIT>Mobiflight.ASCRJ_MACH_TRIM_RELEASE</eventWAIT>
 			</button39>
 		</aircraft>
 		<aircraft name="Airbus A320neo">
@@ -461,8 +461,12 @@
 				<event>Mobiflight.C414_LANDING_LIGHTS_ON</event>
 			</button16>
 			<button17>
-				<event>FSUIPC.LIGHT_TAXI</event>
+				<event>Mobiflight.C414_TAXI_LIGHTS_ON</event>
+				<status_var>FSUIPC.LIGHT_TAXI</status_var>
 			</button17>
+			<button22>
+				<event>Mobiflight.C414_LIGHTSWITCH_MASTER_ON</event>
+			</button22>
 		</aircraft>
 		<aircraft name="Just Flight Turbo Arrow">
 			<button9>
@@ -576,8 +580,8 @@
 		</aircraft>
 		<aircraft name="Fenix A320">
 			<knob0>
-				<event_left>Mobiflight.FNX320_FCU_HEADING_KNOB_INC</event_left>
-				<event_right>Mobiflight.FNX320_FCU_HEADING_KNOB_DEC</event_right>
+				<event_left>Mobiflight.FNX320_FCU_HEADING_KNOB_DEC</event_left>
+				<event_right>Mobiflight.FNX320_FCU_HEADING_KNOB_INC</event_right>
 			</knob0>
 			<knob1>
 				<event_left>Mobiflight.FNX320_FCU_ALTITUDE_KNOB_DEC</event_left>
@@ -624,19 +628,24 @@
 			<button17>
 				<event>Mobiflight.FNX320_LIGHT_NOSE_TAXI</event>
 				<eventOFF>Mobiflight.FNX320_LIGHT_NOSE_OFF</eventOFF>
-				<status_var>TAXI</status_var>
+				<status_var>FSUIPC.S_OH_EXT_LT_NOSE</status_var>
 			</button17>
 			<button18>
-				<event>Mobiflight.FNX320_LIGHT_STROBE_AUTO</event>
-				<eventOFF>Mobiflight.FNX320_LIGHT_STROBE_OFF</eventOFF>
+				<event>Mobiflight.FNX320_LIGHT_STROBE_TOGGLE</event>
+				<status_var>STRB</status_var>
 			</button18>
 			<button19>
 				<event>Mobiflight.FNX320_LIGHT_NAVLOGO_NAV</event>
 				<eventOFF>Mobiflight.FNX320_LIGHT_NAVLOGO_OFF</eventOFF>
 				<status_var>NAVL</status_var>
 			</button19>
+			<button20>
+				<event>TOGGLE_BEACON_LIGHTS</event>
+				<status_var>FSUIPC.S_OH_EXT_LT_BEACON</status_var>
+			</button20>
 			<button21>
 				<event>Mobiflight.FNX320_LIGHT_RWY_TURNOFF_ON</event>
+				<status_var>FSUIPC.S_OH_EXT_LT_RWY_TURNOFF</status_var>
 			</button21>
 			<button22>
 				<event>Mobiflight.FNX320_SAFETY_NO_SMOKING_AUTO</event>
@@ -652,7 +661,8 @@
 				<event>Mobiflight.FNX320_APU_START_TOGGLE</event>
 			</button33>
 			<button36>
-				<event>FSUIPC.S_OH_INT_LT_EMER</event>
+				<event>Mobiflight.FNX320_EMERG_LIGHT_ON</event>
+				<status_var>FSUIPC.S_OH_INT_LT_EMER</status_var>
 			</button36>
 			<button40>
 				<event>Mobiflight.FNX320_APU_BLEED_ON</event>

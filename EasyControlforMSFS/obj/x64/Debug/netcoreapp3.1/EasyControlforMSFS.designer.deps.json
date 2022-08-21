@@ -6,11 +6,11 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "FSUIPCClientDLL/3.2.19": {
+      "FSUIPCClientDLL/3.2.20": {
         "runtime": {
           "lib/net40/fsuipcClient.dll": {
-            "assemblyVersion": "3.2.19.388",
-            "fileVersion": "3.2.19.388"
+            "assemblyVersion": "3.2.20.389",
+            "fileVersion": "3.2.20.389"
           }
         }
       },
@@ -901,12 +901,12 @@
     }
   },
   "libraries": {
-    "FSUIPCClientDLL/3.2.19": {
+    "FSUIPCClientDLL/3.2.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-b8GQvcUbOWOFmcSHT49q+HzhFVOxZTUqBHadWGDcPVoiJVIhe9NZUyqPEkJCu7lCZQOjOcPGzPDwIvHKEzqGHg==",
-      "path": "fsuipcclientdll/3.2.19",
-      "hashPath": "fsuipcclientdll.3.2.19.nupkg.sha512"
+      "sha512": "sha512-48MI6yUv8WNlTk+XNsIVGtGOzMN5ZhB+FjrmpUGOGlu4J/7LC3VXVDv5jZpPhF2NHLEZ9F6XK6ynwDfk9vZTlQ==",
+      "path": "fsuipcclientdll/3.2.20",
+      "hashPath": "fsuipcclientdll.3.2.20.nupkg.sha512"
     },
     "M2MqttDotnetCore/1.1.0": {
       "type": "package",

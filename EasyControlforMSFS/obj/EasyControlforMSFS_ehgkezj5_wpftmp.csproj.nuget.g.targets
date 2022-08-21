@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('$(NuGetPackageRoot)netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.windows.sdk.contracts\10.0.22000.196\build\Microsoft.Windows.SDK.Contracts.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windows.sdk.contracts\10.0.22000.196\build\Microsoft.Windows.SDK.Contracts.targets')" />
+    <Import Project="$(NuGetPackageRoot)melanchall.drywetmidi\6.0.1\build\Melanchall.DryWetMidi.targets" Condition="Exists('$(NuGetPackageRoot)melanchall.drywetmidi\6.0.1\build\Melanchall.DryWetMidi.targets')" />
+    <Import Project="$(NuGetPackageRoot)materialdesignthemes\4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('$(NuGetPackageRoot)materialdesignthemes\4.3.0\build\MaterialDesignThemes.targets')" />
+  </ImportGroup>
+</Project>

@@ -58,8 +58,13 @@
 	</profile>
 	<profile name="Flysimware Cessna 414">
 		<title>Cessna 414AW N5AM GNS530</title>
+		<title>Cessna 414AW N427RC PMS50 GTN750</title>
+		<title>Cessna 414AW N427RC PMS50 GTN750+WT</title>
 	</profile>
 	<profile name="Fenix A320">
 		<title>FenixA320_DLHDAIZI</title>
+		<title>FenixA320_BAWGBUSK</title>
+		<title>FenixA320_EWGDABHG</title>
+		<title>FenixA320_ACACFXCD</title>
 	</profile>
 </root>

@@ -216,6 +216,7 @@ namespace EasyControlforMSFS
                         {
                             string sim_event_new = sim_event.Replace("FSUIPC.", "");
                             MainWindow.myMSFSVarServices.VS_EventSet(sim_event_new, 1);
+                            Debug.WriteLine($"Button event {sim_event} sent with value 1!");
                         }
                         else
                         {
@@ -226,16 +227,17 @@ namespace EasyControlforMSFS
                         if (button_events_wait[aircraft_id, button] != null)
                         {
                             Thread.Sleep(50);
-                            sim_event = button_events_wait[aircraft_id, button];
-                            if (sim_event.Substring(0, 6) == "FSUIPC")
+                            string sim_event_wait = button_events_wait[aircraft_id, button];
+                            if (sim_event_wait.Substring(0, 6) == "FSUIPC")
                             {
-                                string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                                string sim_event_new = sim_event_wait.Replace("FSUIPC.", "");
                                 MainWindow.myMSFSVarServices.VS_EventSet(sim_event_new, 1);
+                                Debug.WriteLine($"Button WAIT event {sim_event_wait} sent with value 1!");
                             }
                             else
                             {
-                                mysimconnect.SendEvent(sim_event, 1);
-                                Debug.WriteLine($"Button event {sim_event} sent!");
+                                mysimconnect.SendEvent(sim_event_wait, 1);
+                                Debug.WriteLine($"Button WAIT event {sim_event_wait} sent!");
                             }
                         }
                     };
@@ -351,7 +353,7 @@ namespace EasyControlforMSFS
 
 
 
-            while (true)
+            while (true && mysimconnect.bSimConnected)
             {
                 for (int i = 1; i < 48; i++)
                 {
@@ -360,13 +362,14 @@ namespace EasyControlforMSFS
                         string status_var = button_status_var[aircraft_id, i];
                         int current_value = 999;
                         int note = i - 8;
+                        if (i > 21) { note = i; }
 
                         if (status_var.Length > 6)
                         {
                             if (status_var.Substring(0, 6) == "FSUIPC")
                             {
                                 current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(status_var.Replace("FSUIPC.", ""));
-                                //Debug.WriteLine($"Check status of knob {i} with status_var {status_var} with result {current_value}");
+                                //Debug.WriteLine($"Check status of button {i} with status_var {status_var} with result {current_value}");
                             }
                             else
                             {
@@ -393,7 +396,7 @@ namespace EasyControlforMSFS
                         {
                             outputDevice.SendEvent(new NoteOnEvent((SevenBitNumber)note, (SevenBitNumber)1));
                             button_status[i] = true;
-                            //Debug.WriteLine($"Button {i} set to true");
+                            Debug.WriteLine($"Button {i} note {note} set to true");
                         }
                         else
                         {
@@ -489,7 +492,7 @@ namespace EasyControlforMSFS
                                     {
                                         var item_button = level4Element.Name.ToString();
                                         Debug.WriteLine($"Item level 4: {item_button}");
-                                        if (item_button.Contains("event") && item_button != "eventOFF")
+                                        if (item_button.Contains("event") && item_button != "eventOFF" && item_button != "eventWAIT")
                                         {
                                             button_events[aircraft_id, button_nr] = level4Element.Value;
                                             Debug.WriteLine($"Event: {button_events[aircraft_id, button_nr]} for aircraft {aircraft[aircraft_id]} and button {button_nr} loaded from file.");

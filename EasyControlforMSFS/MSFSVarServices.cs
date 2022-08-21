@@ -23,6 +23,7 @@ namespace EasyControlforMSFS
         public event EventHandler<string> LogResult = null;
         
         public bool writeLogFile = false;
+
         public class LVarData
         {
             public string lvar { get; set; }
@@ -57,6 +58,7 @@ namespace EasyControlforMSFS
             VS.Init(wih); // Initialise by passing in the windows handle of this form
             VS.LVARUpdateFrequency = 0; // CONTROLLED BY THE WASM Check for changes in lvar values 10 times per second (Hz)
             VS.LogLevel = LOGLEVEL.LOG_LEVEL_INFO; // Set the level of logging
+            //VS.LogLevel = LOGLEVEL.LOG_LEVEL_DEBUG; // Set the level of logging
 
             VS.Start();
             started = VS.IsRunning;
@@ -141,10 +143,16 @@ namespace EasyControlforMSFS
                 //Debug.WriteLine($"Lvar received: {lvar.Name}");
             }
 
-            
+                  
 
         }
 
+        // BE CAREFUL TO USE - MIGHT CRASH SIM
+        public void Reload()
+        {
+            VS.Reload();
+            LogResult?.Invoke(this, $"MSFSVarServices reload executed");
+        }
 
     }
 

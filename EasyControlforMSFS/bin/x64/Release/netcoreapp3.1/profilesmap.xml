@@ -25,7 +25,6 @@
 	</profile>
 	<profile name="Asobo Stock Aircraft G1000">
 		<title>Cessna Skyhawk G1000 Skis Asobo</title>
-		<title>Just Flight PA28 Turbo Arrow IV Custom</title>
 		<title>Cessna Skyhawk G1000 Asobo</title>
 		<title>Bonanza G36 Asobo</title>
 	</profile>
@@ -66,10 +65,13 @@
 		<title>Cessna 414AW N5AM GTN750</title>
 		<title>Cessna 414A Chancellor</title>
 		<title>Cessna 414AW N427RC PMS50 GTN750</title>
+		<title>Cessna 414AW N427RC PMS50 GTN750+WT</title>
+		<title>Cessna 414AW N5AM PMS50 GTN750+WT</title>
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
 		<title>Just Flight PA28 Turbo Arrow IV G-BOGM</title>
+		<title>Just Flight PA28 Turbo Arrow IV Custom</title>
 	</profile>
 	<profile name="Just Flight BAe 146">
 		<title>Just Flight 146-200 Cobham Aviation</title>
@@ -84,5 +86,16 @@
 	<profile name="Fenix A320">
 		<title>FenixA320_AFLVPBDK</title>
 		<title>FenixA320_DLHDAIZI</title>
+		<title>FenixA320_EWGDABHG</title>
+		<title>FenixA320_ACACFXCD</title>
+		<title>FenixA320_AFRFGKXR</title>
+		<title>FenixA320_ITYEIDTE</title>
+	</profile>
+	<profile name="British Normander">
+		<title>Britten Norman Islander BN2B Skybus</title>
+		<title>Britten Norman Islander BA LANDOR</title>
+	</profile>
+	<profile name="MSFS Bonanza V35">
+		<title>Beechcraft V35B Bonanza N9609T</title>
 	</profile>
 </root>

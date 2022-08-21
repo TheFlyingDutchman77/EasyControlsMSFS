@@ -663,6 +663,12 @@ namespace EasyControlforMSFS
             MapTitleButton.Visibility = Visibility.Hidden;
 
         }
+
+
+        private void FSUIPCReload_Click(object sender, RoutedEventArgs e)
+        {
+            myMSFSVarServices.Reload();
+        }
     }
 }
 
