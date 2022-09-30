@@ -474,6 +474,24 @@
 				<eventOFF>MobiFlight.AUTOPILOT_hdg_OFF_PRESS</eventOFF>
 			</button9>
 		</aircraft>
+		<aircraft name="British Normander">
+			<knob1>
+				<event_left>Mobiflight.KAP140_Knob_Outer_DEC</event_left>
+				<event_right>Mobiflight.KAP140_Knob_Outer_INC</event_right>
+				<alt_event_left>Mobiflight.KAP140_Knob_Inner_DEC</alt_event_left>
+				<alt_event_right>Mobiflight.KAP140_Knob_Inner_INC</alt_event_right>
+			</knob1>
+			<knob2>
+				<event_left>MobiFlight.KAP140_Push_DN</event_left>
+				<event_right>MobiFlight.KAP140_Push_DN</event_right>
+			</knob2>
+			<button11>
+				<event>MobiFlight.KAP140_Push_ALT</event>
+			</button11>
+			<button12>
+				<event>MobiFlight.KAP140_Push_ARM</event>
+			</button12>
+		</aircraft>
 		<aircraft name="Just Flight BAe 146">
 			<knob1>
 				<event_left>Mobiflight.BAE146_ALT_DEC</event_left>

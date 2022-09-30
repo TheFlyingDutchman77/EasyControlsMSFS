@@ -70,13 +70,38 @@ namespace EasyControlforMSFS
 
         public void VS_EventSet(string eventname, double value) 
         {
-            FsLVar lvar = VS.LVars[eventname];
-            if (lvar != null)
+            //FsLVar lvar = VS.LVars[eventname];
+            //if (lvar != null)
+            //{
+            //    lvar.SetValue(value);
+            //    Debug.WriteLine($"Event {eventname} set to {value}");
+            //    LogResult?.Invoke(this, $"Event {eventname} set to {value}");
+            //}
+
+            try
             {
-                lvar.SetValue(value);
-                Debug.WriteLine($"Event {eventname} set to {value}");
-                LogResult?.Invoke(this, $"Event {eventname} set to {value}");
+                FSUIPCConnection.Open();
             }
+            catch (FSUIPCException ex)
+            {
+                // Error occured so alert the user
+                //LogResult?.Invoke(this, "Connection Failed. " + ex.Message);
+            }
+            if (FSUIPCConnection.IsOpen)
+            {
+                // connection opened okay
+                string lvar = eventname;
+                try { FSUIPCConnection.WriteLVar(lvar, value); Debug.WriteLine($"Set by MSFSVarServices: {lvar} {value}"); }
+                catch (FSUIPCException ex)
+                {
+                    LogResult?.Invoke(this, $"{lvar} Event send error  {ex.Message}");
+                }
+                if (!lvar.Contains("THROTTLE"))
+                {
+                    LogResult?.Invoke(this, $"{lvar} event send with value {value}");
+                }
+            }
+
         }
 
 

@@ -461,12 +461,33 @@
 				<event>Mobiflight.C414_LANDING_LIGHTS_ON</event>
 			</button16>
 			<button17>
-				<event>Mobiflight.C414_TAXI_LIGHTS_ON</event>
 				<status_var>FSUIPC.LIGHT_TAXI</status_var>
 			</button17>
 			<button22>
 				<event>Mobiflight.C414_LIGHTSWITCH_MASTER_ON</event>
 			</button22>
+		</aircraft>
+		<aircraft name="British Normander">
+			<knob1>
+				<event_left>Mobiflight.KAP140_Knob_Outer_DEC</event_left>
+				<event_right>Mobiflight.KAP140_Knob_Outer_INC</event_right>
+				<alt_event_left>Mobiflight.KAP140_Knob_Inner_DEC</alt_event_left>
+				<alt_event_right>Mobiflight.KAP140_Knob_Inner_INC</alt_event_right>
+			</knob1>
+			<knob2>
+				<event_left>MobiFlight.KAP140_Push_DN</event_left>
+				<event_right>MobiFlight.KAP140_Push_UP</event_right>
+			</knob2>
+			<button11>
+				<event>MobiFlight.KAP140_Push_ALT</event>
+			</button11>
+			<button12>
+				<event>MobiFlight.KAP140_Push_ARM</event>
+			</button12>
+			<button16>
+				<event>Mobiflight.LANDING_LIGHTS_TOGGLE</event>
+				<status_var>LDG</status_var>
+			</button16>
 		</aircraft>
 		<aircraft name="Just Flight Turbo Arrow">
 			<button9>
@@ -475,6 +496,63 @@
 			</button9>
 		</aircraft>
 		<aircraft name="Just Flight BAe 146">
+			<knob1>
+				<event_left>Mobiflight.BAE146_ALT_DEC</event_left>
+				<event_right>Mobiflight.BAE146_ALT_INC</event_right>
+			</knob1>
+			<knob6>
+				<event_left>Mobiflight.BAE146_DH_DEC</event_left>
+				<event_right>Mobiflight.BAE146_DH_INC</event_right>
+			</knob6>
+			<knob7>
+				<event_left>Mobiflight.BAE146_PRESS_SET_DEC</event_left>
+				<event_right>Mobiflight.BAE146_PRESS_SET_INC</event_right>
+			</knob7>
+			<button9>
+				<event>FSUIPC.MCP_Mode_HDG</event>
+			</button9>
+			<button10>
+				<event>FSUIPC.MCP_Mode_LNAV</event>
+			</button10>
+			<button11>
+				<event>FSUIPC.MCP_Alt_arm</event>
+			</button11>
+			<button13>
+				<event>FSUIPC.MCP_Mode_IAS</event>
+			</button13>
+			<button15>
+				<event>FSUIPC.FLTCTRLS_RT_button_L</event>
+			</button15>
+			<button16>
+				<event>Mobiflight.BAE146_LANDING_LIGHTS_ON</event>
+				<eventOFF>Mobiflight.BAE146_LANDING_LIGHTS_OFF</eventOFF>
+			</button16>
+			<button17>
+				<event>Mobiflight.BAE146_TAXI_LIGHTS_ON</event>
+				<eventOFF>Mobiflight.BAE146_TAXI_LIGHTS_OFF</eventOFF>
+			</button17>
+			<button18>
+				<event>FSUIPC.OVHD_LTS_Strobe</event>
+			</button18>
+			<button22>
+				<event>FSUIPC.OVHD_LTS_NoSmkg</event>
+			</button22>
+			<button23>
+				<event>FSUIPC.OVHD_CTR_LWR_FastenBelts</event>
+			</button23>
+			<button32>
+				<event>FSUIPC.OVHD_APU_StartStop</event>
+			</button32>
+			<button33>
+				<event>FSUIPC.OVHD_APU_StartStop</event>
+			</button33>
+			<button37>
+				<event>FSUIPC.PED_AFT_AP_YD</event>
+				<eventOFF>FSUIPC.PED_AFT_AP_YD</eventOFF>
+				<status_var>FSUIPC.PED_AFT_AP_YD1_il</status_var>
+			</button37>
+		</aircraft>
+		<aircraft name="Just Flight BAe 146 - before engine start">
 			<knob1>
 				<event_left>Mobiflight.BAE146_ALT_DEC</event_left>
 				<event_right>Mobiflight.BAE146_ALT_INC</event_right>
@@ -673,10 +751,15 @@
 				<event_right>MobiFlight.KAS297_ALT_INC_1000</event_right>
 				<alt_event_left>MobiFlight.KAS297_ALT_DEC_100</alt_event_left>
 				<alt_event_right>MobiFlight.KAS297_ALT_INC_100</alt_event_right>
-			</knob1><button11>
+			</knob1>
+			<button11>
 				<event>MobiFlight.KAS297_ALT_ARM_PUSH</event>
 				<eventOFF>MobiFlight.KAS297_ALT_ARM_PUSH</eventOFF>
 			</button11>
+			<button12>
+				<event>MobiFlight.KAS297_AP_SELECT_ALT_OR_VS</event>
+				<eventOFF>MobiFlight.KAS297_AP_SELECT_ALT_OR_VS</eventOFF>
+			</button12>
 		</aircraft>
 	</MIDIcontroller>
 </root>

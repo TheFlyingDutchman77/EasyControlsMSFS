@@ -71,6 +71,20 @@
 				<is_switch>False</is_switch>
 			</button8>
 		</aircraft>
+		<aircraft name="Diamond 62">
+			<axis0>
+				<event>THROTTLE1_SET</event>
+				<min>-5000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE2_SET</event>
+				<min>-5000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -205,7 +219,8 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
-		</aircraft><aircraft name="Just Flight Turbo Arrow">
+		</aircraft>
+		<aircraft name="Just Flight Turbo Arrow">
 			<axis0>
 				<event>THROTTLE_SET</event>
 				<min>0</min>
@@ -466,25 +481,47 @@
 				<inverted>False</inverted>
 			</axis0>
 			<axis1>
-				<event>THROTTLE1_SET</event>
+				<event>THROTTLE1_AXIS_SET_EX1</event>
 				<min>-16383</min>
 				<max>16383</max>
 				<inverted>True</inverted>
-				<event2>THROTTLE2_SET</event2>
+				<event2>THROTTLE2_AXIS_SET_EX1</event2>
 				<min2>-16383</min2>
 				<max2>16383</max2>
 				<inverted2>True</inverted2>
 			</axis1>
 			<axis2>
-				<event>THROTTLE3_SET</event>
+				<event>THROTTLE3_AXIS_SET_EX1</event>
 				<min>-16383</min>
 				<max>16383</max>
 				<inverted>True</inverted>
-				<event2>THROTTLE4_SET</event2>
+				<event2>THROTTLE4_AXIS_SET_EX1</event2>
 				<min2>-16383</min2>
 				<max2>16383</max2>
 				<inverted2>True</inverted2>
 			</axis2>
+			<button2>
+				<eventON>FSUIPC.PED_MID_Eng1_latch</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>FSUIPC.PED_MID_Eng2_latch</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>FSUIPC.PED_MID_Eng3_latch</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>FSUIPC.PED_MID_Eng4_latch</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+		</aircraft>
+		<aircraft name="Just Flight BAe 146 - before engine start">
 			<button2>
 				<eventON>FSUIPC.PED_MID_Eng1_latch</eventON>
 				<axis_link></axis_link>
@@ -515,21 +552,26 @@
 			</axis0>
 			<axis1>
 				<event>THROTTLE1_AXIS_SET_EX1</event>
-				<min>-16383</min>
+				<min>-12000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
 			<axis2>
 				<event>THROTTLE2_AXIS_SET_EX1</event>
-				<min>-16383</min>
+				<min>-12000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
 			<button7>
-				<eventON>DECREASE_THROTTLE</eventON>
+				<eventON>Mobiflight.FNX320_REVERSE</eventON>
 				<axis_link>1</axis_link>
 				<is_switch>False</is_switch>
 			</button7>
+			<button8>
+				<eventON>Mobiflight.FNX320_REVERSE</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>False</is_switch>
+			</button8>
 		</aircraft>
 		<aircraft name="British Normander">
 			<axis0>
@@ -554,6 +596,38 @@
 				<eventON>PROP_PITCH_DECR</eventON>
 				<axis_link>2</axis_link>
 				<is_switch>False</is_switch>
+			</button8>
+		</aircraft>
+		<aircraft name="Hondajet">
+			<axis0>
+				<event>MIXTURE_SET</event>
+				<min>-1</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>FSUIPC.THROTTLE1_SET</event>
+				<min>0</min>
+				<max>1</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>FSUIPC.THROTTLE2_SET</event>
+				<min>0</min>
+				<max>1</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button7>
+				<eventON>Mobiflight.HONDA_THROTTLE1_ON</eventON>
+				<eventOFF>Mobiflight.HONDA_THROTTLE1_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.HONDA_THROTTLE2_ON</eventON>
+				<eventOFF>Mobiflight.HONDA_THROTTLE2_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
 	</joystick>
@@ -586,6 +660,33 @@
 			</button3>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G1000">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="Diamond 62">
 			<button0>
 				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
@@ -917,6 +1018,13 @@
 				<is_switch>True</is_switch>
 			</button0>
 		</aircraft>
+		<aircraft name="Just Flight BAe 146 - before engine start">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+		</aircraft>
 		<aircraft name="Fenix A320">
 			<button0>
 				<eventON>Mobiflight.FNX320_BAT_ON</eventON>
@@ -951,43 +1059,6 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
-		</aircraft>
-	</joystick>
-	<joystick name="HID-spelbesturing-1103-1029">
-		<aircraft name="Airbus A320neo">
-			<button0>
-				<eventON>Mobiflight.A32NX_BAT_TOGGLE</eventON>
-				<axis_link></axis_link>
-				<is_switch>False</is_switch>
-			</button0>
-			<button1>
-				<eventON>Mobiflight.A32NX_BAT_ON</eventON>
-				<eventOFF>Mobiflight.A32NX_BAT_OFF</eventOFF>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button1>
-		</aircraft>
-	</joystick>
-	<joystick name="HID-spelbesturing-1699-3117">
-		<aircraft name="Asobo Stock Aircraft G1000">
-			<axis0>
-				<event>THROTTLE_SET</event>
-				<min>0</min>
-				<max>16383</max>
-				<inverted>True</inverted>
-			</axis0>
-			<axis1>
-				<event>AXIS_PROPELLER_SET</event>
-				<min>-16383</min>
-				<max>16383</max>
-				<inverted>True</inverted>
-			</axis1>
-			<axis2>
-				<event>MIXTURE_SET</event>
-				<min>0</min>
-				<max>16383</max>
-				<inverted>True</inverted>
-			</axis2>
 		</aircraft>
 	</joystick>
 </root>

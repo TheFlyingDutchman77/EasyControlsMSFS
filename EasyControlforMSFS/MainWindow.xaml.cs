@@ -552,9 +552,12 @@ namespace EasyControlforMSFS
                         if (sim_event.Substring(0, 6) == "FSUIPC")
                         {
                             string sim_event_new = sim_event.Replace("FSUIPC.", "");
-                            int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(sim_event_new);
+                            //int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(sim_event_new);
+                            //double check = Math.Abs(current_value - Math.Round(set_value_double));
                             Debug.WriteLine($"Set value {sim_event}  {set_value_double}");
-                            if (Math.Abs(current_value - Math.Round(set_value_double)) > 1) { myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); }
+                            //if (Math.Abs(current_value - Math.Round(set_value_double)) > 1) {
+                            myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); 
+                            //}
                         }
                     else { mysimconnect.SendEvent(sim_event, set_value);  }
                     }
