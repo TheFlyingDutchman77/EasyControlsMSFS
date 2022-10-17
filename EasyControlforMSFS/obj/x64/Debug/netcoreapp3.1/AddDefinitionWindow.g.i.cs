@@ -481,7 +481,7 @@ namespace EasyControlforMSFS {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EasyControlforMSFS;component/adddefinitionwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EasyControlforMSFS;V1.0.0.0;component/adddefinitionwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\AddDefinitionWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

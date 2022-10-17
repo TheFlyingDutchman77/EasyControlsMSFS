@@ -116,6 +116,38 @@
 				<event>TOGGLE_TAILWHEEL_LOCK</event>
 			</button39>
 		</aircraft>
+		<aircraft name="Hondajet">
+			<knob1>
+				<event_left>Mobiflight.HONDA_ALT1000_DEC</event_left>
+				<event_right>Mobiflight.HONDA_ALT1000_INC</event_right>
+				<alt_event_left>Mobiflight.HONDA_ALT100_DEC</alt_event_left>
+				<alt_event_right>Mobiflight.HONDA_ALT100_INC</alt_event_right>
+			</knob1>
+			<button9>
+				<eventON>FSUIPC.HDG_Pushed</eventON>
+			</button9>
+			<button10>
+				<eventON>FSUIPC.NAV_Pushed</eventON>
+			</button10>
+			<button12>
+				<eventON>FSUIPC.VS_Pushed</eventON>
+			</button12>
+			<button13>
+				<eventON>FSUIPC.FLC_Pushed</eventON>
+			</button13>
+			<button14>
+				<eventON>FSUIPC.HJET_APPROACH_MODE_ARMED</eventON>
+			</button14>
+			<button21>
+				<eventON>FSUIPC.CPOW Pushed</eventON>
+			</button21>
+			<button22>
+				<event>CABIN_NO_SMOKING_ALERT_SWITCH_TOGGLE</event>
+			</button22>
+			<button23>
+				<event>CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE</event>
+			</button23>
+		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<knob1>
 				<event_left>Mobiflight.WT_CJ4_AP_ALT_FAST_DEC</event_left>

@@ -152,7 +152,7 @@ namespace EasyControlforMSFS {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EasyControlforMSFS;component/add2ndaxiseventswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EasyControlforMSFS;V1.0.0.0;component/add2ndaxiseventswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Add2ndAxisEventsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

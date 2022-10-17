@@ -380,9 +380,9 @@
 		</aircraft>
 		<aircraft name="Quest Kodiak 100">
 			<axis0>
-				<event>THROTTLE_SET</event>
-				<min>0</min>
-				<max>16383</max>
+				<event>FSUIPC.ENGINE_Lever_Power_1</event>
+				<min>-1</min>
+				<max>1</max>
 				<inverted>True</inverted>
 			</axis0>
 			<axis1>
@@ -600,10 +600,10 @@
 		</aircraft>
 		<aircraft name="Hondajet">
 			<axis0>
-				<event>MIXTURE_SET</event>
-				<min>-1</min>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
 				<max>16383</max>
-				<inverted>True</inverted>
+				<inverted>False</inverted>
 			</axis0>
 			<axis1>
 				<event>FSUIPC.THROTTLE1_SET</event>
@@ -617,6 +617,11 @@
 				<max>1</max>
 				<inverted>True</inverted>
 			</axis2>
+			<button2>
+				<eventON>Mobiflight.HONDA_TOGA_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
 			<button7>
 				<eventON>Mobiflight.HONDA_THROTTLE1_ON</eventON>
 				<eventOFF>Mobiflight.HONDA_THROTTLE1_OFF</eventOFF>
@@ -1059,6 +1064,99 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
+		</aircraft>
+		<aircraft name="Hondajet">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>FSUIPC.GroundPower</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+		</aircraft>
+	</joystick>
+	<joystick name="HID-spelbesturing-8989-513">
+		<aircraft name="Hondajet">
+			<button5>
+				<eventON>Mobiflight.HONDA_CHECKLIST_UP</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+			<button7>
+				<eventON>Mobiflight.HONDA_CHECKLIST_DOWN</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button9>
+				<eventON>Mobiflight.HONDA_CHECKLIST_ENTER</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button9>
+		</aircraft>
+		<aircraft name="Cessna Citation CJ4">
+			<button0>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+			<button1>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button1>
+			<button2>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button3>
+			<button4>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+			<button6>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button6>
+			<button7>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON></eventON>
+				<eventOFF></eventOFF>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button8>
+			<button9>
+				<eventON>Mobiflight.Generic_Lwr_DATA_Push</eventON>
+				<eventOFF></eventOFF>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button9>
 		</aircraft>
 	</joystick>
 </root>

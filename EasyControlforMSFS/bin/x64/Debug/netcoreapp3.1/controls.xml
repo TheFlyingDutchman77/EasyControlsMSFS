@@ -728,6 +728,18 @@
 				<is_switch>True</is_switch>
 			</button4>
 		</aircraft>
+		<aircraft name="Hondajet">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+		</aircraft>
 		<aircraft name="Just Flight Turbo Arrow">
 			<button0>
 				<eventON>MASTER_BATTERY_SET</eventON>

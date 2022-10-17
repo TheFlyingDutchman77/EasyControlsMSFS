@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yBVEeFoG9PH3VUIVwfpVtZHap/TaX8vi2g1CLEszQC1Qy10nJQne7eq8r9YdNa9zCOO1c+AzW10Ypxicobpwew==",
+  "dgSpecHash": "TztUZS3/GUGJeveVkwUDSw8BdcWTxUyJNOzbs2ZL3g6S9MGm9h48oGb98Z/0Y6s+OoTV3roTuxZlBLDvqbLXKQ==",
   "success": true,
   "projectFilePath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\erikv\\.nuget\\packages\\fsuipcclientdll\\3.2.20\\fsuipcclientdll.3.2.20.nupkg.sha512",
+    "C:\\Users\\erikv\\.nuget\\packages\\fsuipcclientdll\\3.2.22-beta2\\fsuipcclientdll.3.2.22-beta2.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\m2mqttdotnetcore\\1.1.0\\m2mqttdotnetcore.1.1.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512",
@@ -79,7 +79,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'FSUIPCClientDLL 3.2.20' was restored using 'UAP,Version=v10.0.22000, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'FSUIPCClientDLL 3.2.22-beta2' was restored using 'UAP,Version=v10.0.22000, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "FSUIPCClientDLL",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

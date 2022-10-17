@@ -40,6 +40,7 @@
 		<title>Kodiak 100 Safari Wings</title>
 		<title>Kodiak 100 Legacy Livery 6</title>
 		<title>Kodiak 100 Aviation Sans Frontieres</title>
+		<title>Kodiak 100 Ethnos 360</title>
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
@@ -99,6 +100,8 @@
 		<title>FenixA320_ITYEIDTE_4K</title>
 		<title>FenixA320_AUAOELBK_4K</title>
 		<title>FenixA320_DLHDAIZI_4K</title>
+		<title>FenixA320_BELOOSNI_4K</title>
+		<title>FenixA320_AFRFHBNK_4K</title>
 	</profile>
 	<profile name="British Normander">
 		<title>Britten Norman Islander BN2B Skybus</title>
@@ -114,5 +117,9 @@
 	</profile>
 	<profile name="Hondajet">
 		<title>HJET HA420 Red</title>
+		<title>HJET HA420 Silver</title>
+		<title>HJET HA420 AlphaTauri</title>
+		<title>HJET HA420 AEROSOAR</title>
+		<title>HJET HA420 PH-JET</title>
 	</profile>
 </root>

@@ -184,7 +184,7 @@ namespace EasyControlforMSFS {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EasyControlforMSFS;component/addbuttoneventwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EasyControlforMSFS;V1.0.0.0;component/addbuttoneventwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\AddButtonEventWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

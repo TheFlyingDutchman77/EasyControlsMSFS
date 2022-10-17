@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "FSUIPCClientDLL/3.2.20": {
+      "FSUIPCClientDLL/3.2.22-beta2": {
         "type": "package",
         "compile": {
           "lib/net40/fsuipcClient.dll": {}
@@ -1144,15 +1144,15 @@
     }
   },
   "libraries": {
-    "FSUIPCClientDLL/3.2.20": {
-      "sha512": "48MI6yUv8WNlTk+XNsIVGtGOzMN5ZhB+FjrmpUGOGlu4J/7LC3VXVDv5jZpPhF2NHLEZ9F6XK6ynwDfk9vZTlQ==",
+    "FSUIPCClientDLL/3.2.22-beta2": {
+      "sha512": "OmNaWfzB2kuvsDaqOhiv4dgnoVTA3SKdAfWBBFrmNq2T4NH70L7A+wDsC5qBVn1ylc3cM7PgY2Hd9ULSfQTPvg==",
       "type": "package",
-      "path": "fsuipcclientdll/3.2.20",
+      "path": "fsuipcclientdll/3.2.22-beta2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "License.txt",
-        "fsuipcclientdll.3.2.20.nupkg.sha512",
+        "fsuipcclientdll.3.2.22-beta2.nupkg.sha512",
         "fsuipcclientdll.nuspec",
         "lib/net40/fsuipcClient.dll",
         "lib/net40/fsuipcClient.xml",
@@ -4148,7 +4148,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "FSUIPCClientDLL >= 3.2.20",
+      "FSUIPCClientDLL >= 3.2.22-beta2",
       "M2MqttDotnetCore >= 1.1.0",
       "MaterialDesignThemes >= 4.3.0",
       "Melanchall.DryWetMidi >= 6.0.1",
@@ -4202,7 +4202,7 @@
         "dependencies": {
           "FSUIPCClientDLL": {
             "target": "Package",
-            "version": "[3.2.20, )"
+            "version": "[3.2.22-beta2, )"
           },
           "M2MqttDotnetCore": {
             "target": "Package",
@@ -4259,7 +4259,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'FSUIPCClientDLL 3.2.20' was restored using 'UAP,Version=v10.0.22000, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'FSUIPCClientDLL 3.2.22-beta2' was restored using 'UAP,Version=v10.0.22000, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "FSUIPCClientDLL",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

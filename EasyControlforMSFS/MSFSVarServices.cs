@@ -55,7 +55,7 @@ namespace EasyControlforMSFS
             var wih = new WindowInteropHelper(mSFSServicesWindow).Handle;
 
 
-            VS.Init(wih); // Initialise by passing in the windows handle of this form
+            VS.Init(); // Initialise by passing in the windows handle of this form
             VS.LVARUpdateFrequency = 0; // CONTROLLED BY THE WASM Check for changes in lvar values 10 times per second (Hz)
             VS.LogLevel = LOGLEVEL.LOG_LEVEL_INFO; // Set the level of logging
             //VS.LogLevel = LOGLEVEL.LOG_LEVEL_DEBUG; // Set the level of logging
@@ -96,7 +96,7 @@ namespace EasyControlforMSFS
                 {
                     LogResult?.Invoke(this, $"{lvar} Event send error  {ex.Message}");
                 }
-                if (!lvar.Contains("THROTTLE"))
+                if (!lvar.Contains("THROTTLE") & !lvar.Contains("Power"))
                 {
                     LogResult?.Invoke(this, $"{lvar} event send with value {value}");
                 }
