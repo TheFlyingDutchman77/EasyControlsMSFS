@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TztUZS3/GUGJeveVkwUDSw8BdcWTxUyJNOzbs2ZL3g6S9MGm9h48oGb98Z/0Y6s+OoTV3roTuxZlBLDvqbLXKQ==",
+  "dgSpecHash": "AEYLvG+aplcGlCv5Fr5vtGAax1nzQTqSa/SoTzU9u1VXqXgfG6llhQtqcs6aS6M/6xpfzE6FfMXwxe8w+KlhRw==",
   "success": true,
   "projectFilePath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
   "expectedPackageFiles": [
@@ -71,15 +71,14 @@
     "C:\\Users\\erikv\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.threading.thread\\4.3.0\\system.threading.thread.4.3.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
-    "C:\\Users\\erikv\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512",
-    "C:\\Users\\erikv\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+    "C:\\Users\\erikv\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'FSUIPCClientDLL 3.2.22-beta2' was restored using 'UAP,Version=v10.0.22000, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'FSUIPCClientDLL 3.2.22-beta2' was restored using 'UAP,Version=v10.0.22000, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "FSUIPCClientDLL",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

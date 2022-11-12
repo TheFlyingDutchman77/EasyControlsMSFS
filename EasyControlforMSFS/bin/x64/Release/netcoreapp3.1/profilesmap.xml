@@ -9,10 +9,13 @@
 		<title>Aerosoft DHC6-300 Wheels Buffalo C-GFYN</title>
 		<title>Flybe </title>
 		<title>Aerosoft DHC-6 Series 300 Wheels Pax Canadian Forces JM-1954</title>
+		<title>Aerosoft DHC-6 Series 300 Wheels Pax</title>
+		<title>Aerosoft DHC-6 Inter Caribbean</title>
 	</profile>
 	<profile name="Milviz PC-6">
 		<title>Turbo Porter EC-JXH Glass</title>
 		<title>Turbo Porter S5-CMA Glass</title>
+		<title>Turbo Porter ZS-PCS</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
@@ -41,6 +44,9 @@
 		<title>Kodiak 100 Legacy Livery 6</title>
 		<title>Kodiak 100 Aviation Sans Frontieres</title>
 		<title>Kodiak 100 Ethnos 360</title>
+		<title>Kodiak 100 Factory paint A7</title>
+		<title>Kodiak 100 Factory paint A4</title>
+		<title>Kodiak 100 Factory paint B3 2021</title>
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
@@ -70,6 +76,8 @@
 		<title>Cessna 414AW N427RC PMS50 GTN750</title>
 		<title>Cessna 414AW N427RC PMS50 GTN750+WT</title>
 		<title>Cessna 414AW N5AM PMS50 GTN750+WT</title>
+		<title>Flysimware C414AW N427RC PMS50 GTN750+WT</title>
+		<title>Flysimware C414AW N100JD PMS50 GTN750+WT</title>
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
@@ -88,6 +96,7 @@
 		<title>PMDG 737-700 Transavia (PH-XRX </title>
 		<title>PMDG 737-800 KLM Royal Dutch Airlines (PH-BCA </title>
 		<title>PMDG 737-800 Transavia (PH-HXK </title>
+		<title>PMDG 737-700BBJ PH-GOV</title>
 	</profile>
 	<profile name="Fenix A320">
 		<title>FenixA320_AFLVPBDK</title>
@@ -121,5 +130,15 @@
 		<title>HJET HA420 AlphaTauri</title>
 		<title>HJET HA420 AEROSOAR</title>
 		<title>HJET HA420 PH-JET</title>
+	</profile>
+	<profile name="Bell 407">
+		<title>Bell 407 Blue Stripes</title>
+	</profile>
+	<profile name="Guimbal Cabri G2">
+		<title>Asobo Cabri G2</title>
+	</profile>
+	<profile name="Airbus A310">
+		<title>A310-300 White Livery</title>
+		<title>Airbus A310-300 KLM (PH-AGA)</title>
 	</profile>
 </root>

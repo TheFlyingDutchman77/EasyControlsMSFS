@@ -173,7 +173,7 @@ namespace EasyControlforMSFS
             if (sim_event != null)
             {
                 // First the case with ON/OFF events in the event name and the button is ON (so we need an OFF event to fire)
-                if (sim_event.Contains("_ON") && button_status[button])
+                if (sim_event.Contains("_ON") && button_status[button] && !has_off_event)
                 {
                     Debug.WriteLine("ON OFF EVENT FOUND!");
                     sim_event = sim_event.Replace("_ON", "_OFF");
@@ -209,6 +209,22 @@ namespace EasyControlforMSFS
                             else { mysimconnect.SendEvent(sim_event, 0); }  // we send a 0 instead of 1 for the off event
                         }
                         button_status[button] = false;
+                        if (button_events_wait[aircraft_id, button] != null)
+                        {
+                            Thread.Sleep(50);
+                            string sim_event_wait = button_events_wait[aircraft_id, button];
+                            if (sim_event_wait.Substring(0, 6) == "FSUIPC")
+                            {
+                                string sim_event_new = sim_event_wait.Replace("FSUIPC.", "");
+                                MainWindow.myMSFSVarServices.VS_EventSet(sim_event_new, 1);
+                                Debug.WriteLine($"Button WAIT event {sim_event_wait} sent with value 1!");
+                            }
+                            else
+                            {
+                                mysimconnect.SendEvent(sim_event_wait, 1);
+                                Debug.WriteLine($"Button WAIT event {sim_event_wait} sent!");
+                            }
+                        }
                     }
                     else // button is OFF all cases
                     {

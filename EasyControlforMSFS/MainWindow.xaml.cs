@@ -604,6 +604,7 @@ namespace EasyControlforMSFS
                     {
                         Debug.WriteLine("WAIT event detected");
                         sim_event = sim_eventWAIT;
+                        Thread.Sleep(300);
                         if (sim_event.Substring(0, 6) == "FSUIPC")
                         {
                             string sim_event_new = sim_event.Replace("FSUIPC.", "");
@@ -629,6 +630,20 @@ namespace EasyControlforMSFS
                     else { mysimconnect.SendEvent(sim_event, 0); }
                     Debug.WriteLine($"Button {j} event OFF {sim_event} sent!");
                     Thread.Sleep(200);
+                    if (sim_eventWAIT != null)
+                    {
+                        Debug.WriteLine("WAIT event detected");
+                        sim_event = sim_eventWAIT;
+                        Thread.Sleep(300);
+                        if (sim_event.Substring(0, 6) == "FSUIPC")
+                        {
+                            string sim_event_new = sim_event.Replace("FSUIPC.", "");
+                            myMSFSVarServices.VS_EventSet(sim_event_new, 0);
+                        }
+                        else { mysimconnect.SendEvent(sim_event, 0); }
+                        Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
+
+                    }
                 }
             }
         }
