@@ -16,6 +16,7 @@
 		<title>Turbo Porter EC-JXH Glass</title>
 		<title>Turbo Porter S5-CMA Glass</title>
 		<title>Turbo Porter ZS-PCS</title>
+		<title>Blackbird Turbo Porter EC-JXH Wheels Analog</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
@@ -35,6 +36,7 @@
 		<title>Cessna CJ4 Citation Asobo</title>
 		<title>Cessna CJ4 Citation Kenmore Livery</title>
 		<title>Cessna CJ4 Citation N325CJ</title>
+		<title>Cessna Citation CJ1</title>
 	</profile>
 	<profile name="Quest Kodiak 100">
 		<title>Kodiak 100 Factory paint A5</title>
@@ -111,6 +113,8 @@
 		<title>FenixA320_DLHDAIZI_4K</title>
 		<title>FenixA320_BELOOSNI_4K</title>
 		<title>FenixA320_AFRFHBNK_4K</title>
+		<title>FenixA320_BAWGBUSK_4K</title>
+		<title>FenixA320_SWRHBIJS_4K</title>
 	</profile>
 	<profile name="British Normander">
 		<title>Britten Norman Islander BN2B Skybus</title>
@@ -133,12 +137,15 @@
 	</profile>
 	<profile name="Bell 407">
 		<title>Bell 407 Blue Stripes</title>
+		<title>Bell 407 Black-Orange</title>
 	</profile>
 	<profile name="Guimbal Cabri G2">
 		<title>Asobo Cabri G2</title>
+		<title>Robinson R22</title>
 	</profile>
 	<profile name="Airbus A310">
 		<title>A310-300 White Livery</title>
 		<title>Airbus A310-300 KLM (PH-AGA)</title>
+		<title>Airbus A310-300 Martinair Holland (PH-MCA)</title>
 	</profile>
 </root>

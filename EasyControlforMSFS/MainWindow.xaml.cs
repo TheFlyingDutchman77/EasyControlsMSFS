@@ -559,7 +559,8 @@ namespace EasyControlforMSFS
                             myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); 
                             //}
                         }
-                    else { mysimconnect.SendEvent(sim_event, set_value);  }
+                    else { mysimconnect.SendEvent(sim_event, set_value); Debug.WriteLine($"Set value {sim_event}  {set_value}");
+                        }
                     }
                 }
                 

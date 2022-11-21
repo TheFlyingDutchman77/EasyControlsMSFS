@@ -29,22 +29,32 @@
 		<aircraft name="Airbus A310">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
-				<min>-16383</min>
+				<min>-16400</min>
 				<max>16383</max>
 				<inverted>False</inverted>
 			</axis0>
 			<axis1>
-				<event>THROTTLE1_SET</event>
-				<min>-16383</min>
+				<event>THROTTLE1_AXIS_SET_EX1</event>
+				<min>-1500</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
 			<axis2>
-				<event>THROTTLE2_SET</event>
-				<min>-16383</min>
+				<event>THROTTLE2_AXIS_SET_EX1</event>
+				<min>-1500</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+			<button7>
+				<eventON>Mobiflight.A310_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>False</is_switch>
+			</button8>
 		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
 			<axis0>
@@ -512,18 +522,23 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+			<button7>
+				<eventON>PROP_PITCH_DECR</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>True</is_switch>
+			</button7>
 		</aircraft>
 		<aircraft name="Bell 407">
 			<axis0>
-				<event>FSUIPC.CollectiveGrip</event>
-				<min>0</min>
-				<max>100</max>
-				<inverted>True</inverted>
-			</axis0>
-			<axis1>
 				<event>THROTTLE_SET</event>
 				<min>-16383</min>
 				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>FSUIPC.CollectiveGrip</event>
+				<min>0</min>
+				<max>100</max>
 				<inverted>True</inverted>
 			</axis1>
 			<axis2>
@@ -612,13 +627,13 @@
 			</axis0>
 			<axis1>
 				<event>THROTTLE1_AXIS_SET_EX1</event>
-				<min>-12000</min>
+				<min>-10000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
 			<axis2>
 				<event>THROTTLE2_AXIS_SET_EX1</event>
-				<min>-12000</min>
+				<min>-10000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
@@ -628,7 +643,7 @@
 				<is_switch>False</is_switch>
 			</button7>
 			<button8>
-				<eventON>Mobiflight.FNX320_REVERSE</eventON>
+				<eventON>Mobiflight.ONZIN</eventON>
 				<axis_link>2</axis_link>
 				<is_switch>False</is_switch>
 			</button8>
@@ -1040,6 +1055,11 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
 			<button3>
 				<eventON>PITOT_HEAT_SET</eventON>
 				<eventOFF>PITOT_HEAT_SET</eventOFF>
@@ -1170,6 +1190,23 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+		</aircraft>
+		<aircraft name="Guimbal Cabri G2">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
 		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-8989-513">
@@ -1191,6 +1228,16 @@
 			</button9>
 		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
+			<button5>
+				<eventON>MobiFlight.Generic_Lwr_MENU_ADV_DEC</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+			<button7>
+				<eventON>MobiFlight.Generic_Lwr_MENU_ADV_INC</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button7>
 			<button9>
 				<eventON>Mobiflight.Generic_Lwr_DATA_Push</eventON>
 				<axis_link></axis_link>

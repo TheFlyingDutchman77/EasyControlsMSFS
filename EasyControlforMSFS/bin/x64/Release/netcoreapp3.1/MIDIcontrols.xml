@@ -163,6 +163,11 @@
 				<event>FSUIPC.switchStarter</event>
 			</button37>
 		</aircraft>
+		<aircraft name="Guimbal Carbi G2">
+			<button37>
+				<event>TOGGLE_STARTER1</event>
+			</button37>
+		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<knob1>
 				<event_left>Mobiflight.WT_CJ4_AP_ALT_FAST_DEC</event_left>
@@ -549,21 +554,44 @@
 		</aircraft>
 		<aircraft name="Airbus A310">
 			<knob0>
-				<event_left>FSUIPC.A310_HEADING_DIAL_DN_COMMAND</event_left>
-				<event_right>FSUIPC.A310_HEADING_DIAL_UP_COMMAND</event_right>
+				<event_left>Mobiflight.A310_HDG_DN</event_left>
+				<event_right>Mobiflight.A310_HDG_UP</event_right>
 			</knob0>
 			<knob1>
-				<event_left>FSUIPC.A310_ALTITUDE_DIAL_DN_COMMAND</event_left>
-				<event_right>FSUIPC.A310_ALTITUDE_DIAL_UP_COMMAND</event_right>
+				<event_left>Mobiflight.A310_ALT_DN</event_left>
+				<event_right>Mobiflight.A310_ALT_UP</event_right>
 			</knob1>
 			<knob2>
-				<event_left>FSUIPC.A310_VVI_DIAL_DN_COMMAND</event_left>
-				<event_right>FSUIPC.A310_VVI_DIAL_UP_COMMAND</event_right>
+				<event_left>Mobiflight.A310_VS_DN</event_left>
+				<event_right>Mobiflight.A310_VS_UP</event_right>
 			</knob2>
 			<knob3>
-				<event_left>FSUIPC.A310_AIRSPEED_DIAL_DN_COMMAND</event_left>
-				<event_right>FSUIPC.A310_AIRSPEED_DIAL_UP_COMMAND</event_right>
+				<event_left>Mobiflight.A310_SPD_DN</event_left>
+				<event_right>Mobiflight.A310_SPD_UP</event_right>
 			</knob3>
+			<knob9>
+				<event_left>Mobiflight.A310_GEAR_DN</event_left>
+				<event_right>Mobiflight.A310_GEAR_UP</event_right>
+			</knob9>
+			<button8>
+				<event>Mobiflight.A310_AP_ON</event>
+				<status_var>AP</status_var>
+			</button8>
+			<button9>
+				<eventON>Mobiflight.A310_HDG_TOGGLE</eventON>
+				<eventOFF>Mobiflight.A310_HDG_TOGGLE</eventOFF>
+				<status_var>FSUIPC.__HDGSEL_ButtonIsPressed</status_var>
+			</button9>
+			<button10>
+				<eventON>Mobiflight.A310_NAV_TOGGLE</eventON>
+				<eventOFF>Mobiflight.A310_NAV_TOGGLE</eventOFF>
+				<status_var>FSUIPC.__NAV_ButtonIsPressed</status_var>
+			</button10>
+			<button14>
+				<eventON>Mobiflight.A310_APPR_TOGGLE</eventON>
+				<eventOFF>Mobiflight.A310_APPR_TOGGLE</eventOFF>
+				<status_var>FSUIPC.__LAND_ButtonIsPressed</status_var>
+			</button14>
 			<button16>
 				<event>Mobiflight.A310_LANDING_LIGHTS_ON</event>
 			</button16>
@@ -577,7 +605,7 @@
 				<event>Mobiflight.A310_NAV_LIGHT_ON</event>
 			</button19>
 			<button20>
-				<event>FSUIPC.A310_BEACON_LIGHT_SWITCH</event>
+				<event>Mobiflight.A310_BEACON_LIGHTS_ON</event>
 			</button20>
 			<button21>
 				<event>Mobiflight.A310_RWY_TURNOFF_ON</event>
@@ -587,16 +615,16 @@
 				<eventOFF>Mobiflight.A310_NO_SMOKING_OFF</eventOFF>
 			</button22>
 			<button23>
-				<event>FSUIPC.A310_SEATBELTS_SWITCH</event>
+				<event>Mobiflight.A310_SEATBELTS_ON</event>
 			</button23>
 			<button32>
-				<event>FSUIPC.A310_apu_master_switch</event>
+				<event>Mobiflight.APU_MASTER_ON</event>
 			</button32>
 			<button33>
-				<event>FSUIPC.A310_APU_START_BUTTON</event>
+				<event>Mobiflight.APU_START_ON</event>
 			</button33>
 			<button40>
-				<event>FSUIPC.A310_apu_bleed</event>
+				<event>Mobiflight.APU_BLEED_ON</event>
 			</button40>
 		</aircraft>
 		<aircraft name="Flysimware Cessna 414">

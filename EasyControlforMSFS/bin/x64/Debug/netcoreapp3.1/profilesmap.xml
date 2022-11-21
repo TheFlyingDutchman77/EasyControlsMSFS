@@ -67,6 +67,7 @@
 		<title>FenixA320_BAWGBUSK</title>
 		<title>FenixA320_EWGDABHG</title>
 		<title>FenixA320_ACACFXCD</title>
+		<title>FenixA320</title>
 	</profile>
 	<profile name="Just Flight BAe 146 - before start engines">
 		<title>Just Flight 146-300 KLM UK</title>
@@ -74,5 +75,8 @@
 	<profile name="Hondajet">
 		<title>HJET HA420 Red</title>
 		<title>HJET HA420 PH-JET</title>
+	</profile>
+	<profile name="Airbus A310">
+		<title>Airbus A310-300 Martinair Holland (PH-MCA)</title>
 	</profile>
 </root>
