@@ -116,6 +116,25 @@
 				<event>TOGGLE_TAILWHEEL_LOCK</event>
 			</button39>
 		</aircraft>
+		<aircraft name="TBM930">
+			<knob0>
+				<event_left>Mobiflight.AS1000_PFD_HEADING_DEC</event_left>
+				<event_right>Mobiflight.AS1000_PFD_HEADING_INC</event_right>
+			</knob0>
+			<knob3>
+				<event_left>Mobiflight.WT_CJ4_AP_SPEED_DEC</event_left>
+				<event_right>Mobiflight.WT_CJ4_AP_SPEED_INC</event_right>
+			</knob3>
+			<button21>
+				<event>TOGGLE_LOGO_LIGHTS</event>
+				<eventOFF>TOGGLE_LOGO_LIGHTS</eventOFF>
+				<status_var>BCN</status_var>
+			</button21>
+			<button40>
+				<event>Mobiflight.TBM930_BLEED_AUTO</event>
+				<eventOFF>Mobiflight.TBM930_BLEED_OFF</eventOFF>
+			</button40>
+		</aircraft>
 		<aircraft name="Hondajet">
 			<knob1>
 				<event_left>Mobiflight.HONDA_ALT1000_DEC</event_left>
@@ -615,16 +634,16 @@
 				<eventOFF>Mobiflight.A310_NO_SMOKING_OFF</eventOFF>
 			</button22>
 			<button23>
-				<event>Mobiflight.A310_SEATBELTS_ON</event>
+				<event>Mobiflight.A310_SEATBELT_ON</event>
 			</button23>
 			<button32>
-				<event>Mobiflight.APU_MASTER_ON</event>
+				<event>Mobiflight.A310_APU_MASTER_ON</event>
 			</button32>
 			<button33>
-				<event>Mobiflight.APU_START_ON</event>
+				<event>Mobiflight.A310_APU_START_ON</event>
 			</button33>
 			<button40>
-				<event>Mobiflight.APU_BLEED_ON</event>
+				<event>Mobiflight.A310_APU_BLEED_ON</event>
 			</button40>
 		</aircraft>
 		<aircraft name="Flysimware Cessna 414">
@@ -797,6 +816,10 @@
 				<event_left>Mobiflight.737_ELEV_DEC</event_left>
 				<event_right>Mobiflight.737_ELEV_INC</event_right>
 			</knob7>
+			<knob14>
+				<event_left>Mobiflight.737_CRS2_INC</event_left>
+				<event_right>Mobiflight.737_CRS2_DEC</event_right>
+			</knob14>			
 			<knob17>
 				<event_left>Mobiflight.737_CRS_LEVEL_INC</event_left>
 				<event_right>Mobiflight.737_CRS_LEVEL_DEC</event_right>
@@ -928,6 +951,14 @@
 				<event>MobiFlight.KAS297_AP_SELECT_ALT_OR_VS</event>
 				<eventOFF>MobiFlight.KAS297_AP_SELECT_ALT_OR_VS</eventOFF>
 			</button12>
+		</aircraft>
+		<aircraft name="Cessna Citation Longitude">
+			<button32>
+				<event>APU_STARTER</event>
+			</button32>
+			<button33>
+				<event>APU_OFF_SWITCH</event>
+			</button33>
 		</aircraft>
 	</MIDIcontroller>
 </root>

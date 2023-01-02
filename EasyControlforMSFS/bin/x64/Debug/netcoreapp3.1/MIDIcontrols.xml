@@ -193,6 +193,8 @@
 				<event>Mobiflight.Generic_Lwr_Push_CKLST_1</event>
 			</button47>
 		</aircraft>
+		<aircraft name="Cessna Citation Longitude">
+		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
 			<knob1>
 				<event_left>Mobiflight.KAP140_Knob_Outer_DEC</event_left>

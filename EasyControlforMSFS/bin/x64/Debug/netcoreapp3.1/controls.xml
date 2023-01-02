@@ -135,6 +135,31 @@
 				<inverted>True</inverted>
 			</axis2>
 		</aircraft>
+		<aircraft name="Cessna Citation Longitude">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button7>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+		</aircraft>
 		<aircraft name="PMDG Boeing 737">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>

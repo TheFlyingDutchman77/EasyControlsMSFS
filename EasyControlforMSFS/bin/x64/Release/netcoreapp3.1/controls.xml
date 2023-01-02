@@ -135,6 +135,36 @@
 				<inverted>True</inverted>
 			</axis2>
 		</aircraft>
+		<aircraft name="Cessna Citation Longitude">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>33500</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button7>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>False</is_switch>
+			</button8>
+		</aircraft>
 		<aircraft name="PMDG Boeing 737">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -179,13 +209,13 @@
 			</axis0>
 			<axis1>
 				<event>THROTTLE1_AXIS_SET_EX1</event>
-				<min>-16383</min>
+				<min>-10000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
 			<axis2>
 				<event>THROTTLE2_AXIS_SET_EX1</event>
-				<min>-16383</min>
+				<min>-10000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
@@ -209,6 +239,16 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button5>
+			<button7>
+				<eventON>Mobiflight.FNX320_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>False</is_switch>
+			</button8>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G1000">
 			<axis0>
@@ -332,10 +372,6 @@
 				<inverted>True</inverted>
 			</axis0>
 			<axis1>
-				<event>MIXTURE_SET</event>
-				<min>0</min>
-				<max>16383</max>
-				<inverted>True</inverted>
 				<event2>AXIS_PROPELLER_SET</event2>
 				<min2>-16383</min2>
 				<max2>16383</max2>
@@ -346,11 +382,6 @@
 				<axis_link>0</axis_link>
 				<is_switch>False</is_switch>
 			</button6>
-			<button7>
-				<eventON>PROP_PITCH_DECR</eventON>
-				<axis_link>1</axis_link>
-				<is_switch>False</is_switch>
-			</button7>
 			<button8>
 				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
 				<eventOFF>TOGGLE_FUEL_VALVE_ALL</eventOFF>
@@ -511,7 +542,7 @@
 				<inverted>True</inverted>
 			</axis0>
 			<axis1>
-				<event>AXIS_PROPELLER_SET</event>
+				<event>AXIS_SPOILER_SET</event>
 				<min>-16383</min>
 				<max>16383</max>
 				<inverted>True</inverted>
@@ -895,7 +926,8 @@
 		</aircraft>
 		<aircraft name="TBM930">
 			<button0>
-				<eventON>MASTER_BATTERY_SET</eventON>
+				<eventON>Mobiflight.TBM_BAT_ON</eventON>
+				<eventOFF>Mobiflight.TBM_BAT_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
@@ -982,6 +1014,33 @@
 			</button0>
 			<button1>
 				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="Cessna Citation Longitude">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>TOGGLE_EXTERNAL_POWER</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>

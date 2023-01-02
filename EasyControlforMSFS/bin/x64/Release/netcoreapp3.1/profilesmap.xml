@@ -31,6 +31,9 @@
 		<title>Cessna Skyhawk G1000 Skis Asobo</title>
 		<title>Cessna Skyhawk G1000 Asobo</title>
 		<title>Bonanza G36 Asobo</title>
+		<title>Cessna 152 Asobo</title>
+		<title>Blackbird Simulations DHC-2 Beaver Wheels N471PM</title>
+		<title>Blackbird Simulations DHC-2 Beaver Wheels G-EVMK</title>
 	</profile>
 	<profile name="Cessna Citation CJ4">
 		<title>Cessna CJ4 Citation Asobo</title>
@@ -49,18 +52,21 @@
 		<title>Kodiak 100 Factory paint A7</title>
 		<title>Kodiak 100 Factory paint A4</title>
 		<title>Kodiak 100 Factory paint B3 2021</title>
+		<title>Kodiak 100 cargo pod, Legacy Livery 3</title>
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
 		<title>CRJ900 Lufthansa Cityline D-ACNU</title>
 		<title>CRJ1000 Air France HOP! F-HMLH</title>
 		<title>CRJ700ER Lufthansa Regional D-ACSB</title>
+		<title>CRJ700ER AirFrance HOP! F-GRZH</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G3X">
 		<title>Asobo XCub Floats</title>
 	</profile>
 	<profile name="TBM930">
 		<title>TBM 930 Asobo</title>
+		<title>Socata TBM 930 (MSFS)</title>
 	</profile>
 	<profile name="Boeing 247D">
 		<title>Boeing 247D United Air Lines (1941)</title>
@@ -80,6 +86,7 @@
 		<title>Cessna 414AW N5AM PMS50 GTN750+WT</title>
 		<title>Flysimware C414AW N427RC PMS50 GTN750+WT</title>
 		<title>Flysimware C414AW N100JD PMS50 GTN750+WT</title>
+		<title>Flysimware C414AW N414XX PMS50 GTN750+WT</title>
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
@@ -147,5 +154,9 @@
 		<title>A310-300 White Livery</title>
 		<title>Airbus A310-300 KLM (PH-AGA)</title>
 		<title>Airbus A310-300 Martinair Holland (PH-MCA)</title>
+		<title>Airbus A310-300 Lufthansa (D-AIDD)</title>
+	</profile>
+	<profile name="Cessna Citation Longitude">
+		<title>Cessna Longitude Asobo</title>
 	</profile>
 </root>
