@@ -10,13 +10,13 @@
 			</axis0>
 			<axis1>
 				<event>THROTTLE1_SET</event>
-				<min>-16383</min>
+				<min>-10000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
 			<axis2>
 				<event>THROTTLE2_SET</event>
-				<min>-16383</min>
+				<min>-10000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
@@ -25,6 +25,16 @@
 				<axis_link>0</axis_link>
 				<is_switch>False</is_switch>
 			</button0>
+			<button7>
+				<eventON>Mobiflight.FNX320_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>False</is_switch>
+			</button8>
 		</aircraft>
 		<aircraft name="Airbus A310">
 			<axis0>
@@ -372,22 +382,26 @@
 				<inverted>True</inverted>
 			</axis0>
 			<axis1>
-				<event2>AXIS_PROPELLER_SET</event2>
-				<min2>-16383</min2>
-				<max2>16383</max2>
-				<inverted2>True</inverted2>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
 			</axis1>
 			<button6>
 				<eventON>DECREASE_THROTTLE</eventON>
 				<axis_link>0</axis_link>
 				<is_switch>False</is_switch>
 			</button6>
-			<button8>
+			<button4>
 				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
-				<eventOFF>TOGGLE_FUEL_VALVE_ALL</eventOFF>
 				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button8>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G3X">
 			<axis0>
@@ -764,6 +778,11 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
+			<button3>
+				<eventON>Mobiflight.A310_PROBE_HEAT_ON</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
 		</aircraft>
 		<aircraft name="PMDG Boeing 737">
 			<button0>
@@ -927,7 +946,6 @@
 		<aircraft name="TBM930">
 			<button0>
 				<eventON>Mobiflight.TBM_BAT_ON</eventON>
-				<eventOFF>Mobiflight.TBM_BAT_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
@@ -947,10 +965,17 @@
 				<is_switch>True</is_switch>
 			</button3>
 			<button4>
-				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<eventON>Mobiflight.TBM930_ALL_ICE_ON</eventON>
+				<eventOFF>Mobiflight.TBM930_ALL_ICE_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
+			<button5>
+				<eventON>Mobiflight.TBM930_INERT_ON</eventON>
+				<eventOFF>Mobiflight.TBM930_INERT_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G3X">
 			<button0>
@@ -1044,21 +1069,24 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
-			<button2>
-				<eventON>AVIONICS_MASTER_SET</eventON>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button2>
 			<button3>
-				<eventON>PITOT_HEAT_SET</eventON>
+				<eventON>Mobiflight.LONG_PITOT_ON</eventON>
+				<eventOFF>Mobiflight.LONG_PITOT_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button3>
 			<button4>
-				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<eventON>Mobiflight.LONG_WING_STAB_AI_ON</eventON>
+				<eventOFF>Mobiflight.LONG_WING_STAB_AI_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
+			<button5>
+				<eventON>Mobiflight.LONG_ANTI_ICE_ENGINES_TOGGLE</eventON>
+				<eventOFF>Mobiflight.LONG_ANTI_ICE_ENGINES_TOGGLE</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
 		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
 			<button0>
@@ -1302,6 +1330,18 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button9>
+		</aircraft>
+		<aircraft name="Cessna Citation Longitude">
+			<button9>
+				<eventON>Mobiflight.AUTO_THROTTLE_TO_GA</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button9>
+			<button19>
+				<eventON>Mobiflight.AUTO_THROTTLE_ARM</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button19>
 		</aircraft>
 	</joystick>
 </root>

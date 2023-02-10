@@ -25,7 +25,7 @@ namespace EasyControlforMSFS
         public bool MIDIconnected = false;
         public bool XMLloadedsuccessfully = false;
 
-        public static int max_num_ac = 30;
+        public static int max_num_ac = 100;
         public static int max_num_buttons = 48;
         public static int max_num_knobs = 48;
         public string MIDIcontroller_name;
@@ -115,11 +115,28 @@ namespace EasyControlforMSFS
                 {
                     direction = "left";
                 }
-                //Debug.WriteLine($"Knob: {note_nr}, direction: {direction}");
+                Debug.WriteLine($"Knob: {note_nr}, direction: {direction}");
                 
                 // HERE WE REDUCE KNOB NR BY 1 BECAUSE KNOBS START AT 1 AND BUTTONS AT 0 IN THE MIDI LIBRARY
-                SendKnobEvent(note_nr-1, direction, aircraft_id);
-                Debug.WriteLine($"knob {note_nr-1}");
+                if (note_nr != 10 )
+                {
+                    SendKnobEvent(note_nr - 1, direction, aircraft_id);
+                    Debug.WriteLine($"Event send for knob {note_nr - 1}");
+                }
+                else
+                {
+                    if (value == 127)
+                    {
+                        SendKnobEvent(note_nr - 1, direction, aircraft_id);
+                        Debug.WriteLine($"Event send for knob {note_nr - 1}");
+                    }
+                    if (value == 0)
+                    {
+                        SendKnobEvent(note_nr - 1, direction, aircraft_id);
+                        Debug.WriteLine($"Event send for knob {note_nr - 1}");
+                    }
+                }
+                
             }
             if (e.Event.EventType.ToString() == "NoteOn")
             {
@@ -287,16 +304,18 @@ namespace EasyControlforMSFS
 
         public void SendKnobEvent(int knob, string direction, int aircraft_id)
         {
+            Debug.WriteLine($"aircraft id: {aircraft_id}, direction: {direction}, knob: {knob}");
             string sim_event = "";
             if (direction == "left")
             {
                 sim_event = knob_events_left[aircraft_id, knob];
-                if (button_status[knob] && knob_events_left_alt != null) { sim_event = knob_events_left_alt[aircraft_id, knob]; }
+                //Alternative event only working for knobs 0-7, no alt events allowed for knobs 10-17!!!!!
+                if (button_status[knob] && knob_events_left_alt[aircraft_id, knob] != null && knob < 9) { sim_event = knob_events_left_alt[aircraft_id, knob]; }
             }
             else
             {
                 sim_event = knob_events_right[aircraft_id, knob];
-                if (button_status[knob] && knob_events_right_alt != null) { sim_event = knob_events_right_alt[aircraft_id, knob]; }
+                if (button_status[knob] && knob_events_right_alt[aircraft_id, knob] != null && knob < 9) { sim_event = knob_events_right_alt[aircraft_id, knob]; }
             }
             // No sim event found, check for generic event
             if (sim_event == null)
@@ -334,11 +353,11 @@ namespace EasyControlforMSFS
                 {
                     mysimconnect.SendEvent(sim_event, 1);
                 }
-                LogResult?.Invoke(this, $"Knob {knob} event {sim_event} send to sim");
-                Debug.WriteLine($"Knob event {sim_event} sent!");
+                LogResult?.Invoke(this, $"Knob {knob} event {sim_event} send to sim for aircraft id {aircraft_id}");
+                Debug.WriteLine($"Knob event {sim_event} sent for aircraft id {aircraft_id}!");
                 //Thread.Sleep(2);
             }
-            else { LogResult?.Invoke(this, $"Knob {knob} has no events associated"); }
+            else { LogResult?.Invoke(this, $"Knob {knob} has no events associated for aircraft id {aircraft_id}"); }
 
         }
 
@@ -495,6 +514,13 @@ namespace EasyControlforMSFS
                         {
                             aircraft[aircraft_id] = level2Element.Attribute("name").Value;
                             Debug.WriteLine($"Aircraft definition found: {aircraft[aircraft_id]}");
+                            for (int j = 0; j < max_num_knobs; j++)
+                            {
+                                knob_events_left[aircraft_id, j] = "";
+                                knob_events_right[aircraft_id, j] = "";
+                                knob_events_left_alt[aircraft_id, j] = "";
+                                knob_events_right_alt[aircraft_id, j] = "";
+                            }
                             foreach (XElement level3Element in level2Element.Elements())
                             {
                                 var item = level3Element.Name.ToString();

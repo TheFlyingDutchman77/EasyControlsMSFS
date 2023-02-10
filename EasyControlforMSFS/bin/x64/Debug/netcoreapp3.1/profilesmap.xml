@@ -61,6 +61,7 @@
 		<title>Cessna 414AW N5AM GNS530</title>
 		<title>Cessna 414AW N427RC PMS50 GTN750</title>
 		<title>Cessna 414AW N427RC PMS50 GTN750+WT</title>
+		<title>Flysimware C414AW N427RC PMS50 GTN750+WT</title>
 	</profile>
 	<profile name="Fenix A320">
 		<title>FenixA320_DLHDAIZI</title>
@@ -78,5 +79,8 @@
 	</profile>
 	<profile name="Airbus A310">
 		<title>Airbus A310-300 Martinair Holland (PH-MCA)</title>
+	</profile>
+	<profile name="Cessna Citation Longitude">
+		<title>Cessna Longitude Asobo</title>
 	</profile>
 </root>

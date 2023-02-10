@@ -148,7 +148,7 @@ namespace EasyControlforMSFS
 
             try
             {
-                await Task.Run(() => simconnect = new SimConnect("SimConnector", wih, WM_USER_SIMCONNECT, null, 0));
+                await Task.Run(() => simconnect = new SimConnect("SimConnectorEasyControls", wih, WM_USER_SIMCONNECT, null, 0));
 
                 // Listen for connect and quit msgs
                 simconnect.OnRecvOpen += SimConnect_OnRecvOpen;

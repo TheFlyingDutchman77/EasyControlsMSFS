@@ -600,6 +600,11 @@ namespace EasyControlforMSFS
                     }
                     else { mysimconnect.SendEvent(sim_event, 1); }
                     Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        MessageTextBox.AppendText($"Button {j} event ON {sim_event} sent!\r\n");
+                        MessageTextBox.ScrollToEnd();
+                    }); 
                     Thread.Sleep(200);
                     if (sim_eventWAIT != null)
                     {
@@ -613,7 +618,11 @@ namespace EasyControlforMSFS
                         }
                         else { mysimconnect.SendEvent(sim_event, 1); }
                         Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
-
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            MessageTextBox.AppendText($"Button {j} event ON {sim_event} sent!\r\n");
+                            MessageTextBox.ScrollToEnd();
+                        });
                     }
 
                 }
@@ -630,6 +639,11 @@ namespace EasyControlforMSFS
                     }
                     else { mysimconnect.SendEvent(sim_event, 0); }
                     Debug.WriteLine($"Button {j} event OFF {sim_event} sent!");
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        MessageTextBox.AppendText($"Button {j} event OFF {sim_event} sent!\r\n");
+                        MessageTextBox.ScrollToEnd();
+                    });
                     Thread.Sleep(200);
                     if (sim_eventWAIT != null)
                     {
@@ -643,7 +657,12 @@ namespace EasyControlforMSFS
                         }
                         else { mysimconnect.SendEvent(sim_event, 0); }
                         Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
-
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            MessageTextBox.AppendText($"Button {j} event ON {sim_event} sent!\r\n");
+                            MessageTextBox.ScrollToEnd();
+                        });
+                        
                     }
                 }
             }

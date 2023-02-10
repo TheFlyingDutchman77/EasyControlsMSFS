@@ -100,8 +100,7 @@
 				<status_var>PNL</status_var>
 			</button22>
 			<button23>
-				<event>TOGGLE_BEACON_LIGHTS</event>
-				<status_var>BCN</status_var>
+				<event>Mobiflight.CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE</event>
 			</button23>
 			<button35>
 				<event>TOGGLE_ELECT_FUEL_PUMP</event>
@@ -115,6 +114,33 @@
 			<button39>
 				<event>TOGGLE_TAILWHEEL_LOCK</event>
 			</button39>
+		</aircraft>
+		<aircraft name="TBM930">
+			<knob0>
+				<event_left>Mobiflight.AS1000_PFD_HEADING_DEC</event_left>
+				<event_right>Mobiflight.AS1000_PFD_HEADING_INC</event_right>
+			</knob0>
+			<knob3>
+				<event_left>Mobiflight.WT_CJ4_AP_SPEED_DEC</event_left>
+				<event_right>Mobiflight.WT_CJ4_AP_SPEED_INC</event_right>
+			</knob3>
+			<button21>
+				<event>TOGGLE_LOGO_LIGHTS</event>
+				<eventOFF>TOGGLE_LOGO_LIGHTS</eventOFF>
+				<status_var>BCN</status_var>
+			</button21>
+			<button23>
+				<event>Mobiflight.TBM930_CABIN_LIGHTS_ON</event>
+				<status_var></status_var>
+			</button23>
+			<button35>
+				<event>Mobiflight.TBM930_AUX_BP_AUTO</event>
+				<eventOFF>Mobiflight.TBM930_AUX_BP_OFF</eventOFF>
+			</button35>
+			<button40>
+				<event>Mobiflight.TBM930_BLEED_AUTO</event>
+				<eventOFF>Mobiflight.TBM930_BLEED_OFF</eventOFF>
+			</button40>
 		</aircraft>
 		<aircraft name="Hondajet">
 			<knob1>
@@ -147,6 +173,26 @@
 			<button23>
 				<event>CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE</event>
 			</button23>
+		</aircraft>
+		<aircraft name="Bell 407">
+			<button22>
+				<event>Mobiflight.BELL407_INSTR_LIGHTS_ON</event>
+			</button22>
+			<button16>
+				<event>Mobiflight.BELL407_LANDING_LIGHTS_TOGGLE</event>
+			</button16>
+			<button17>
+				<event>LANDING_LIGHTS_ON</event>
+				<status_var>LDG</status_var>
+			</button17>
+			<button37>
+				<event>FSUIPC.switchStarter</event>
+			</button37>
+		</aircraft>
+		<aircraft name="Guimbal Carbi G2">
+			<button37>
+				<event>TOGGLE_STARTER1</event>
+			</button37>
 		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<knob1>
@@ -192,8 +238,6 @@
 			<button47>
 				<event>Mobiflight.Generic_Lwr_Push_CKLST_1</event>
 			</button47>
-		</aircraft>
-		<aircraft name="Cessna Citation Longitude">
 		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
 			<knob1>
@@ -534,6 +578,101 @@
 				<eventOFF>Mobiflight.EMER_EXIT_OFF</eventOFF>
 			</button36>
 		</aircraft>
+		<aircraft name="Airbus A310">
+			<knob0>
+				<event_left>Mobiflight.A310_HDG_DN</event_left>
+				<event_right>Mobiflight.A310_HDG_UP</event_right>
+			</knob0>
+			<knob1>
+				<event_left>Mobiflight.A310_ALT_DN</event_left>
+				<event_right>Mobiflight.A310_ALT_UP</event_right>
+			</knob1>
+			<knob2>
+				<event_left>Mobiflight.A310_VS_DN</event_left>
+				<event_right>Mobiflight.A310_VS_UP</event_right>
+			</knob2>
+			<knob3>
+				<event_left>Mobiflight.A310_SPD_DN</event_left>
+				<event_right>Mobiflight.A310_SPD_UP</event_right>
+			</knob3>
+			<knob5>
+				<event_left>FSUIPC.A310_RMP_ILS_OUTER_KNOB_TURNED_ANTICLOCKWISE</event_left>
+				<event_right>FSUIPC.A310_RMP_ILS_OUTER_KNOB_TURNED_CLOCKWISE</event_right>
+				<alt_event_left>FSUIPC.A310_RMP_ILS_INNER_KNOB_TURNED_ANTICLOCKWISE</alt_event_left>
+				<alt_event_right>FSUIPC.A310_RMP_ILS_INNER_KNOB_TURNED_CLOCKWISE</alt_event_right>
+			</knob5>
+			<knob6>
+				<event_left>FSUIPC.A310_FPA_DH_KNOB_TURNED_ANTICLOCKWISE</event_left>
+				<event_right>FSUIPC.A310_FPA_DH_KNOB_TURNED_CLOCKWISE</event_right>
+			</knob6>
+			<knob7>
+				<event_left>Mobiflight.A310_ELEV_DEC</event_left>
+				<event_right>Mobiflight.A310_ELEV_INC</event_right>
+			</knob7>
+			<knob9>
+				<event_left>Mobiflight.A310_GEAR_DN</event_left>
+				<event_right>Mobiflight.A310_GEAR_UP</event_right>
+			</knob9>
+			<button8>
+				<event>Mobiflight.A310_AP_ON</event>
+				<status_var>AP</status_var>
+			</button8>
+			<button9>
+				<eventON>Mobiflight.A310_HDG_TOGGLE</eventON>
+				<eventOFF>Mobiflight.A310_HDG_TOGGLE</eventOFF>
+				<status_var>FSUIPC.__HDGSEL_ButtonIsPressed</status_var>
+			</button9>
+			<button10>
+				<eventON>Mobiflight.A310_NAV_TOGGLE</eventON>
+				<eventOFF>Mobiflight.A310_NAV_TOGGLE</eventOFF>
+				<status_var>FSUIPC.__NAV_ButtonIsPressed</status_var>
+			</button10>
+			<button14>
+				<eventON>Mobiflight.A310_APPR_TOGGLE</eventON>
+				<eventOFF>Mobiflight.A310_APPR_TOGGLE</eventOFF>
+				<status_var>FSUIPC.__LAND_ButtonIsPressed</status_var>
+			</button14>
+			<button16>
+				<event>Mobiflight.A310_LANDING_LIGHTS_ON</event>
+			</button16>
+			<button17>
+				<event>Mobiflight.A310_TAXI_LIGHT_ON</event>
+			</button17>
+			<button18>
+				<event>Mobiflight.A310_STROBES_TOGGLE</event>
+			</button18>
+			<button19>
+				<event>Mobiflight.A310_NAV_LIGHT_ON</event>
+			</button19>
+			<button20>
+				<event>Mobiflight.A310_BEACON_LIGHTS_ON</event>
+			</button20>
+			<button21>
+				<event>Mobiflight.A310_RWY_TURNOFF_ON</event>
+			</button21>
+			<button22>
+				<event>Mobiflight.A310_NO_SMOKING_AUTO</event>
+				<eventOFF>Mobiflight.A310_NO_SMOKING_OFF</eventOFF>
+			</button22>
+			<button23>
+				<event>Mobiflight.A310_SEATBELT_ON</event>
+			</button23>
+			<button32>
+				<event>Mobiflight.A310_APU_MASTER_ON</event>
+			</button32>
+			<button33>
+				<event>Mobiflight.A310_APU_START_ON</event>
+			</button33>
+			<button34>
+				<event>Mobiflight.A310_WINDOW_HEAT_LEFT_ON</event>
+			</button34>
+			<button35>
+				<event>Mobiflight.A310_WINDOW_HEAT_RIGHT_ON</event>
+			</button35>
+			<button40>
+				<event>Mobiflight.A310_APU_BLEED_ON</event>
+			</button40>
+		</aircraft>
 		<aircraft name="Flysimware Cessna 414">
 			<button16>
 				<event>Mobiflight.C414_LANDING_LIGHTS_ON</event>
@@ -704,6 +843,10 @@
 				<event_left>Mobiflight.737_ELEV_DEC</event_left>
 				<event_right>Mobiflight.737_ELEV_INC</event_right>
 			</knob7>
+			<knob14>
+				<event_left>Mobiflight.737_CRS2_INC</event_left>
+				<event_right>Mobiflight.737_CRS2_DEC</event_right>
+			</knob14>			
 			<knob17>
 				<event_left>Mobiflight.737_CRS_LEVEL_INC</event_left>
 				<event_right>Mobiflight.737_CRS_LEVEL_DEC</event_right>
@@ -835,6 +978,32 @@
 				<event>MobiFlight.KAS297_AP_SELECT_ALT_OR_VS</event>
 				<eventOFF>MobiFlight.KAS297_AP_SELECT_ALT_OR_VS</eventOFF>
 			</button12>
+		</aircraft>
+		<aircraft name="Cessna Citation Longitude">
+			<knob16>
+				<event_left>Mobiflight.LONG_LIGHTING_KNOB_PANEL_DEC</event_left>
+				<event_right>Mobiflight.LONG_LIGHTING_KNOB_PANEL_INC</event_right>
+			</knob16>
+			<knob17>
+				<event_left>Mobiflight.LONG_LIGHTING_KNOB_FLOOD_DEC</event_left>
+				<event_right>Mobiflight.LONG_LIGHTING_KNOB_FLOOD_INC</event_right>
+			</knob17>
+			<button16>
+				<event>Mobiflight.LONG_LANDING_LIGHTS_ON</event>
+				<status_var>LDG</status_var>
+			</button16>
+			<button22>
+				<event>CABIN_NO_SMOKING_ALERT_SWITCH_TOGGLE</event>
+			</button22>
+			<button23>
+				<event>CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE</event>
+			</button23>
+			<button32>
+				<event>Mobiflight.LONG_APU_START</event>
+			</button32>
+			<button33>
+				<event>Mobiflight.LONG_APU_STOP</event>
+			</button33>
 		</aircraft>
 	</MIDIcontroller>
 </root>

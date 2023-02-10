@@ -100,8 +100,7 @@
 				<status_var>PNL</status_var>
 			</button22>
 			<button23>
-				<event>TOGGLE_BEACON_LIGHTS</event>
-				<status_var>BCN</status_var>
+				<event>Mobiflight.CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE</event>
 			</button23>
 			<button35>
 				<event>TOGGLE_ELECT_FUEL_PUMP</event>
@@ -130,6 +129,14 @@
 				<eventOFF>TOGGLE_LOGO_LIGHTS</eventOFF>
 				<status_var>BCN</status_var>
 			</button21>
+			<button23>
+				<event>Mobiflight.TBM930_CABIN_LIGHTS_ON</event>
+				<status_var></status_var>
+			</button23>
+			<button35>
+				<event>Mobiflight.TBM930_AUX_BP_AUTO</event>
+				<eventOFF>Mobiflight.TBM930_AUX_BP_OFF</eventOFF>
+			</button35>
 			<button40>
 				<event>Mobiflight.TBM930_BLEED_AUTO</event>
 				<eventOFF>Mobiflight.TBM930_BLEED_OFF</eventOFF>
@@ -588,6 +595,20 @@
 				<event_left>Mobiflight.A310_SPD_DN</event_left>
 				<event_right>Mobiflight.A310_SPD_UP</event_right>
 			</knob3>
+			<knob5>
+				<event_left>FSUIPC.A310_RMP_ILS_OUTER_KNOB_TURNED_ANTICLOCKWISE</event_left>
+				<event_right>FSUIPC.A310_RMP_ILS_OUTER_KNOB_TURNED_CLOCKWISE</event_right>
+				<alt_event_left>FSUIPC.A310_RMP_ILS_INNER_KNOB_TURNED_ANTICLOCKWISE</alt_event_left>
+				<alt_event_right>FSUIPC.A310_RMP_ILS_INNER_KNOB_TURNED_CLOCKWISE</alt_event_right>
+			</knob5>
+			<knob6>
+				<event_left>FSUIPC.A310_FPA_DH_KNOB_TURNED_ANTICLOCKWISE</event_left>
+				<event_right>FSUIPC.A310_FPA_DH_KNOB_TURNED_CLOCKWISE</event_right>
+			</knob6>
+			<knob7>
+				<event_left>Mobiflight.A310_ELEV_DEC</event_left>
+				<event_right>Mobiflight.A310_ELEV_INC</event_right>
+			</knob7>
 			<knob9>
 				<event_left>Mobiflight.A310_GEAR_DN</event_left>
 				<event_right>Mobiflight.A310_GEAR_UP</event_right>
@@ -642,6 +663,12 @@
 			<button33>
 				<event>Mobiflight.A310_APU_START_ON</event>
 			</button33>
+			<button34>
+				<event>Mobiflight.A310_WINDOW_HEAT_LEFT_ON</event>
+			</button34>
+			<button35>
+				<event>Mobiflight.A310_WINDOW_HEAT_RIGHT_ON</event>
+			</button35>
 			<button40>
 				<event>Mobiflight.A310_APU_BLEED_ON</event>
 			</button40>
@@ -953,11 +980,29 @@
 			</button12>
 		</aircraft>
 		<aircraft name="Cessna Citation Longitude">
+			<knob16>
+				<event_left>Mobiflight.LONG_LIGHTING_KNOB_PANEL_DEC</event_left>
+				<event_right>Mobiflight.LONG_LIGHTING_KNOB_PANEL_INC</event_right>
+			</knob16>
+			<knob17>
+				<event_left>Mobiflight.LONG_LIGHTING_KNOB_FLOOD_DEC</event_left>
+				<event_right>Mobiflight.LONG_LIGHTING_KNOB_FLOOD_INC</event_right>
+			</knob17>
+			<button16>
+				<event>Mobiflight.LONG_LANDING_LIGHTS_ON</event>
+				<status_var>LDG</status_var>
+			</button16>
+			<button22>
+				<event>CABIN_NO_SMOKING_ALERT_SWITCH_TOGGLE</event>
+			</button22>
+			<button23>
+				<event>CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE</event>
+			</button23>
 			<button32>
-				<event>APU_STARTER</event>
+				<event>Mobiflight.LONG_APU_START</event>
 			</button32>
 			<button33>
-				<event>APU_OFF_SWITCH</event>
+				<event>Mobiflight.LONG_APU_STOP</event>
 			</button33>
 		</aircraft>
 	</MIDIcontroller>

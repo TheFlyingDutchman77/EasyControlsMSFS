@@ -17,6 +17,7 @@
 		<title>Turbo Porter S5-CMA Glass</title>
 		<title>Turbo Porter ZS-PCS</title>
 		<title>Blackbird Turbo Porter EC-JXH Wheels Analog</title>
+		<title>Blackbird Turbo Porter EC-JXH Wheels Glass</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
@@ -26,6 +27,7 @@
 		<title>Airbus A32NX British Airways</title>
 		<title>Airbus A320neo TAP CS-TVG</title>
 		<title>Airbus A32NX Austrian 2019</title>
+		<title>Airbus A32NX Austrian Airlines OE-LBU Dibraze</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G1000">
 		<title>Cessna Skyhawk G1000 Skis Asobo</title>
@@ -60,6 +62,7 @@
 		<title>CRJ1000 Air France HOP! F-HMLH</title>
 		<title>CRJ700ER Lufthansa Regional D-ACSB</title>
 		<title>CRJ700ER AirFrance HOP! F-GRZH</title>
+		<title>KLM CityHopper</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G3X">
 		<title>Asobo XCub Floats</title>
@@ -87,11 +90,14 @@
 		<title>Flysimware C414AW N427RC PMS50 GTN750+WT</title>
 		<title>Flysimware C414AW N100JD PMS50 GTN750+WT</title>
 		<title>Flysimware C414AW N414XX PMS50 GTN750+WT</title>
+		<title>Flysimware C414AW N100JD PMS50 GTN750</title>
+		<title>Flysimware C414AW N100JD GNS530</title>
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
 		<title>Just Flight PA28 Turbo Arrow IV G-BOGM</title>
 		<title>Just Flight PA28 Turbo Arrow IV Custom</title>
+		<title>Carenado M20R Ovation N811CR</title>
 	</profile>
 	<profile name="Just Flight BAe 146 - before engine start">
 		<title>Just Flight 146-200 Cobham Aviation</title>
@@ -127,6 +133,7 @@
 		<title>Britten Norman Islander BN2B Skybus</title>
 		<title>Britten Norman Islander BA LANDOR</title>
 		<title>Britten Norman Islander BN2BA OLT</title>
+		<title>Britten Norman Islander BN2B Shetland</title>
 	</profile>
 	<profile name="MSFS Bonanza V35">
 		<title>Beechcraft V35B Bonanza N9609T</title>
@@ -141,6 +148,7 @@
 		<title>HJET HA420 AlphaTauri</title>
 		<title>HJET HA420 AEROSOAR</title>
 		<title>HJET HA420 PH-JET</title>
+		<title>HJET HA420 D-IVVV</title>
 	</profile>
 	<profile name="Bell 407">
 		<title>Bell 407 Blue Stripes</title>
@@ -155,8 +163,15 @@
 		<title>Airbus A310-300 KLM (PH-AGA)</title>
 		<title>Airbus A310-300 Martinair Holland (PH-MCA)</title>
 		<title>Airbus A310-300 Lufthansa (D-AIDD)</title>
+		<title>Airbus A310-300 Midwest Airlines (SU-MWA)</title>
+		<title>Airbus A310-300 Lufthansa (D-AIDM)</title>
+		<title>Airbus A310-300 American (N2291W)</title>
 	</profile>
 	<profile name="Cessna Citation Longitude">
 		<title>Cessna Longitude Asobo</title>
+		<title>Cessna Longitude 01 Livery</title>
+	</profile>
+	<profile name="Just Flight BAe 146">
+		<title>Just Flight 146-100 PSA</title>
 	</profile>
 </root>
