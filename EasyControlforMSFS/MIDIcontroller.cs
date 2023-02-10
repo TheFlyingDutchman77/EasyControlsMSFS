@@ -514,13 +514,6 @@ namespace EasyControlforMSFS
                         {
                             aircraft[aircraft_id] = level2Element.Attribute("name").Value;
                             Debug.WriteLine($"Aircraft definition found: {aircraft[aircraft_id]}");
-                            for (int j = 0; j < max_num_knobs; j++)
-                            {
-                                knob_events_left[aircraft_id, j] = "";
-                                knob_events_right[aircraft_id, j] = "";
-                                knob_events_left_alt[aircraft_id, j] = "";
-                                knob_events_right_alt[aircraft_id, j] = "";
-                            }
                             foreach (XElement level3Element in level2Element.Elements())
                             {
                                 var item = level3Element.Name.ToString();
