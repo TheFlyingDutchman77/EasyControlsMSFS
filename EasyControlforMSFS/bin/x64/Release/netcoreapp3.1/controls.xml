@@ -320,6 +320,26 @@
 				<inverted>True</inverted>
 			</axis2>
 		</aircraft>
+		<aircraft name="M20R">
+			<axis0>
+				<event>THROTTLE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>MIXTURE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+		</aircraft>
 		<aircraft name="Boeing 247D">
 			<axis0>
 				<event>FSUIPC.ENG PROPELLER 1</event>
@@ -387,11 +407,6 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
-			<button6>
-				<eventON>DECREASE_THROTTLE</eventON>
-				<axis_link>0</axis_link>
-				<is_switch>False</is_switch>
-			</button6>
 			<button4>
 				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
 				<axis_link></axis_link>
@@ -402,6 +417,11 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button5>
+			<button6>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button6>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G3X">
 			<axis0>
@@ -755,6 +775,28 @@
 				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
+		<aircraft name="PMDG DC6">
+			<axis0>
+				<event>THROTTLE1_AXIS_SET_EX1</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+				<event2>THROTTLE2_AXIS_SET_EX1</event2>
+				<min2>-16383</min2>
+				<max2>16383</max2>
+				<inverted2>True</inverted2>
+			</axis0>
+			<axis1>
+				<event>THROTTLE3_AXIS_SET_EX1</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+				<event2>THROTTLE4_AXIS_SET_EX1</event2>
+				<min2>-16383</min2>
+				<max2>16383</max2>
+				<inverted2>True</inverted2>
+			</axis1>
+		</aircraft>
 	</joystick>
 	<joystick name="HID-spelbesturing-9025-32823">
 		<aircraft name="Aerosoft CRJ">
@@ -885,6 +927,33 @@
 			</button4>
 		</aircraft>
 		<aircraft name="Just Flight Turbo Arrow">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="M20R">
 			<button0>
 				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
@@ -1313,6 +1382,16 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button9>
+			<button19>
+				<eventON>Mobiflight.AUTO_THROTTLE_TO_GA</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button19>
+			<button29>
+				<eventON>FSUIPC.CSC PUSHED</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button29>
 		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<button5>
@@ -1339,6 +1418,14 @@
 			</button9>
 			<button19>
 				<eventON>Mobiflight.AUTO_THROTTLE_ARM</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button19>
+		</aircraft>
+		<aircraft name="M20R">
+			<button19>
+				<eventON>SPOILERS_TOGGLE</eventON>
+				<eventOFF>SPOILERS_TOGGLE</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button19>

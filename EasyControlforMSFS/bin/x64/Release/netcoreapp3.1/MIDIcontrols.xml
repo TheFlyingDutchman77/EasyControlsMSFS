@@ -32,6 +32,10 @@
 				<event_left>RUDDER_TRIM_LEFT</event_left>
 				<event_right>RUDDER_TRIM_RIGHT</event_right>
 			</knob7>
+			<knob17>
+				<event_left>Mobiflight.C_172_PILOT_CABIN_LIGHT_DEC</event_left>
+				<event_right>Mobiflight.C_172_PILOT_CABIN_LIGHT_INC</event_right>
+			</knob17>
 			<knob9>
 				<event_left>Mobiflight.GEAR_DOWN</event_left>
 				<event_right>Mobiflight.GEAR_UP</event_right>
@@ -149,21 +153,6 @@
 				<alt_event_left>Mobiflight.HONDA_ALT100_DEC</alt_event_left>
 				<alt_event_right>Mobiflight.HONDA_ALT100_INC</alt_event_right>
 			</knob1>
-			<button9>
-				<eventON>FSUIPC.HDG_Pushed</eventON>
-			</button9>
-			<button10>
-				<eventON>FSUIPC.NAV_Pushed</eventON>
-			</button10>
-			<button12>
-				<eventON>FSUIPC.VS_Pushed</eventON>
-			</button12>
-			<button13>
-				<eventON>FSUIPC.FLC_Pushed</eventON>
-			</button13>
-			<button14>
-				<eventON>FSUIPC.HJET_APPROACH_MODE_ARMED</eventON>
-			</button14>
 			<button21>
 				<eventON>FSUIPC.CPOW Pushed</eventON>
 			</button21>
@@ -193,6 +182,20 @@
 			<button37>
 				<event>TOGGLE_STARTER1</event>
 			</button37>
+		</aircraft>
+		<aircraft name="PMDG DC6">
+			<knob2>
+				<event_left>Mobiflight.DC6_AP_PITCH_UP</event_left>
+				<event_right>Mobiflight.DC6_AP_PITCH_DOWN</event_right>
+			</knob2>
+			<button10>
+				<event>Mobiflight.DC6_AP_NAV_ON</event>
+				<status_var></status_var>
+			</button10>
+			<button11>
+				<event>Mobiflight.DC6_AP_ALT_HOLD_ON</event>
+				<status_var></status_var>
+			</button11>
 		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<knob1>
@@ -417,10 +420,6 @@
 				<event_left>Mobiflight.ASCRJ_PRESS_LDG_ELEV_KNOB_DEC</event_left>
 				<event_right>Mobiflight.ASCRJ_PRESS_LDG_ELEV_KNOB_INC</event_right>
 			</knob7>
-			<knob8>
-				<event_left>Mobiflight.ASCRJ_GEAR_GEAR_LEVER_SWITCH_ON</event_left>
-				<event_right>Mobiflight.ASCRJ_GEAR_GEAR_LEVER_SWITCH_OFF</event_right>
-			</knob8>
 			<knob9>
 				<event_left>Mobiflight.ASCRJ_GEAR_GEAR_LEVER_SWITCH_ON</event_left>
 				<event_right>Mobiflight.ASCRJ_GEAR_GEAR_LEVER_SWITCH_OFF</event_right>

@@ -1313,6 +1313,11 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button9>
+			<button19>
+				<eventON>Mobiflight.AUTO_THROTTLE_TO_GA</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button19>
 		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<button5>

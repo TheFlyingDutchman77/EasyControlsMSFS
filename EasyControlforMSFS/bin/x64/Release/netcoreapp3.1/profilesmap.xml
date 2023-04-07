@@ -18,6 +18,7 @@
 		<title>Turbo Porter ZS-PCS</title>
 		<title>Blackbird Turbo Porter EC-JXH Wheels Analog</title>
 		<title>Blackbird Turbo Porter EC-JXH Wheels Glass</title>
+		<title>Turbo Porter ZK-MCT Analog</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
@@ -28,6 +29,7 @@
 		<title>Airbus A320neo TAP CS-TVG</title>
 		<title>Airbus A32NX Austrian 2019</title>
 		<title>Airbus A32NX Austrian Airlines OE-LBU Dibraze</title>
+		<title>Airbus A320neo Easyjet NEO c/s</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G1000">
 		<title>Cessna Skyhawk G1000 Skis Asobo</title>
@@ -36,6 +38,7 @@
 		<title>Cessna 152 Asobo</title>
 		<title>Blackbird Simulations DHC-2 Beaver Wheels N471PM</title>
 		<title>Blackbird Simulations DHC-2 Beaver Wheels G-EVMK</title>
+		<title>Cessna Skyhawk Asobo</title>
 	</profile>
 	<profile name="Cessna Citation CJ4">
 		<title>Cessna CJ4 Citation Asobo</title>
@@ -55,6 +58,7 @@
 		<title>Kodiak 100 Factory paint A4</title>
 		<title>Kodiak 100 Factory paint B3 2021</title>
 		<title>Kodiak 100 cargo pod, Legacy Livery 3</title>
+		<title>Kodiak 100 tundra tyres, Factory paint A2</title>
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
@@ -63,6 +67,7 @@
 		<title>CRJ700ER Lufthansa Regional D-ACSB</title>
 		<title>CRJ700ER AirFrance HOP! F-GRZH</title>
 		<title>KLM CityHopper</title>
+		<title>CRJ550ER REX Express</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G3X">
 		<title>Asobo XCub Floats</title>
@@ -92,6 +97,7 @@
 		<title>Flysimware C414AW N414XX PMS50 GTN750+WT</title>
 		<title>Flysimware C414AW N100JD PMS50 GTN750</title>
 		<title>Flysimware C414AW N100JD GNS530</title>
+		<title>Flysimware C414AW N5AM PMS50 GTN750</title>
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
@@ -112,6 +118,7 @@
 		<title>PMDG 737-800 KLM Royal Dutch Airlines (PH-BCA </title>
 		<title>PMDG 737-800 Transavia (PH-HXK </title>
 		<title>PMDG 737-700BBJ PH-GOV</title>
+		<title>PMDG 737-800 Ryanair (G-RUKA </title>
 	</profile>
 	<profile name="Fenix A320">
 		<title>FenixA320_AFLVPBDK</title>
@@ -134,10 +141,15 @@
 		<title>Britten Norman Islander BA LANDOR</title>
 		<title>Britten Norman Islander BN2BA OLT</title>
 		<title>Britten Norman Islander BN2B Shetland</title>
+		<title>Britten Norman BN-2 Islander</title>
+		<title>Britten Norman Islander BN2A PLAIN</title>
+		<title>Britten Norman Islander BN2BA Air BC</title>
 	</profile>
 	<profile name="MSFS Bonanza V35">
 		<title>Beechcraft V35B Bonanza N9609T</title>
 		<title>Beechcraft V35B Bonanza N829K</title>
+		<title>Beechcraft V35B Bonanza G-BGGH</title>
+		<title>Beechcraft V35B Bonanza N295K</title>
 	</profile>
 	<profile name="Diamond 62">
 		<title>DA 62 Kenmore Livery</title>
@@ -149,6 +161,8 @@
 		<title>HJET HA420 AEROSOAR</title>
 		<title>HJET HA420 PH-JET</title>
 		<title>HJET HA420 D-IVVV</title>
+		<title>HJET E2</title>
+		<title>HJET E2 - Lite</title>
 	</profile>
 	<profile name="Bell 407">
 		<title>Bell 407 Blue Stripes</title>
@@ -173,5 +187,12 @@
 	</profile>
 	<profile name="Just Flight BAe 146">
 		<title>Just Flight 146-100 PSA</title>
+	</profile>
+	<profile name="M20R">
+		<title>Carenado M20R Ovation N48MQ</title>
+	</profile>
+	<profile name="PMDG DC6">
+		<title>PMDG DC-6B United Air Lines (N37534 </title>
+		<title>PMDG DC-6B PMDG House (N6PM </title>
 	</profile>
 </root>
