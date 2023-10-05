@@ -33,7 +33,7 @@
 			<button8>
 				<eventON>Mobiflight.ONZIN</eventON>
 				<axis_link>2</axis_link>
-				<is_switch>False</is_switch>
+				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
 		<aircraft name="Airbus A310">
@@ -63,7 +63,7 @@
 			<button8>
 				<eventON>Mobiflight.ONZIN</eventON>
 				<axis_link>2</axis_link>
-				<is_switch>False</is_switch>
+				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
@@ -145,6 +145,14 @@
 				<inverted>True</inverted>
 			</axis2>
 		</aircraft>
+		<aircraft name="SF50 Vision Jet">
+			<axis0>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+		</aircraft>
 		<aircraft name="Cessna Citation Longitude">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -172,7 +180,7 @@
 			<button8>
 				<eventON>Mobiflight.ONZIN</eventON>
 				<axis_link>2</axis_link>
-				<is_switch>False</is_switch>
+				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
 		<aircraft name="PMDG Boeing 737">
@@ -257,7 +265,57 @@
 			<button8>
 				<eventON>Mobiflight.ONZIN</eventON>
 				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+		</aircraft>
+		<aircraft name="ATR">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_AXIS_SET_EX1</event>
+				<min>-9200</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_AXIS_SET_EX1</event>
+				<min>-9200</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button2>
+				<eventON>Mobiflight.MSATR_FUEL_LEVER_1_INC</eventON>
+				<axis_link></axis_link>
 				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>Mobiflight.MSATR_FUEL_LEVER_1_DEC</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button3>
+			<button4>
+				<eventON>Mobiflight.MSATR_FUEL_LEVER_2_INC</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.MSATR_FUEL_LEVER_2_DEC</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+			<button7>
+				<eventON>Mobiflight.FNX320_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G1000">
@@ -279,6 +337,11 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+			<button6>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button6>
 		</aircraft>
 		<aircraft name="MSFS Bonanza V35">
 			<axis0>
@@ -319,6 +382,46 @@
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis2>
+		</aircraft>
+		<aircraft name="Beech18">
+			<axis0>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>FSUIPC.THROTTLE1_SET</event>
+				<min>0</min>
+				<max>1</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>FSUIPC.THROTTLE2_SET</event>
+				<min>0</min>
+				<max>1</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button0>
+				<eventON>MIXTURE1_INCR</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+			<button1>
+				<eventON>MIXTURE1_DECR</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button1>
+			<button2>
+				<eventON>MIXTURE2_INCR</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>MIXTURE2_DECR</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button3>
 		</aircraft>
 		<aircraft name="M20R">
 			<axis0>
@@ -395,7 +498,7 @@
 			</button5>
 		</aircraft>
 		<aircraft name="TBM930">
-			<axis0>
+			<axis0>	
 				<event>THROTTLE_SET</event>
 				<min>0</min>
 				<max>16383</max>
@@ -406,7 +509,36 @@
 				<min>-16383</min>
 				<max>16383</max>
 				<inverted>True</inverted>
-			</axis1>
+			</axis1>			
+			<button4>
+				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+			<button6>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button6>
+		</aircraft>
+		<aircraft name="Blacksquare TBM850">
+			<axis0>	
+				<event>THROTTLE_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>AXIS_PROPELLER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>			
 			<button4>
 				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
 				<axis_link></axis_link>
@@ -710,10 +842,39 @@
 			<button8>
 				<eventON>Mobiflight.ONZIN</eventON>
 				<axis_link>2</axis_link>
-				<is_switch>False</is_switch>
+				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
-		<aircraft name="British Normander">
+		<aircraft name="Asobo Boeing 787">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_AXIS_SET_EX1</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_AXIS_SET_EX1</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button7>
+				<eventON>Mobiflight.787_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+		</aircraft><aircraft name="British Normander">
 			<axis0>
 				<event>THROTTLE1_AXIS_SET_EX1</event>
 				<min>-16383</min>
@@ -813,6 +974,31 @@
 				<is_switch>True</is_switch>
 			</button5>
 		</aircraft>
+		<aircraft name="ATR">
+			<button0>
+				<eventON>Mobiflight.MSATR_BATT_ON</eventON>
+				<eventOFF>Mobiflight.MSATR_BATT_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>Mobiflight.MSATR_EXT_PWR_ON</eventON>
+				<eventOFF>Mobiflight.MSATR_EXT_PWR_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button3>
+				<eventON>Mobiflight.MSATR_PROBES_ON</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button5>
+				<eventON>Mobiflight.MSATR_GUST_LOCK_OFF</eventON>
+				<eventOFF>Mobiflight.MSATR_GUST_LOCK_ON</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
+		</aircraft>
 		<aircraft name="Airbus A310">
 			<button0>
 				<eventON>Mobiflight.A310_BATTERIES_ON</eventON>
@@ -846,6 +1032,33 @@
 			</button3>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G1000">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>WINDSHIELD_DEICE_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+		</aircraft>
+		<aircraft name="Beech18">
 			<button0>
 				<eventON>MASTER_BATTERY_SET</eventON>
 				<axis_link></axis_link>
@@ -1046,6 +1259,40 @@
 				<is_switch>True</is_switch>
 			</button5>
 		</aircraft>
+		<aircraft name="Blacksquare TBM850">
+			<button0>
+				<eventON>Mobiflight.TBM_BAT_ON</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>AVIONICS_MASTER_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>Mobiflight.TBM930_ALL_ICE_ON</eventON>
+				<eventOFF>Mobiflight.TBM930_ALL_ICE_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.TBM930_INERT_ON</eventON>
+				<eventOFF>Mobiflight.TBM930_INERT_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
+		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G3X">
 			<button0>
 				<eventON>MASTER_BATTERY_SET</eventON>
@@ -1126,6 +1373,41 @@
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
+		</aircraft>
+		<aircraft name="SF50 Vision Jet">
+			<button0>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>ALTERNATOR_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>Mobiflight.VIS_OXY_ON</eventON>
+				<eventOFF>Mobiflight.VIS_OXY_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>Mobiflight.LONG_WING_STAB_AI_ON</eventON>
+				<eventOFF>Mobiflight.LONG_WING_STAB_AI_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.LONG_ANTI_ICE_ENGINES_TOGGLE</eventON>
+				<eventOFF>Mobiflight.LONG_ANTI_ICE_ENGINES_TOGGLE</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
 		</aircraft>
 		<aircraft name="Cessna Citation Longitude">
 			<button0>
@@ -1243,8 +1525,8 @@
 		</aircraft>
 		<aircraft name="Flysimware Cessna 414">
 			<button0>
-				<eventON>Mobiflight.C414_BAT_MASTER_ON</eventON>
-				<eventOFF>Mobiflight.C414_BAT_MASTER_OFF</eventOFF>
+				<eventON>MASTER_BATTERY_SET</eventON>
+				<eventOFF>MASTER_BATTERY_SET</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
@@ -1392,6 +1674,28 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button29>
+		</aircraft>
+		<aircraft name="SF50 Vision Jet">
+			<button5>
+				<eventON>Mobiflight.VIS_CL_UP</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+			<button7>
+				<eventON>Mobiflight.VIS_CL_DN</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button9>
+				<eventON>Mobiflight.VIS_CL_SELECT</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button9>
+			<button19>
+				<eventON>Mobiflight.AUTO_THROTTLE_TO_GA</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button19>
 		</aircraft>
 		<aircraft name="Cessna Citation CJ4">
 			<button5>

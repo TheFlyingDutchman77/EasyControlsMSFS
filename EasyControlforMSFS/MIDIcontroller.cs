@@ -118,12 +118,12 @@ namespace EasyControlforMSFS
                 Debug.WriteLine($"Knob: {note_nr}, direction: {direction}");
                 
                 // HERE WE REDUCE KNOB NR BY 1 BECAUSE KNOBS START AT 1 AND BUTTONS AT 0 IN THE MIDI LIBRARY
-                if (note_nr != 10 )
+                if (note_nr != 10 && note_nr != 9 ) // Here we ignore the slider 
                 {
                     SendKnobEvent(note_nr - 1, direction, aircraft_id);
                     Debug.WriteLine($"Event send for knob {note_nr - 1}");
                 }
-                else
+                else // used for slider 
                 {
                     if (value == 127)
                     {

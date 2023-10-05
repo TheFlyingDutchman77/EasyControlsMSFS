@@ -14,7 +14,7 @@ namespace EasyControlforMSFS
 
         public class ProfilesMapData
         {
-            public static int max_num_titles_mapped = 50;
+            public static int max_num_titles_mapped = 60;
 
             public string profile_name { get; set; }
             public string[] titles = new string[max_num_titles_mapped];
@@ -50,7 +50,9 @@ namespace EasyControlforMSFS
 
                 foreach (XElement level2Element in level1Element.Elements())
                 {
-                    profilesMap.profiles_map[profile_id].AddTitle(title_id, level2Element.Value);
+                    string temp = level2Element.Value.Replace("&", "&amp");
+                    
+                    profilesMap.profiles_map[profile_id].AddTitle(title_id, temp);
                     profilesMap.profiles_map[profile_id].nr_titles += 1;
                     title_id += 1;
                     Debug.WriteLine($"Title added: {level2Element.Value} to profile {level1Element.Attribute("name").Value}");
@@ -84,6 +86,7 @@ namespace EasyControlforMSFS
             File.WriteAllTextAsync(profilesmap_file, output_file);
         }
 
+        
     }
 
 }

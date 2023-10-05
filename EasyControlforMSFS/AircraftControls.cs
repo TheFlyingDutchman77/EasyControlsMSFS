@@ -21,9 +21,9 @@ namespace EasyControlforMSFS
 
         public class AircraftControlsData
         {
-            public static int max_num_ac = 30;
+            public static int max_num_ac = 100;
             public static int max_num_events = 10;
-            public static int max_num_axis = 30;
+            public static int max_num_axis = 100;
             public static int max_num_buttons = 160;
 
             public int max_nr_axis = max_num_axis;
@@ -32,7 +32,7 @@ namespace EasyControlforMSFS
 
             public string controller_name { get; set; }
             public int num_aircraft { get; set; }
-            public int[] num_axis = new int[max_num_axis];
+            public int[] num_axis = new int[max_num_axis]; //should probably be max_num_ac... to check later
             public int[] num_buttons = new int[max_num_buttons];
 
 

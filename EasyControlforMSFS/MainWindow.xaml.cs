@@ -277,6 +277,7 @@ namespace EasyControlforMSFS
             if (sResult.Contains("Title"))
             {
                 title = sResult.Split("|")[1];
+                title = title.Replace("&", "");
                 TitleTextBlock.Text = title;
                 CheckTitleReceived(title);
             }

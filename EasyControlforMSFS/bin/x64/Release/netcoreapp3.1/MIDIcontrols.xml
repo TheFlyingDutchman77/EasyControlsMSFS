@@ -146,6 +146,12 @@
 				<eventOFF>Mobiflight.TBM930_BLEED_OFF</eventOFF>
 			</button40>
 		</aircraft>
+		<aircraft name="Blacksquare TBM850">
+			<button40>
+				<event>Mobiflight.TBM930_BLEED_AUTO</event>
+				<eventOFF>Mobiflight.TBM930_BLEED_OFF</eventOFF>
+			</button40>
+		</aircraft>
 		<aircraft name="Hondajet">
 			<knob1>
 				<event_left>Mobiflight.HONDA_ALT1000_DEC</event_left>
@@ -299,6 +305,9 @@
 				<event>YAW_DAMPER_TOGGLE</event>
 				<status_var>AP</status_var>
 			</button37>
+			<button40>
+				<event>Mobiflight.ASDHC6_BLEED_TOGGLE</event>
+			</button40>
 		</aircraft>
 		<aircraft name="Quest Kodiak 100">
 			<button16>
@@ -316,6 +325,19 @@
 			</button37>
 			<button40>
 				<event>Mobiflight.KODIAK_BUS</event>
+			</button40>
+		</aircraft>
+		<aircraft name="Beech18">
+			<button16>
+				<event>MobiFlight.B18_LANDING_LIGHTS_ON</event>
+			</button16>
+			<button22>
+				<event>MobiFlight.B18_PANEL_LIGHT_ON</event>
+			</button22>
+		</aircraft>
+		<aircraft name="SF50 Vision Jet">
+			<button40>
+				<event>Mobiflight.VIS_BLEED_ON</event>
 			</button40>
 		</aircraft>
 		<aircraft name="Milviz PC-6">
@@ -519,6 +541,79 @@
 				<eventWAIT>Mobiflight.ASCRJ_MACH_TRIM_RELEASE</eventWAIT>
 			</button39>
 		</aircraft>
+		<aircraft name="ATR">
+			<knob1>
+				<event_left>MobiFlight.MSATR_ALT_DEC</event_left>
+				<event_right>MobiFlight.MSATR_ALT_INC</event_right>
+			</knob1>
+			<knob2>
+				<event_left>MobiFlight.MSATR_VS_DEC</event_left>
+				<event_right>MobiFlight.MSATR_VS_INC</event_right>
+			</knob2>
+			<knob3>
+				<event_left>MobiFlight.MSATR_SPD_DEC</event_left>
+				<event_right>MobiFlight.MSATR_SPD_INC</event_right>
+			</knob3>
+			<knob5>
+				<event_left>Mobiflight.MSATR_BARO_DEC</event_left>
+				<event_right>Mobiflight.MSATR_BARO_INC</event_right>
+			</knob5>
+			<knob6>
+				<event_left>Mobiflight.MSATR_DH_DEC</event_left>
+				<event_right>Mobiflight.MSATR_DH_INC</event_right>
+			</knob6>
+			<button9>
+				<event>Mobiflight.MSATR_HDG_TOGGLE</event>
+			</button9>
+			<button10>
+				<event>Mobiflight.MSATR_NAV_TOGGLE</event>
+			</button10>
+			<button11>
+				<event>Mobiflight.MSATR_ALT_TOGGLE</event>
+			</button11>
+			<button12>
+				<event>Mobiflight.MSATR_VS_TOGGLE</event>
+			</button12>
+			<button13>
+				<event>Mobiflight.MSATR_IAS_TOGGLE</event>
+			</button13>
+			<button14>
+				<event>Mobiflight.MSATR_APP_TOGGLE</event>
+			</button14>
+			<button16>
+				<event>Mobiflight.MSATR_LANDING_ON</event>
+				<status_var>LDG</status_var>
+			</button16>
+			<button17>
+				<event>Mobiflight.MSATR_TAXI_ON</event>
+				<status_var>TAXI</status_var>
+			</button17>
+			<button18>
+				<event>Mobiflight.MSATR_STROBE_ON</event>
+				<status_var>STRB</status_var>
+			</button18>
+			<button19>
+				<event>Mobiflight.MSATR_NAV_ON</event>
+				<status_var>NAVL</status_var>
+			</button19>
+			<button20>
+				<event>Mobiflight.MSATR_BEACON_ON</event>
+				<status_var>BCN</status_var>
+			</button20>
+			<button23>
+				<event>Mobiflight.MSATR_SEATBELT_ON</event>
+			</button23>
+			<button34>
+				<event>Mobiflight.MSATR_WS_LEFT_ON</event>
+			</button34>
+			<button35>
+				<event>Mobiflight.MSATR_WS_RIGHT_ON</event>
+			</button35>
+			<button36>
+				<eventON>Mobiflight.MSATR_EMERG_ARM</eventON>
+				<eventOFF>Mobiflight.MSATR_EMERG_OFF</eventOFF>
+			</button36>
+		</aircraft>
 		<aircraft name="Airbus A320neo">
 			<knob9>
 				<event_left>Mobiflight.GEAR_DOWN_SET</event_left>
@@ -572,6 +667,15 @@
 			<button33>
 				<event>Mobiflight.A32NX_APU_START</event>
 			</button33>
+			<button36>
+				<event>Mobiflight.EMER_EXIT_ARM</event>
+				<eventOFF>Mobiflight.EMER_EXIT_OFF</eventOFF>
+			</button36>
+			<button40>
+				<event>Mobiflight.A32NX_BLEED_ON</event>
+			</button40>
+		</aircraft>
+		<aircraft name="Boeing 787">
 			<button36>
 				<event>Mobiflight.EMER_EXIT_ARM</event>
 				<eventOFF>Mobiflight.EMER_EXIT_OFF</eventOFF>
@@ -682,6 +786,10 @@
 			<button22>
 				<event>Mobiflight.C414_LIGHTSWITCH_MASTER_ON</event>
 			</button22>
+			<button35>
+				<eventON>Mobiflight.C414_FUEL_PUMPS_LOW</eventON>
+				<eventOFF>Mobiflight.C414_FUEL_PUMPS_OFF</eventOFF>
+			</button35>
 		</aircraft>
 		<aircraft name="British Normander">
 			<knob1>
@@ -706,6 +814,10 @@
 			</button16>
 		</aircraft>
 		<aircraft name="Just Flight Turbo Arrow">
+			<knob0>
+				<event_left>Mobiflight.PA28_HDG_DEC</event_left>
+				<event_right>Mobiflight.PA28_HDG_INC</event_right>
+			</knob0>
 			<button9>
 				<event>MobiFlight.AUTOPILOT_hdg_ON_PRESS</event>
 				<eventOFF>MobiFlight.AUTOPILOT_hdg_OFF_PRESS</eventOFF>

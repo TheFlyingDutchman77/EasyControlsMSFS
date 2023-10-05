@@ -56,7 +56,7 @@ namespace EasyControlforMSFS
 
 
             VS.Init(); // Initialise by passing in the windows handle of this form
-            VS.LVARUpdateFrequency = 0; // CONTROLLED BY THE WASM Check for changes in lvar values 10 times per second (Hz)
+            //VS.LVARUpdateFrequency = 0; // CONTROLLED BY THE WASM Check for changes in lvar values 10 times per second (Hz)
             VS.LogLevel = LOGLEVEL.LOG_LEVEL_INFO; // Set the level of logging
             //VS.LogLevel = LOGLEVEL.LOG_LEVEL_DEBUG; // Set the level of logging
 
