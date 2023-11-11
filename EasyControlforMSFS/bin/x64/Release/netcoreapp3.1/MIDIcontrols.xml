@@ -141,15 +141,42 @@
 				<event>Mobiflight.TBM930_AUX_BP_AUTO</event>
 				<eventOFF>Mobiflight.TBM930_AUX_BP_OFF</eventOFF>
 			</button35>
+			<button36>
+				<eventON>Mobiflight.TBM930_IGN_AUTO</eventON>
+				<eventOFF>Mobiflight.TBM930_IGN_OFF</eventOFF>
+			</button36>
 			<button40>
 				<event>Mobiflight.TBM930_BLEED_AUTO</event>
 				<eventOFF>Mobiflight.TBM930_BLEED_OFF</eventOFF>
 			</button40>
 		</aircraft>
 		<aircraft name="Blacksquare TBM850">
+			<button16>
+				<event>Mobiflight.LONG_LANDING_LIGHTS_ON</event>
+				<status_var>LDG</status_var>
+			</button16>
+			<button35>
+				<event>Mobiflight.TBM850_AUX_FUEL_PUMP_TOGGLE</event>
+			</button35>
+			<button36>
+				<event>Mobiflight.TBM850_IGNITION_TOGGLE</event>
+			</button36>
+			<button37>
+				<eventON>Mobiflight.TBM850_STARTER_ON</eventON>
+			</button37>
+			<button39>
+				<event>Mobiflight.TBM850_WHEEL_CHOCKS_TOGGLE</event>
+			</button39>
 			<button40>
-				<event>Mobiflight.TBM930_BLEED_AUTO</event>
-				<eventOFF>Mobiflight.TBM930_BLEED_OFF</eventOFF>
+				<event>Mobiflight.TBM850_BLEED_TOGGLE</event>
+			</button40>
+		</aircraft>
+		<aircraft name="FSReborn M500">
+			<button37>
+				<event>STARTER1_SET</event>
+			</button37>
+			<button40>
+				<event>Mobiflight.TBM850_BLEED_TOGGLE</event>
 			</button40>
 		</aircraft>
 		<aircraft name="Hondajet">

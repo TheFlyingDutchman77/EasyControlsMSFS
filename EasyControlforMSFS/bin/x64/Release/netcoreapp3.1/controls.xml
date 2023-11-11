@@ -538,22 +538,62 @@
 				<min>-16383</min>
 				<max>16383</max>
 				<inverted>True</inverted>
-			</axis1>			
-			<button4>
-				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
+			</axis1>
+			<axis2>
+				<event>MIXTURE_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button0>
+				<eventON>Mobiflight.TBM850_COND_LEVER_INC</eventON>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
-			</button4>
-			<button5>
-				<eventON>TOGGLE_FUEL_VALVE_ALL</eventON>
+			</button0>
+			<button1>
+				<eventON>Mobiflight.TBM850_COND_LEVER_DEC</eventON>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
-			</button5>
+			</button1>
 			<button6>
 				<eventON>DECREASE_THROTTLE</eventON>
 				<axis_link>0</axis_link>
 				<is_switch>False</is_switch>
 			</button6>
+		</aircraft>
+		<aircraft name="FSReborn M500">
+			<axis0>	
+				<event>THROTTLE_SET</event>
+				<min>255</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>	
+				<event>THROTTLE_SET</event>
+				<min>-4096</min>
+				<max>0</max>
+				<inverted>False</inverted>
+			</axis1>
+			<button0>
+				<eventON>Mobiflight.FSRM500_COND_LEVER_ON</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+			<button1>
+				<eventON>Mobiflight.FSRM500_COND_LEVER_OFF</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button1>
+			<button6>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>0</axis_link>
+				<is_switch>False</is_switch>
+			</button6>
+			<button7>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
 		</aircraft>
 		<aircraft name="Asobo Stock Aircraft G3X">
 			<axis0>
@@ -1261,17 +1301,20 @@
 		</aircraft>
 		<aircraft name="Blacksquare TBM850">
 			<button0>
-				<eventON>Mobiflight.TBM_BAT_ON</eventON>
+				<eventON>Mobiflight.TBM850_BATT_ON</eventON>
+				<eventOFF>Mobiflight.TBM850_BATT_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button0>
 			<button1>
-				<eventON>ALTERNATOR_SET</eventON>
+				<eventON>Mobiflight.TBM850_GEN_ON</eventON>
+				<eventOFF>Mobiflight.TBM850_GEN_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button1>
 			<button2>
-				<eventON>AVIONICS_MASTER_SET</eventON>
+				<eventON>Mobiflight.TBM850_AVIONICS_ON</eventON>
+				<eventOFF>Mobiflight.TBM850_AVIONICS_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button2>
@@ -1283,6 +1326,43 @@
 			<button4>
 				<eventON>Mobiflight.TBM930_ALL_ICE_ON</eventON>
 				<eventOFF>Mobiflight.TBM930_ALL_ICE_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.TBM930_INERT_ON</eventON>
+				<eventOFF>Mobiflight.TBM930_INERT_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button5>
+		</aircraft>
+		<aircraft name="FSReborn M500">
+			<button0>
+				<eventON>Mobiflight.FSRM500_BATT_ON</eventON>
+				<eventOFF>Mobiflight.FSRM500_BATT_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button0>
+			<button1>
+				<eventON>Mobiflight.FSRM500_GEN2_ON</eventON>
+				<eventOFF>Mobiflight.FSRM500_GEN2_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button1>
+			<button2>
+				<eventON>Mobiflight.FSRM500_AVIONICS_ON</eventON>
+				<eventOFF>Mobiflight.FSRM500_AVIONICS_OFF</eventOFF>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button2>
+			<button3>
+				<eventON>PITOT_HEAT_SET</eventON>
+				<axis_link></axis_link>
+				<is_switch>True</is_switch>
+			</button3>
+			<button4>
+				<eventON>Mobiflight.FSRM500_WS_DEICE_ON</eventON>
+				<eventOFF>Mobiflight.FSRM500_WS_DEICE_OFF</eventOFF>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button4>
@@ -1725,6 +1805,13 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button19>
+		</aircraft>
+		<aircraft name="Blacksquare TBM850">
+			<button9>
+				<eventON>Mobiflight.TBM850_850MODE_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button9>
 		</aircraft>
 		<aircraft name="M20R">
 			<button19>

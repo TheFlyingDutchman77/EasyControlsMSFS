@@ -252,5 +252,15 @@
 	</profile>
 	<profile name="Blacksquare TBM850">
 		<title>Black Square TBM 850 Red  Silver</title>
+		<title>Black Square TBM 850 Feather Red</title>
+		<title>Black Square TBM 850 N851TB</title>
+		<title>TBM 850 N851TB</title>
+		<title>Black Square TBM 850 Blue Ribbons</title>
+	</profile>
+	<profile name="FSReborn M500">
+		<title>M500 by FSReborn</title>
+		<title>M500 by FSReborn - OceanBlue</title>
+		<title>Abacus GA2 TBM 850 N850WM G1000</title>
+		<title>M500 by FSReborn - UrbanGold</title>
 	</profile>
 </root>

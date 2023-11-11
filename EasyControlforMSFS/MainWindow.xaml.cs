@@ -560,7 +560,7 @@ namespace EasyControlforMSFS
                             myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); 
                             //}
                         }
-                    else { mysimconnect.SendEvent(sim_event, set_value); Debug.WriteLine($"Set value {sim_event}  {set_value}");
+                    else { mysimconnect.SendEvent(sim_event, set_value); Debug.WriteLine($"Set value axis {j}:  {sim_event}  {set_value}");
                         }
                     }
                 }
@@ -598,14 +598,28 @@ namespace EasyControlforMSFS
                     {
                         string sim_event_new = sim_event.Replace("FSUIPC.", "");
                         myMSFSVarServices.VS_EventSet(sim_event_new, 1);
+                        Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
                     }
-                    else { mysimconnect.SendEvent(sim_event, 1); }
-                    Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
-                    this.Dispatcher.Invoke(() =>
+                    else 
                     {
-                        MessageTextBox.AppendText($"Button {j} event ON {sim_event} sent!\r\n");
-                        MessageTextBox.ScrollToEnd();
-                    }); 
+                        if (!sim_event.Contains("ONZIN"))
+                        {
+                            mysimconnect.SendEvent(sim_event, 1);
+                            Debug.WriteLine($"Button {j} event ON {sim_event} sent!");
+                        }
+                        else
+                        {
+                            Debug.WriteLine($"Button {j} event ON SKIPPED {sim_event}!");
+                        }
+                    }
+                    if (!sim_event.Contains("ONZIN"))
+                    {
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            MessageTextBox.AppendText($"Button {j} event ON {sim_event} sent!\r\n");
+                            MessageTextBox.ScrollToEnd();
+                        });
+                    }
                     Thread.Sleep(200);
                     if (sim_eventWAIT != null)
                     {
@@ -638,7 +652,8 @@ namespace EasyControlforMSFS
                         string sim_event_new = sim_event.Replace("FSUIPC.", "");
                         myMSFSVarServices.VS_EventSet(sim_event_new, 0);
                     }
-                    else { mysimconnect.SendEvent(sim_event, 0); }
+                    else 
+                    { mysimconnect.SendEvent(sim_event, 0); }
                     Debug.WriteLine($"Button {j} event OFF {sim_event} sent!");
                     this.Dispatcher.Invoke(() =>
                     {
