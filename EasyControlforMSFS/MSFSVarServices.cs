@@ -96,7 +96,7 @@ namespace EasyControlforMSFS
                 {
                     LogResult?.Invoke(this, $"{lvar} Event send error  {ex.Message}");
                 }
-                if (!lvar.Contains("THROTTLE") & !lvar.Contains("Power") & !lvar.Contains("CollectiveGrip"))
+                if (!lvar.Contains("THROTTLE") & !lvar.Contains("Power") & !lvar.Contains("THR_HW") & !lvar.Contains("SPOILER_BV_LEVER")  & !lvar.Contains("CollectiveGrip") & !lvar.Contains("HELICOPTER_Throttle"))
                 {
                     LogResult?.Invoke(this, $"{lvar} event send with value {value}");
                 }

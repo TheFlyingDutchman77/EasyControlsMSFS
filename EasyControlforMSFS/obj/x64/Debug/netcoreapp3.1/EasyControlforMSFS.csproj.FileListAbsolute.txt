@@ -117,3 +117,4 @@ D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyCo
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.dll
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.pdb
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.genruntimeconfig.cache
+D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.sourcelink.json

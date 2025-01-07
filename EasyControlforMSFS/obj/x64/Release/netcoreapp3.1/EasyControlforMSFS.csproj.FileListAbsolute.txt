@@ -117,3 +117,5 @@ D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\Easy
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\EasyControlforMSFS.dll
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\EasyControlforMSFS.pdb
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\EasyControlforMSFS.genruntimeconfig.cache
+D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\EasyControlforMSFS.sourcelink.json
+D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\EasyControlforMSFS_Content.g.cs

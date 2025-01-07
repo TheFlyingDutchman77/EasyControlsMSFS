@@ -254,4 +254,10 @@
 	<profile name="">
 		<title>M500 by FSReborn - OceanBlue</title>
 	</profile>
+	<profile name="F14">
+		<title>F-14A Tomcat VF-1 NK100 (1974)</title>
+	</profile>
+	<profile name="FSS E195">
+		<title>FSS Embraer E190 KLMCityhopper</title>
+	</profile>
 </root>

@@ -119,6 +119,57 @@
 				<event>TOGGLE_TAILWHEEL_LOCK</event>
 			</button39>
 		</aircraft>
+		<aircraft name="Inibuilds A400M">
+			<knob1>
+				<event_left>AP_ALT_VAR_DEC</event_left>
+				<event_right>AP_ALT_VAR_INC</event_right>
+			</knob1>
+			<button8>
+				<event>Mobiflight.INIA400_AP_TOGGLE</event>
+				<status_var>AP</status_var>
+			</button8>
+			<button14>
+				<event>Mobiflight.INIA400_APPR_TOGGLE</event>
+				<status_var>APPR</status_var>
+			</button14>
+			<button16>
+				<event>Mobiflight.INIA400_LANDING_LIGHTS_ON</event>
+				<status_var>LDG</status_var>
+			</button16>
+			<button18>
+				<event>Mobiflight.INIA400_STROBE_ON</event>
+				<status_var></status_var>
+			</button18>
+			<button21>
+				<event>Mobiflight.INIA400_RWY_TURNOFF_ON</event>
+				<status_var></status_var>
+			</button21>
+		</aircraft>
+		<aircraft name="King Air">
+			<button16>
+				<eventON>Mobiflight.LONG_LANDING_LIGHTS_ON</eventON>
+				<eventOFF>Mobiflight.LONG_LANDING_LIGHTS_OFF</eventOFF>
+				<status_var>LDG</status_var>
+			</button16>
+			<button22>
+				<eventON>Mobiflight.BS_KA_MASTER_PANEL_LIGHTS_ON</eventON>
+				<eventOFF>Mobiflight.BS_KA_MASTER_PANEL_LIGHTS_OFF</eventOFF>
+			</button22>
+			<button40>
+				<eventON>Mobiflight.BS_KA_Bleed_ON</eventON>
+				<eventOFF>Mobiflight.BS_KA_Bleed_OFF</eventOFF>
+			</button40>
+		</aircraft>
+		<aircraft name="Huey">
+			<button16>
+				<eventON>Mobiflight.LONG_LANDING_LIGHTS_ON</eventON>
+				<eventOFF>Mobiflight.LONG_LANDING_LIGHTS_OFF</eventOFF>
+				<status_var>LDG</status_var>
+			</button16>
+			<button21>
+				<event>TOGGLE_LOGO_LIGHTS</event>
+			</button21>
+		</aircraft>
 		<aircraft name="TBM930">
 			<knob0>
 				<event_left>Mobiflight.AS1000_PFD_HEADING_DEC</event_left>
@@ -177,6 +228,22 @@
 			</button37>
 			<button40>
 				<event>Mobiflight.TBM850_BLEED_TOGGLE</event>
+			</button40>
+		</aircraft>
+		<aircraft name="Tecnam P2012">
+			<button22>
+				<event>Moblight.P2012_PANEL_LIGHT_ON</event>
+				<status_var></status_var>
+			</button22>
+			<button35>
+				<event>Mobiflight.P2012_FUEL_PUMPS_ON</event>
+			</button35>
+			<button36>
+				<event>Mobiflight.P2012_IGNITION_ON</event>
+			</button36>
+			<button40>
+				<event>Moblight.P2012_TIE_BUS_ON</event>
+				<status_var></status_var>
 			</button40>
 		</aircraft>
 		<aircraft name="Hondajet">
@@ -241,30 +308,6 @@
 				<event_left>Mobiflight.WT_CJ4_AP_SPEED_DEC</event_left>
 				<event_right>Mobiflight.WT_CJ4_AP_SPEED_INC</event_right>
 			</knob3>
-			<button9>
-				<event>Mobiflight.WT_CJ4_AP_HDG_PRESSED</event>
-				<status_var>HDG</status_var>
-			</button9>
-			<button10>
-				<event>Mobiflight.WT_CJ4_AP_NAV_PRESSED</event>
-				<status_var>NAV</status_var>
-			</button10>
-			<button11>
-				<event>Mobiflight.WT_CJ4_AP_ALT_PRESSED</event>
-				<status_var>ALT</status_var>
-			</button11>
-			<button12>
-				<event>Mobiflight.WT_CJ4_AP_VS_PRESSED</event>
-				<status_var>VS</status_var>
-			</button12>
-			<button13>
-				<event>Mobiflight.WT_CJ4_AP_FLC_PRESSED</event>
-				<status_var>FLC</status_var>
-			</button13>
-			<button14>
-				<event>Mobiflight.WT_CJ4_AP_APPR_PRESSED</event>
-				<status_var>APPR</status_var>
-			</button14>
 			<button22>
 				<event>Mobiflight.WT_CJ4_SAFETY_LIGHT_TOGGLE</event>
 			</button22>
@@ -639,6 +682,83 @@
 			<button36>
 				<eventON>Mobiflight.MSATR_EMERG_ARM</eventON>
 				<eventOFF>Mobiflight.MSATR_EMERG_OFF</eventOFF>
+			</button36>
+		</aircraft>
+		<aircraft name="FSS E195">
+			<knob0>
+				<event_left>Mobiflight.FSS_FGP_HDG_Decrease</event_left>
+				<event_right>Mobiflight.FSS_FGP_HDG_Increase</event_right>
+			</knob0>
+			<knob1>
+				<event_left>Mobiflight.FSS_FGP_ALT_Decr_100</event_left>
+				<event_right>Mobiflight.FSS_FGP_ALT_Incr_100</event_right>
+				<alt_event_left>Mobiflight.FSS_FGP_ALT_Decrease</alt_event_left>
+				<alt_event_right>Mobiflight.FSS_FGP_ALT_Increase</alt_event_right>
+			</knob1>
+			<knob2>
+				<event_left>Mobiflight.FSS_FGP_VS_Decrease</event_left>
+				<event_right>Mobiflight.FSS_FGP_VS_Increase</event_right>
+			</knob2>
+			<knob3>
+				<event_left>Mobiflight.FSS_FGP_SPD_Decrease</event_left>
+				<event_right>Mobiflight.FSS_FGP_SPD_Increase</event_right>
+			</knob3>
+			<button0>
+				<event>Mobiflight.FSS_FGP_HDG_Sync_Push</event>
+			</button0>
+			<button3>
+				<eventON>Mobiflight.FSS_Set_Manual_Speed</eventON>
+				<eventOFF>Mobiflight.FSS_Set_FMS_Speed</eventOFF>
+			</button3>
+			<button8>
+				<event>Mobiflight.FSS_FGP_AP_Push</event>
+				<status_var>AP</status_var>
+			</button8>
+			<button9>
+				<event>Mobiflight.FSS_FGP_HDG_Push</event>
+				<status_var>HDG</status_var>
+			</button9>
+			<button10>
+				<event>Mobiflight.FSS_FGP_NAV_Push</event>
+				<status_var>VS</status_var>
+			</button10>
+			<button12>
+				<event>Mobiflight.FSS_FGP_VS_Push</event>
+				<status_var>VS</status_var>
+			</button12>
+			<button13>
+				<event>Mobiflight.FSS_FGP_FLCH_Push</event>
+				<status_var>VS</status_var>
+			</button13>
+			<button14>
+				<event>Mobiflight.FSS_FGP_APP_Push</event>
+				<status_var>APPR</status_var>
+			</button14>
+			<button16>
+				<event>Mobiflight.FSS_LANDING_LIGHTS_ON</event>
+				<status_var>LDG</status_var>
+			</button16>
+			<button17>
+				<event>Mobiflight.FSS_TAXI_LIGHTS_ON</event>
+				<status_var>TAXI</status_var>
+			</button17>
+			<button22>
+				<eventON>Mobiflight.FSS_NO_SMKG_On</eventON>
+				<eventOFF>Mobiflight.FSS_NO_SMKG_Off</eventOFF>
+			</button22>
+			<button23>
+				<eventON>Mobiflight.FSS_FSTN_Belts_On</eventON>
+				<eventOFF>Mobiflight.FSS_FSTN_Belts_Off</eventOFF>
+			</button23>
+			<button32>
+				<event>Mobiflight.FSS_APU_INC</event>
+			</button32>
+			<button33>
+				<event>Mobiflight.FSS_APU_DEC</event>
+			</button33>
+			<button36>
+				<eventON>Mobiflight.FSS_EMER_ARM</eventON>
+				<eventOFF>Mobiflight.FSS_EMER_OFF</eventOFF>
 			</button36>
 		</aircraft>
 		<aircraft name="Airbus A320neo">
@@ -1017,6 +1137,59 @@
 			<button36>
 				<event>Mobiflight.737_EMER_ARM_ON</event>
 				<eventOFF>Mobiflight.737_EMER_ARM_OFF</eventOFF>
+			</button36>
+		</aircraft>
+		<aircraft name="PMDG Boeing 777">
+			<knob1>
+				<event_left>AP_ALT_VAR_DEC</event_left>
+				<event_right>AP_ALT_VAR_INC</event_right>
+			</knob1>
+			<knob5>
+				<event_left>Mobiflight.777_BARO_DEC</event_left>
+				<event_right>Mobiflight.777_BARO_INC</event_right>
+				<alt_event_left>Mobiflight.777_BARO_DEC_FAST</alt_event_left>
+				<alt_event_right>Mobiflight.777_BARO_INC_FAST</alt_event_right>
+			</knob5>
+			<knob6>
+				<event_left>Mobiflight.777_DH_DEC</event_left>
+				<event_right>Mobiflight.777_DH_INC</event_right>
+			</knob6>
+			<button1>
+				<event>Mobiflight.777_ALTI_PUSH</event>
+			</button1>
+			<button5>
+				<event>Mobiflight.777_BARO_HP_TOGGLE</event>
+			</button5>
+			<button16>
+				<event>Mobiflight.777_LANDING_LIGHT_TOGGLE</event>
+			</button16>
+			<button17>
+				<event>Mobiflight.777_TAXI_LIGHT_TOGGLE</event>
+			</button17>
+			<button18>
+				<event>Mobiflight.777_STROBE_LIGHT_TOGGLE</event>
+			</button18>
+			<button21>
+				<event>Mobiflight.777_RWY_LIGHT_TOGGLE</event>
+			</button21>
+			<button23>
+				<eventON>Mobiflight.777_SEAT_BELT_TOGGLE</eventON>
+			</button23>
+			<button32>
+				<event>Mobiflight.777_APU_START</event>
+			</button32>
+			<button33>
+				<event>Mobiflight.777_APU_STOP</event>
+			</button33>
+			<button34>
+				<event>Mobiflight.777_WINDSHIELD_LEFT_TOGGLE</event>
+			</button34>
+			<button35>
+				<event>Mobiflight.777_WINDSHIELD_RIGHT_TOGGLE</event>
+			</button35>
+			<button36>
+				<event>Mobiflight.777_EMER_LIGHTS_ON</event>
+				<eventOFF>Mobiflight.777_EMER_LIGHTS_OFF</eventOFF>
 			</button36>
 		</aircraft>
 		<aircraft name="Fenix A320">

@@ -5,10 +5,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationIcon>flight_30822 (1).ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="flight_30822 %281%29.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="flight_30822 (1).ico" />
   </ItemGroup>
 
   <ItemGroup>

@@ -12,6 +12,9 @@
 		<title>Aerosoft DHC-6 Series 300 Wheels Pax</title>
 		<title>Aerosoft DHC-6 Inter Caribbean</title>
 		<title>Aerosoft DHC6-300 Wheels Pax Buffalo Airways C-GFYN</title>
+		<title>Aerosoft DHC-6 Series 300 Amphibian Pax</title>
+		<title>DHC-6 Twin Otter Territory Airlines VH-GKR</title>
+		<title>DeHavilland DHC-6 300 Twin Otter (Aerosoft Extended)</title>
 	</profile>
 	<profile name="Milviz PC-6">
 		<title>Turbo Porter EC-JXH Glass</title>
@@ -21,6 +24,8 @@
 		<title>Blackbird Turbo Porter EC-JXH Wheels Glass</title>
 		<title>Turbo Porter ZK-MCT Analog</title>
 		<title>Blackbird Turbo Porter A14-693 Wheels Analog</title>
+		<title>Blackbird Turbo Porter S5-CMA Tundra Analog</title>
+		<title>Blackbird Turbo Porter EC-JXH Tundra Glass</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
@@ -36,6 +41,9 @@
 		<title>A320_NEO-KLM 8K (A32NX Converted)</title>
 		<title>Airbus A320 Eurowings D-AENA</title>
 		<title>Airbus A32NX Austrian Airlines Factory Out OE-LBU Dibraze</title>
+		<title>Airbus A320 ITA Airways EI-INB Francesco Moser</title>
+		<title>FlyByWire Transavia France F-GNEO</title>
+		<title>Airbus A320 Neo (FBW) Aegean</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G1000">
 		<title>Cessna Skyhawk G1000 Skis Asobo</title>
@@ -47,6 +55,12 @@
 		<title>Cessna Skyhawk Asobo</title>
 		<title>FlyingIron Spitfire Mk IX SAAF - 40 Sqn PT672</title>
 		<title>Cessna 208B Grand Caravan EX</title>
+		<title>Blackbird Simulations DHC-2 Beaver Floats CF-OBS</title>
+		<title>Zenith 701 Yellow no doors</title>
+		<title>Cessna Grand Caravan Global Livery</title>
+		<title>DA40-NG Asobo</title>
+		<title>Cessna 206 Stationair</title>
+		<title>C172SP Classic Passengers</title>
 	</profile>
 	<profile name="Cessna Citation CJ4">
 		<title>Cessna CJ4 Citation Asobo</title>
@@ -67,6 +81,8 @@
 		<title>Kodiak 100 Factory paint B3 2021</title>
 		<title>Kodiak 100 cargo pod, Legacy Livery 3</title>
 		<title>Kodiak 100 tundra tyres, Factory paint A2</title>
+		<title>Kodiak 100 cargo pod, tundra Missionary Bush Pilot</title>
+		<title>Kodiak 100 Factory paint A8</title>
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
@@ -78,9 +94,13 @@
 		<title>CRJ550ER REX Express</title>
 		<title>CRJ900 Scandinavian Airlines EI-FPN</title>
 		<title>CRJ 700 Caribbean Airlines</title>
+		<title>CRJ900 Scandinavian Airlines OY-KFI</title>
+		<title>Embraer ERJ-135LR</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G3X">
 		<title>Asobo XCub Floats</title>
+		<title>Asobo XCub</title>
+		<title>XCub Passengers Big Wheels</title>
 	</profile>
 	<profile name="TBM930">
 		<title>TBM 930 Asobo</title>
@@ -110,6 +130,8 @@
 		<title>Flysimware C414AW N100JD GNS530</title>
 		<title>Flysimware C414AW N5AM PMS50 GTN750</title>
 		<title>Flysimware C414AW N427RC PMS50 GTN750</title>
+		<title>Cessna 310</title>
+		<title>Cessna 421 Golden Eagle</title>
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
@@ -132,6 +154,8 @@
 		<title>PMDG 737-800 Transavia (PH-HXK </title>
 		<title>PMDG 737-700BBJ PH-GOV</title>
 		<title>PMDG 737-800 Ryanair (G-RUKA </title>
+		<title>PMDG 737-700 Ryanair (EI-SEV </title>
+		<title>PMDG 737-800 Arkefly (PH-TFA)</title>
 	</profile>
 	<profile name="Fenix A320">
 		<title>FenixA320_AFLVPBDK</title>
@@ -152,6 +176,27 @@
 		<title>FenixA320_EZSHBJZY_4K</title>
 		<title>FenixA320_EJUOEIVO_4K</title>
 		<title>FenixA320_EWGDABHG_4K</title>
+		<title>Fenix A320 - Air France 'Standard' F-GKXS (2022)</title>
+		<title>Fenix A320 - easyJet 'Standard' G-EJCD (2023)</title>
+		<title>Fenix A320 - Swiss 'Standard' HB-IJR (2015)</title>
+		<title>Fenix A320 - Edelweiss Air 'Standard' HB-JJN (2019)</title>
+		<title>Fenix A320 - Brussels Airlines 'Tintin' OO-SNB (2014)</title>
+		<title>Fenix A320 - Aegean Airlines 'Acropolis Museum' SX-DVV (2009)</title>
+		<title>Fenix A320 - Brussels Airlines 'New' OO-SNL (2023)</title>
+		<title>Fenix A320 - Scandinavian Airlines 'New' OY-KAM (2019)</title>
+		<title>Fenix A320 - Eurowings 'Standard' D-ABZE (2023)</title>
+		<title>Fenix A320 - Air France 'Modern' F-GKXS (2022)</title>
+		<title>Fenix A320 - Lufthansa 'Standard' D-AIZD (2019)</title>
+		<title>Fenix A321 - Lufthansa 'Dark Blue' D-AIRK (2024)</title>
+		<title>Fenix A319 - Delta Air Lines 'Standard' N333NB (2024)</title>
+		<title>Fenix A319 - ITA Airways 'Standard' EI-IMV (2024)</title>
+		<title>Fenix A319 - Eurowings 'Early Modern' D-AGWB (2023)</title>
+		<title>Fenix A319 - SAS Scandinavian Airlines 'Retro' OY-KBO (2024)</title>
+		<title>Fenix A321 - Aegean Airlines 'Discover Greece' SX-DNG (2018)</title>
+		<title>Fenix A320 - Easyjet 'Standard' G-EZOM (2024)</title>
+		<title>Fenix A320 - British Airways 'Standard' G-EUYY (2024)</title>
+		<title>Fenix A321 - Swiss 'Standard' HB-ION (2024)</title>
+		<title>FenixA319 CFM</title>
 	</profile>
 	<profile name="British Normander">
 		<title>Britten Norman Islander BN2B Skybus</title>
@@ -210,6 +255,7 @@
 		<title>Just Flight 146-100 PSA</title>
 		<title>Just Flight 146-100 Jersey European</title>
 		<title>Just Flight 146-100 WAT</title>
+		<title>Just Flight 146-300 Eurowings</title>
 	</profile>
 	<profile name="M20R">
 		<title>Carenado M20R Ovation N48MQ</title>
@@ -233,6 +279,8 @@
 		<title>ATR 42 D-BPPP</title>
 		<title>AT46 Coastair</title>
 		<title>ATR 42-500</title>
+		<title>ATR 72 SAS ES-ATE</title>
+		<title>Hans Hartmann ATR 42-600 Air Corsica 2012</title>
 	</profile>
 	<profile name="Beech18">
 		<title>Beechcraft D18S N846DS</title>
@@ -245,6 +293,9 @@
 		<title>FFX Vision Jet Shuttle</title>
 		<title>FFX Vision Jet Uluru</title>
 		<title>FFX Vision Jet Apex Bordeaux</title>
+		<title>FFX Vision Jet Apex Corso Red</title>
+		<title>Microsoft Vision Jet Executive Seating</title>
+		<title>FFX Vision Jet Arrivee Maldives</title>
 	</profile>
 	<profile name="Asobo Boeing 787">
 		<title>B787 10 KLM Livery</title>
@@ -256,11 +307,74 @@
 		<title>Black Square TBM 850 N851TB</title>
 		<title>TBM 850 N851TB</title>
 		<title>Black Square TBM 850 Blue Ribbons</title>
+		<title>Black Square TBM 850 Red  Gold</title>
+		<title>Black Square TBM 850 Blue Lines</title>
 	</profile>
 	<profile name="FSReborn M500">
 		<title>M500 by FSReborn</title>
 		<title>M500 by FSReborn - OceanBlue</title>
 		<title>Abacus GA2 TBM 850 N850WM G1000</title>
 		<title>M500 by FSReborn - UrbanGold</title>
+		<title>M500 by FSReborn - Emanation</title>
+		<title>M500 by FSReborn - Rosaria</title>
+	</profile>
+	<profile name="Tecnam P2012">
+		<title>Tecnam P2012 Traveller - Oriens Aviation</title>
+		<title>Tecnam P2012 Traveller - FSS</title>
+		<title>Tecnam P2012 Traveller - Cape Air</title>
+		<title>Cessna 404 Titan</title>
+		<title>Australia GAF N22 Nomad</title>
+	</profile>
+	<profile name="F14">
+		<title>F-14A Tomcat VF-1 NK100 (1974)</title>
+		<title>F-14B Tomcat VF-11 AG211 (1998)</title>
+	</profile>
+	<profile name="FSS E195">
+		<title>FSS Embraer E195 Flybe</title>
+		<title>FSS Embraer E190 KLMCityhopper</title>
+		<title>FSS Embraer E190 BA Cityflyer</title>
+	</profile>
+	<profile name="PMDG Boeing 777">
+		<title>PMDG 777-300ER KLM (PH-BVF </title>
+		<title>PMDG 777-300ER Swiss (HB-JNL </title>
+		<title>PMDG 777-300ER Emirates Airlines (A6-ENE </title>
+		<title>PMDG 777-300ER United Airlines (N2251U </title>
+		<title>PMDG 777-300ER Japan Airlines (JA731J </title>
+		<title>PMDG 777-300ER Ethiopian Airlines (ET-APX </title>
+		<title>PMDG 777-300ER British Airways (G-STBC </title>
+	</profile>
+	<profile name="King Air">
+		<title>Jetstream 32 ADA</title>
+		<title>Beechcraft King Air 200</title>
+		<title>Beechcraft King Air 300 Paint2</title>
+		<title>Beech King Air 300 Paint2</title>
+		<title>Black Square King Air 350 Default Blue</title>
+		<title>Black Square King Air 350 Default Gold</title>
+		<title>Beechcraft Queen Air 80S</title>
+	</profile>
+	<profile name="Huey">
+		<title>Bell 412</title>
+		<title>205-A1B Heliquest High Skids</title>
+		<title>205-A1B SHERIFF SD</title>
+		<title>205-A1B DHAFO</title>
+		<title>UH-1H US Army </title>
+		<title>UH-1H US Air Force Rescue</title>
+		<title>205-A1B NASA</title>
+	</profile>
+	<profile name="FBW Airbus A380">
+		<title>A380X Emirates</title>
+	</profile>
+	<profile name="Asobo Stock Aircraft G1000 - MSFS2024">
+		<title>C400 Corvalis</title>
+		<title>C172SP G1000 Passengers</title>
+		<title>DA62 Scientific Research</title>
+		<title>C172SP G1000 Skydive</title>
+		<title>C172SP G1000 Aerial Advertising</title>
+	</profile>
+	<profile name="Inibuils A321">
+		<title>A321</title>
+	</profile>
+	<profile name="Inibuils A400M">
+		<title>A400M Cargo</title>
 	</profile>
 </root>

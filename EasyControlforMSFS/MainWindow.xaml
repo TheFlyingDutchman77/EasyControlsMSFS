@@ -62,6 +62,8 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Name ="Buttonsexit" Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button Name="MidiReload" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="MidiReload_Click">Reload MIDI</Button>
+                <Separator Width="20" Background="Transparent"/>
                 <Button Name="FSUIPCReload" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="FSUIPCReload_Click" >Reload FSUIPC</Button>
                 <Separator Width="20" Background="Transparent"/>
                 <Button Content="Define events" Margin="0,0,0,20" Click="Button_Click"/>

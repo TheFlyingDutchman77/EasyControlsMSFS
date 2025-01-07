@@ -155,7 +155,20 @@ namespace EasyControlforMSFS
         public void StopMIDIconnection()
         {
             inputDevice.StopEventsListening();
+            (inputDevice as IDisposable)?.Dispose();
+            (outputDevice as IDisposable)?.Dispose();
+        }
+        public void RestartMIDIconnection()
+        {
+            inputDevice.StopEventsListening();
+            (inputDevice as IDisposable)?.Dispose();
+            (outputDevice as IDisposable)?.Dispose();
 
+            inputDevice = InputDevice.GetByName("X-TOUCH MINI");
+            inputDevice.EventReceived += OnEventReceived;
+            inputDevice.StartEventsListening();
+            outputDevice = OutputDevice.GetByName("X-TOUCH MINI");
+            outputDevice.EventSent += OnEventSent;
         }
 
 

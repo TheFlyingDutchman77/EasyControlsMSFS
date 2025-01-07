@@ -555,12 +555,39 @@ namespace EasyControlforMSFS
                             string sim_event_new = sim_event.Replace("FSUIPC.", "");
                             //int current_value = (int)MainWindow.myMSFSVarServices.VS_GetLvarValue(sim_event_new);
                             //double check = Math.Abs(current_value - Math.Round(set_value_double));
-                            Debug.WriteLine($"Set value {sim_event}  {set_value_double}");
+                            //Debug.WriteLine($"Set value {sim_event}  {set_value_double}");
                             //if (Math.Abs(current_value - Math.Round(set_value_double)) > 1) {
-                            myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10); 
-                            //}
+
+                            //SPECIFIC FOR FSS
+                            if (sim_event.Contains("FSS_EXX_EVT_LEVER_THROTTLE"))
+                            {
+                                set_value_double = set_value_double / 100;
+                            }
+
+
+                            myMSFSVarServices.VS_EventSet(sim_event_new, set_value_double); Thread.Sleep(10);
+
+
+                            //SPECIFIC FOR FSS
+                            if (sim_event.Contains("FSS_EXX_EVT_LEVER_THROTTLE_L"))
+                            {
+                                myMSFSVarServices.VS_EventSet("FSS_EXX_THR_HW_INPUT_L_ACTIVE", 1);
+                            }
+                            if (sim_event.Contains("FSS_EXX_EVT_LEVER_THROTTLE_R"))
+                            {
+                                myMSFSVarServices.VS_EventSet("FSS_EXX_THR_HW_INPUT_R_ACTIVE", 1);
+                            }
+
                         }
-                    else { mysimconnect.SendEvent(sim_event, set_value); Debug.WriteLine($"Set value axis {j}:  {sim_event}  {set_value}");
+                    else {
+                            if (sim_event.Contains("AXIS_SPOILER_SET") && (set_value < -17999))
+                            {
+                                Debug.WriteLine("axis spoiler skipped, too low");
+                            }
+                            else
+                            {
+                                mysimconnect.SendEvent(sim_event, set_value); Debug.WriteLine($"Set value axis {j}:  {sim_event}  {set_value}");
+                            }
                         }
                     }
                 }
@@ -722,6 +749,12 @@ namespace EasyControlforMSFS
         private void FSUIPCReload_Click(object sender, RoutedEventArgs e)
         {
             myMSFSVarServices.Reload();
+        }
+
+        private void MidiReload_Click(object sender, RoutedEventArgs e)
+        {
+            myMIDIcontroller.RestartMIDIconnection();  
+            
         }
     }
 }
