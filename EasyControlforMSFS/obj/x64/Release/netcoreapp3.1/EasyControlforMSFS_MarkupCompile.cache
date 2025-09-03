@@ -8,12 +8,12 @@ D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\
 EasyControlforMSFS
 none
 false
-TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
+TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\App.xaml
 5-677766058
 1-1707485374
 141665929828
-2891207605498
+291782838709
 Add2ndAxisEventsWindow.xaml;AddButtonEventWindow.xaml;AddDefinitionWindow.xaml;MainWindow.xaml;MIDIMapWindow.xaml;
 
 False

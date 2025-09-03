@@ -26,6 +26,7 @@
 		<title>Blackbird Turbo Porter A14-693 Wheels Analog</title>
 		<title>Blackbird Turbo Porter S5-CMA Tundra Analog</title>
 		<title>Blackbird Turbo Porter EC-JXH Tundra Glass</title>
+		<title>Blackbird Turbo Porter PK-UCF Tundra Glass</title>
 	</profile>
 	<profile name="Airbus A320neo">
 		<title>FWB EUROWINGS ABFO</title>
@@ -61,12 +62,14 @@
 		<title>DA40-NG Asobo</title>
 		<title>Cessna 206 Stationair</title>
 		<title>C172SP Classic Passengers</title>
+		<title>FlyingIron Spitfire Mk IX RAF - 93 Sqn EN479</title>
 	</profile>
 	<profile name="Cessna Citation CJ4">
 		<title>Cessna CJ4 Citation Asobo</title>
 		<title>Cessna CJ4 Citation Kenmore Livery</title>
 		<title>Cessna CJ4 Citation N325CJ</title>
 		<title>Cessna Citation CJ1</title>
+		<title>Cessna Citation CJ4</title>
 	</profile>
 	<profile name="Quest Kodiak 100">
 		<title>Kodiak 100 Factory paint A5</title>
@@ -83,6 +86,10 @@
 		<title>Kodiak 100 tundra tyres, Factory paint A2</title>
 		<title>Kodiak 100 cargo pod, tundra Missionary Bush Pilot</title>
 		<title>Kodiak 100 Factory paint A8</title>
+		<title>Kodiak 100 tundra tyres, cargo pod, Factory paint B3</title>
+		<title>Kodiak 100 Glenorchy Air ZK-KDK Tundra</title>
+		<title>Kodiak 100 tundra tyres, cargo pod, Factory paint A2</title>
+		<title>Kodiak 100 tundra tyres, cargo pod, Aviation Sans Frontieres</title>
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
@@ -96,11 +103,20 @@
 		<title>CRJ 700 Caribbean Airlines</title>
 		<title>CRJ900 Scandinavian Airlines OY-KFI</title>
 		<title>Embraer ERJ-135LR</title>
+		<title>CRJ550 United Express N504GJ</title>
+		<title>CRJ700ER American Eagle N508AE</title>
+		<title>CRJ700ER Delta Airlines N391CA</title>
+		<title>CRJ900 PrivateLivery D-ACHH</title>
+		<title>CRJ1000 Iberia Regional EC-MNQ</title>
+		<title>CRJ550 Privat D-ALKI</title>
+		<title>CRJ550ER Privat D-ALKI</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G3X">
 		<title>Asobo XCub Floats</title>
 		<title>Asobo XCub</title>
 		<title>XCub Passengers Big Wheels</title>
+		<title>NXCub</title>
+		<title>XCub Passengers</title>
 	</profile>
 	<profile name="TBM930">
 		<title>TBM 930 Asobo</title>
@@ -132,6 +148,8 @@
 		<title>Flysimware C414AW N427RC PMS50 GTN750</title>
 		<title>Cessna 310</title>
 		<title>Cessna 421 Golden Eagle</title>
+		<title>Flysimware C414AW N49BA PMS50 GTN750</title>
+		<title>Flysimware C414AW N427RC GNS530</title>
 	</profile>
 	<profile name="Just Flight Turbo Arrow">
 		<title>Just Flight PA28 Turbo Arrow IV D-EAIV</title>
@@ -197,6 +215,22 @@
 		<title>Fenix A320 - British Airways 'Standard' G-EUYY (2024)</title>
 		<title>Fenix A321 - Swiss 'Standard' HB-ION (2024)</title>
 		<title>FenixA319 CFM</title>
+		<title>Fenix A321 - Eurowings 'Standard' D-AIDP (2024)</title>
+		<title>Fenix A320 - Eurowings 'Early Modern' D-AEWK (2024)</title>
+		<title>Fenix A319 - Easyjet Europe 'Standard' OE-LQD (2024)</title>
+		<title>Fenix A321 - Delta Air Lines 'Standard' N365DN (2024)</title>
+		<title>Fenix A320 - Air France 'Modern' F-HEPI (2024)</title>
+		<title>Fenix A319 - Iberia 'Standard' EC-KUB (2024)</title>
+		<title>Fenix A319 - Easyjet 'Classic' G-EZFZ (2015)</title>
+		<title>Fenix A320 - Eurowings Europe 'Standard' OE-IQC (2022)</title>
+		<title>Fenix A320 - Air New Zealand 'Standard' ZK-OJS (2017)</title>
+		<title>Fenix A319 - Brussels Airlines 'Standard' OO-SSF (2024)</title>
+		<title>Vueling EC-MGZ</title>
+		<title>Fenix A321 - Spirit Airlines 'Modern-Scratched' N681NK (2024)</title>
+		<title>Fenix A321 - Spirit Airlines 'Modern-Scratched' N663NK (2017)</title>
+		<title>FenixA320 IAE SL</title>
+		<title>FenixA320 CFM SL</title>
+		<title>Fenix A320 CFM TVF F-GNEO</title>
 	</profile>
 	<profile name="British Normander">
 		<title>Britten Norman Islander BN2B Skybus</title>
@@ -250,6 +284,7 @@
 		<title>Cessna Longitude Asobo</title>
 		<title>Cessna Longitude 01 Livery</title>
 		<title>Cessna Longitude Global Livery</title>
+		<title>Asobo Cessna Citation Longitude Passengers</title>
 	</profile>
 	<profile name="Just Flight BAe 146">
 		<title>Just Flight 146-100 PSA</title>
@@ -281,6 +316,9 @@
 		<title>ATR 42-500</title>
 		<title>ATR 72 SAS ES-ATE</title>
 		<title>Hans Hartmann ATR 42-600 Air Corsica 2012</title>
+		<title>ATR 42-600 Highline</title>
+		<title>MS AT76 Loganair G-LMTD</title>
+		<title>ATR 72-600 Livery Air New Zealand</title>
 	</profile>
 	<profile name="Beech18">
 		<title>Beechcraft D18S N846DS</title>
@@ -300,6 +338,9 @@
 	<profile name="Asobo Boeing 787">
 		<title>B787 10 KLM Livery</title>
 		<title>B787 10 British Airways G-ZBLA</title>
+		<title>Boeing 787-9 (RR) Air Europa</title>
+		<title>Boeing 787-9 (GE) Lufthansa</title>
+		<title>Boeing 787-9 (GE) TUI Fly Nordic</title>
 	</profile>
 	<profile name="Blacksquare TBM850">
 		<title>Black Square TBM 850 Red  Silver</title>
@@ -342,6 +383,9 @@
 		<title>PMDG 777-300ER Japan Airlines (JA731J </title>
 		<title>PMDG 777-300ER Ethiopian Airlines (ET-APX </title>
 		<title>PMDG 777-300ER British Airways (G-STBC </title>
+		<title>PMDG 777-300ER Etihad Airways (A6-ETG </title>
+		<title>777-300ER</title>
+		<title>PMDG 777-300ER Air France (F-GSQB </title>
 	</profile>
 	<profile name="King Air">
 		<title>Jetstream 32 ADA</title>
@@ -351,6 +395,8 @@
 		<title>Black Square King Air 350 Default Blue</title>
 		<title>Black Square King Air 350 Default Gold</title>
 		<title>Beechcraft Queen Air 80S</title>
+		<title>Beechcraft King Air 350 G-MEGN Analog</title>
+		<title>Analog King Air 350 RNZAF</title>
 	</profile>
 	<profile name="Huey">
 		<title>Bell 412</title>
@@ -370,11 +416,35 @@
 		<title>DA62 Scientific Research</title>
 		<title>C172SP G1000 Skydive</title>
 		<title>C172SP G1000 Aerial Advertising</title>
+		<title>C208B Passengers</title>
+		<title>C208B Medic</title>
+		<title>AT802 Firefighting</title>
+		<title>Diamond DA40NG Private Charter</title>
 	</profile>
 	<profile name="Inibuils A321">
 		<title>A321</title>
 	</profile>
 	<profile name="Inibuils A400M">
 		<title>A400M Cargo</title>
+	</profile>
+	<profile name="Asobo Boeing 737 Max">
+		<title>737 Max 8 Passengers</title>
+	</profile>
+	<profile name="Inibuilds A350">
+		<title>A350-900 (Default Cabin)</title>
+		<title>A350-900 (No Cabin)</title>
+		<title>A350-1000 (No Cabin)</title>
+		<title>A350-1000 (Default Cabin)</title>
+		<title>Airbus A350-900 Lufthansa (D-AIXY)</title>
+		<title>Airbus A350-1000 British Airways (G-XWBA)</title>
+		<title>Airbus A350-1000 Virgin Atlantic (G-VBOB)</title>
+	</profile>
+	<profile name="COWS DA42">
+		<title>DA42-VI Dreamline</title>
+	</profile>
+	<profile name="FlightFX C750">
+		<title>C750 Winglets - Livery 9</title>
+		<title>C750 Winglets - Livery 6</title>
+		<title>C750 Winglets - Livery 2</title>
 	</profile>
 </root>

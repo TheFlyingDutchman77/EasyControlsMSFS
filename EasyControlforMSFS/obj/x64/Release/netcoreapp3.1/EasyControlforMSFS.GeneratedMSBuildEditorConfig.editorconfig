@@ -3,3 +3,6 @@ build_property.RootNamespace = EasyControlforMSFS
 build_property.ProjectDir = D:\Github\EasyControlsMSFS\EasyControlforMSFS\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

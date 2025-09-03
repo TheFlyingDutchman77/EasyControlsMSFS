@@ -841,6 +841,14 @@
           }
         }
       },
+      "System.Speech/10.0.0-preview.7.25380.108": {
+        "runtime": {
+          "lib/netstandard2.0/System.Speech.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "10.0.25.38108"
+          }
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.0.0",
@@ -1334,6 +1342,13 @@
       "sha512": "sha512-HVL1rvqYtnRCxFsYag/2le/ZfKLK4yMw79+s6FmKXbSCNN0JeAhrYxnRAHFoWRa0dEojsDcbBSpH3l22QxAVyw==",
       "path": "system.security.principal.windows/4.3.0",
       "hashPath": "system.security.principal.windows.4.3.0.nupkg.sha512"
+    },
+    "System.Speech/10.0.0-preview.7.25380.108": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vzKEug9WbOhCWkrrLhcHbecXwst7v+pDMPPLlHoe2Hy488cCo2dUv1gXaaUReztNDvYsOI7BQAjQOqbaDLQtbA==",
+      "path": "system.speech/10.0.0-preview.7.25380.108",
+      "hashPath": "system.speech.10.0.0-preview.7.25380.108.nupkg.sha512"
     },
     "System.Text.Encoding/4.3.0": {
       "type": "package",

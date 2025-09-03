@@ -119,10 +119,35 @@
 				<event>TOGGLE_TAILWHEEL_LOCK</event>
 			</button39>
 		</aircraft>
+		<aircraft name="Inibuilds A350">
+			<knob1>
+				<event_left>Mobiflight.INIA350_ALT_DEC</event_left>
+				<event_right>Mobiflight.INIA350_ALT_INC</event_right>
+			</knob1>
+			<button23>
+				<event>Mobiflight.INIA400_SEATBELTS_TOGGLE</event>
+			</button23>
+			<button32>
+				<event>Mobiflight.INIA400_APU_MASTER_ON</event>
+			</button32>
+			<button33>
+				<event>Mobiflight.INIA400_APU_START_ON</event>
+			</button33>
+			<button40>
+				<event>Mobiflight.INIA400_APU_BLEED_ON</event>
+			</button40>
+		</aircraft>
+		<aircraft name="FlightFX C750">
+			<button16>
+				<eventON>Mobiflight.LONG_LANDING_LIGHTS_ON</eventON>
+				<eventOFF>Mobiflight.LONG_LANDING_LIGHTS_OFF</eventOFF>
+				<status_var>LDG</status_var>
+			</button16>
+		</aircraft>
 		<aircraft name="Inibuilds A400M">
 			<knob1>
-				<event_left>AP_ALT_VAR_DEC</event_left>
-				<event_right>AP_ALT_VAR_INC</event_right>
+				<event_left>Mobiflight.INIA350_ALT_DEC</event_left>
+				<event_right>Mobiflight.INIA350_ALT_INC</event_right>
 			</knob1>
 			<button8>
 				<event>Mobiflight.INIA400_AP_TOGGLE</event>
@@ -144,6 +169,21 @@
 				<event>Mobiflight.INIA400_RWY_TURNOFF_ON</event>
 				<status_var></status_var>
 			</button21>
+			<button22>
+				<event>Mobiflight.INIA400_EMERG_LIGHTS_TOGGLE</event>
+			</button22>
+			<button23>
+				<event>Mobiflight.INIA400_SEATBELTS_TOGGLE</event>
+			</button23>
+			<button32>
+				<event>Mobiflight.INIA400_APU_MASTER_ON</event>
+			</button32>
+			<button33>
+				<event>Mobiflight.INIA400_APU_START_ON</event>
+			</button33>
+			<button40>
+				<event>Mobiflight.INIA400_APU_BLEED_ON</event>
+			</button40>
 		</aircraft>
 		<aircraft name="King Air">
 			<button16>
@@ -297,7 +337,7 @@
 				<status_var></status_var>
 			</button11>
 		</aircraft>
-		<aircraft name="Cessna Citation CJ4">
+		<aircraft name="Cessna Citation CJ4 - 2020">
 			<knob1>
 				<event_left>Mobiflight.WT_CJ4_AP_ALT_FAST_DEC</event_left>
 				<event_right>Mobiflight.WT_CJ4_AP_ALT_FAST_INC</event_right>
@@ -317,6 +357,12 @@
 			<button47>
 				<event>Mobiflight.Generic_Lwr_Push_CKLST_1</event>
 			</button47>
+		</aircraft>
+		<aircraft name="Cessna Citation CJ4">
+			<button22>
+				<event>Mobiflight.CABIN_NO_SMOKING_ALERT_SWITCH_TOGGLE</event>
+				<status_var></status_var>
+			</button22>
 		</aircraft>
 		<aircraft name="Aerosoft Twin Otter">
 			<knob1>

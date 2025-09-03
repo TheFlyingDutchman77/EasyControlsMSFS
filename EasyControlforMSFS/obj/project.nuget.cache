@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MtuJnxXeacLaIDnJULTO1uYTpKvdFiTCxiUGdTnWeHV2zGtIjoBoszSHtHcnbc9cahwz7eOVgrhH/C19Et3o3Q==",
+  "dgSpecHash": "PiiXCturtoI=",
   "success": true,
   "projectFilePath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,7 @@
     "C:\\Users\\erikv\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.3.2\\system.security.cryptography.x509certificates.4.3.2.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.security.principal\\4.3.0\\system.security.principal.4.3.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.security.principal.windows\\4.3.0\\system.security.principal.windows.4.3.0.nupkg.sha512",
+    "C:\\Users\\erikv\\.nuget\\packages\\system.speech\\10.0.0-preview.7.25380.108\\system.speech.10.0.0-preview.7.25380.108.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\erikv\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
@@ -77,8 +78,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'FSUIPCClientDLL 3.2.22-beta2' was restored using 'UAP,Version=v10.0.22000, .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "projectPath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
       "libraryId": "FSUIPCClientDLL",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

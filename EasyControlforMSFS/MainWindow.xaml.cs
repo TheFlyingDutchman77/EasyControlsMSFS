@@ -123,8 +123,8 @@ namespace EasyControlforMSFS
                 connectMIDI.IsBackground = true;
                 connectMIDI.Start();
             }
-
         }
+
 
         public void ConnectMQTT()
         {

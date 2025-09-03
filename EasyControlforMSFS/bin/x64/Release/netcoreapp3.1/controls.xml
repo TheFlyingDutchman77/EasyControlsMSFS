@@ -34,7 +34,7 @@
 		<aircraft name="Inibuils A321">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
-				<min>-16383</min>
+				<min>-16583</min>
 				<max>16383</max>
 				<inverted>False</inverted>
 			</axis0>
@@ -60,6 +60,56 @@
 				<axis_link>2</axis_link>
 				<is_switch>True</is_switch>
 			</button8>
+		</aircraft>
+		<aircraft name="FlightFX C750">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16583</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>0000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_SET</event>
+				<min>0000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button7>
+				<eventON>Mobiflight.A310_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+			<button2>
+				<eventON>Mobiflight.C750_ENG1_CUTOFF_ON</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>Mobiflight.C750_ENG1_CUTOFF_OFF</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button3>
+			<button4>
+				<eventON>Mobiflight.C750_ENG2_CUTOFF_ON</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.C750_ENG2_CUTOFF_OFF</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
 		</aircraft>
 		<aircraft name="FBW Airbus A380">
 			<axis0>
@@ -101,6 +151,49 @@
 		</aircraft>
 		<aircraft name="Inibuilds A400M">
 			<axis0>
+				<event></event>
+				<min>0</min>
+				<max>1</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>-7000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+				<event2>THROTTLE2_SET</event2>
+				<min2>-7000</min2>
+				<max2>16383</max2>
+				<inverted2>True</inverted2>
+			</axis1>
+			<axis2>
+				<event>THROTTLE3_SET</event>
+				<min>-7000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+				<event2>THROTTLE4_SET</event2>
+				<min2>-7000</min2>
+				<max2>16383</max2>
+				<inverted2>True</inverted2>
+			</axis2>
+			<button0>
+				<eventON>Mobiflight.INIA400_CHOCKS_REMOVE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button0>
+			<button7>
+				<eventON>Mobiflight.FBW380_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+		</aircraft>
+		<aircraft name="Inibuilds A350">
+			<axis0>
 				<event>AXIS_SPOILER_SET</event>
 				<min>-20383</min>
 				<max>16383</max>
@@ -136,7 +229,8 @@
 				<axis_link>2</axis_link>
 				<is_switch>True</is_switch>
 			</button8>
-		</aircraft><aircraft name="Airbus A310">
+		</aircraft>
+		<aircraft name="Airbus A310">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
 				<min>-16400</min>
@@ -308,6 +402,41 @@
 				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
+		<aircraft name="Asobo Boeing 737 Max">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button2>
+				<eventON>Mobiflight.737_ENG1_FUEL_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button4>
+				<eventON>Mobiflight.737_ENG2_FUEL_TOGGLE</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button7>
+				<eventON>DECREASE_THROTTLE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+		</aircraft>
 		<aircraft name="PMDG Boeing 737">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -377,6 +506,11 @@
 				<axis_link>1</axis_link>
 				<is_switch>False</is_switch>
 			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
 		</aircraft>
 		<aircraft name="FSS E195">
 			<axis0>
@@ -411,7 +545,7 @@
 		<aircraft name="Aerosoft CRJ">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
-				<min>-16383</min>
+				<min>-17000</min>
 				<max>16383</max>
 				<inverted>False</inverted>
 			</axis0>
@@ -978,6 +1112,20 @@
 				<axis_link>2</axis_link>
 				<is_switch>False</is_switch>
 			</button8>
+		</aircraft>
+		<aircraft name="COWS DA42">
+			<axis0>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
 		</aircraft>
 		<aircraft name="Tecnam P2012">
 			<axis0>
@@ -2188,12 +2336,12 @@
 				<is_switch>False</is_switch>
 			</button5>
 			<button7>
-				<eventON>MobiFlight.Generic_Lwr_MENU_ADV_INC</eventON>
+				<eventON>MobiFlight.INIA400_CHECKLIST_OK</eventON>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button7>
 			<button9>
-				<eventON>Mobiflight.Generic_Lwr_DATA_Push</eventON>
+				<eventON>Mobiflight.AS3000_Lower_2_DATA_Button_Push</eventON>
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button9>

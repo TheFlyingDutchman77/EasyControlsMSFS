@@ -113,8 +113,11 @@ D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyCo
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.AssemblyInfoInputs.cache
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.AssemblyInfo.cs
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.csproj.CoreCompileInputs.cache
-D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.csproj.CopyComplete
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.dll
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.pdb
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.genruntimeconfig.cache
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS.sourcelink.json
+D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyControlforMSFS_Content.g.cs
+D:\Github\EasyControlsMSFS\EasyControlforMSFS\bin\x64\Debug\netcoreapp3.1\System.Speech.dll
+D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Debug\netcoreapp3.1\EasyCont.D514F0BF.Up2Date
+D:\Github\EasyControlsMSFS\EasyControlforMSFS\bin\x64\Debug\netcoreapp3.1\Microsoft.Speech.dll

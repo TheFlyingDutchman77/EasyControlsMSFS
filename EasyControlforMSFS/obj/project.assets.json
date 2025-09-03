@@ -1150,6 +1150,22 @@
           }
         }
       },
+      "System.Speech/10.0.0-preview.7.25380.108": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/System.Speech.targets": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3925,6 +3941,38 @@
         "system.security.principal.windows.nuspec"
       ]
     },
+    "System.Speech/10.0.0-preview.7.25380.108": {
+      "sha512": "vzKEug9WbOhCWkrrLhcHbecXwst7v+pDMPPLlHoe2Hy488cCo2dUv1gXaaUReztNDvYsOI7BQAjQOqbaDLQtbA==",
+      "type": "package",
+      "path": "system.speech/10.0.0-preview.7.25380.108",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Speech.targets",
+        "lib/net10.0/System.Speech.dll",
+        "lib/net10.0/System.Speech.xml",
+        "lib/net462/_._",
+        "lib/net8.0/System.Speech.dll",
+        "lib/net8.0/System.Speech.xml",
+        "lib/net9.0/System.Speech.dll",
+        "lib/net9.0/System.Speech.xml",
+        "lib/netstandard2.0/System.Speech.dll",
+        "lib/netstandard2.0/System.Speech.xml",
+        "runtimes/win/lib/net10.0/System.Speech.dll",
+        "runtimes/win/lib/net10.0/System.Speech.xml",
+        "runtimes/win/lib/net8.0/System.Speech.dll",
+        "runtimes/win/lib/net8.0/System.Speech.xml",
+        "runtimes/win/lib/net9.0/System.Speech.dll",
+        "runtimes/win/lib/net9.0/System.Speech.xml",
+        "system.speech.10.0.0-preview.7.25380.108.nupkg.sha512",
+        "system.speech.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -4245,6 +4293,7 @@
       "MaterialDesignThemes >= 4.3.0",
       "Melanchall.DryWetMidi >= 6.0.1",
       "Microsoft.Windows.SDK.Contracts >= 10.0.22000.196",
+      "System.Speech >= 10.0.0-preview.7.25380.108",
       "YamlDotNet >= 11.2.1"
     ]
   },
@@ -4286,7 +4335,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "netcoreapp3.1": {
@@ -4311,6 +4366,10 @@
           "Microsoft.Windows.SDK.Contracts": {
             "target": "Package",
             "version": "[10.0.22000.196, )"
+          },
+          "System.Speech": {
+            "target": "Package",
+            "version": "[10.0.0-preview.7.25380.108, )"
           },
           "YamlDotNet": {
             "target": "Package",
@@ -4337,7 +4396,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   },
