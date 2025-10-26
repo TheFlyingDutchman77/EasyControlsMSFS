@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <root>
-	<joystick name="Flight Throttle Quadrant (HID)-1699-3117">
+	<joystick name="HID-spelbesturing-1699-3117">
 		<aircraft name="Airbus A320neo">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
