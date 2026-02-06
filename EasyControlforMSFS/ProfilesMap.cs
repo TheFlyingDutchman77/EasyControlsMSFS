@@ -14,7 +14,7 @@ namespace EasyControlforMSFS
 
         public class ProfilesMapData
         {
-            public static int max_num_titles_mapped = 60;
+            public static int max_num_titles_mapped = 100;
 
             public string profile_name { get; set; }
             public string[] titles = new string[max_num_titles_mapped];

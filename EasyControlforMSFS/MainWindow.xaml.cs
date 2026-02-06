@@ -562,6 +562,7 @@ namespace EasyControlforMSFS
                             if (sim_event.Contains("FSS_EXX_EVT_LEVER_THROTTLE"))
                             {
                                 set_value_double = set_value_double / 100;
+                                Debug.WriteLine(set_value_double);
                             }
 
 

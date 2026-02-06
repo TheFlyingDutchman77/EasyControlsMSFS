@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PiiXCturtoI=",
+  "dgSpecHash": "BGUJnTMmlKM=",
   "success": true,
   "projectFilePath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
   "expectedPackageFiles": [
@@ -84,7 +84,7 @@
       "filePath": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\EasyControlforMSFS.csproj",
       "libraryId": "FSUIPCClientDLL",
       "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
+        "netcoreapp3.1"
       ]
     }
   ]

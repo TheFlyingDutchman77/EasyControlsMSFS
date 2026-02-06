@@ -119,5 +119,4 @@ D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\Easy
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\EasyControlforMSFS.sourcelink.json
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\EasyControlforMSFS_Content.g.cs
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\bin\x64\Release\netcoreapp3.1\System.Speech.dll
-D:\Github\EasyControlsMSFS\EasyControlforMSFS\bin\x64\Release\netcoreapp3.1\Microsoft.Speech.dll
 D:\Github\EasyControlsMSFS\EasyControlforMSFS\obj\x64\Release\netcoreapp3.1\EasyCont.D514F0BF.Up2Date

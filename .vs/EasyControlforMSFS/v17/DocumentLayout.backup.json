@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\midicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\midicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\simconnectimplementer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,7 +87,7 @@
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MainWindow.xaml.cs",
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MainWindow.xaml.cs",
               "RelativeToolTip": "EasyControlforMSFS\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAowCQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABYBAAAAAAAAAIAwwC8BAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2022-05-21T10:37:28.807Z",
               "EditorCaption": ""
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MainWindow.xaml",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MainWindow.xaml",
@@ -142,15 +142,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MIDIcontroller.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MIDIcontroller.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MIDIcontroller.cs",
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MIDIcontroller.cs",
               "RelativeToolTip": "EasyControlforMSFS\\MIDIcontroller.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAKsBAAAAAAAAAAAMwMQBAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2022-06-30T08:06:56.548Z"
+              "WhenOpened": "2022-06-30T08:06:56.548Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

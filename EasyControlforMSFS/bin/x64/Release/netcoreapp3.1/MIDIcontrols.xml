@@ -1130,6 +1130,29 @@
 				<status_var>FSUIPC.PED_AFT_AP_YD1_il</status_var>
 			</button37>
 		</aircraft>
+		<aircraft name="TFDi MD11">
+			<knob1>
+				<event_left>AP_ALT_VAR_DEC</event_left>
+				<event_right>AP_ALT_VAR_INC</event_right>
+			</knob1>
+			<knob5>
+				<event_left>Mobiflight.MD11_BARO_DEC</event_left>
+				<event_right>Mobiflight.MD11_BARO_INC</event_right>
+			</knob5>
+			<button16>
+				<event>Mobiflight.MD11_LANDING_LIGHTS_ON</event>
+				<eventOFF>Mobiflight.MD11_LANDING_LIGHTS_OFF</eventOFF>
+			</button16>
+			<button17>
+				<event>Mobiflight.MD11_TAXI_LIGHT_ON</event>
+				<eventOFF>Mobiflight.MD11_TAXI_LIGHT_OFF</eventOFF>
+				<status_var>TAXI</status_var>
+			</button17>
+			<button32>
+				<event>Mobiflight.MD11_APU_PRESS</event>
+				<eventWAIT>Mobiflight.MD11_APU_PRESS</eventWAIT>
+			</button32>
+		</aircraft>
 		<aircraft name="PMDG Boeing 737">
 			<knob1>
 				<event_left>AP_ALT_VAR_DEC</event_left>

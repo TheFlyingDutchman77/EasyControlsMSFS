@@ -63,6 +63,8 @@
 		<title>Cessna 206 Stationair</title>
 		<title>C172SP Classic Passengers</title>
 		<title>FlyingIron Spitfire Mk IX RAF - 93 Sqn EN479</title>
+		<title>Cessna 210 Centurion</title>
+		<title>Savage Norden: Passengers</title>
 	</profile>
 	<profile name="Cessna Citation CJ4">
 		<title>Cessna CJ4 Citation Asobo</title>
@@ -90,6 +92,7 @@
 		<title>Kodiak 100 Glenorchy Air ZK-KDK Tundra</title>
 		<title>Kodiak 100 tundra tyres, cargo pod, Factory paint A2</title>
 		<title>Kodiak 100 tundra tyres, cargo pod, Aviation Sans Frontieres</title>
+		<title>Kodiak 100 tundra tyres, cargo pod, Factory paint A1</title>
 	</profile>
 	<profile name="Aerosoft CRJ">
 		<title>CRJ900 Lufthansa Cityline D-ACNM</title>
@@ -110,6 +113,7 @@
 		<title>CRJ1000 Iberia Regional EC-MNQ</title>
 		<title>CRJ550 Privat D-ALKI</title>
 		<title>CRJ550ER Privat D-ALKI</title>
+		<title>CRJ900 Delta Connection N324PQ</title>
 	</profile>
 	<profile name="Asobo Stock Aircraft G3X">
 		<title>Asobo XCub Floats</title>
@@ -157,6 +161,7 @@
 		<title>Just Flight PA28 Turbo Arrow IV Custom</title>
 		<title>Carenado M20R Ovation N811CR</title>
 		<title>Piper PA-28 Archer</title>
+		<title>Just Flight PA28 Turbo Arrow IV N3023K</title>
 	</profile>
 	<profile name="Just Flight BAe 146 - before engine start">
 		<title>Just Flight 146-200 Cobham Aviation</title>
@@ -174,6 +179,9 @@
 		<title>PMDG 737-800 Ryanair (G-RUKA </title>
 		<title>PMDG 737-700 Ryanair (EI-SEV </title>
 		<title>PMDG 737-800 Arkefly (PH-TFA)</title>
+		<title>737-800 PAX SSW SC</title>
+		<title>737-800 PAX BW SC</title>
+		<title>737-800 PAX BW TC</title>
 	</profile>
 	<profile name="Fenix A320">
 		<title>FenixA320_AFLVPBDK</title>
@@ -233,6 +241,10 @@
 		<title>Fenix A320 CFM TVF F-GNEO</title>
 		<title>FenixA321 CFM SL TC</title>
 		<title>FenixA321 IAE WF SC</title>
+		<title>FenixA321 CFM SL SC</title>
+		<title>FenixA321 IAE SL TC</title>
+		<title>FenixA319 IAE WF SD</title>
+		<title>FenixA319 CFM WF SD</title>
 	</profile>
 	<profile name="British Normander">
 		<title>Britten Norman Islander BN2B Skybus</title>
@@ -343,6 +355,7 @@
 		<title>Boeing 787-9 (RR) Air Europa</title>
 		<title>Boeing 787-9 (GE) Lufthansa</title>
 		<title>Boeing 787-9 (GE) TUI Fly Nordic</title>
+		<title>787-10</title>
 	</profile>
 	<profile name="Blacksquare TBM850">
 		<title>Black Square TBM 850 Red  Silver</title>
@@ -376,6 +389,8 @@
 		<title>FSS Embraer E195 Flybe</title>
 		<title>FSS Embraer E190 KLMCityhopper</title>
 		<title>FSS Embraer E190 BA Cityflyer</title>
+		<title>FSS Embraer E190 HOP</title>
+		<title>FSS Embraer E195 Austrian</title>
 	</profile>
 	<profile name="PMDG Boeing 777">
 		<title>PMDG 777-300ER KLM (PH-BVF </title>
@@ -388,6 +403,7 @@
 		<title>PMDG 777-300ER Etihad Airways (A6-ETG </title>
 		<title>777-300ER</title>
 		<title>PMDG 777-300ER Air France (F-GSQB </title>
+		<title>777F</title>
 	</profile>
 	<profile name="King Air">
 		<title>Jetstream 32 ADA</title>
@@ -443,10 +459,21 @@
 	</profile>
 	<profile name="COWS DA42">
 		<title>DA42-VI Dreamline</title>
+		<title>DA42-VI Split</title>
+		<title>DA42-VI White</title>
 	</profile>
 	<profile name="FlightFX C750">
 		<title>C750 Winglets - Livery 9</title>
 		<title>C750 Winglets - Livery 6</title>
 		<title>C750 Winglets - Livery 2</title>
+		<title>C750 Winglets - Livery 1</title>
+	</profile>
+	<profile name="">
+		<title>Carenado M20R D-ERWO</title>
+	</profile>
+	<profile name="TFDi MD11">
+		<title>TFDi Design MD-11 GE CF6-80c</title>
+		<title>TFDi Design MD-11F PW4462</title>
+		<title>TFDi Design MD-11F GE</title>
 	</profile>
 </root>
