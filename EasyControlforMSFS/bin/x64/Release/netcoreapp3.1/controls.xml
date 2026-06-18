@@ -55,6 +55,30 @@
 				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
+		<aircraft name="Aerosoft A340">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-20000</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE_SET</event>
+				<min>0000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<button7>
+				<eventON>Mobiflight.A32NX_THROTTLE_FULL_REVERSE_BUTTON</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+		</aircraft>
 		<aircraft name="Inibuils A321">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -426,6 +450,50 @@
 				<is_switch>True</is_switch>
 			</button8>
 		</aircraft>
+		<aircraft name="Cessna C680 Sovereign+">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-16383</min>
+				<max>33500</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button7>
+				<eventON>Mobiflight.A310_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+		</aircraft>
+		<aircraft name="Embraer Phenom 300">
+			<axis0>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+		</aircraft>
 		<aircraft name="Asobo Boeing 737 Max">
 			<axis0>
 				<event>AXIS_SPOILER_SET</event>
@@ -537,6 +605,24 @@
 			</button8>
 		</aircraft>
 		<aircraft name="FSS E195">
+			<axis0>
+				<event>FSUIPC.FSS_EXX_SPOILER_BV_LEVER</event>
+				<min>0</min>
+				<max>1</max>
+				<inverted>False</inverted>
+			</axis0>
+			<button7>
+				<eventON>Mobiflight.FSS_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+		</aircraft>
+		<aircraft name="FSS E195 OUD">
 			<axis0>
 				<event>FSUIPC.FSS_EXX_SPOILER_BV_LEVER</event>
 				<min>0</min>
@@ -1402,35 +1488,11 @@
 				<max>16383</max>
 				<inverted>False</inverted>
 			</axis0>
-			<axis1>
-				<event>FSUIPC.THROTTLE1_SET</event>
-				<min>0</min>
-				<max>1</max>
-				<inverted>True</inverted>
-			</axis1>
-			<axis2>
-				<event>FSUIPC.THROTTLE2_SET</event>
-				<min>0</min>
-				<max>1</max>
-				<inverted>True</inverted>
-			</axis2>
 			<button2>
 				<eventON>Mobiflight.HONDA_TOGA_SET</eventON>
 				<axis_link></axis_link>
 				<is_switch>True</is_switch>
 			</button2>
-			<button7>
-				<eventON>Mobiflight.HONDA_THROTTLE1_ON</eventON>
-				<eventOFF>Mobiflight.HONDA_THROTTLE1_OFF</eventOFF>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button7>
-			<button8>
-				<eventON>Mobiflight.HONDA_THROTTLE2_ON</eventON>
-				<eventOFF>Mobiflight.HONDA_THROTTLE2_OFF</eventOFF>
-				<axis_link></axis_link>
-				<is_switch>True</is_switch>
-			</button8>
 		</aircraft>
 		<aircraft name="PMDG DC6">
 			<axis0>
@@ -2330,6 +2392,23 @@
 				<axis_link></axis_link>
 				<is_switch>False</is_switch>
 			</button29>
+		</aircraft>
+		<aircraft name="Embraer Phenom 300">
+			<button5>
+				<eventON>Mobiflight.HONDA_CHECKLIST_UP</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+			<button7>
+				<eventON>Mobiflight.HONDA_CHECKLIST_DOWN</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button9>
+				<eventON>Mobiflight.P300_G3000_PUSH</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button9>
 		</aircraft>
 		<aircraft name="SF50 Vision Jet">
 			<button5>

@@ -245,6 +245,9 @@
 		<title>FenixA321 IAE SL TC</title>
 		<title>FenixA319 IAE WF SD</title>
 		<title>FenixA319 CFM WF SD</title>
+		<title>FenixA319 IAE WF HD</title>
+		<title>FenixA320 CFM WF</title>
+		<title>FenixA321 CFM WF SC</title>
 	</profile>
 	<profile name="British Normander">
 		<title>Britten Norman Islander BN2B Skybus</title>
@@ -276,6 +279,7 @@
 		<title>HJET E2</title>
 		<title>HJET E2 - Lite</title>
 		<title>HJET HA420 Elite White</title>
+		<title>mg hjet ha420 [Preset Default]</title>
 	</profile>
 	<profile name="Bell 407">
 		<title>Bell 407 Blue Stripes</title>
@@ -365,6 +369,9 @@
 		<title>Black Square TBM 850 Blue Ribbons</title>
 		<title>Black Square TBM 850 Red  Gold</title>
 		<title>Black Square TBM 850 Blue Lines</title>
+		<title>Black Square Caravan Professional Cargo Pod N2500A</title>
+		<title>Black Square Caravan Professional Cargo Pod ZK-SAB</title>
+		<title>Black Square Caravan Professional Super Cargomaster N738FE</title>
 	</profile>
 	<profile name="FSReborn M500">
 		<title>M500 by FSReborn</title>
@@ -456,6 +463,7 @@
 		<title>Airbus A350-900 Lufthansa (D-AIXY)</title>
 		<title>Airbus A350-1000 British Airways (G-XWBA)</title>
 		<title>Airbus A350-1000 Virgin Atlantic (G-VBOB)</title>
+		<title>A350-900 ULR</title>
 	</profile>
 	<profile name="COWS DA42">
 		<title>DA42-VI Dreamline</title>
@@ -475,5 +483,21 @@
 		<title>TFDi Design MD-11 GE CF6-80c</title>
 		<title>TFDi Design MD-11F PW4462</title>
 		<title>TFDi Design MD-11F GE</title>
+		<title>TFDi Design MD-11 PW4462</title>
+	</profile>
+	<profile name="Aerosoft A340">
+		<title>Aerosoft A346-Lufthansa-New</title>
+		<title>Aerosoft A346-Lufthansa-Old</title>
+		<title>Aerosoft A346-VirginAtlanticAirlines</title>
+		<title>Airbus A340-600 AerLingus</title>
+		<title>Airbus A340-600 TCJDM</title>
+		<title>Aerosoft A346-EtihadF1</title>
+	</profile>
+	<profile name="Embraer Phenom 300">
+		<title>FSReborn Phenom 300E Manchester Interior</title>
+		<title>FSReborn Phenom 300E Tristan Interior</title>
+	</profile>
+	<profile name="Cessna C680 Sovereign+">
+		<title>Cessna Citation X</title>
 	</profile>
 </root>

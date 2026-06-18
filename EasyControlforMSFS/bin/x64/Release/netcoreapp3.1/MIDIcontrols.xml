@@ -1153,6 +1153,71 @@
 				<eventWAIT>Mobiflight.MD11_APU_PRESS</eventWAIT>
 			</button32>
 		</aircraft>
+		<aircraft name="Aerosoft A340">
+			<knob0>
+				<event_left>Mobiflight.A340_HDG_DEC</event_left>
+				<event_right>Mobiflight.A340_HDG_INC</event_right>
+			</knob0>
+			<knob1>
+				<event_left>Mobiflight.A340_ALT_DEC</event_left>
+				<event_right>Mobiflight.A340_ALT_INC</event_right>
+			</knob1>
+			<knob2>
+				<event_left>Mobiflight.A340_VS_DEC</event_left>
+				<event_right>Mobiflight.A340_VS_INC</event_right>
+			</knob2>
+			<knob3>
+				<event_left>Mobiflight.A340_SPD_DEC</event_left>
+				<event_right>Mobiflight.A340_SPD_INC</event_right>
+			</knob3>
+			<knob5>
+				<event_left>Mobiflight.A340_BARO_DEC</event_left>
+				<event_right>Mobiflight.A340_BARO_INC</event_right>
+			</knob5>
+			<button8>
+				<event>A340_AP_ON</event>
+				<status_var>AP</status_var>
+			</button8>
+			<button14>
+				<event>A340_APPR_ON</event>
+				<status_var>APPR</status_var>
+			</button14>
+			<button16>
+				<event>Mobiflight.A340_LANDING_ON</event>
+				<status_var>LDG</status_var>
+			</button16>
+			<button17>
+				<event>Mobiflight.A340_TAXI_ON</event>
+				<status_var>TAXI</status_var>
+			</button17>
+			<button18>
+				<event>Mobiflight.A340_STROBE_ON</event>
+				<status_var>STRB</status_var>
+			</button18>
+			<button19>
+				<event>Mobiflight.A340_NAV_ON</event>
+				<status_var>NAVL</status_var>
+			</button19>
+			<button20>
+				<event>Mobiflight.A340_BCN_ON</event>
+				<status_var>BCN</status_var>
+			</button20>
+			<button21>
+				<event>Mobiflight.A340_RWY_ON</event>
+			</button21>
+			<button22>
+				<event>Mobiflight.A340_NO_SMOKING_ON</event>
+			</button22>
+			<button23>
+				<event>Mobiflight.A340_SEATBELT_ON</event>
+			</button23>
+			<button32>
+				<event>Mobiflight.A340_APU_ON</event>
+			</button32>
+			<button33>
+				<event>Mobiflight.A340_APU_START</event>
+			</button33>
+		</aircraft>
 		<aircraft name="PMDG Boeing 737">
 			<knob1>
 				<event_left>AP_ALT_VAR_DEC</event_left>

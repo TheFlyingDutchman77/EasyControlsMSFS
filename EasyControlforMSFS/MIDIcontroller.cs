@@ -25,7 +25,7 @@ namespace EasyControlforMSFS
         public bool MIDIconnected = false;
         public bool XMLloadedsuccessfully = false;
 
-        public static int max_num_ac = 100;
+        public static int max_num_ac = 200;
         public static int max_num_buttons = 48;
         public static int max_num_knobs = 48;
         public string MIDIcontroller_name;
@@ -60,6 +60,7 @@ namespace EasyControlforMSFS
         public MIDIcontroller(SimConnectImplementer mysimconnectInput)
         {
             mysimconnect = mysimconnectInput;
+            Thread.Sleep(200);
             try
             {
                 inputDevice = InputDevice.GetByName("X-TOUCH MINI");

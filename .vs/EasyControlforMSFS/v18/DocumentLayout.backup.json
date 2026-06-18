@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\midicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\profilesmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\profilesmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\aircraftcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|solutionrelative:easycontrolformsfs\\aircraftcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9898C8-8B84-422B-B47F-ED165CC64F3D}|EasyControlforMSFS\\EasyControlforMSFS.csproj|d:\\github\\easycontrolsmsfs\\easycontrolformsfs\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -77,23 +81,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "AircraftControls.cs",
+              "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\AircraftControls.cs",
+              "RelativeDocumentMoniker": "EasyControlforMSFS\\AircraftControls.cs",
+              "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\AircraftControls.cs",
+              "RelativeToolTip": "EasyControlforMSFS\\AircraftControls.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T19:06:38.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MainWindow.xaml.cs",
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MainWindow.xaml.cs",
               "RelativeToolTip": "EasyControlforMSFS\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0CAAAAAAAAAAAAADcBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T13:51:48.533Z"
+              "WhenOpened": "2026-01-09T13:51:48.533Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProfilesMap.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\ProfilesMap.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\ProfilesMap.cs",
@@ -101,11 +118,12 @@
               "RelativeToolTip": "EasyControlforMSFS\\ProfilesMap.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T13:51:48.583Z"
+              "WhenOpened": "2026-01-09T13:51:48.583Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MainWindow.xaml",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MainWindow.xaml",
@@ -116,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MSFSVarServices.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MSFSVarServices.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MSFSVarServices.cs",
@@ -128,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SimConnectImplementer.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\SimConnectImplementer.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\SimConnectImplementer.cs",
@@ -146,14 +164,14 @@
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MIDIcontroller.cs",
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MIDIcontroller.cs",
               "RelativeToolTip": "EasyControlforMSFS\\MIDIcontroller.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAAmwPkAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAD4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T13:51:48.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AddButtonEventWindow.xaml.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\AddButtonEventWindow.xaml.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\AddButtonEventWindow.xaml.cs",
@@ -165,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "layout.json",
               "DocumentMoniker": "E:\\MSFSCommunityContent\\MODs\\fd77-tbm930-mod\\layout.json",
               "ToolTip": "E:\\MSFSCommunityContent\\MODs\\fd77-tbm930-mod\\layout.json",
@@ -175,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "GameControllerReader.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\GameControllerReader.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\GameControllerReader.cs",
@@ -187,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MQTTclient.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MQTTclient.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MQTTclient.cs",
@@ -199,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MIDIMapWindow.xaml.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MIDIMapWindow.xaml.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MIDIMapWindow.xaml.cs",
@@ -211,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "AddDefinitionWindow.xaml",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\AddDefinitionWindow.xaml",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\AddDefinitionWindow.xaml",
@@ -222,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AddDefinitionWindow.xaml.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\AddDefinitionWindow.xaml.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\AddDefinitionWindow.xaml.cs",
@@ -234,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "App.config",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\App.config",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\App.config",
@@ -246,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MIDIMapWindow.xaml",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MIDIMapWindow.xaml",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MIDIMapWindow.xaml",
@@ -257,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Add2ndAxisEventsWindow.xaml",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\Add2ndAxisEventsWindow.xaml",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\Add2ndAxisEventsWindow.xaml",
@@ -268,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Add2ndAxisEventsWindow.xaml.cs",
               "DocumentMoniker": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\Add2ndAxisEventsWindow.xaml.cs",
               "RelativeDocumentMoniker": "EasyControlforMSFS\\Add2ndAxisEventsWindow.xaml.cs",
