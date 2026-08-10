@@ -137,6 +137,37 @@
 				<event>Mobiflight.INIA400_APU_BLEED_ON</event>
 			</button40>
 		</aircraft>
+		<aircraft name="Just Flight Fokker">
+			<knob1>
+				<event_left>Mobiflight.FOKKER_ALT_DEC</event_left>
+				<event_right>Mobiflight.FOKKER_ALT_INC</event_right>
+			</knob1>
+			<knob2>
+				<event_left>Mobiflight.FOKKER_VS_DEC</event_left>
+				<event_right>Mobiflight.FOKKER_VS_INC</event_right>
+			</knob2>
+			<knob3>
+				<event_left>Mobiflight.FOKKER_SPD_DEC</event_left>
+				<event_right>Mobiflight.FOKKER_SPD_INC</event_right>
+			</knob3>
+			<knob6>
+				<event_left>Mobiflight.FOKKER_DH_DEC</event_left>
+				<event_right>Mobiflight.FOKKER_DH_INC</event_right>
+			</knob6>
+		</aircraft>
+		<aircraft name="Synaptic A220">
+			<knob1>
+				<event_left>AP_ALT_VAR_DEC</event_left>
+				<event_right>AP_ALT_VAR_INC</event_right>
+			</knob1>
+			<knob6>
+				<event_left>Mobiflight.A220_DH_DEC</event_left>
+				<event_right>Mobiflight.A220_DH_INC</event_right>
+			</knob6>
+			<button1>
+				<event>HEADING_BUG_SET</event>
+			</button1>
+		</aircraft>
 		<aircraft name="FlightFX C750">
 			<button16>
 				<eventON>Mobiflight.LONG_LANDING_LIGHTS_ON</eventON>

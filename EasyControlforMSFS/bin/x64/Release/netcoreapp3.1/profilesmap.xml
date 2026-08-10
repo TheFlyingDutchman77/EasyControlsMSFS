@@ -492,6 +492,7 @@
 		<title>Airbus A340-600 AerLingus</title>
 		<title>Airbus A340-600 TCJDM</title>
 		<title>Aerosoft A346-EtihadF1</title>
+		<title>ToLiss A346 PRO [Preset Pax]</title>
 	</profile>
 	<profile name="Embraer Phenom 300">
 		<title>FSReborn Phenom 300E Manchester Interior</title>
@@ -499,5 +500,13 @@
 	</profile>
 	<profile name="Cessna C680 Sovereign+">
 		<title>Cessna Citation X</title>
+		<title>Sovereign N914SP</title>
+	</profile>
+	<profile name="Just Flight Fokker">
+		<title>Just Flight F100 </title>
+		<title>Just Flight F70 </title>
+	</profile>
+	<profile name="Synaptic A220">
+		<title>A220-300</title>
 	</profile>
 </root>

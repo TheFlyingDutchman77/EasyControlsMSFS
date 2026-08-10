@@ -64,7 +64,7 @@
 			</axis0>
 			<axis1>
 				<event>THROTTLE_SET</event>
-				<min>0000</min>
+				<min>2000</min>
 				<max>16383</max>
 				<inverted>True</inverted>
 			</axis1>
@@ -231,6 +231,36 @@
 			</button0>
 			<button7>
 				<eventON>Mobiflight.FBW380_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
+		</aircraft>
+		<aircraft name="Synaptic A220">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>-17000</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_AXIS_SET_EX1</event>
+				<min>-10000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_AXIS_SET_EX1</event>
+				<min>-10000</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button7>
+				<eventON>Mobiflight.FNX320_REVERSE</eventON>
 				<axis_link>1</axis_link>
 				<is_switch>False</is_switch>
 			</button7>
@@ -528,6 +558,56 @@
 				<axis_link>1</axis_link>
 				<is_switch>False</is_switch>
 			</button7>
+		</aircraft>
+		<aircraft name="Just Flight Fokker">
+			<axis0>
+				<event>AXIS_SPOILER_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>False</inverted>
+			</axis0>
+			<axis1>
+				<event>THROTTLE1_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis1>
+			<axis2>
+				<event>THROTTLE2_SET</event>
+				<min>0</min>
+				<max>16383</max>
+				<inverted>True</inverted>
+			</axis2>
+			<button2>
+				<eventON>Mobiflight.FOKKER_FUEL_L_ON</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button2>
+			<button3>
+				<eventON>Mobiflight.FOKKER_FUEL_L_OFF</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button3>
+			<button4>
+				<eventON>Mobiflight.FOKKER_FUEL_R_ON</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button4>
+			<button5>
+				<eventON>Mobiflight.FOKKER_FUEL_R_OFF</eventON>
+				<axis_link></axis_link>
+				<is_switch>False</is_switch>
+			</button5>
+			<button7>
+				<eventON>Mobiflight.FOKKER_REVERSE</eventON>
+				<axis_link>1</axis_link>
+				<is_switch>False</is_switch>
+			</button7>
+			<button8>
+				<eventON>Mobiflight.ONZIN</eventON>
+				<axis_link>2</axis_link>
+				<is_switch>True</is_switch>
+			</button8>
 		</aircraft>
 		<aircraft name="PMDG Boeing 737">
 			<axis0>
