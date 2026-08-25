@@ -105,8 +105,7 @@
               "RelativeToolTip": "EasyControlforMSFS\\MainWindow.xaml.cs",
               "ViewState": "AgIAAD0CAAAAAAAAAAAAADcBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T13:51:48.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T13:51:48.533Z"
             },
             {
               "$type": "Document",
@@ -118,8 +117,7 @@
               "RelativeToolTip": "EasyControlforMSFS\\ProfilesMap.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T13:51:48.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T13:51:48.583Z"
             },
             {
               "$type": "Document",
@@ -130,7 +128,8 @@
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MainWindow.xaml",
               "RelativeToolTip": "EasyControlforMSFS\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-09T13:51:48.584Z"
+              "WhenOpened": "2026-01-09T13:51:48.584Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -164,7 +163,7 @@
               "RelativeDocumentMoniker": "EasyControlforMSFS\\MIDIcontroller.cs",
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MIDIcontroller.cs",
               "RelativeToolTip": "EasyControlforMSFS\\MIDIcontroller.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAD4AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T13:51:48.589Z",
               "EditorCaption": ""
@@ -236,7 +235,8 @@
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\AddDefinitionWindow.xaml",
               "RelativeToolTip": "EasyControlforMSFS\\AddDefinitionWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-09T13:51:48.612Z"
+              "WhenOpened": "2026-01-09T13:51:48.612Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -271,7 +271,8 @@
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\MIDIMapWindow.xaml",
               "RelativeToolTip": "EasyControlforMSFS\\MIDIMapWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-09T13:51:48.617Z"
+              "WhenOpened": "2026-01-09T13:51:48.617Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -282,7 +283,8 @@
               "ToolTip": "D:\\Github\\EasyControlsMSFS\\EasyControlforMSFS\\Add2ndAxisEventsWindow.xaml",
               "RelativeToolTip": "EasyControlforMSFS\\Add2ndAxisEventsWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-09T13:51:48.618Z"
+              "WhenOpened": "2026-01-09T13:51:48.618Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

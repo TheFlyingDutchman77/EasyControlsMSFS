@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasyControlforMSFS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3dedc9b66ad748496551aedf71c7eaada7d73540")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e82d445618a9651f6225df0c50509cea91812f55")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasyControlforMSFS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasyControlforMSFS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

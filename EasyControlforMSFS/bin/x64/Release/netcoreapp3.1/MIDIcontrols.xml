@@ -160,6 +160,10 @@
 				<event_left>AP_ALT_VAR_DEC</event_left>
 				<event_right>AP_ALT_VAR_INC</event_right>
 			</knob1>
+			<knob5>
+				<event_left>Mobiflight.A220_BARO_DEC</event_left>
+				<event_right>Mobiflight.A220_BARO_INC</event_right>
+			</knob5>
 			<knob6>
 				<event_left>Mobiflight.A220_DH_DEC</event_left>
 				<event_right>Mobiflight.A220_DH_INC</event_right>
